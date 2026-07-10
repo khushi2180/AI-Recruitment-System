@@ -2,3 +2,6 @@ python-dotenv
 google-genai
 groq
 pdfplumber
+Flask
+gunicorn
+flask-cors
