@@ -1,0 +1,2929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Analysis — Smart Recruitment Dashboard</title>
+  <meta name="description" content="AI-Powered Smart Recruitment System — Recruiter Dashboard with ATS scoring, hiring funnel, bias detection, and diversity analytics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <style>
+    /* ═══════════════════════════════════════════════════════════════
+       DESIGN TOKENS
+    ═══════════════════════════════════════════════════════════════ */
+    :root {
+      --bg-base:       #080808;
+      --bg-surface:    #0f0f0f;
+      --bg-card:       #161616;
+      --bg-card-hover: #1e1a17;
+      --border:        rgba(249,115,22,0.2);
+      --border-bright: rgba(249,115,22,0.5);
+
+      --purple-900: #431407;
+      --purple-700: #c2410c;
+      --purple-500: #f97316;
+      --purple-400: #fb923c;
+      --purple-300: #fed7aa;
+      --pink-500:   #ef4444;
+      --blue-500:   #f59e0b;
+      --cyan-500:   #fbbf24;
+      --green-500:  #22c55e;
+      --amber-500:  #f97316;
+      --red-500:    #dc2626;
+
+      --text-primary:   #fafaf9;
+      --text-secondary: #a8a29e;
+      --text-muted:     #57534e;
+
+      --glow-purple: 0 0 40px rgba(249,115,22,0.3);
+      --glow-pink:   0 0 40px rgba(239,68,68,0.25);
+      --glow-green:  0 0 40px rgba(34,197,94,0.20);
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-base);
+      color: var(--text-primary);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       ANIMATED BACKGROUND
+    ═══════════════════════════════════════════════════════════════ */
+    .bg-orbs {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;
+    }
+    .orb {
+      position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.12;
+      animation: orb-drift 20s ease-in-out infinite;
+    }
+    .orb-1 { width: 600px; height: 600px; background: #f97316; top: -200px; left: -100px; animation-delay: 0s; }
+    .orb-2 { width: 500px; height: 500px; background: #dc2626; bottom: -150px; right: -100px; animation-delay: -7s; }
+    .orb-3 { width: 400px; height: 400px; background: #f59e0b; top: 40%; left: 40%; animation-delay: -14s; }
+
+    @keyframes orb-drift {
+      0%,100% { transform: translate(0, 0) scale(1); }
+      33%      { transform: translate(40px, -30px) scale(1.05); }
+      66%      { transform: translate(-20px, 20px) scale(0.95); }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       LAYOUT
+    ═══════════════════════════════════════════════════════════════ */
+    .wrapper { position: relative; z-index: 1; display: flex; min-height: 100vh; }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      width: 260px; min-height: 100vh; background: var(--bg-surface);
+      border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; gap: 0;
+      position: sticky; top: 0; height: 100vh; overflow-y: auto;
+      flex-shrink: 0;
+    }
+
+    .sidebar-logo {
+      padding: 28px 24px 20px;
+      display: flex; align-items: center; gap: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo-icon {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--purple-500), var(--pink-500));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; box-shadow: var(--glow-purple);
+      flex-shrink: 0;
+    }
+    .logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px; }
+    .logo-sub  { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+
+    .sidebar-nav { padding: 16px 12px; flex: 1; }
+    .nav-section { margin-bottom: 24px; }
+    .nav-label { font-size: 10px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; padding: 0 12px 8px; }
+
+    .nav-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 12px; border-radius: var(--radius-sm);
+      cursor: pointer; transition: all 0.2s;
+      font-size: 13.5px; font-weight: 500; color: var(--text-secondary);
+      text-decoration: none; margin-bottom: 2px;
+    }
+    .nav-item:hover { background: rgba(249,115,22,0.12); color: var(--text-primary); }
+    .nav-item.active { background: rgba(249,115,22,0.2); color: var(--purple-300); border: 1px solid var(--border); }
+    .nav-icon { width: 18px; height: 18px; object-fit: contain; flex-shrink: 0; margin-right: 2px; }
+    .nav-badge {
+      margin-left: auto; background: var(--purple-700); color: var(--purple-300);
+      font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 20px;
+    }
+
+    .sidebar-footer {
+      padding: 16px 20px; border-top: 1px solid var(--border);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .avatar {
+      width: 34px; height: 34px; border-radius: 50%;
+      object-fit: cover; flex-shrink: 0;
+    }
+    .avatar-info .name { font-size: 13px; font-weight: 600; }
+    .avatar-info .role { font-size: 11px; color: var(--text-muted); }
+
+    /* ── MAIN CONTENT ── */
+    .main { flex: 1; overflow: hidden; }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: rgba(18,18,26,0.8); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 32px; display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .topbar-left h1 { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; }
+    .topbar-left p { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+    .topbar-right { display: flex; align-items: center; gap: 12px; }
+
+    .btn {
+      padding: 9px 18px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s; font-family: inherit;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #f97316, #dc2626);
+      color: white; box-shadow: var(--glow-purple);
+    }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-ghost { background: rgba(249,115,22,0.1); color: var(--purple-300); border: 1px solid var(--border); }
+    .btn-ghost:hover { background: rgba(249,115,22,0.2); }
+
+    .status-badge {
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px 12px; border-radius: 20px;
+      background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3);
+      font-size: 12px; color: var(--green-500); font-weight: 600;
+    }
+    .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-500); animation: pulse-dot 2s infinite; }
+    @keyframes pulse-dot { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    /* ── PAGE CONTENT ── */
+    .content { padding: 28px 32px; overflow-y: auto; max-height: calc(100vh - 65px); }
+
+    /* ══ KPI CARDS ROW ══ */
+    .kpi-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px;
+    }
+    .kpi-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: 20px 22px;
+      transition: all 0.25s; position: relative; overflow: hidden;
+      min-height: 160px; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .kpi-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--accent-grad, linear-gradient(90deg, var(--purple-500), var(--pink-500)));
+    }
+    .kpi-card:hover { border-color: var(--border-bright); transform: translateY(-2px); box-shadow: var(--glow-purple); }
+
+    .kpi-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+    .kpi-label { font-size: 12px; font-weight: 500; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; }
+    .kpi-icon { font-size: 20px; }
+
+    .kpi-value { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; line-height: 1; }
+    .kpi-sub { font-size: 12px; color: var(--text-muted); margin-top: 6px; display: flex; align-items: center; gap: 4px; }
+    .kpi-up   { color: var(--green-500); }
+    .kpi-down { color: var(--red-500); }
+
+    /* ══ GRID LAYOUTS ══ */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+    .grid-2-1 { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 20px; }
+    .grid-1-2 { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; margin-bottom: 20px; }
+
+    /* ══ CHART CARDS ══ */
+    .card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-md); overflow: hidden; transition: border-color 0.2s;
+    }
+    .card:hover { border-color: var(--border-bright); }
+    .card-header {
+      padding: 18px 22px 14px; display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-title { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; }
+    .card-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .card-body { padding: 20px 22px; }
+    .card-badge { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+    .badge-purple { background: rgba(249,115,22,0.15); color: var(--purple-300); border: 1px solid rgba(249,115,22,0.3); }
+    .badge-green  { background: rgba(16,185,129,0.12); color: var(--green-500); border: 1px solid rgba(16,185,129,0.3); }
+    .badge-red    { background: rgba(239,68,68,0.12); color: var(--red-500); border: 1px solid rgba(239,68,68,0.3); }
+    .badge-amber  { background: rgba(245,158,11,0.12); color: var(--amber-500); border: 1px solid rgba(245,158,11,0.3); }
+
+    canvas { max-width: 100%; }
+
+    /* ══ FORM INPUTS DARK THEME ══ */
+    select, input[type="text"] {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23f97316' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      padding-right: 32px !important;
+    }
+    select:focus, input[type="text"]:focus {
+      border-color: #f97316;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(249,115,22,0.15);
+    }
+    select option {
+      background: #1a1a1a;
+      color: var(--text-primary);
+    }
+
+    /* ══ HIRING FUNNEL ══ */
+    .funnel-container { padding: 4px 0; }
+    .funnel-stage {
+      margin-bottom: 10px; cursor: default;
+    }
+    .funnel-label {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 6px; font-size: 13px;
+    }
+    .funnel-stage-name { font-weight: 500; color: var(--text-primary); }
+    .funnel-count { font-weight: 700; font-family: 'Space Grotesk', sans-serif; }
+    .funnel-bar-bg { background: rgba(255,255,255,0.06); border-radius: 6px; height: 28px; overflow: hidden; position: relative; }
+    .funnel-bar-fill {
+      height: 100%; border-radius: 6px; transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+      display: flex; align-items: center; padding-left: 10px;
+    }
+    .funnel-pct { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.85); }
+    .funnel-delta { font-size: 11px; color: var(--text-muted); margin-left: 8px; }
+
+    /* ══ CANDIDATE TABLE ══ */
+    .table-wrapper { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left; font-size: 11px; font-weight: 600; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 10px 14px; border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    tbody tr { transition: background 0.15s; }
+    tbody tr:hover { background: rgba(249,115,22,0.06); }
+    tbody td { padding: 12px 14px; font-size: 13px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .td-name { font-weight: 600; }
+    .td-role { color: var(--text-secondary); font-size: 12px; }
+
+    .score-pill {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 700;
+    }
+    .score-high { background: rgba(16,185,129,0.12); color: var(--green-500); border: 1px solid rgba(16,185,129,0.3); }
+    .score-med  { background: rgba(245,158,11,0.12); color: var(--amber-500); border: 1px solid rgba(245,158,11,0.3); }
+    .score-low  { background: rgba(239,68,68,0.12);  color: var(--red-500);   border: 1px solid rgba(239,68,68,0.3); }
+
+    .status-chip {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600;
+    }
+    .chip-short  { background: rgba(249,115,22,0.15); color: var(--purple-300); }
+    .chip-reject { background: rgba(100,100,120,0.2); color: #64748b; }
+
+    /* ══ BIAS METER ══ */
+    .bias-grid { display: flex; flex-direction: column; gap: 14px; }
+    .bias-item { }
+    .bias-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+    .bias-name { font-size: 13px; font-weight: 500; }
+    .bias-sev { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+    .sev-high   { background: rgba(239,68,68,0.15);  color: var(--red-500);   }
+    .sev-med    { background: rgba(245,158,11,0.15); color: var(--amber-500); }
+    .sev-low    { background: rgba(16,185,129,0.12); color: var(--green-500); }
+    .sev-unobs  { background: rgba(100,116,139,0.2); color: #94a3b8; }
+    .bias-bar-bg { background: rgba(255,255,255,0.06); border-radius: 4px; height: 6px; overflow: hidden; }
+    .bias-bar-fill { height: 100%; border-radius: 4px; transition: width 1.5s ease; }
+
+    /* ══ ROLE BREAKDOWN ══ */
+    .role-cards { display: flex; flex-direction: column; gap: 12px; }
+    .role-card {
+      background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 14px 16px;
+      display: flex; align-items: center; gap: 14px;
+      transition: all 0.2s;
+    }
+    .role-card:hover { background: rgba(249,115,22,0.08); border-color: var(--border-bright); }
+    .role-emoji { font-size: 22px; }
+    .role-info { flex: 1; }
+    .role-title { font-size: 13px; font-weight: 600; }
+    .role-company { font-size: 11px; color: var(--text-muted); }
+    .role-stats { text-align: right; }
+    .role-applied { font-size: 16px; font-weight: 700; font-family: 'Space Grotesk', sans-serif; }
+    .role-shortlisted { font-size: 11px; color: var(--green-500); }
+
+    /* ══ SECTION HEADINGS ══ */
+    .section-heading {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+    }
+    .section-heading h2 { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; }
+    .section-divider { flex: 1; height: 1px; background: var(--border); }
+
+    /* ══ ACTIVITY FEED ══ */
+    .activity-list { display: flex; flex-direction: column; gap: 0; }
+    .activity-item {
+      display: flex; align-items: flex-start; gap: 12px; padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .activity-item:last-child { border-bottom: none; }
+    .activity-dot {
+      width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 14px;
+      margin-top: 2px;
+    }
+    .activity-content { flex: 1; }
+    .activity-text { font-size: 13px; font-weight: 500; line-height: 1.4; }
+    .activity-text span { color: var(--purple-300); }
+    .activity-time { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
+
+    /* ══ DIVERSITY STATS ══ */
+    .diversity-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
+    .diversity-card {
+      background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 16px; text-align: center;
+    }
+    .diversity-pct { font-size: 28px; font-weight: 800; font-family: 'Space Grotesk', sans-serif; }
+    .diversity-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+    /* ══ SPARKLINE ══ */
+    .sparkline-row { display: flex; align-items: flex-end; gap: 3px; height: 40px; margin-top: 6px; }
+    .spark-bar { flex: 1; border-radius: 3px 3px 0 0; background: rgba(249,115,22,0.35); transition: height 0.5s; }
+    .spark-bar.active { background: #f97316; }
+
+    /* ══ PROGRESS RING ══ */
+    .ring-container { position: relative; display: inline-flex; align-items: center; justify-content: center; }
+    .ring-label { position: absolute; text-align: center; }
+    .ring-label .pct { font-size: 20px; font-weight: 800; font-family: 'Space Grotesk', sans-serif; }
+    .ring-label .sub { font-size: 10px; color: var(--text-muted); }
+
+    /* ══ TOOLTIP ══ */
+    .tooltip { position: relative; cursor: help; }
+    .tooltip::after {
+      content: attr(data-tip);
+      position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%);
+      background: #1e293b; color: var(--text-primary); font-size: 11px;
+      padding: 5px 10px; border-radius: 6px; white-space: nowrap;
+      opacity: 0; pointer-events: none; transition: opacity 0.2s; margin-bottom: 6px;
+      border: 1px solid var(--border);
+    }
+    .tooltip:hover::after { opacity: 1; }
+
+    /* ══ ANIMATIONS ══ */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-in { animation: fadeInUp 0.4s ease both; }
+    .delay-1 { animation-delay: 0.05s; }
+    .delay-2 { animation-delay: 0.10s; }
+    .delay-3 { animation-delay: 0.15s; }
+    .delay-4 { animation-delay: 0.20s; }
+    .delay-5 { animation-delay: 0.25s; }
+
+    /* ══ SCROLLBAR ══ */
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+    /* ══ MODAL OVERLAY ══ */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 9000;
+      background: rgba(0,0,0,0.75); backdrop-filter: blur(6px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 0.25s;
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+    .modal-box {
+      background: #1a1210; border: 1px solid rgba(249,115,22,0.35);
+      border-radius: 18px; padding: 32px; width: 520px; max-width: 95vw;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 60px rgba(249,115,22,0.15);
+      transform: translateY(20px); transition: transform 0.25s;
+    }
+    .modal-overlay.open .modal-box { transform: translateY(0); }
+    .modal-title {
+      font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700;
+      margin-bottom: 6px; color: var(--purple-300);
+    }
+    .modal-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    .form-label { font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.07em; display: block; margin-bottom: 6px; }
+    .form-input {
+      width: 100%; background: #0f0f0f; border: 1px solid rgba(249,115,22,0.25);
+      border-radius: 8px; padding: 10px 14px; color: var(--text-primary);
+      font-size: 13px; font-family: inherit; outline: none; transition: border-color 0.2s;
+    }
+    .form-input:focus { border-color: rgba(249,115,22,0.6); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .modal-actions { display: flex; gap: 10px; margin-top: 24px; justify-content: flex-end; }
+    .btn-cancel { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: var(--text-secondary); border-radius: 8px; padding: 9px 18px; font-size: 13px; font-weight: 600; cursor: pointer; }
+    .btn-cancel:hover { background: rgba(255,255,255,0.1); }
+    .btn-save { background: linear-gradient(135deg,#f97316,#dc2626); border: none; color: white; border-radius: 8px; padding: 9px 22px; font-size: 13px; font-weight: 600; cursor: pointer; }
+    .btn-save:hover { opacity: 0.9; }
+    .role-action-btn { background: transparent; border: none; cursor: pointer; padding: 4px 8px; border-radius: 6px; font-size: 12px; transition: background 0.2s; }
+    .role-edit-btn   { color: #fb923c; }
+    .role-edit-btn:hover   { background: rgba(249,115,22,0.15); }
+    .role-delete-btn { color: #ef4444; }
+    .role-delete-btn:hover { background: rgba(239,68,68,0.15); }
+  </style>
+</head>
+<body>
+
+<!-- Ambient background -->
+<div class="bg-orbs">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<!-- ══ NEW JOB MODAL ══ -->
+<div class="modal-overlay" id="newJobModal">
+  <div class="modal-box">
+    <div class="modal-title">📋 Add New Job Opening</div>
+    <div class="modal-sub">Fill in the details to create a new role listing</div>
+    <div class="form-group">
+      <label class="form-label">Job Title</label>
+      <input class="form-input" id="nj-title" type="text" placeholder="e.g. Data Scientist">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Company</label>
+        <input class="form-input" id="nj-company" type="text" placeholder="e.g. Acme Corp">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Location</label>
+        <input class="form-input" id="nj-location" type="text" placeholder="e.g. Mumbai">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Salary Range</label>
+        <input class="form-input" id="nj-salary" type="text" placeholder="e.g. ₹12–18 LPA">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Department</label>
+        <select class="form-input" id="nj-dept">
+          <option>Engineering</option>
+          <option>Data &amp; Analytics</option>
+          <option>Product</option>
+          <option>Design</option>
+          <option>Security</option>
+          <option>Marketing</option>
+          <option>Operations</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Job Description (brief)</label>
+      <textarea class="form-input" id="nj-desc" rows="3" placeholder="Key responsibilities and requirements…" style="resize:vertical"></textarea>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Min Experience (yrs)</label>
+        <input class="form-input" id="nj-exp" type="number" min="0" max="15" placeholder="e.g. 2">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Openings</label>
+        <input class="form-input" id="nj-openings" type="number" min="1" placeholder="e.g. 3">
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeJobModal('newJobModal')">Cancel</button>
+      <button class="btn-save" onclick="saveNewJob()">+ Create Job</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ EDIT JOB MODAL ══ -->
+<div class="modal-overlay" id="editJobModal">
+  <div class="modal-box">
+    <div class="modal-title">✏️ Edit Job Opening</div>
+    <div class="modal-sub">Update the details for this role</div>
+    <input type="hidden" id="ej-index">
+    <div class="form-group">
+      <label class="form-label">Job Title</label>
+      <input class="form-input" id="ej-title" type="text">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Company</label>
+        <input class="form-input" id="ej-company" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Location</label>
+        <input class="form-input" id="ej-location" type="text">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Salary Range</label>
+        <input class="form-input" id="ej-salary" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Applied Count (Calculated)</label>
+        <input class="form-input" id="ej-applied" type="number" min="0" disabled style="opacity:0.6;cursor:not-allowed">
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeJobModal('editJobModal')">Cancel</button>
+      <button class="btn-save" onclick="saveEditJob()">Save Changes</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ RESUME UPLOAD MODAL ══ -->
+<div class="modal-overlay" id="resumeUploadModal">
+  <div class="modal-box" style="width: 580px; background: #0f0c0b; border: 1px solid rgba(249,115,22,0.4);">
+    <div class="modal-title" style="color: var(--purple-300); font-size: 20px;">📄 AI Resume Parser</div>
+    <div class="modal-sub">Upload candidate resumes to parse and rank them using the AI screening engine</div>
+    
+    <div id="uploadDragZone" style="border: 2px dashed rgba(249,115,22,0.3); border-radius: 12px; padding: 30px; text-align: center; background: rgba(249,115,22,0.02); cursor: pointer; transition: all 0.2s;" onclick="document.getElementById('resumeFileInput').click()">
+      <img src="assets/resume_upload_graphic.png" style="width: 140px; margin-bottom: 16px; opacity: 0.9;" alt="Upload Illustration">
+      <div style="font-weight: 600; font-size: 14px; margin-bottom: 6px; color: var(--purple-300)">Drag &amp; drop PDF/Word Resumes here</div>
+      <div style="font-size: 11px; color: var(--text-muted)">or click to browse from your device (Supports multiple files)</div>
+      <input type="file" id="resumeFileInput" multiple accept=".pdf,.doc,.docx,.txt" style="display: none;" onchange="handleResumeSelect(event)">
+    </div>
+
+    <!-- Selected Files List -->
+    <div id="selectedFilesContainer" style="display: none; margin-top: 16px; max-height: 120px; overflow-y: auto; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px;">
+      <div style="font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">Selected Files</div>
+      <div id="selectedFilesList" style="display: flex; flex-direction: column; gap: 6px;"></div>
+    </div>
+
+    <!-- Progress Indicator -->
+    <div id="parseProgressContainer" style="display: none; margin-top: 20px;">
+      <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px;">
+        <span id="parseProgressStatus" style="font-weight: 600;">Extracting text...</span>
+        <span id="parseProgressPct" style="color: var(--amber-500); font-weight: 700;">0%</span>
+      </div>
+      <div style="background: rgba(255,255,255,0.06); border-radius: 4px; height: 8px; overflow: hidden; margin-bottom: 12px;">
+        <div id="parseProgressBar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #f97316, #dc2626); transition: width 0.3s;"></div>
+      </div>
+      <div id="parseLogConsole" style="background: #000; font-family: monospace; font-size: 10px; color: #a8a29e; padding: 8px 12px; border-radius: 6px; height: 70px; overflow-y: auto; border: 1px solid rgba(249,115,22,0.15);"></div>
+    </div>
+
+    <div class="modal-actions" style="margin-top: 24px;">
+      <button class="btn-cancel" onclick="closeJobModal('resumeUploadModal')">Close</button>
+      <button class="btn-save" id="btnStartParsing" onclick="startAIResumeParsing()" disabled style="background: linear-gradient(135deg, #f59e0b, #f97316); opacity: 0.5; cursor: not-allowed;">⚡ Parse &amp; Screen</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper">
+  <!-- ══ SIDEBAR ══ -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="assets/logo.png" alt="CV Analysis Logo" style="width: 40px; height: 40px; border-radius: 12px; object-fit: cover;">
+      <div>
+        <div class="logo-text">CV Analysis</div>
+        <div class="logo-sub">Recruitment Suite v2.4</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-label">Overview</div>
+        <a class="nav-item active" href="#dashboard" id="nav-dashboard">
+          <img class="nav-icon" src="https://img.icons8.com/fluency/24/dashboard.png" alt=""> Dashboard
+        </a>
+        <a class="nav-item" href="#funnel" id="nav-funnel">
+          <img class="nav-icon" src="https://img.icons8.com/fluency/24/funnel.png" alt=""> Hiring Funnel
+          <span class="nav-badge" id="nav-funnel-badge">4</span>
+        </a>
+        <a class="nav-item" href="#analytics" id="nav-analytics">
+          <img class="nav-icon" src="https://img.icons8.com/fluency/24/analytics.png" alt=""> Analytics
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Recruitment</div>
+        <a class="nav-item" href="#candidates" id="nav-candidates">
+          <img class="nav-icon" src="https://img.icons8.com/fluency/24/conference-call.png" alt=""> Candidates
+          <span class="nav-badge">30</span>
+        </a>
+        <a class="nav-item" href="#jobs" id="nav-jobs">
+          <img class="nav-icon" src="https://img.icons8.com/fluency/24/briefcase.png" alt=""> Job Openings
+          <span class="nav-badge">5</span>
+        </a>
+        <a class="nav-item" href="#interviews" id="nav-interviews">
+          <img class="nav-icon" src="https://img.icons8.com/fluency/24/robot-2.png" alt=""> AI Questions
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">AI Insights</div>
+        <a class="nav-item" href="#bias" id="nav-bias">
+          <img class="nav-icon" src="https://img.icons8.com/fluency/24/scales.png" alt=""> Bias Detection
+          <span class="nav-badge" style="background:#7f1d1d;color:#fca5a5;">HIGH</span>
+        </a>
+        <a class="nav-item" href="#diversity" id="nav-diversity">
+          <img class="nav-icon" src="https://img.icons8.com/fluency/24/rainbow.png" alt=""> Diversity
+        </a>
+        <a class="nav-item" href="#reports" id="nav-reports">
+          <img class="nav-icon" src="https://img.icons8.com/fluency/24/document.png" alt=""> Reports
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Settings</div>
+        <a class="nav-item" href="#settings">
+          <img class="nav-icon" src="https://img.icons8.com/fluency/24/settings.png" alt=""> Settings
+        </a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=80" alt="Shreya Rawat">
+      <div class="avatar-info">
+        <div class="name">Shreya Rawat</div>
+        <div class="role">Senior Recruiter</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ══ MAIN ══ -->
+  <div class="main">
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="topbar-left">
+        <h1>Recruiter Dashboard</h1>
+        <p>Batch: Summer 2024 · 5 Roles · 30 Applicants · Last updated 28 Jun 2024, 3:21 PM</p>
+      </div>
+      <div class="topbar-right">
+        <div class="status-badge">
+          <div class="status-dot"></div>
+          AI Engine Active
+        </div>
+        <button class="btn btn-ghost" onclick="exportFullReport()"><img src="https://img.icons8.com/fluency/16/export.png" style="vertical-align:middle;margin-right:4px;width:14px;height:14px;"> Export Report</button>
+        <button class="btn btn-primary" onclick="openNewJobModal()"><img src="https://img.icons8.com/fluency/16/plus.png" style="vertical-align:middle;margin-right:4px;width:14px;height:14px;"> New Job</button>
+        <button class="btn btn-primary" onclick="openResumeUploadModal()" style="background: linear-gradient(135deg, #f59e0b, #f97316); box-shadow: 0 0 40px rgba(245,158,11,0.25);"><img src="https://img.icons8.com/fluency/16/folder-invoices.png" style="vertical-align:middle;margin-right:4px;width:14px;height:14px;"> Input Resumes</button>
+      </div>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="content" id="dashboard">
+
+      <!-- ══════════════ KPI ROW ══════════════ -->
+      <div class="kpi-grid animate-in">
+
+        <div class="kpi-card" style="--accent-grad: linear-gradient(90deg,#f97316,#ef4444)">
+          <div class="kpi-top">
+            <span class="kpi-label">Applications Received</span>
+            <img class="kpi-icon" src="https://img.icons8.com/fluency/32/inbox.png" alt="">
+          </div>
+          <div class="kpi-value" id="kpi-received" style="color: var(--purple-300)">30</div>
+          <div class="kpi-sub">
+            <span class="kpi-up">↑ 12</span> vs last cycle
+          </div>
+          <div class="sparkline-row">
+            <div class="spark-bar" style="height:30%"></div>
+            <div class="spark-bar" style="height:45%"></div>
+            <div class="spark-bar" style="height:60%"></div>
+            <div class="spark-bar" style="height:40%"></div>
+            <div class="spark-bar" style="height:75%"></div>
+            <div class="spark-bar" style="height:55%"></div>
+            <div class="spark-bar active" style="height:100%"></div>
+          </div>
+        </div>
+
+        <div class="kpi-card" style="--accent-grad: linear-gradient(90deg,#10b981,#06b6d4)">
+          <div class="kpi-top">
+            <span class="kpi-label">Shortlisted</span>
+            <img class="kpi-icon" src="https://img.icons8.com/fluency/32/checked.png" alt="">
+          </div>
+          <div class="kpi-value" id="kpi-shortlisted" style="color: var(--green-500)">19</div>
+          <div class="kpi-sub">
+            <span class="kpi-up" id="kpi-shortlist-rate">63.3%</span> shortlist rate
+          </div>
+          <div class="sparkline-row">
+            <div class="spark-bar" style="height:20%;background:rgba(16,185,129,0.3)"></div>
+            <div class="spark-bar" style="height:40%;background:rgba(16,185,129,0.3)"></div>
+            <div class="spark-bar" style="height:55%;background:rgba(16,185,129,0.3)"></div>
+            <div class="spark-bar" style="height:35%;background:rgba(16,185,129,0.3)"></div>
+            <div class="spark-bar" style="height:70%;background:rgba(16,185,129,0.3)"></div>
+            <div class="spark-bar" style="height:50%;background:rgba(16,185,129,0.3)"></div>
+            <div class="spark-bar" style="height:100%;background:var(--green-500)"></div>
+          </div>
+        </div>
+
+        <div class="kpi-card" style="--accent-grad: linear-gradient(90deg,#f59e0b,#ef4444)">
+          <div class="kpi-top">
+            <span class="kpi-label">Avg ATS Score</span>
+            <img class="kpi-icon" src="https://img.icons8.com/fluency/32/bullseye.png" alt="">
+          </div>
+          <div class="kpi-value" id="kpi-avg-score" style="color: var(--amber-500)">67.2</div>
+          <div class="kpi-sub">
+            out of 100 &nbsp;·&nbsp; <span class="kpi-up">↑ 4.1</span> vs prev
+          </div>
+          <div class="sparkline-row">
+            <div class="spark-bar" style="height:55%;background:rgba(245,158,11,0.3)"></div>
+            <div class="spark-bar" style="height:48%;background:rgba(245,158,11,0.3)"></div>
+            <div class="spark-bar" style="height:62%;background:rgba(245,158,11,0.3)"></div>
+            <div class="spark-bar" style="height:58%;background:rgba(245,158,11,0.3)"></div>
+            <div class="spark-bar" style="height:65%;background:rgba(245,158,11,0.3)"></div>
+            <div class="spark-bar" style="height:63%;background:rgba(245,158,11,0.3)"></div>
+            <div class="spark-bar" style="height:100%;background:var(--amber-500)"></div>
+          </div>
+        </div>
+
+        <div class="kpi-card" style="--accent-grad: linear-gradient(90deg,#ef4444,#dc2626)">
+          <div class="kpi-top">
+            <span class="kpi-label">Rejected</span>
+            <img class="kpi-icon" src="https://img.icons8.com/fluency/32/delete-sign.png" alt="">
+          </div>
+          <div class="kpi-value" id="kpi-rejected" style="color: var(--red-500)">11</div>
+          <div class="kpi-sub">
+            <span id="kpi-rejection-rate">36.7%</span> rejection rate
+          </div>
+          <div class="sparkline-row">
+            <div class="spark-bar" style="height:40%;background:rgba(239,68,68,0.3)"></div>
+            <div class="spark-bar" style="height:55%;background:rgba(239,68,68,0.3)"></div>
+            <div class="spark-bar" style="height:35%;background:rgba(239,68,68,0.3)"></div>
+            <div class="spark-bar" style="height:60%;background:rgba(239,68,68,0.3)"></div>
+            <div class="spark-bar" style="height:45%;background:rgba(239,68,68,0.3)"></div>
+            <div class="spark-bar" style="height:50%;background:rgba(239,68,68,0.3)"></div>
+            <div class="spark-bar" style="height:100%;background:var(--red-500)"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════ CHARTS ROW 1 ══════════════ -->
+      <div class="grid-2 animate-in delay-2">
+
+        <!-- ATS Score Distribution -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">ATS Score Distribution</div>
+              <div class="card-sub">All 30 candidates across 5 roles</div>
+            </div>
+            <span class="card-badge badge-purple">30 Candidates</span>
+          </div>
+          <div class="card-body">
+            <canvas id="chartScoreDist" height="200"></canvas>
+          </div>
+        </div>
+
+        <!-- Score by Role -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Average ATS Score by Role</div>
+              <div class="card-sub">Shortlisted vs Rejected per role</div>
+            </div>
+            <span class="card-badge badge-purple">5 Roles</span>
+          </div>
+          <div class="card-body">
+            <canvas id="chartByRole" height="200"></canvas>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════ HIRING FUNNEL + PIE ══════════════ -->
+      <div class="grid-2-1 animate-in delay-3" id="funnel">
+
+        <!-- Hiring Funnel -->
+        <div class="card">
+          <div class="card-header">
+            <div style="display:flex;align-items:center;gap:12px">
+              <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#f97316,#ef4444);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(249,115,22,0.35)">
+                <img src="https://img.icons8.com/fluency/24/funnel.png" style="width:22px;height:22px;filter:brightness(0) invert(1)">
+              </div>
+              <div>
+                <div class="card-title">Hiring Funnel</div>
+                <div class="card-sub">Summer 2024 Batch · All Roles Combined</div>
+              </div>
+            </div>
+            <span class="card-badge badge-amber">Live</span>
+          </div>
+          <div class="card-body">
+            <div class="funnel-container">
+
+              <div class="funnel-stage">
+                <div class="funnel-label">
+                  <span class="funnel-stage-name">📥 Applications Received</span>
+                  <div><span class="funnel-count" id="funnel-s1-count" style="color:var(--purple-300)">30</span> <span class="funnel-delta">100%</span></div>
+                </div>
+                <div class="funnel-bar-bg">
+                  <div class="funnel-bar-fill" style="width:100%;background:linear-gradient(90deg,#7c3aed,#f97316)">
+                    <span class="funnel-pct">100%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="funnel-stage">
+                <div class="funnel-label">
+                  <span class="funnel-stage-name">🔍 Resumes Parsed by AI</span>
+                  <div><span class="funnel-count" id="funnel-s2-count" style="color:var(--purple-300)">30</span> <span class="funnel-delta">100%</span></div>
+                </div>
+                <div class="funnel-bar-bg">
+                  <div class="funnel-bar-fill" style="width:100%;background:linear-gradient(90deg,#c2410c,#7c3aed)">
+                    <span class="funnel-pct">100%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="funnel-stage">
+                <div class="funnel-label">
+                  <span class="funnel-stage-name">⚙️ ATS Screened (≥55)</span>
+                  <div><span class="funnel-count" id="funnel-s3-count" style="color:var(--cyan-500)">22</span> <span class="funnel-delta" id="funnel-s3-delta">73.3%</span></div>
+                </div>
+                <div class="funnel-bar-bg">
+                  <div class="funnel-bar-fill" id="funnel-s3-bar" style="width:73.3%;background:linear-gradient(90deg,#0e7490,#06b6d4)">
+                    <span class="funnel-pct" id="funnel-s3-pct">73%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="funnel-stage">
+                <div class="funnel-label">
+                  <span class="funnel-stage-name" id="funnel-s4-label">✅ Shortlisted (≥65)</span>
+                  <div><span class="funnel-count" id="funnel-s4-count" style="color:var(--green-500)">19</span> <span class="funnel-delta" id="funnel-s4-delta">63.3%</span></div>
+                </div>
+                <div class="funnel-bar-bg">
+                  <div class="funnel-bar-fill" id="funnel-s4-bar" style="width:63.3%;background:linear-gradient(90deg,#065f46,#10b981)">
+                    <span class="funnel-pct" id="funnel-s4-pct">63%</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Shortlist vs Reject Pie -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Shortlist Breakdown</div>
+              <div class="card-sub">By decision category</div>
+            </div>
+          </div>
+          <div class="card-body" style="display:flex;flex-direction:column;align-items:center;gap:20px">
+            <canvas id="chartPie" height="180" width="180"></canvas>
+            <div style="width:100%;display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px">
+                <span style="width:12px;height:12px;border-radius:3px;background:#f97316;flex-shrink:0"></span>
+                <span>Shortlisted</span><span id="pie-short-text" style="margin-left:auto;font-weight:700">19 (63%)</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px">
+                <span style="width:12px;height:12px;border-radius:3px;background:#ef4444;flex-shrink:0"></span>
+                <span>Rejected</span><span id="pie-rej-text" style="margin-left:auto;font-weight:700">11 (37%)</span>
+              </div>
+            </div>
+            <!-- Donut Ring SVG for avg score -->
+            <div style="text-align:center;border-top:1px solid var(--border);padding-top:16px;width:100%">
+              <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px">Avg ATS Score</div>
+              <div id="pie-avg-score" style="font-size:36px;font-weight:800;font-family:'Space Grotesk',sans-serif;color:var(--amber-500)">67.2</div>
+              <div style="font-size:12px;color:var(--text-muted)">/100 &nbsp;·&nbsp; Target: 70</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════ CHARTS ROW 2 ══════════════ -->
+      <div class="grid-3 animate-in delay-3" id="analytics">
+
+        <!-- Skills Distribution -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Top Skills in Pool</div>
+              <div class="card-sub">Most frequent across all candidates</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <canvas id="chartSkills" height="240"></canvas>
+          </div>
+        </div>
+
+        <!-- Education Distribution -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Education Distribution</div>
+              <div class="card-sub">Degree types across candidates</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <canvas id="chartEdu" height="240"></canvas>
+          </div>
+        </div>
+
+        <!-- Experience Range -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Experience Distribution</div>
+              <div class="card-sub">Years of experience across pool</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <canvas id="chartExp" height="240"></canvas>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════ CANDIDATE TABLE ══════════════ -->
+      <div class="section-heading animate-in delay-4" id="candidates">
+        <h2>👥 Candidate Rankings</h2>
+        <div class="section-divider"></div>
+        <span class="card-badge badge-purple">30 Total</span>
+      </div>
+
+      <div class="card animate-in delay-4" style="margin-bottom:24px">
+        <div class="card-header">
+          <div>
+            <div class="card-title">All Candidates — ATS Ranked</div>
+            <div class="card-sub" id="tableSubtitle">Sorted by ATS score descending · Scores computed by AI</div>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-ghost" id="toggleFilterBtn" style="font-size:12px;padding:6px 12px" onclick="toggleFilterPanel()">⚙ Filter</button>
+            <button class="btn btn-ghost" style="font-size:12px;padding:6px 12px" onclick="exportCSV()">⬇ Export CSV</button>
+          </div>
+        </div>
+
+        <!-- ── FILTER PANEL ── -->
+        <div id="filterPanel" style="display:none;padding:16px 20px;border-bottom:1px solid var(--border);background:rgba(249,115,22,0.04)">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr auto;gap:12px;align-items:end">
+
+            <!-- Search -->
+            <div>
+              <label style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;display:block;margin-bottom:6px">Search Name</label>
+              <input id="filterName" type="text" placeholder="e.g. Aarav…"
+                style="width:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:7px 12px;color:var(--text-primary);font-size:13px;outline:none"
+                oninput="applyFilters()">
+            </div>
+
+            <!-- Role -->
+            <div>
+              <label style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;display:block;margin-bottom:6px">Role</label>
+              <select id="filterRole" onchange="applyFilters()"
+                style="width:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:7px 12px;color:var(--text-primary);font-size:13px;outline:none">
+                <option value="">All Roles</option>
+                <option>Software Engineer</option>
+                <option>Cyber Security Analyst</option>
+                <option>Data Analyst</option>
+                <option>Product Manager</option>
+                <option>UI/UX Designer</option>
+              </select>
+            </div>
+
+            <!-- Status -->
+            <div>
+              <label style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;display:block;margin-bottom:6px">Status</label>
+              <select id="filterStatus" onchange="applyFilters()"
+                style="width:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:7px 12px;color:var(--text-primary);font-size:13px;outline:none">
+                <option value="">All</option>
+                <option value="shortlisted">✅ Shortlisted</option>
+                <option value="rejected">❌ Rejected</option>
+              </select>
+            </div>
+
+            <!-- Score Range -->
+            <div>
+              <label style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;display:block;margin-bottom:6px">Min ATS Score</label>
+              <div style="display:flex;gap:6px;align-items:center">
+                <input id="filterMinScore" type="number" min="0" max="100" value="0" placeholder="0"
+                  style="width:60px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:7px 8px;color:var(--text-primary);font-size:13px;outline:none"
+                  oninput="applyFilters()">
+                <span style="color:var(--text-muted);font-size:12px">–</span>
+                <input id="filterMaxScore" type="number" min="0" max="100" value="100" placeholder="100"
+                  style="width:60px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:7px 8px;color:var(--text-primary);font-size:13px;outline:none"
+                  oninput="applyFilters()">
+              </div>
+            </div>
+
+            <!-- Reset -->
+            <div>
+              <button onclick="resetFilters()"
+                style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#ef4444;border-radius:8px;padding:7px 14px;font-size:12px;cursor:pointer;white-space:nowrap">
+                ✕ Reset
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Candidate</th>
+                <th>Role</th>
+                <th>Experience</th>
+                <th>CGPA</th>
+                <th>Skills</th>
+                <th>ATS Score</th>
+                <th>Status</th>
+                <th>Tier</th>
+                <th style="text-align:right">Action</th>
+              </tr>
+            </thead>
+            <tbody id="candidateTableBody">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ══════════════ BIAS + ROLE ══════════════ -->
+      <div class="grid-2 animate-in delay-4" id="bias">
+
+        <!-- Bias Detection Panel -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">⚖️ Bias Detection Report</div>
+              <div class="card-sub" id="biasOverallSub">10 dimensions analysed · Overall Risk: HIGH</div>
+            </div>
+            <span class="card-badge badge-red" id="biasOverallBadge">⚠ HIGH RISK</span>
+          </div>
+          <div class="card-body">
+            <div class="bias-grid">
+              <!-- Bias items injected by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Role Breakdown -->
+        <div class="card" id="jobs">
+          <div class="card-header">
+            <div>
+              <div class="card-title">💼 Open Roles</div>
+              <div class="card-sub">Applications received per position</div>
+            </div>
+            <span class="card-badge badge-purple">5 Roles</span>
+          </div>
+          <div class="card-body">
+            <div class="role-cards" id="jobRolesContainer">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════ DIVERSITY ══════════════ -->
+      <div class="animate-in delay-5" id="diversity">
+
+        <!-- Diversity Analytics -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">🌈 Diversity Analytics</div>
+              <div class="card-sub">Across 30 candidates — current batch</div>
+            </div>
+            <span class="card-badge badge-green">Monitored</span>
+          </div>
+          <div class="card-body">
+            <div style="margin-bottom:20px">
+              <canvas id="chartGender" height="160"></canvas>
+            </div>
+            <div class="diversity-grid">
+              <div class="diversity-card">
+                <div class="diversity-pct" style="color:var(--purple-300)">53%</div>
+                <div class="diversity-label">Female Candidates</div>
+              </div>
+              <div class="diversity-card">
+                <div class="diversity-pct" style="color:var(--cyan-500)">47%</div>
+                <div class="diversity-label">Male Candidates</div>
+              </div>
+              <div class="diversity-card">
+                <div class="diversity-pct" style="color:var(--green-500)">71%</div>
+                <div class="diversity-label">Female Shortlist Rate</div>
+              </div>
+              <div class="diversity-card">
+                <div class="diversity-pct" style="color:var(--amber-500)">56%</div>
+                <div class="diversity-label">Male Shortlist Rate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- ══════════════ AI QUESTION GENERATOR ══════════════ -->
+      <div class="animate-in delay-5" id="interviews" style="scroll-margin-top:80px">
+        <div class="section-heading">
+          <h2>🤖 AI Question Generator</h2>
+          <div class="section-divider"></div>
+          <span class="card-badge badge-purple">Powered by Gemini</span>
+        </div>
+
+        <div class="card" style="margin-bottom:24px">
+          <div class="card-header">
+            <div>
+              <div class="card-title">✨ Generate Interview Questions with Gemini AI</div>
+              <div class="card-sub">Role-specific · Technical + Behavioural + Situational · 13 questions per session</div>
+            </div>
+            <span class="card-badge badge-green" id="geminiStatusBadge">Ready</span>
+          </div>
+          <div class="card-body">
+
+            <!-- Controls Row -->
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:12px;margin-bottom:16px;align-items:end">
+              <div>
+                <label style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;display:block;margin-bottom:6px">Job Role</label>
+                <select id="qgenRole" style="width:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:var(--text-primary);font-size:13px;outline:none">
+                  <option value="Software Engineer">Software Engineer</option>
+                  <option value="Cyber Security Analyst">Cyber Security Analyst</option>
+                  <option value="Data Analyst">Data Analyst</option>
+                  <option value="Product Manager">Product Manager</option>
+                  <option value="UI/UX Designer">UI/UX Designer</option>
+                </select>
+              </div>
+              <div>
+                <label style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;display:block;margin-bottom:6px">Candidate Name (optional)</label>
+                <input id="qgenName" type="text" placeholder="e.g. Rohan Kapoor"
+                  style="width:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:var(--text-primary);font-size:13px;outline:none;box-sizing:border-box">
+              </div>
+              <div>
+                <label style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;display:block;margin-bottom:6px">Key Skills (comma-separated)</label>
+                <input id="qgenSkills" type="text" placeholder="e.g. Python, React, Docker"
+                  style="width:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:var(--text-primary);font-size:13px;outline:none;box-sizing:border-box">
+              </div>
+              <div>
+                <button id="btnGenerateQuestions" onclick="generateQuestionsWithGemini()"
+                  style="background:linear-gradient(135deg,#f97316,#ef4444);border:none;color:white;border-radius:10px;padding:10px 20px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;height:40px;margin-top:26px">
+                  ⚡ Generate
+                </button>
+              </div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="qgenLoading" style="display:none;text-align:center;padding:32px;color:var(--text-muted)">
+              <div style="font-size:32px;margin-bottom:12px;animation:spin 1.2s linear infinite;display:inline-block">⚙</div>
+              <div style="font-size:13px">Gemini is generating tailored questions...</div>
+            </div>
+
+            <!-- Output Panel -->
+            <div id="qgenOutput" style="display:none">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+                <div id="qgenHeading" style="font-size:14px;font-weight:700;color:var(--text-primary)"></div>
+                <button onclick="copyQuestions()" style="background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.3);color:var(--orange-500,#f97316);border-radius:8px;padding:6px 14px;font-size:11px;cursor:pointer">📋 Copy All</button>
+              </div>
+
+              <!-- Technical -->
+              <div style="margin-bottom:20px">
+                <div style="font-size:12px;font-weight:700;color:#f97316;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;display:flex;align-items:center;gap:8px">
+                  <img src="https://img.icons8.com/fluency/16/source-code.png"> Technical Questions
+                </div>
+                <div id="qgenTechnical" style="display:flex;flex-direction:column;gap:8px"></div>
+              </div>
+
+              <!-- Behavioural -->
+              <div style="margin-bottom:20px">
+                <div style="font-size:12px;font-weight:700;color:#10b981;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;display:flex;align-items:center;gap:8px">
+                  <img src="https://img.icons8.com/fluency/16/communication.png"> Behavioural Questions
+                </div>
+                <div id="qgenBehavioural" style="display:flex;flex-direction:column;gap:8px"></div>
+              </div>
+
+              <!-- Situational -->
+              <div>
+                <div style="font-size:12px;font-weight:700;color:#a78bfa;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;display:flex;align-items:center;gap:8px">
+                  <img src="https://img.icons8.com/fluency/16/idea.png"> Situational Questions
+                </div>
+                <div id="qgenSituational" style="display:flex;flex-direction:column;gap:8px"></div>
+              </div>
+            </div>
+
+            <!-- Error State -->
+            <div id="qgenError" style="display:none;padding:16px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:10px;font-size:13px;color:#ef4444"></div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- ══════════════ REPORTS ══════════════ -->
+      <div class="animate-in delay-5" id="reports" style="scroll-margin-top:80px">
+        <div class="section-heading">
+          <h2>📋 Reports</h2>
+          <div class="section-divider"></div>
+          <span class="card-badge badge-purple">4 Reports</span>
+        </div>
+        <div class="grid-2" style="margin-bottom:24px">
+          <div class="card" style="cursor:pointer" onclick="exportCSV();showToast('📥 Candidate Rankings CSV downloaded!','success')">
+            <div class="card-header">
+              <div><div class="card-title">📥 Candidate Rankings</div><div class="card-sub">All 30 candidates · ATS scored · CSV format</div></div>
+              <span class="card-badge badge-green">Ready</span>
+            </div>
+            <div class="card-body">
+              <div style="font-size:13px;color:var(--text-muted);line-height:1.6">Ranked list of all candidates with ATS score breakdown per dimension. Includes status (shortlisted/rejected) and tier classification.</div>
+              <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+                <span style="font-size:11px;background:rgba(16,185,129,0.12);color:#10b981;padding:3px 10px;border-radius:20px">📊 30 rows</span>
+                <span style="font-size:11px;background:rgba(249,115,22,0.12);color:#fed7aa;padding:3px 10px;border-radius:20px">9 columns</span>
+                <span style="font-size:11px;background:rgba(245,158,11,0.12);color:#fcd34d;padding:3px 10px;border-radius:20px">CSV</span>
+              </div>
+              <button style="margin-top:14px;background:linear-gradient(135deg,#f97316,#ef4444);border:none;color:white;border-radius:8px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;width:100%">⬇ Download CSV</button>
+            </div>
+          </div>
+          <div class="card" style="cursor:pointer" onclick="exportBiasReport()">
+            <div class="card-header">
+              <div><div class="card-title">⚖️ Bias Audit Report</div><div class="card-sub">10 dimensions · Summer 2024 batch</div></div>
+              <span class="card-badge badge-red">HIGH RISK</span>
+            </div>
+            <div class="card-body">
+              <div style="font-size:13px;color:var(--text-muted);line-height:1.6">Full bias audit report across 10 dimensions including institution tier, gender, socioeconomic background, employment gaps. Severity: HIGH.</div>
+              <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+                <span style="font-size:11px;background:rgba(239,68,68,0.12);color:#ef4444;padding:3px 10px;border-radius:20px">⚠ 4 HIGH</span>
+                <span style="font-size:11px;background:rgba(245,158,11,0.12);color:#fcd34d;padding:3px 10px;border-radius:20px">2 MEDIUM</span>
+                <span style="font-size:11px;background:rgba(16,185,129,0.12);color:#10b981;padding:3px 10px;border-radius:20px">TXT</span>
+              </div>
+              <button style="margin-top:14px;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);color:#ef4444;border-radius:8px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;width:100%">⬇ Download Bias Report</button>
+            </div>
+          </div>
+          <div class="card" style="cursor:pointer" onclick="exportHiringFunnel()">
+            <div class="card-header">
+              <div><div class="card-title">🔻 Hiring Funnel Report</div><div class="card-sub">13 stages · per-role breakdown</div></div>
+              <span class="card-badge badge-amber">JSON</span>
+            </div>
+            <div class="card-body">
+              <div style="font-size:13px;color:var(--text-muted);line-height:1.6">Complete 13-stage hiring funnel with per-role conversion rates, benchmarks, time-to-hire, and AI efficiency metrics.</div>
+              <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+                <span style="font-size:11px;background:rgba(245,158,11,0.12);color:#fcd34d;padding:3px 10px;border-radius:20px">13 stages</span>
+                <span style="font-size:11px;background:rgba(249,115,22,0.12);color:#fed7aa;padding:3px 10px;border-radius:20px">5 roles</span>
+                <span style="font-size:11px;background:rgba(6,182,212,0.12);color:#67e8f9;padding:3px 10px;border-radius:20px">JSON</span>
+              </div>
+              <button style="margin-top:14px;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);color:#f59e0b;border-radius:8px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;width:100%">⬇ Download Funnel Report</button>
+            </div>
+          </div>
+          <div class="card" style="cursor:pointer" onclick="exportFullReport()">
+            <div class="card-header">
+              <div><div class="card-title">📄 Full Dashboard Report</div><div class="card-sub">All KPIs, charts, and data in one export</div></div>
+              <span class="card-badge badge-purple">PDF</span>
+            </div>
+            <div class="card-body">
+              <div style="font-size:13px;color:var(--text-muted);line-height:1.6">Comprehensive dashboard summary including all KPIs, candidate rankings, funnel stats, and bias findings. Ready for presentation.</div>
+              <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+                <span style="font-size:11px;background:rgba(249,115,22,0.12);color:#fed7aa;padding:3px 10px;border-radius:20px">All sections</span>
+                <span style="font-size:11px;background:rgba(16,185,129,0.12);color:#10b981;padding:3px 10px;border-radius:20px">Print-ready</span>
+              </div>
+              <button style="margin-top:14px;background:linear-gradient(135deg,#f97316,#ef4444);border:none;color:white;border-radius:8px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;width:100%">🖨 Print / Save as PDF</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════ SETTINGS ══════════════ -->
+      <div class="animate-in delay-5" id="settings" style="scroll-margin-top:80px;margin-bottom:40px">
+        <div class="section-heading">
+          <h2>⚙️ Settings</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header"><div><div class="card-title">🎛 ATS Scoring Weights</div><div class="card-sub">Adjust how the AI scores candidates</div></div></div>
+            <div class="card-body">
+              <div style="display:flex;flex-direction:column;gap:14px">
+                <div><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px"><label>Skills Match</label><span id="wSkills" style="color:var(--purple-300);font-weight:700">30%</span></div><input type="range" id="weightSkills" min="10" max="60" value="30" oninput="document.getElementById('wSkills').textContent=this.value+'%'" style="width:100%;accent-color:#f97316"></div>
+                <div><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px"><label>Experience</label><span id="wExp" style="color:var(--blue-500);font-weight:700">20%</span></div><input type="range" id="weightExp" min="5" max="40" value="20" oninput="document.getElementById('wExp').textContent=this.value+'%'" style="width:100%;accent-color:#3b82f6"></div>
+                <div><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px"><label>Projects</label><span id="wProj" style="color:var(--green-500);font-weight:700">15%</span></div><input type="range" id="weightProj" min="5" max="30" value="15" oninput="document.getElementById('wProj').textContent=this.value+'%'" style="width:100%;accent-color:#10b981"></div>
+                <div><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px"><label>Education</label><span id="wEdu" style="color:var(--amber-500);font-weight:700">10%</span></div><input type="range" id="weightEdu" min="5" max="20" value="10" oninput="document.getElementById('wEdu').textContent=this.value+'%'" style="width:100%;accent-color:#f59e0b"></div>
+                <div><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px"><label>Certifications</label><span id="wCert" style="color:var(--red-500);font-weight:700">15%</span></div><input type="range" id="weightCert" min="0" max="20" value="15" oninput="document.getElementById('wCert').textContent=this.value+'%'" style="width:100%;accent-color:#ef4444"></div>
+                <div><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px"><label>Resume Quality</label><span id="wQual" style="color:var(--cyan-500);font-weight:700">10%</span></div><input type="range" id="weightQual" min="0" max="15" value="10" oninput="document.getElementById('wQual').textContent=this.value+'%'" style="width:100%;accent-color:#06b6d4"></div>
+                <button onclick="applySettings()" style="background:linear-gradient(135deg,#f97316,#ef4444);border:none;color:white;border-radius:8px;padding:9px;font-size:13px;font-weight:600;cursor:pointer;width:100%">Apply Weights</button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div><div class="card-title">⚖️ Bias Thresholds</div><div class="card-sub">Configure when bias is flagged</div></div></div>
+            <div class="card-body" style="margin-bottom:20px">
+              <div style="display:flex;flex-direction:column;gap:14px">
+                <div><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px"><label>HIGH severity threshold</label><span id="tHigh" style="color:var(--red-500);font-weight:700">&gt;15 pts gap</span></div><input type="range" id="threshHigh" min="5" max="30" value="15" oninput="document.getElementById('tHigh').textContent='&gt;'+this.value+' pts gap'; renderBiasGrid();" style="width:100%;accent-color:#ef4444"></div>
+                <div><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px"><label>MEDIUM severity threshold</label><span id="tMed" style="color:var(--amber-500);font-weight:700">&gt;8 pts gap</span></div><input type="range" id="threshMed" min="2" max="15" value="8" oninput="document.getElementById('tMed').textContent='&gt;'+this.value+' pts gap'; renderBiasGrid();" style="width:100%;accent-color:#f59e0b"></div>
+                <div style="padding:14px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.2);border-radius:10px">
+                  <div style="font-size:13px;font-weight:600;margin-bottom:8px">Shortlist Threshold</div>
+                  <div style="display:flex;gap:10px;align-items:center">
+                    <input type="number" id="shortlistThresh" value="65" min="40" max="90" style="width:70px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:6px 10px;color:var(--text-primary);font-size:13px">
+                    <span style="font-size:12px;color:var(--text-muted)">ATS score minimum to shortlist</span>
+                  </div>
+                </div>
+                <div style="padding:14px;background:rgba(249,115,22,0.06);border:1px solid var(--border);border-radius:10px">
+                  <div style="font-size:13px;font-weight:600;margin-bottom:10px">Notifications</div>
+                  <div style="display:flex;flex-direction:column;gap:8px">
+                    <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer"><input type="checkbox" checked style="accent-color:#f97316"> Email on new shortlist</label>
+                    <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer"><input type="checkbox" checked style="accent-color:#f97316"> Alert on HIGH bias finding</label>
+                    <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer"><input type="checkbox" style="accent-color:#f97316"> Daily pipeline digest</label>
+                  </div>
+                </div>
+                <button onclick="applySettings()" style="background:linear-gradient(135deg,#f97316,#ef4444);border:none;color:white;border-radius:8px;padding:9px;font-size:13px;font-weight:600;cursor:pointer;width:100%">Save Settings</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /content -->
+  </div><!-- /main -->
+</div><!-- /wrapper -->
+
+<!-- ══════════════ JAVASCRIPT ══════════════ -->
+<script>
+// ─── Chart.js global defaults ─────────────────────────────────────────────
+Chart.defaults.color = '#94a3b8';
+Chart.defaults.borderColor = 'rgba(249,115,22,0.15)';
+Chart.defaults.font.family = "'Inter', sans-serif";
+
+const PURPLE  = '#f97316';
+const PINK    = '#ef4444';
+const GREEN   = '#10b981';
+const AMBER   = '#f59e0b';
+const BLUE    = '#3b82f6';
+const CYAN    = '#06b6d4';
+const RED     = '#ef4444';
+
+let candidates = [];
+let masterSorted = [];
+let currentFiltered = [];
+
+async function loadCandidates() {
+  try {
+    const res = await fetch('http://localhost:5001/api/list_resumes');
+    if (res.ok) {
+      const data = await res.json();
+      if (data.status === 'success' && data.resumes) {
+        candidates = data.resumes.map(p => {
+          const ats = p.ats_score || {};
+          const skills = p.skills ? Object.values(p.skills).flat() : [];
+          const expMonths = p.experience && p.experience.length > 0
+            ? p.experience.reduce((s, e) => s + (e.duration_months || 0), 0)
+            : 0;
+          const exp = Math.round((expMonths / 12) * 10) / 10;
+          
+          let rawTotal = ats.total || 0;
+          if (rawTotal > 100) rawTotal = 100;
+          
+          return {
+            name:        p.name || 'Unknown',
+            role:        p.role_applied || 'Unknown',
+            exp:         exp,
+            cgpa:        (p.education && p.education[0] && p.education[0].cgpa) || 0,
+            skills:      skills.length,
+            score:       rawTotal,
+            shortlisted: ats.shortlisted || false,
+            tier:        p.quality_tier || 'Average',
+            detectedSkills: skills,
+            _fullJson:   p
+          };
+        });
+      }
+    }
+  } catch (err) {
+    console.error("Error loading candidates:", err);
+  }
+
+  // Also include the mock fallback data ONLY if server gave 0 resumes (just so the dashboard doesn't look broken if it's completely empty on first launch)
+  if (candidates.length === 0) {
+    candidates = [
+      {name:"Saurabh Tiwari",   role:"Product Manager",       exp:5.0, cgpa:8.5, skills:32, score:98.0, shortlisted:true,  tier:"Excellent"},
+      {name:"Vivek Rao",        role:"Data Analyst",          exp:1.8, cgpa:8.4, skills:24, score:92.1, shortlisted:true,  tier:"Excellent"},
+      {name:"Rohan Kapoor",     role:"Cyber Security Analyst",exp:2.1, cgpa:8.6, skills:31, score:88.4, shortlisted:true,  tier:"Excellent"},
+      {name:"Nandita Roy",      role:"UI/UX Designer",        exp:3.8, cgpa:9.0, skills:30, score:97.0, shortlisted:true,  tier:"Excellent"},
+      {name:"Tanvi Patel",      role:"Software Engineer",     exp:2.1, cgpa:9.1, skills:28, score:78.1, shortlisted:true,  tier:"Excellent"}
+    ];
+  }
+
+  masterSorted = [...candidates].sort((a, b) => b.score - a.score);
+  currentFiltered = masterSorted;
+  renderTable(masterSorted);
+  recalculateKPIs();
+}
+
+// ─── CANDIDATE TABLE — FILTER + EXPORT ENGINE ─────────────────────────────
+const tbody = document.getElementById('candidateTableBody');
+const roleIconUrl = {
+  "Software Engineer": "https://img.icons8.com/fluency/20/code.png",
+  "Cyber Security Analyst": "https://img.icons8.com/fluency/20/shield.png",
+  "Data Analyst": "https://img.icons8.com/fluency/20/analytics.png",
+  "Product Manager": "https://img.icons8.com/fluency/20/compass.png",
+  "UI/UX Designer": "https://img.icons8.com/fluency/20/design.png"
+};
+
+
+function renderTable(data) {
+  tbody.innerHTML = '';
+  if (data.length === 0) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td colspan="10" style="text-align:center;padding:32px;color:var(--text-muted)">No candidates match the current filters.</td>`;
+    tbody.appendChild(tr);
+    document.getElementById('tableSubtitle').textContent = 'No results — try adjusting your filters';
+    return;
+  }
+  data.forEach((c, i) => {
+    const scoreClass = c.score >= 80 ? 'score-high' : c.score >= 60 ? 'score-med' : 'score-low';
+    const statusClass = c.shortlisted ? 'chip-short' : 'chip-reject';
+    const statusText  = c.shortlisted ? 'Shortlisted' : 'Rejected';
+    const statusIcon  = c.shortlisted ? 'https://img.icons8.com/fluency/16/checked.png' : 'https://img.icons8.com/fluency/16/cancel.png';
+    const tierColor   = c.tier === 'Excellent' ? '#10b981' : c.tier === 'Average' ? '#f59e0b' : '#ef4444';
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td style="color:var(--text-muted);font-weight:600">${i + 1}</td>
+      <td><div class="td-name">${c.name}</div></td>
+      <td><div class="td-role"><img src="${roleIconUrl[c.role] || ''}" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"> ${c.role}</div></td>
+      <td style="color:var(--text-secondary)">${c.exp} yr${c.exp !== 1 ? 's' : ''}</td>
+      <td style="font-weight:600">${c.cgpa}</td>
+      <td style="color:var(--purple-300)">${c.skills}</td>
+      <td><span class="score-pill ${scoreClass}">${c.score.toFixed(1)}</span></td>
+      <td><span class="status-chip ${statusClass}"><img src="${statusIcon}" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;">${statusText}</span></td>
+      <td><span style="color:${tierColor};font-size:12px;font-weight:600">${c.tier}</span></td>
+      <td style="text-align:right">
+        <button class="role-action-btn role-delete-btn" onclick="removeCandidate('${c.name}')" title="Remove Resume">🗑 Remove</button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+  const shortlisted = data.filter(c => c.shortlisted).length;
+  document.getElementById('tableSubtitle').textContent =
+    `Showing ${data.length} of ${candidates.length} candidates · ${shortlisted} shortlisted · Sorted by ATS score`;
+}
+
+function applyFilters() {
+  const name      = document.getElementById('filterName').value.trim().toLowerCase();
+  const role      = document.getElementById('filterRole').value;
+  const status    = document.getElementById('filterStatus').value;
+  const minScore  = parseFloat(document.getElementById('filterMinScore').value) || 0;
+  const maxScore  = parseFloat(document.getElementById('filterMaxScore').value) || 100;
+
+  currentFiltered = masterSorted.filter(c => {
+    if (name   && !c.name.toLowerCase().includes(name))   return false;
+    if (role   && c.role !== role)                         return false;
+    if (status === 'shortlisted' && !c.shortlisted)        return false;
+    if (status === 'rejected'    &&  c.shortlisted)        return false;
+    if (c.score < minScore || c.score > maxScore)          return false;
+    return true;
+  });
+  renderTable(currentFiltered);
+}
+
+function resetFilters() {
+  document.getElementById('filterName').value     = '';
+  document.getElementById('filterRole').value     = '';
+  document.getElementById('filterStatus').value   = '';
+  document.getElementById('filterMinScore').value = '0';
+  document.getElementById('filterMaxScore').value = '100';
+  currentFiltered = masterSorted;
+  renderTable(currentFiltered);
+}
+
+function toggleFilterPanel() {
+  const panel = document.getElementById('filterPanel');
+  const btn   = document.getElementById('toggleFilterBtn');
+  const open  = panel.style.display === 'none';
+  panel.style.display = open ? 'block' : 'none';
+  btn.textContent     = open ? '✕ Close Filter' : '⚙ Filter';
+  btn.style.background = open ? 'rgba(249,115,22,0.18)' : '';
+  btn.style.color      = open ? '#fed7aa' : '';
+}
+
+function exportCSV() {
+  const headers = ['Rank','Name','Role','Experience (yrs)','CGPA','Skills Count','ATS Score','Status','Tier'];
+  const rows = currentFiltered.map((c, i) => [
+    i + 1,
+    `"${c.name}"`,
+    `"${c.role}"`,
+    c.exp,
+    c.cgpa,
+    c.skills,
+    c.score.toFixed(1),
+    c.shortlisted ? 'Shortlisted' : 'Rejected',
+    c.tier
+  ]);
+  const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href     = url;
+  a.download = `CV_Analysis_Candidates_${new Date().toISOString().slice(0,10)}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// Initial render
+renderTable(masterSorted);
+
+// ─── CHART 1: Score Distribution ──────────────────────────────────────────
+new Chart(document.getElementById('chartScoreDist'), {
+  type: 'bar',
+  data: {
+    labels: ['0–19','20–39','40–59','60–69','70–79','80–89','90–100'],
+    datasets: [{
+      label: 'Candidates',
+      data: [0, 5, 4, 3, 9, 6, 3],
+      backgroundColor: [
+        'rgba(100,116,139,0.5)','rgba(239,68,68,0.6)','rgba(239,68,68,0.5)',
+        'rgba(245,158,11,0.6)','rgba(249,115,22,0.6)','rgba(16,185,129,0.6)',
+        'rgba(16,185,129,0.8)'
+      ],
+      borderColor: ['#475569','#ef4444','#f87171','#f59e0b','#f97316','#10b981','#34d399'],
+      borderWidth: 1.5, borderRadius: 6,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { grid: { color: 'rgba(249,115,22,0.08)' }, ticks: { stepSize: 1 } },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// ─── CHART 2: By Role ──────────────────────────────────────────────────────
+new Chart(document.getElementById('chartByRole'), {
+  type: 'bar',
+  data: {
+    labels: ['Software Eng.','Cyber Sec.','Data Analyst','Product Mgr','UI/UX Design'],
+    datasets: [
+      {
+        label: 'Shortlisted Avg',
+        data: [81.7, 76.4, 82.5, 77.6, 81.1],
+        backgroundColor: 'rgba(249,115,22,0.65)',
+        borderColor: PURPLE, borderWidth: 1.5, borderRadius: 6,
+      },
+      {
+        label: 'Rejected Avg',
+        data: [50.3, 42.1, 45.1, 41.1, 40.4],
+        backgroundColor: 'rgba(239,68,68,0.45)',
+        borderColor: RED, borderWidth: 1.5, borderRadius: 6,
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }
+    },
+    scales: {
+      y: { grid: { color: 'rgba(249,115,22,0.08)' }, max: 100 },
+      x: { grid: { display: false }, ticks: { font: { size: 11 } } }
+    }
+  }
+});
+
+// ─── CHART 3: Pie ──────────────────────────────────────────────────────────
+window.myPieChart = new Chart(document.getElementById('chartPie'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Shortlisted','Rejected'],
+    datasets: [{
+      data: [19, 11],
+      backgroundColor: ['rgba(249,115,22,0.8)', 'rgba(239,68,68,0.6)'],
+      borderColor: ['#f97316','#ef4444'],
+      borderWidth: 2, hoverOffset: 8,
+    }]
+  },
+  options: {
+    responsive: false, cutout: '68%',
+    plugins: {
+      legend: { display: false },
+      tooltip: { 
+        callbacks: { 
+          label: ctx => {
+            const total = ctx.dataset.data[0] + ctx.dataset.data[1];
+            return ` ${ctx.label}: ${ctx.parsed} (${Math.round(ctx.parsed/total*100)}%)`;
+          }
+        }
+      }
+    }
+  }
+});
+
+// ─── CHART 4: Top Skills ───────────────────────────────────────────────────
+new Chart(document.getElementById('chartSkills'), {
+  type: 'bar',
+  data: {
+    labels: ['Python','SQL','Figma','Git','React','PostgreSQL','Tableau','Docker','Linux','AWS'],
+    datasets: [{
+      label: 'Candidates with skill',
+      data: [19, 16, 12, 24, 10, 15, 10, 9, 11, 12],
+      backgroundColor: `rgba(249,115,22,0.6)`,
+      borderColor: PURPLE, borderWidth: 1.5,
+      borderRadius: 5,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { color: 'rgba(249,115,22,0.08)' }, max: 30 },
+      y: { grid: { display: false }, ticks: { font: { size: 11 } } }
+    }
+  }
+});
+
+// ─── CHART 5: Education ───────────────────────────────────────────────────
+new Chart(document.getElementById('chartEdu'), {
+  type: 'doughnut',
+  data: {
+    labels: ['B.Tech/B.E','MBA','B.Des/M.Des','B.Sc','BCA/B.Com'],
+    datasets: [{
+      data: [16, 7, 4, 2, 1],
+      backgroundColor: [
+        'rgba(249,115,22,0.75)', 'rgba(236,72,153,0.65)',
+        'rgba(6,182,212,0.65)',  'rgba(16,185,129,0.65)',
+        'rgba(245,158,11,0.65)'
+      ],
+      borderColor: [PURPLE, PINK, CYAN, GREEN, AMBER],
+      borderWidth: 2, hoverOffset: 8,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false, cutout: '60%',
+    plugins: {
+      legend: { position: 'bottom', labels: { boxWidth: 11, font: { size: 11 }, padding: 8 } }
+    }
+  }
+});
+
+// ─── CHART 6: Experience ──────────────────────────────────────────────────
+new Chart(document.getElementById('chartExp'), {
+  type: 'bar',
+  data: {
+    labels: ['Fresh (0–0.5)','Junior (0.5–1)','Mid (1–2)','Senior (2–3)','Expert (3+)'],
+    datasets: [{
+      label: 'Candidates',
+      data: [3, 2, 13, 7, 5],
+      backgroundColor: [
+        'rgba(239,68,68,0.55)','rgba(245,158,11,0.55)',
+        'rgba(249,115,22,0.65)','rgba(16,185,129,0.65)',
+        'rgba(6,182,212,0.65)'
+      ],
+      borderColor: [RED, AMBER, PURPLE, GREEN, CYAN],
+      borderWidth: 1.5, borderRadius: 6,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { grid: { color: 'rgba(249,115,22,0.08)' }, stepSize: 1 },
+      x: { grid: { display: false }, ticks: { font: { size: 10 } } }
+    }
+  }
+});
+
+// ─── CHART 7: Gender Bar ──────────────────────────────────────────────────
+new Chart(document.getElementById('chartGender'), {
+  type: 'bar',
+  data: {
+    labels: ['Software Eng.','Cyber Sec.','Data Analyst','Product Mgr','UI/UX Design'],
+    datasets: [
+      {
+        label: 'Female', data: [2, 3, 3, 3, 3],
+        backgroundColor: 'rgba(236,72,153,0.65)', borderColor: PINK,
+        borderWidth: 1.5, borderRadius: 5,
+      },
+      {
+        label: 'Male', data: [4, 3, 3, 3, 3],
+        backgroundColor: 'rgba(59,130,246,0.55)', borderColor: BLUE,
+        borderWidth: 1.5, borderRadius: 5,
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { position: 'bottom', labels: { boxWidth: 11, font: { size: 11 } } }
+    },
+    scales: {
+      y: { grid: { color: 'rgba(249,115,22,0.08)' }, stacked: false },
+      x: { grid: { display: false }, ticks: { font: { size: 10 } } }
+    }
+  }
+});
+
+
+// ─── BIAS ITEMS ───────────────────────────────────────────────────────────
+const biasData = [
+  { name: 'Institution/College Tier', gap: 25.2, max: 35 },
+  { name: 'English Fluency (proxy)',   gap: 35.1, max: 35 },
+  { name: 'Socioeconomic Background', gap: 22.4, max: 35 },
+  { name: 'Employment Gap',           gap: 16.5, max: 35 },
+  { name: 'Age',                      gap: 8.6,  max: 35 },
+  { name: 'Gender',                   gap: 5.3,  max: 35 },
+  { name: 'Region / Location',        gap: 3.1,  max: 35 },
+  { name: 'Resume Length',            gap: 1.8,  max: 35 },
+  { name: 'Disability',               gap: 0,    max: 35, unobs: true },
+  { name: 'Caste / Religion',         gap: 0,    max: 35, unobs: true },
+];
+
+function renderBiasGrid() {
+  const biasGrid = document.querySelector('.bias-grid');
+  if (!biasGrid) return;
+  biasGrid.innerHTML = '';
+  
+  const highT = parseInt(document.getElementById('threshHigh')?.value) || 15;
+  const medT = parseInt(document.getElementById('threshMed')?.value) || 8;
+  
+  let overallHigh = false;
+
+  biasData.forEach(b => {
+    let sev = 'LOW';
+    if (b.unobs) { sev = 'UNOBS'; }
+    else if (b.gap > highT) { sev = 'HIGH'; overallHigh = true; }
+    else if (b.gap > medT) { sev = 'MEDIUM'; }
+
+    const sevClass = sev === 'HIGH' ? 'sev-high' : sev === 'MEDIUM' ? 'sev-med' : sev === 'LOW' ? 'sev-low' : 'sev-unobs';
+    const barColor = sev === 'HIGH' ? '#ef4444' : sev === 'MEDIUM' ? '#f59e0b' : sev === 'LOW' ? '#10b981' : '#64748b';
+    const pct = sev === 'UNOBS' ? 15 : Math.min((b.gap / b.max) * 100, 100);
+
+    biasGrid.innerHTML += `
+      <div class="bias-item">
+        <div class="bias-header">
+          <span class="bias-name">${b.name}</span>
+          <span class="bias-sev ${sevClass}">${sev}</span>
+        </div>
+        <div class="bias-bar-bg">
+          <div class="bias-bar-fill" style="width:${pct}%;background:${barColor}"></div>
+        </div>
+        ${b.gap > 0 ? `<div style="font-size:11px;color:var(--text-muted);margin-top:3px">${b.gap.toFixed(1)} pt score gap detected</div>` : ''}
+      </div>
+    `;
+  });
+  
+  const sub = document.getElementById('biasOverallSub');
+  const badge = document.getElementById('biasOverallBadge');
+  if (sub) sub.textContent = `10 dimensions analysed · Overall Risk: ${overallHigh ? 'HIGH' : 'MEDIUM'}`;
+  if (badge) {
+    badge.textContent = overallHigh ? '⚠ HIGH RISK' : '⚠ MEDIUM RISK';
+    badge.className = overallHigh ? 'card-badge badge-red' : 'card-badge badge-amber';
+  }
+}
+renderBiasGrid();
+
+// ─── NAV ACTIVE STATE ──────────────────────────────────────────────────────
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    item.classList.add('active');
+  });
+});
+// ─── TOAST NOTIFICATION ───────────────────────────────────────────────────
+function showToast(msg, type = 'info') {
+  const existing = document.getElementById('cvanalysis-toast');
+  if (existing) existing.remove();
+  const t = document.createElement('div');
+  t.id = 'cvanalysis-toast';
+  const colors = { success: '#10b981', info: '#f97316', warning: '#f59e0b', error: '#ef4444' };
+  t.style.cssText = `
+    position:fixed;bottom:32px;right:32px;z-index:9999;
+    background:var(--bg-card);border:1px solid ${colors[type]}40;
+    border-left:3px solid ${colors[type]};border-radius:10px;
+    padding:14px 20px;color:var(--text-primary);font-size:13px;font-family:'Inter',sans-serif;
+    box-shadow:0 8px 32px rgba(0,0,0,0.4);max-width:320px;
+    animation:slideInToast 0.3s ease;
+  `;
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => { t.style.animation = 'slideOutToast 0.3s ease forwards'; setTimeout(() => t.remove(), 300); }, 3000);
+}
+const toastStyle = document.createElement('style');
+toastStyle.textContent = `
+  @keyframes slideInToast  { from { transform:translateX(120%); opacity:0; } to { transform:translateX(0); opacity:1; } }
+  @keyframes slideOutToast { from { transform:translateX(0); opacity:1; } to { transform:translateX(120%); opacity:0; } }
+`;
+document.head.appendChild(toastStyle);
+
+// ─── EXPORT REPORT (PRINT) ────────────────────────────────────────────────
+function exportFullReport() {
+  showToast('🖨 Opening print dialog — Save as PDF from your browser…', 'info');
+  setTimeout(() => window.print(), 800);
+}
+
+// ─── EXPORT BIAS REPORT ───────────────────────────────────────────────────
+function exportBiasReport() {
+  const high = parseInt(document.getElementById('threshHigh').value) || 15;
+  const med = parseInt(document.getElementById('threshMed').value) || 8;
+
+  const dims = [
+    { name: "Institution/College Tier", gap: 25.2 },
+    { name: "English Fluency (proxy)", gap: 35.1 },
+    { name: "Socioeconomic Background", gap: 22.4 },
+    { name: "Employment Gap", gap: 16.5 },
+    { name: "Age", gap: 8.6 },
+    { name: "Gender", gap: 5.3 },
+    { name: "Location/Region", gap: 3.1 },
+    { name: "Resume Length", gap: 1.8 }
+  ];
+
+  let dimText = "";
+  let overallHigh = false;
+  
+  dims.forEach((d, i) => {
+    let severity = "LOW";
+    if (d.gap > high) { severity = "HIGH"; overallHigh = true; }
+    else if (d.gap > med) { severity = "MEDIUM"; }
+    
+    dimText += `${i+1}. ${d.name.padEnd(27, ' ')} — ${severity.padEnd(9, ' ')} (${d.gap} pt gap)\n`;
+  });
+  
+  dimText += `9. Disability                 — UNOBSERVABLE RISK\n10. Caste/Religion            — UNOBSERVABLE RISK\n`;
+
+  const content = `CV Analysis — Bias Audit Report\nSummer 2024 Batch\nGenerated: ${new Date().toLocaleDateString()}\n\nOVERALL RISK LEVEL: ${overallHigh ? 'HIGH' : 'MEDIUM'}\nCandidates Analysed: ${candidates.length || 30}\n\nDIMENSIONS:\n${dimText}\nRECOMMENDATIONS:\n- Remove institution tier as scoring factor\n- Implement name-blind CV review\n- Add standardised technical assessment\n- Re-audit quarterly with hire performance data`;
+  
+  const blob = new Blob([content], { type: 'text/plain;charset=utf-8;' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `CV_Analysis_Bias_Report_${new Date().toISOString().slice(0,10)}.txt`;
+  a.click();
+  showToast('📥 Bias Audit Report downloaded!', 'success');
+}
+
+// ─── EXPORT HIRING FUNNEL REPORT ──────────────────────────────────────────
+function exportHiringFunnel() {
+  const data = {
+    generated: new Date().toISOString(),
+    batch: 'Summer 2024',
+    funnel: [
+      { stage: 'Applications Received', count: 30, pct: '100%' },
+      { stage: 'ATS Screened (≥55)',    count: 22, pct: '73.3%' },
+      { stage: 'Shortlisted (≥65)',     count: 19, pct: '63.3%' }
+    ],
+    time_to_hire_days: 18,
+    offer_acceptance_rate: '75%'
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `CV_Analysis_Hiring_Funnel_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  showToast('📥 Hiring Funnel Report downloaded!', 'success');
+}
+
+// ─── NAV SCROLL SPY + SMOOTH SCROLL ────────────────────────────────────
+const navSections = [
+  { id: 'dashboard',  navId: 'nav-dashboard'  },
+  { id: 'funnel',     navId: 'nav-funnel'     },
+  { id: 'analytics',  navId: 'nav-analytics'  },
+  { id: 'candidates', navId: 'nav-candidates' },
+  { id: 'jobs',       navId: 'nav-jobs'       },
+  { id: 'interviews', navId: 'nav-interviews' },
+  { id: 'bias',       navId: 'nav-bias'       },
+  { id: 'diversity',  navId: 'nav-diversity'  },
+  { id: 'reports',    navId: 'nav-reports'    },
+  { id: 'settings',   navId: null             },
+];
+
+// The scrolling container is .content (not .main)
+const scrollEl = document.querySelector('.content') || document.querySelector('.main') || window;
+
+let isNavClickScrolling = false;
+
+function setActiveNav(navId) {
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+  if (navId) {
+    const el = document.getElementById(navId);
+    if (el) el.classList.add('active');
+  }
+}
+
+function getScrollTop() {
+  if (scrollEl === window) return window.scrollY;
+  return scrollEl.scrollTop;
+}
+
+function updateActiveNav() {
+  if (isNavClickScrolling) return; // Prevent scrollspy fighting with smooth scroll
+
+  const scrollTop = getScrollTop() + 140;
+  
+  // Sort sections by their actual vertical position to fix grid layout overlaps
+  const validSections = navSections
+    .map(s => {
+      const el = document.getElementById(s.id);
+      return el ? { ...s, top: el.offsetTop } : null;
+    })
+    .filter(s => s !== null)
+    .sort((a, b) => a.top - b.top);
+
+  let current = validSections[0];
+  for (const s of validSections) {
+    if (s.top <= scrollTop) current = s;
+  }
+  if (current && current.navId) setActiveNav(current.navId);
+}
+
+scrollEl.addEventListener('scroll', updateActiveNav, { passive: true });
+
+// Smooth scroll on nav click
+document.querySelectorAll('.nav-item[href]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    if (!href || !href.startsWith('#')) return;
+    e.preventDefault();
+    const targetId = href.slice(1);
+    const target = document.getElementById(targetId);
+    if (!target) return;
+    
+    // Pause scrollspy while smooth scrolling
+    isNavClickScrolling = true;
+    
+    // immediately set active so click feels snappy
+    const sec = navSections.find(s => s.id === targetId);
+    if (sec) setActiveNav(sec.navId);
+    
+    const offset = target.offsetTop - 80;
+    if (scrollEl === window) {
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    } else {
+      scrollEl.scrollTo({ top: offset, behavior: 'smooth' });
+    }
+    
+    // Resume scrollspy after smooth scroll ends (roughly 800ms)
+    setTimeout(() => { isNavClickScrolling = false; }, 800);
+  });
+});
+
+// Run once on load to highlight correct item
+updateActiveNav();
+
+// ─── JOB ROLES DATA STORE ──────────────────────────────────────────────────
+const deptEmoji = {
+  'Engineering':'💻','Data & Analytics':'📊','Product':'🗺️',
+  'Design':'🎨','Security':'🔐','Marketing':'📣','Operations':'⚙️'
+};
+
+let jobRoles = [
+  { title:'Software Engineer',       company:'TechNova Solutions',       location:'Bengaluru', salary:'₹6–9 LPA',   applied:6, shortlisted:4, emoji:'💻' },
+  { title:'Cyber Security Analyst',  company:'SecureNet Technologies',    location:'Gurugram',  salary:'₹7–10 LPA',  applied:6, shortlisted:4, emoji:'🔐' },
+  { title:'Data Analyst',            company:'Insight Analytics',         location:'Hyderabad', salary:'₹5–8 LPA',   applied:6, shortlisted:4, emoji:'📊' },
+  { title:'Product Manager',         company:'NextGen Digital Labs',      location:'Pune',      salary:'₹14–20 LPA', applied:6, shortlisted:3, emoji:'🗺️' },
+  { title:'UI/UX Designer',          company:'PixelCraft Studio',         location:'Noida',     salary:'₹8–12 LPA',  applied:6, shortlisted:4, emoji:'🎨' },
+];
+
+function renderJobRoles() {
+  const container = document.getElementById('jobRolesContainer');
+  if (!container) return;
+
+  // Calculate dynamic applied and shortlisted counts for each role from candidates array
+  const rolesWithDynamicCounts = jobRoles.map(j => {
+    // filter candidates matching this role name (case-insensitive)
+    const matchingCandidates = candidates.filter(c => c.role && c.role.trim().toLowerCase() === j.title.trim().toLowerCase());
+    const applied = matchingCandidates.length;
+    const shortlisted = matchingCandidates.filter(c => c.shortlisted).length;
+    return {
+      ...j,
+      applied: applied,
+      shortlisted: shortlisted
+    };
+  });
+
+  container.innerHTML = rolesWithDynamicCounts.map((j, i) => `
+    <div class="role-card" id="role-card-${i}">
+      <div class="role-emoji">${j.emoji || '💼'}</div>
+      <div class="role-info">
+        <div class="role-title">${j.title}</div>
+        <div class="role-company">${j.company} · ${j.location} · ${j.salary}</div>
+      </div>
+      <div class="role-stats">
+        <div class="role-applied">${j.applied}</div>
+        <div class="role-shortlisted">${j.shortlisted} shortlisted</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;margin-left:8px">
+        <button class="role-action-btn role-edit-btn" onclick="openEditJobModal(${i})" title="Edit">✏️ Edit</button>
+        <button class="role-action-btn role-delete-btn" onclick="deleteJob(${i})" title="Delete">🗑 Del</button>
+      </div>
+    </div>
+  `).join('');
+  // update badge
+  const badge = document.querySelector('#jobs .card-badge');
+  if (badge) badge.textContent = jobRoles.length + ' Roles';
+  // update nav badge
+  const navBadge = document.querySelector('#nav-jobs .nav-badge');
+  if (navBadge) navBadge.textContent = jobRoles.length;
+}
+
+// ─── MODAL HELPERS ─────────────────────────────────────────────────────
+function openNewJobModal() {
+  ['nj-title','nj-company','nj-location','nj-salary','nj-desc','nj-exp','nj-openings'].forEach(id => {
+    const el = document.getElementById(id); if (el) el.value = '';
+  });
+  document.getElementById('newJobModal').classList.add('open');
+}
+
+function openEditJobModal(index) {
+  const j = jobRoles[index];
+  const matchingCandidates = candidates.filter(c => c.role && c.role.trim().toLowerCase() === j.title.trim().toLowerCase());
+  const applied = matchingCandidates.length;
+
+  document.getElementById('ej-index').value    = index;
+  document.getElementById('ej-title').value    = j.title;
+  document.getElementById('ej-company').value  = j.company;
+  document.getElementById('ej-location').value = j.location;
+  document.getElementById('ej-salary').value   = j.salary;
+  document.getElementById('ej-applied').value  = applied;
+  document.getElementById('editJobModal').classList.add('open');
+}
+
+function closeJobModal(id) {
+  document.getElementById(id).classList.remove('open');
+}
+
+function saveNewJob() {
+  const title    = document.getElementById('nj-title').value.trim();
+  const company  = document.getElementById('nj-company').value.trim();
+  const location = document.getElementById('nj-location').value.trim();
+  const salary   = document.getElementById('nj-salary').value.trim();
+  const dept     = document.getElementById('nj-dept').value;
+  const openings = parseInt(document.getElementById('nj-openings').value) || 1;
+  if (!title) { showToast('⚠ Job title is required!', 'warning'); return; }
+  jobRoles.push({
+    title, company: company || 'TBD', location: location || 'TBD',
+    salary: salary || 'Negotiable', applied: 0, shortlisted: 0,
+    emoji: deptEmoji[dept] || '💼'
+  });
+  renderJobRoles();
+  closeJobModal('newJobModal');
+  showToast(`✅ "${title}" added to Job Openings!`, 'success');
+}
+
+function saveEditJob() {
+  const i = parseInt(document.getElementById('ej-index').value);
+  jobRoles[i].title    = document.getElementById('ej-title').value.trim()    || jobRoles[i].title;
+  jobRoles[i].company  = document.getElementById('ej-company').value.trim()  || jobRoles[i].company;
+  jobRoles[i].location = document.getElementById('ej-location').value.trim() || jobRoles[i].location;
+  jobRoles[i].salary   = document.getElementById('ej-salary').value.trim()   || jobRoles[i].salary;
+  renderJobRoles();
+  closeJobModal('editJobModal');
+  showToast(`✅ "${jobRoles[i].title}" updated!`, 'success');
+}
+
+function deleteJob(index) {
+  const name = jobRoles[index].title;
+  if (!confirm(`Delete "${name}"? This cannot be undone.`)) return;
+  jobRoles.splice(index, 1);
+  renderJobRoles();
+  showToast(`🗑 "${name}" removed.`, 'warning');
+}
+
+// ─── SETTINGS LOGIC ─────────────────────────────────────────────────────────
+function applySettings() {
+  const wSkills = parseInt(document.getElementById('weightSkills').value) || 30;
+  const wExp = parseInt(document.getElementById('weightExp').value) || 20;
+  const wProj = parseInt(document.getElementById('weightProj').value) || 15;
+  const wEdu = parseInt(document.getElementById('weightEdu').value) || 10;
+  const wCert = parseInt(document.getElementById('weightCert').value) || 15;
+  const wQual = parseInt(document.getElementById('weightQual').value) || 10;
+
+  const totalW = wSkills + wExp + wProj + wEdu + wCert + wQual;
+  const thresh = parseInt(document.getElementById('shortlistThresh').value) || 65;
+
+  candidates.forEach(c => {
+    if (c._fullJson && c._fullJson.ats_score && c._fullJson.ats_score.breakdown) {
+       // Real parsed candidate from AI
+       const b = c._fullJson.ats_score.breakdown;
+       // The AI sometimes hallucinates points slightly over the boundaries, so we clamp them using Math.min
+       let newScore = 
+         (Math.min(b.skills_match, 30) / 30) * wSkills +
+         (Math.min(b.experience, 20) / 20) * wExp +
+         (Math.min(b.projects, 15) / 15) * wProj +
+         (Math.min(b.education, 10) / 10) * wEdu +
+         (Math.min(b.certifications, 15) / 15) * wCert +
+         (Math.min(b.resume_quality, 10) / 10) * wQual;
+         
+       // Normalize based on total weight and strictly cap at 100
+       newScore = (newScore / totalW) * 100;
+       c.score = parseFloat(Math.min(newScore, 100).toFixed(1));
+    } else {
+       // For mock candidates, adjust their score proportionally just to show it's functional
+       // Assume they were scored out of a 100-point total weight before
+       let oldBaseScore = c._originalScore || c.score;
+       if (!c._originalScore) c._originalScore = oldBaseScore; // stash original score
+       
+       let newScore = oldBaseScore * (totalW / 100);
+       // Cap at 100
+       newScore = Math.min(newScore, 100);
+       c.score = parseFloat(newScore.toFixed(1));
+    }
+    
+    // Dynamically update Shortlist status based on new threshold
+    c.shortlisted = (c.score >= thresh);
+  });
+  
+  masterSorted = [...candidates].sort((a, b) => b.score - a.score);
+  currentFiltered = masterSorted;
+  renderTable(masterSorted);
+  recalculateKPIs();
+  
+  showToast('✅ Settings applied! Scores and shortlists updated dynamically.', 'success');
+}
+
+
+// ─── RESUME UPLOAD AND PARSER LOGIC ─────────────────────────────────────────
+let selectedResumes = [];
+
+function openResumeUploadModal() {
+  selectedResumes = [];
+  document.getElementById('selectedFilesContainer').style.display = 'none';
+  document.getElementById('selectedFilesList').innerHTML = '';
+  document.getElementById('parseProgressContainer').style.display = 'none';
+  document.getElementById('parseProgressBar').style.width = '0%';
+  document.getElementById('parseProgressPct').textContent = '0%';
+  document.getElementById('parseProgressStatus').textContent = 'Extracting text...';
+  document.getElementById('parseLogConsole').innerHTML = '';
+  
+  const fileInput = document.getElementById('resumeFileInput');
+  if (fileInput) fileInput.value = '';
+  
+  const btn = document.getElementById('btnStartParsing');
+  btn.disabled = true;
+  btn.style.opacity = '0.5';
+  btn.style.cursor = 'not-allowed';
+  
+  document.getElementById('resumeUploadModal').classList.add('open');
+}
+
+function handleResumeSelect(e) {
+  const files = e.target.files;
+  if (!files || files.length === 0) return;
+  
+  selectedResumes = Array.from(files);
+  
+  const list = document.getElementById('selectedFilesList');
+  list.innerHTML = selectedResumes.map((f, idx) => `
+    <div style="display:flex; justify-content:space-between; align-items:center; font-size:12px; background:rgba(255,255,255,0.03); padding:6px 10px; border-radius:6px; border:1px solid rgba(249,115,22,0.15)">
+      <span style="color:var(--purple-300)">📄 ${f.name}</span>
+      <span style="color:var(--text-muted); font-size:10px;">(${(f.size/1024).toFixed(1)} KB)</span>
+    </div>
+  `).join('');
+  
+  document.getElementById('selectedFilesContainer').style.display = 'block';
+  
+  const btn = document.getElementById('btnStartParsing');
+  btn.disabled = false;
+  btn.style.opacity = '1';
+  btn.style.cursor = 'pointer';
+}
+
+function addLog(msg) {
+  const c = document.getElementById('parseLogConsole');
+  if (!c) return;
+  const line = document.createElement('div');
+  line.style.marginBottom = '4px';
+  line.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+  c.appendChild(line);
+  c.scrollTop = c.scrollHeight;
+}
+
+// Predefined set of realistic candidate outcomes to inject
+const mockParsedCandidates = [
+  { name: "Rohit Deshmukh", role: "Software Engineer", exp: 3.5, cgpa: 8.9, skills: 24, score: 92.5, shortlisted: true, tier: "Excellent" },
+  { name: "Ananya Iyer", role: "UI/UX Designer", exp: 2.2, cgpa: 9.1, skills: 28, score: 89.0, shortlisted: true, tier: "Excellent" },
+  { name: "Siddharth Sen", role: "Data Analyst", exp: 4.1, cgpa: 8.2, skills: 26, score: 86.8, shortlisted: true, tier: "Excellent" },
+  { name: "Prisha Nair", role: "Product Manager", exp: 1.5, cgpa: 7.6, skills: 18, score: 58.4, shortlisted: false, tier: "Average" },
+  { name: "Vikram Malhotra", role: "Cyber Security Analyst", exp: 5.5, cgpa: 8.0, skills: 32, score: 94.2, shortlisted: true, tier: "Excellent" },
+  { name: "Tanmay Joshi", role: "Software Engineer", exp: 0.8, cgpa: 6.8, skills: 11, score: 51.5, shortlisted: false, tier: "Poor" }
+];
+
+function extractNameFromFilename(filename) {
+  let name = filename.replace(/\.[^/.]+$/, ""); // strip extension
+  name = name.replace(/[_-]/g, " "); // replace underscores/hyphens with spaces
+  name = name.replace(/\b(resume|cv|updated|2024|2025|2026|final|latest|profile|placement|academic|job|application)\b/gi, ""); // remove common noise words
+  name = name.trim();
+  // capitalize words
+  return name.split(" ").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ").trim() || "Candidate";
+}
+
+// ─── REAL PDF TEXT EXTRACTION via pdf.js ─────────────────────────────────────
+
+// Configure pdf.js worker
+if (typeof pdfjsLib !== 'undefined') {
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+}
+
+async function extractTextFromFile(file) {
+  const ext = file.name.split('.').pop().toLowerCase();
+
+  if (ext === 'pdf') {
+
+    // ── PRIMARY: Server-side pdfplumber (accurate for all PDF layouts) ─────────
+    try {
+      const pdfRes = await fetch('http://localhost:5001/api/extract_pdf_text', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/pdf' },
+        body: await file.arrayBuffer()
+      });
+      if (pdfRes.ok) {
+        const result = await pdfRes.json();
+        if (result.status === 'success' && result.text && result.text.trim().length > 50) {
+          addLog(`  ⚙ Server-side extraction (pdfplumber): ${result.chars} chars`);
+          return result.text;
+        }
+      }
+    } catch (_) {
+      // server offline → fall through to local
+    }
+
+    // ── FALLBACK: Local pdf.js with position-aware line grouping ───────────────
+    addLog(`  ⚠ Server offline — using local pdf.js fallback`);
+    try {
+      const arrayBuffer = await file.arrayBuffer();
+      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+      let fullText = '';
+      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+        const page = await pdf.getPage(pageNum);
+        const content = await page.getTextContent();
+        const Y_THRESHOLD = 5;
+        const lines = [];
+        for (const item of content.items) {
+          if (!item.str || !item.str.trim()) continue;
+          const y = Math.round(item.transform[5]);
+          const x = item.transform[4];
+          let matched = false;
+          for (const ln of lines) {
+            if (Math.abs(ln.y - y) <= Y_THRESHOLD) { ln.items.push({ x, str: item.str }); matched = true; break; }
+          }
+          if (!matched) lines.push({ y, items: [{ x, str: item.str }] });
+        }
+        lines.sort((a, b) => b.y - a.y);
+        let prevY = null;
+        for (const ln of lines) {
+          ln.items.sort((a, b) => a.x - b.x);
+          const lineText = ln.items.map(i => i.str).join(' ').trim();
+          if (!lineText) continue;
+          if (prevY !== null && Math.abs(prevY - ln.y) > 20) fullText += '\n';
+          fullText += lineText + '\n';
+          prevY = ln.y;
+        }
+        fullText += '\n';
+      }
+      return fullText.trim();
+    } catch (err) {
+      addLog(`[Warning] PDF extraction failed: ${err.message}`);
+      return '';
+    }
+
+  } else if (ext === 'docx') {
+    addLog(`[Notice] ${file.name}: DOCX not supported. Convert to PDF for best results.`);
+    return '';
+  } else if (ext === 'txt') {
+    return await file.text();
+  } else {
+    addLog(`[Notice] ${file.name}: Unsupported format (.${ext}). Upload PDF or TXT.`);
+    return '';
+  }
+}
+
+
+// ─── Smart Resume Text Parser ─────────────────────────────────────────────────
+
+function parseResumeFromText(text, candidateName, fallbackRole) {
+  const lines = text.split(/\n|\.(?=\s[A-Z])/).map(l => l.trim()).filter(Boolean);
+  const fullText = text;
+
+  // ── NAME ──────────────────────────────────────────────────────────────────
+  // Already extracted from filename, but try to confirm from top of text
+  let name = candidateName;
+  if (fullText) {
+    // The first non-empty, all-caps or Title Case line ≤ 5 words is likely the name
+    for (const ln of lines.slice(0, 6)) {
+      const cleaned = ln.replace(/[^a-zA-Z\s]/g, '').trim();
+      const words = cleaned.split(/\s+/).filter(Boolean);
+      if (words.length >= 2 && words.length <= 5 && words.every(w => /^[A-Z]/.test(w))) {
+        name = cleaned;
+        break;
+      }
+    }
+  }
+
+  // ── EMAIL ─────────────────────────────────────────────────────────────────
+  const emailMatch = fullText.match(/[\w.+-]+@[\w-]+\.[a-z]{2,}/i);
+  const email = emailMatch ? emailMatch[0].toLowerCase() : `${name.toLowerCase().replace(/\s+/g, '.')}@gmail.com`;
+
+  // ── PHONE ─────────────────────────────────────────────────────────────────
+  const phoneMatch = fullText.match(/(\+91[-\s]?)?[6-9]\d{9}/);
+  const phone = phoneMatch ? phoneMatch[0].replace(/\s/g, '-') : '';
+
+  // ── LINKEDIN ──────────────────────────────────────────────────────────────
+  const linkedinMatch = fullText.match(/linkedin\.com\/in\/[\w-]+/i);
+  const linkedin = linkedinMatch ? linkedinMatch[0] : '';
+
+  // ── GITHUB ────────────────────────────────────────────────────────────────
+  const githubMatch = fullText.match(/github\.com\/[\w-]+/i);
+  const github = githubMatch ? githubMatch[0] : '';
+
+  // ── ROLE ─────────────────────────────────────────────────────────────────
+  const roleKeywords = {
+    'Software Engineer': ['software engineer', 'software developer', 'backend', 'frontend', 'full stack', 'fullstack', 'sde', 'swe'],
+    'Cyber Security Analyst': ['cyber security', 'cybersecurity', 'security analyst', 'soc analyst', 'vapt', 'penetration test', 'ethical hacker', 'infosec'],
+    'Data Analyst': ['data analyst', 'data science', 'analytics', 'business intelligence', 'bi analyst', 'power bi', 'tableau', 'data engineer'],
+    'Product Manager': ['product manager', 'product management', 'product owner', 'agile', 'scrum master', 'roadmap'],
+    'UI/UX Designer': ['ui/ux', 'ux designer', 'ui designer', 'interaction design', 'figma', 'user experience', 'product design']
+  };
+  let detectedRole = fallbackRole;
+  const textLower = fullText.toLowerCase();
+  for (const [role, keywords] of Object.entries(roleKeywords)) {
+    if (keywords.some(k => textLower.includes(k))) {
+      detectedRole = role;
+      break;
+    }
+  }
+
+  // ── CGPA ──────────────────────────────────────────────────────────────────
+  const cgpaMatch = fullText.match(/cgpa[:\s]*([0-9]\.[0-9]{1,2})/i) ||
+                    fullText.match(/gpa[:\s]*([0-9]\.[0-9]{1,2})/i) ||
+                    fullText.match(/\b([7-9]\.[0-9]{1,2})\s*\/\s*10\b/);
+  const cgpa = cgpaMatch ? parseFloat(cgpaMatch[1]) : null;
+
+  // ── EXPERIENCE YEARS ──────────────────────────────────────────────────────
+  const expMatch = fullText.match(/(\d+(\.\d+)?)\s*\+?\s*years?\s*(of\s*)?(experience|exp)/i) ||
+                   fullText.match(/(experience|exp)[:\s]*(\d+(\.\d+)?)\s*\+?\s*years?/i);
+  let expYears = expMatch ? parseFloat(expMatch[1] || expMatch[2]) : 0;
+
+  // Fallback: count Full-Time experience date ranges
+  if (!expYears) {
+    const dateRanges = [...fullText.matchAll(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{4})\s*[-–to]+\s*(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|Present)\s*(\d{0,4})/gi)];
+    let totalMonths = 0;
+    for (const m of dateRanges) {
+      const startYear = parseInt(m[2]);
+      const endYear = m[4] ? parseInt(m[4]) : new Date().getFullYear();
+      totalMonths += (endYear - startYear) * 12;
+    }
+    expYears = Math.round(totalMonths / 12 * 10) / 10;
+  }
+
+  // ── SKILLS ────────────────────────────────────────────────────────────────
+  const knownSkills = [
+    'Python','JavaScript','TypeScript','Java','C++','C#','Go','Rust','SQL','NoSQL','MongoDB',
+    'React','Angular','Vue','NodeJS','Node.js','Express','Django','Flask','FastAPI','Spring',
+    'AWS','Azure','GCP','Docker','Kubernetes','Terraform','CI/CD','Git','GitHub','Jenkins',
+    'PostgreSQL','MySQL','Redis','Elasticsearch','Kafka',
+    'TensorFlow','PyTorch','scikit-learn','Pandas','NumPy','Matplotlib',
+    'Figma','Sketch','Adobe XD','InVision','Prototyping','Wireframing','Canva',
+    'Tableau','Power BI','Excel','SPSS','R','Looker',
+    'Splunk','Wireshark','Metasploit','Burp Suite','Nessus','MITRE ATT&CK','SIEM',
+    'JIRA','Confluence','Trello','Agile','Scrum','Roadmapping','A/B Testing',
+    'Machine Learning','Deep Learning','NLP','Computer Vision','LLM','RAG',
+    'HTML','CSS','Sass','Webpack','REST','GraphQL','gRPC'
+  ];
+  const detectedSkills = knownSkills.filter(sk => {
+    const pattern = new RegExp(`\\b${sk.replace(/[.+]/g, '\\$&')}\\b`, 'i');
+    return pattern.test(fullText);
+  });
+
+  // ── EDUCATION ─────────────────────────────────────────────────────────────
+  const degreeMatch = fullText.match(/\b(B\.?Tech|B\.?E|B\.?Sc|M\.?Tech|M\.?Sc|MBA|BCA|MCA|B\.?Des|B\.?Com|Ph\.?D)[^\n,]*/i);
+  const degreeText = degreeMatch ? degreeMatch[0].trim() : (detectedRole === 'UI/UX Designer' ? 'B.Des in Design' : detectedRole === 'Software Engineer' ? 'B.Tech in Computer Science' : 'Bachelor of Science');
+
+  const institutionMatch = fullText.match(/(IIT|IIM|BITS|NIT|VIT|MIT|NID|ISB|Manipal|BITS Pilani|Jadavpur|Osmania|Amity|SRM|Thapar|Fergusson|RV College|DA-IICT|Nirma)[^\n,]*/i);
+  const institution = institutionMatch ? institutionMatch[0].trim() : '';
+
+  const yearMatch = fullText.match(/\b(20[12][0-9])\b/g);
+  const gradYear = yearMatch ? parseInt(yearMatch[yearMatch.length - 1]) : 2024;
+
+  // ── SUMMARY ───────────────────────────────────────────────────────────────
+  const summaryMatch = fullText.match(/(summary|profile|objective|about)[:\s]*([^]{40,300}?)(?=\n[A-Z]{3,}|\neducation|\nexperience)/i);
+  const summary = summaryMatch ? summaryMatch[2].trim().replace(/\s+/g, ' ') : '';
+
+  // ── CERTIFICATIONS ────────────────────────────────────────────────────────
+  const certKeywords = ['AWS Certified','Google Professional','Microsoft Certified','CompTIA','PMP','CEH','CISSP','Cisco','Oracle Certified','Scrum Master','PMI','Coursera','Udacity'];
+  const detectedCerts = certKeywords.filter(k => fullText.toLowerCase().includes(k.toLowerCase()));
+
+  // ── ATS SCORE (heuristic) ─────────────────────────────────────────────────
+  let atsScore = 40;
+  atsScore += Math.min(detectedSkills.length * 2, 30);   // up to 30 for skills
+  atsScore += Math.min(expYears * 3, 15);                // up to 15 for exp
+  if (cgpa && cgpa >= 8) atsScore += 8;
+  else if (cgpa && cgpa >= 7) atsScore += 5;
+  if (detectedCerts.length > 0) atsScore += Math.min(detectedCerts.length * 3, 9);
+  if (institution) atsScore += 3;
+  atsScore = Math.min(Math.round(atsScore), 99);
+
+  const tier = atsScore >= 80 ? 'Excellent' : atsScore >= 60 ? 'Average' : 'Poor';
+  const shortlisted = atsScore >= 65;
+
+  return {
+    // Dashboard card fields
+    name,
+    role: detectedRole,
+    exp: expYears,
+    cgpa: cgpa || 0,
+    skills: detectedSkills.length || 0,
+    score: atsScore,
+    shortlisted,
+    tier,
+    // Full JSON schema fields
+    email,
+    phone,
+    linkedin,
+    github,
+    summary,
+    degree: degreeText,
+    institution,
+    gradYear,
+    detectedSkills,
+    detectedCerts,
+    fullText: text.slice(0, 200)  // first 200 chars as reference
+  };
+}
+
+async function buildResumeJson(parsed) {
+  const nameParts = parsed.name.replace(/\s+/g, '_');
+  return {
+    name: parsed.name,
+    email: parsed.email,
+    phone: parsed.phone || '',
+    linkedin: parsed.linkedin || `linkedin.com/in/${parsed.name.toLowerCase().replace(/\s+/g, '')}`,
+    github: parsed.github || '',
+    portfolio: '',
+    address: '',
+    role_applied: parsed.role,
+    quality_tier: parsed.tier,
+    summary: parsed.summary || `${parsed.role} with ${parsed.exp} years of experience and strong technical skills.`,
+    education: [
+      {
+        degree: parsed.degree,
+        institution: parsed.institution || '',
+        university: '',
+        cgpa: parsed.cgpa || null,
+        cgpa_scale: 10.0,
+        year_of_passing: parsed.gradYear
+      }
+    ],
+    experience: [
+      {
+        company: '',
+        title: parsed.role,
+        location: '',
+        type: 'Full-Time',
+        start_date: '',
+        end_date: '',
+        duration_months: Math.round(parsed.exp * 12),
+        responsibilities: []
+      }
+    ],
+    skills: buildSkillsMap(parsed.role, parsed.detectedSkills),
+    projects: [],
+    certifications: parsed.detectedCerts.map(c => ({ name: c })),
+    achievements: [],
+    languages_known: [],
+    soft_skills: [],
+    ats_score: {
+      total: parsed.score,
+      breakdown: {
+        skills_match: Math.min(parsed.detectedSkills.length * 2, 30),
+        experience: Math.min(Math.round(parsed.exp * 3), 15),
+        projects: 0,
+        education: parsed.cgpa && parsed.cgpa >= 8 ? 8 : 5,
+        certifications: Math.min(parsed.detectedCerts.length * 3, 9),
+        resume_quality: 3
+      },
+      shortlisted: parsed.shortlisted
+    }
+  };
+}
+
+function buildSkillsMap(role, skills) {
+  const roleSkillKeys = {
+    'Software Engineer':        ['languages','frameworks','databases','tools','cloud','testing'],
+    'Cyber Security Analyst':   ['security_tools','frameworks','scripting','networking','os_platforms','cloud_security'],
+    'Data Analyst':             ['languages','tools','visualization','databases','cloud','ml_libraries'],
+    'Product Manager':          ['tools','methodologies','analytics','communication'],
+    'UI/UX Designer':           ['design_tools','prototyping','research','dev_skills']
+  };
+  const keys = roleSkillKeys[role] || ['technical', 'tools'];
+  // Spread skills evenly across categories
+  const perCat = Math.ceil(skills.length / keys.length);
+  const map = {};
+  keys.forEach((key, i) => {
+    map[key] = skills.slice(i * perCat, (i + 1) * perCat);
+  });
+  return map;
+}
+
+async function saveResumeToServer(resumeData) {
+  return fetch('http://localhost:5001/api/save_resume', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(resumeData)
+  })
+  .then(res => res.json())
+  .catch(() => null);
+}
+
+function startAIResumeParsing() {
+  if (selectedResumes.length === 0) return;
+  
+  document.getElementById('btnStartParsing').disabled = true;
+  document.getElementById('uploadDragZone').style.pointerEvents = 'none';
+  document.getElementById('uploadDragZone').style.opacity = '0.5';
+  document.getElementById('parseProgressContainer').style.display = 'block';
+  
+  const bar = document.getElementById('parseProgressBar');
+  const pct = document.getElementById('parseProgressPct');
+  const status = document.getElementById('parseProgressStatus');
+  
+  addLog("Initializing NLP parser engine...");
+  addLog(`Loaded AI Screening Model v2.4 — processing ${selectedResumes.length} file(s)...`);
+  
+  const parsedResults = [];
+  let processedCount = 0;
+  
+  // Process each file sequentially using async parsing
+  async function processAll() {
+    for (let i = 0; i < selectedResumes.length; i++) {
+      const file = selectedResumes[i];
+      status.textContent = `Extracting text: ${file.name}...`;
+      addLog(`[${i+1}/${selectedResumes.length}] Reading: ${file.name}`);
+      
+      // Update progress proportionally
+      const progressStart = Math.round((i / selectedResumes.length) * 90);
+      bar.style.width = `${progressStart}%`;
+      pct.textContent = `${progressStart}%`;
+      
+      // Extract text
+      const text = await extractTextFromFile(file);
+      const textFound = text.trim().length > 50;
+      if (textFound) {
+        addLog(`  ✓ Extracted ${text.length} chars of text. Preview:`);
+        addLog(`  ┌─ ${text.substring(0, 300).replace(/\n/g, ' ↵ ').trim()} …`);
+      } else {
+        addLog(`  ⚠ Low text content — PDF may be scanned/image-based.`);
+      }
+      
+      // Derive name from filename
+      const candidateName = extractNameFromFilename(file.name);
+      
+      // ── Gemini AI is the ONLY parser — no regex fallback ──────────────────
+      status.textContent = `Gemini AI parsing: ${file.name}...`;
+      let parsed = null;
+
+      if (!textFound) {
+        addLog(`  ❌ Could not extract readable text from "${file.name}". It may be a scanned/image PDF. Skipping.`);
+        processedCount++;
+        continue;
+      }
+
+      try {
+        addLog(`  🤖 Sending to Gemini AI for parsing...`);
+        const geminiRes = await fetch('http://localhost:5001/api/parse_resume_with_gemini', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text, name: candidateName })
+        });
+
+        if (!geminiRes.ok) {
+          throw new Error(`Server returned HTTP ${geminiRes.status}`);
+        }
+
+        const geminiData = await geminiRes.json();
+
+        if (geminiData.status !== 'success') {
+          throw new Error(geminiData.message || 'Gemini returned an error');
+        }
+
+        const p = geminiData.parsed;
+        const ats = p.ats_score || {};
+        const skills = p.skills ? Object.values(p.skills).flat() : [];
+        const expMonths = p.experience && p.experience.length > 0
+          ? p.experience.reduce((s, e) => s + (e.duration_months || 0), 0)
+          : 0;
+        const exp = Math.round((expMonths / 12) * 10) / 10;
+
+        parsed = {
+          name:        p.name || candidateName,
+          role:        p.role_applied || 'Unknown',
+          exp,
+          cgpa:        (p.education && p.education[0] && p.education[0].cgpa) || 0,
+          skills:      skills.length,
+          score:       ats.total || 0,
+          shortlisted: ats.shortlisted || false,
+          tier:        p.quality_tier || 'Average',
+          detectedSkills: skills,
+          _fullJson:   p
+        };
+
+        addLog(`  ✅ Gemini parsed: ${parsed.name} | ${parsed.role} | ATS=${parsed.score} | Tier=${parsed.tier}`);
+        addLog(`  → Shortlist: ${parsed.shortlisted ? '✅ PASS' : '❌ FAIL'}`);
+
+      } catch (err) {
+        addLog(`  ❌ Gemini failed for "${file.name}": ${err.message}`);
+        addLog(`     → Make sure server.py is running and your Gemini quota has not been exceeded.`);
+        addLog(`     → Skipping this file.`);
+        processedCount++;
+        continue;
+      }
+
+      // Save Gemini-produced JSON directly to datasets/resumes/
+      status.textContent = `Saving to datasets/resumes/...`;
+      const resumeJson = parsed._fullJson;
+      const saveResult = await saveResumeToServer(resumeJson);
+
+      if (saveResult && saveResult.status === 'success') {
+        addLog(`  ✓ Saved → ${saveResult.filename}`);
+      } else {
+        addLog(`  ⚠ Server offline — no file saved (run server.py)`);
+      }
+      
+      parsedResults.push(parsed);
+      processedCount++;
+      
+      const progressEnd = Math.round(((i + 1) / selectedResumes.length) * 90);
+      bar.style.width = `${progressEnd}%`;
+      pct.textContent = `${progressEnd}%`;
+    }
+    
+    // Final phase
+    status.textContent = 'Finalizing rankings...';
+    bar.style.width = '100%';
+    pct.textContent = '100%';
+    
+    // Push all parsed candidates to the dashboard
+    const addedList = [];
+    for (const parsed of parsedResults) {
+      const newCand = {
+        name: parsed.name,
+        role: parsed.role,
+        exp: parsed.exp,
+        cgpa: parsed.cgpa || 0,
+        skills: (parsed.detectedSkills ? parsed.detectedSkills.length : 0) || parsed.skills || 0,
+        score: parsed.score,
+        shortlisted: parsed.shortlisted,
+        tier: parsed.tier
+      };
+      candidates.push(newCand);
+      addedList.push(newCand);
+    }
+    
+    masterSorted = [...candidates].sort((a, b) => b.score - a.score);
+    currentFiltered = masterSorted;
+    renderTable(masterSorted);
+    recalculateKPIs();
+    
+    status.textContent = 'AI Screening Completed!';
+    addLog(`\n✅ Done — ${parsedResults.length} resume(s) parsed & saved to datasets/resumes.`);
+    showToast(`⚡ Parsed ${parsedResults.length} resume(s) from real content. Candidates added & ranked.`, 'success');
+    
+    setTimeout(() => {
+      closeJobModal('resumeUploadModal');
+      document.getElementById('uploadDragZone').style.pointerEvents = 'all';
+      document.getElementById('uploadDragZone').style.opacity = '1';
+      document.getElementById('btnStartParsing').disabled = false;
+    }, 1200);
+  }
+  
+  processAll().catch(err => {
+    addLog(`[Error] ${err.message}`);
+    status.textContent = 'Error during parsing.';
+    document.getElementById('btnStartParsing').disabled = false;
+  });
+}
+
+function recalculateKPIs() {
+  const total = candidates.length;
+  const screened = candidates.filter(c => c.score >= 55).length;
+  const shortlistedList = candidates.filter(c => c.shortlisted);
+  const shortlisted = shortlistedList.length;
+  const rejected = total - shortlisted;
+  const shortlistRate = total > 0 ? ((shortlisted / total) * 100).toFixed(1) : "0.0";
+  const screenedRate = total > 0 ? ((screened / total) * 100).toFixed(1) : "0.0";
+  const rejectionRate = total > 0 ? ((rejected / total) * 100).toFixed(1) : "0.0";
+  const avgScore = total > 0 ? (candidates.reduce((sum, c) => sum + c.score, 0) / total).toFixed(1) : "0.0";
+
+  const receivedEl   = document.getElementById('kpi-received');
+  const shortlistedEl = document.getElementById('kpi-shortlisted');
+  const shortlistRateEl = document.getElementById('kpi-shortlist-rate');
+  const avgScoreEl   = document.getElementById('kpi-avg-score');
+  const rejectedEl   = document.getElementById('kpi-rejected');
+  const rejRateEl    = document.getElementById('kpi-rejection-rate');
+
+  if (receivedEl)     receivedEl.textContent    = total;
+  if (shortlistedEl)  shortlistedEl.textContent = shortlisted;
+  if (shortlistRateEl) shortlistRateEl.textContent = `${shortlistRate}%`;
+  if (avgScoreEl)     avgScoreEl.textContent     = avgScore;
+  if (rejectedEl)     rejectedEl.textContent     = rejected;
+  if (rejRateEl)      rejRateEl.textContent      = `${rejectionRate}%`;
+
+  // Update badge counters
+  const navBadge = document.querySelector('#nav-candidates .nav-badge');
+  if (navBadge) navBadge.textContent = total;
+  const summaryBadge = document.querySelector('#candidates .card-badge');
+  if (summaryBadge) summaryBadge.textContent = `${total} Total`;
+
+  // Update Funnel Stats
+  const f1Count = document.getElementById('funnel-s1-count');
+  if (f1Count) f1Count.textContent = total;
+  const f2Count = document.getElementById('funnel-s2-count');
+  if (f2Count) f2Count.textContent = total;
+  
+  const f3Count = document.getElementById('funnel-s3-count');
+  const f3Delta = document.getElementById('funnel-s3-delta');
+  const f3Pct = document.getElementById('funnel-s3-pct');
+  const f3Bar = document.getElementById('funnel-s3-bar');
+  if (f3Count) f3Count.textContent = screened;
+  if (f3Delta) f3Delta.textContent = screenedRate + '%';
+  if (f3Pct) f3Pct.textContent = Math.round(screenedRate) + '%';
+  if (f3Bar) f3Bar.style.width = screenedRate + '%';
+
+  const f4Count = document.getElementById('funnel-s4-count');
+  const f4Delta = document.getElementById('funnel-s4-delta');
+  const f4Pct = document.getElementById('funnel-s4-pct');
+  const f4Bar = document.getElementById('funnel-s4-bar');
+  const f4Label = document.getElementById('funnel-s4-label');
+  if (f4Count) f4Count.textContent = shortlisted;
+  if (f4Delta) f4Delta.textContent = shortlistRate + '%';
+  if (f4Pct) f4Pct.textContent = Math.round(shortlistRate) + '%';
+  if (f4Bar) f4Bar.style.width = shortlistRate + '%';
+  if (f4Label) {
+    const thresh = document.getElementById('shortlistThreshold') ? document.getElementById('shortlistThreshold').value : 65;
+    f4Label.textContent = `✅ Shortlisted (≥${thresh})`;
+  }
+
+  // Update Pie Chart Text
+  const pieShort = document.getElementById('pie-short-text');
+  if (pieShort) pieShort.textContent = `${shortlisted} (${Math.round(shortlistRate)}%)`;
+  const pieRej = document.getElementById('pie-rej-text');
+  if (pieRej) pieRej.textContent = `${rejected} (${Math.round(rejectionRate)}%)`;
+  const pieAvg = document.getElementById('pie-avg-score');
+  if (pieAvg) pieAvg.textContent = avgScore;
+
+  // Update Pie Chart Data
+  if (window.myPieChart) {
+    window.myPieChart.data.datasets[0].data = [shortlisted, rejected];
+    window.myPieChart.update();
+  }
+
+  // Update dynamic job roles statistics
+  renderJobRoles();
+}
+
+function removeCandidate(name) {
+  if (!confirm(`Are you sure you want to remove candidate "${name}" and delete their parsed resume records?`)) return;
+  
+  // Find index in global candidates array
+  const idx = candidates.findIndex(c => c.name === name);
+  if (idx !== -1) {
+    candidates.splice(idx, 1);
+    
+    // Re-calculate masterSorted and currentFiltered
+    masterSorted = [...candidates].sort((a, b) => b.score - a.score);
+    
+    // Apply filters again to reflect deletion in current view
+    applyFilters();
+    
+    // Update dashboard KPI numbers
+    recalculateKPIs();
+    
+    // Call server API to delete the file
+    fetch('http://localhost:5001/api/delete_resume', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name })
+    })
+    .then(res => res.json())
+    .then(resData => {
+      if (resData.status === 'success' && resData.filepath) {
+        showToast(`🗑 Removed candidate & deleted ${resData.filepath.split('/').pop()} from datasets/resumes.`, 'warning');
+      } else {
+        showToast(`🗑 Removed candidate "${name}".`, 'warning');
+      }
+    })
+    .catch(err => {
+      showToast(`🗑 Removed candidate "${name}".`, 'warning');
+    });
+  }
+}
+
+
+// ─── GEMINI QUESTION GENERATOR ───────────────────────────────────────────────
+
+let lastGeneratedQuestions = null;
+
+async function generateQuestionsWithGemini() {
+  const role   = document.getElementById('qgenRole').value;
+  const name   = document.getElementById('qgenName').value.trim() || 'the candidate';
+  const skills = document.getElementById('qgenSkills').value.trim();
+  const btn    = document.getElementById('btnGenerateQuestions');
+  const badge  = document.getElementById('geminiStatusBadge');
+
+  // UI state
+  document.getElementById('qgenLoading').style.display = 'block';
+  document.getElementById('qgenOutput').style.display  = 'none';
+  document.getElementById('qgenError').style.display   = 'none';
+  btn.disabled = true;
+  btn.textContent = '⏳ Generating...';
+  badge.textContent = 'Working...';
+  badge.style.background = 'rgba(245,158,11,0.2)';
+  badge.style.color = '#f59e0b';
+
+  try {
+    const res = await fetch('http://localhost:5001/api/generate_questions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ role, name, skills: skills.split(',').map(s => s.trim()).filter(Boolean), tier: 'Average', exp: 2 })
+    });
+
+    const data = await res.json();
+
+    if (data.status !== 'success') throw new Error(data.message || 'Server error');
+
+    lastGeneratedQuestions = data.questions;
+    renderQuestions(data.questions, role, name);
+
+    badge.textContent = '✓ Generated';
+    badge.style.background = 'rgba(16,185,129,0.2)';
+    badge.style.color = '#10b981';
+
+  } catch (err) {
+    document.getElementById('qgenError').style.display = 'block';
+    document.getElementById('qgenError').textContent =
+      `Error: ${err.message}. Make sure server.py is running (python3 server.py).`;
+    badge.textContent = 'Error';
+    badge.style.background = 'rgba(239,68,68,0.2)';
+    badge.style.color = '#ef4444';
+  } finally {
+    document.getElementById('qgenLoading').style.display = 'none';
+    btn.disabled = false;
+    btn.textContent = '⚡ Generate';
+  }
+}
+
+function renderQuestions(qs, role, name) {
+  const diffColor = { Easy: '#10b981', Medium: '#f59e0b', Hard: '#ef4444' };
+
+  function renderList(containerId, items, type) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = '';
+    items.forEach((item, i) => {
+      const q = item.q || item;
+      const meta = type === 'technical'
+        ? `<span style="font-size:10px;padding:2px 8px;border-radius:20px;background:rgba(255,255,255,0.06);color:${diffColor[item.difficulty] || '#999'};margin-left:8px">${item.difficulty || ''} · ${item.topic || ''}</span>`
+        : type === 'behavioural'
+        ? `<span style="font-size:10px;padding:2px 8px;border-radius:20px;background:rgba(255,255,255,0.06);color:#a78bfa;margin-left:8px">${item.focus || ''}</span>`
+        : `<span style="font-size:10px;padding:2px 8px;border-radius:20px;background:rgba(255,255,255,0.06);color:#6ee7b7;margin-left:8px">${item.scenario || ''}</span>`;
+
+      const div = document.createElement('div');
+      div.style.cssText = 'padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;font-size:13px;line-height:1.6;display:flex;gap:12px;align-items:flex-start';
+      div.innerHTML = `
+        <span style="min-width:24px;height:24px;border-radius:50%;background:rgba(249,115,22,0.15);color:#f97316;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">${i+1}</span>
+        <span>${q}${meta}</span>`;
+      container.appendChild(div);
+    });
+  }
+
+  renderList('qgenTechnical', qs.technical || [], 'technical');
+  renderList('qgenBehavioural', qs.behavioural || [], 'behavioural');
+  renderList('qgenSituational', qs.situational || [], 'situational');
+
+  document.getElementById('qgenHeading').innerHTML =
+    `✨ Questions for <strong>${name}</strong> — <span style="color:#f97316">${role}</span>`;
+  document.getElementById('qgenOutput').style.display = 'block';
+}
+
+function copyQuestions() {
+  if (!lastGeneratedQuestions) return;
+  const qs = lastGeneratedQuestions;
+  let text = '';
+  if (qs.technical)   { text += 'TECHNICAL:\n'; qs.technical.forEach((q,i) => { text += `${i+1}. ${q.q}\n`; }); }
+  if (qs.behavioural) { text += '\nBEHAVIOURAL:\n'; qs.behavioural.forEach((q,i) => { text += `${i+1}. ${q.q}\n`; }); }
+  if (qs.situational) { text += '\nSITUATIONAL:\n'; qs.situational.forEach((q,i) => { text += `${i+1}. ${q.q}\n`; }); }
+  navigator.clipboard.writeText(text).then(() => showToast('📋 Questions copied to clipboard!', 'success'));
+}
+
+// Close modals on overlay click
+['newJobModal','editJobModal','resumeUploadModal'].forEach(id => {
+  document.getElementById(id).addEventListener('click', (e) => {
+    if (e.target === document.getElementById(id)) closeJobModal(id);
+  });
+});
+
+// Initial render
+window.addEventListener('DOMContentLoaded', () => {
+  renderJobRoles();
+  loadCandidates();
+});
+
+</script>
+</body>
+</html>

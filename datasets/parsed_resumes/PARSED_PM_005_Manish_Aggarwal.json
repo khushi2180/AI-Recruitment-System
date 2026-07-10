@@ -1,0 +1,142 @@
+{
+  "resume_id": "PM-005",
+  "name": "Manish Aggarwal",
+  "email": "manishaggarwal.pm1990@gmail.com",
+  "phone": "+919810555321",
+  "linkedin": "linkedin.com/in/manishaggarwal-pm",
+  "github": null,
+  "portfolio": null,
+  "address": "Janakpuri, New Delhi - 110058",
+  "role_applied": "Product Manager",
+  "quality_tier": "Poor",
+  "education": [
+    {
+      "degree": "MBA – General Management",
+      "institution": "Amity Business School, Noida",
+      "university": "Amity University",
+      "cgpa": 6.9,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2020
+    },
+    {
+      "degree": "B.Com – Commerce",
+      "institution": "Delhi College of Arts and Commerce",
+      "university": "University of Delhi",
+      "cgpa": 6.2,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2018
+    }
+  ],
+  "highest_degree": "MBA – General Management",
+  "institution": "Amity Business School, Noida",
+  "cgpa": 6.9,
+  "experience": [
+    {
+      "company": "Vedantu Innovations",
+      "title": "Product Manager",
+      "location": "Noida, UP",
+      "type": "Full-Time",
+      "start_date": "Jan 2021",
+      "end_date": "Apr 2023",
+      "duration_months": 27,
+      "responsibilities": [
+        "Managed product features for the online learning platform.",
+        "Worked with tech team to deliver features every quarter.",
+        "Created user stories and PRDs.",
+        "Attended daily standups and stakeholder meetings.",
+        "Did competitive research on competitor platforms."
+      ]
+    },
+    {
+      "company": "Freelance Consulting",
+      "title": "Product Consultant",
+      "location": "Remote",
+      "type": "Freelance",
+      "start_date": "May 2023",
+      "end_date": "Present",
+      "duration_months": 13,
+      "responsibilities": [
+        "Consulted for 2 small startups on product strategy.",
+        "Helped write PRDs and roadmaps."
+      ]
+    }
+  ],
+  "years_experience": 2.8,
+  "companies": [
+    "Vedantu Innovations",
+    "Freelance Consulting"
+  ],
+  "skills": {
+    "core_pm": [
+      "PRD Writing (basic)",
+      "Roadmapping",
+      "Sprint Planning"
+    ],
+    "research": [
+      "User Surveys",
+      "Competitive Research"
+    ],
+    "analytics": [
+      "Google Analytics (basic)",
+      "Excel"
+    ],
+    "tools": [
+      "JIRA",
+      "Trello",
+      "Confluence (basic)",
+      "PowerPoint"
+    ],
+    "frameworks": [
+      "MoSCoW (basic)",
+      "Scrum"
+    ]
+  },
+  "skills_flat": [
+    "PRD Writing (basic)",
+    "Roadmapping",
+    "Sprint Planning",
+    "User Surveys",
+    "Competitive Research",
+    "Google Analytics (basic)",
+    "Excel",
+    "JIRA",
+    "Trello",
+    "Confluence (basic)",
+    "PowerPoint",
+    "MoSCoW (basic)",
+    "Scrum"
+  ],
+  "skill_count": 13,
+  "projects": [],
+  "project_count": 0,
+  "certifications": [
+    {
+      "name": "Product Management Fundamentals",
+      "issuer": "LinkedIn Learning",
+      "year": 2021
+    }
+  ],
+  "certification_names": [
+    "Product Management Fundamentals"
+  ],
+  "certification_count": 1,
+  "achievements": [
+    "Team player at Vedantu – recognized in town hall"
+  ],
+  "languages_known": [
+    "Hindi (Native)",
+    "English (Conversational)"
+  ],
+  "soft_skills": [
+    "Communication",
+    "Team Management",
+    "Adaptability"
+  ],
+  "interests": [
+    "Cricket",
+    "Bollywood",
+    "Travel"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.636423",
+  "source_file": "PM_005_Manish_Aggarwal.json"
+}

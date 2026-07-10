@@ -1,0 +1,101 @@
+{
+  "resume_id": "PM-005",
+  "name": "Manish Aggarwal",
+  "email": "manishaggarwal.pm1990@gmail.com",
+  "phone": "+91-9810555321",
+  "linkedin": "linkedin.com/in/manishaggarwal-pm",
+  "github": null,
+  "address": "Janakpuri, New Delhi - 110058",
+  "role_applied": "Product Manager",
+  "quality_tier": "Poor",
+
+  "summary": "Product Manager with 3.5 years of experience. Have managed product teams and delivered multiple projects. Good at communication and team management. Looking for new opportunities.",
+
+  "education": [
+    {
+      "degree": "MBA – General Management",
+      "institution": "Amity Business School, Noida",
+      "university": "Amity University",
+      "cgpa": 6.9,
+      "year_of_passing": 2020,
+      "relevant_courses": ["Management Principles", "Marketing", "HR Management"]
+    },
+    {
+      "degree": "B.Com – Commerce",
+      "institution": "Delhi College of Arts and Commerce",
+      "university": "University of Delhi",
+      "cgpa": 6.2,
+      "year_of_passing": 2018
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "Vedantu Innovations",
+      "title": "Product Manager",
+      "location": "Noida, UP",
+      "type": "Full-Time",
+      "start_date": "Jan 2021",
+      "end_date": "Apr 2023",
+      "duration_months": 27,
+      "responsibilities": [
+        "Managed product features for the online learning platform.",
+        "Worked with tech team to deliver features every quarter.",
+        "Created user stories and PRDs.",
+        "Attended daily standups and stakeholder meetings.",
+        "Did competitive research on competitor platforms."
+      ]
+    },
+    {
+      "company": "Freelance Consulting",
+      "title": "Product Consultant",
+      "location": "Remote",
+      "type": "Freelance",
+      "start_date": "May 2023",
+      "end_date": "Present",
+      "duration_months": 13,
+      "responsibilities": [
+        "Consulted for 2 small startups on product strategy.",
+        "Helped write PRDs and roadmaps."
+      ]
+    }
+  ],
+
+  "skills": {
+    "core_pm": ["PRD Writing (basic)", "Roadmapping", "Sprint Planning"],
+    "research": ["User Surveys", "Competitive Research"],
+    "analytics": ["Google Analytics (basic)", "Excel"],
+    "tools": ["JIRA", "Trello", "Confluence (basic)", "PowerPoint"],
+    "frameworks": ["MoSCoW (basic)", "Scrum"]
+  },
+
+  "projects": [],
+
+  "certifications": [
+    { "name": "Product Management Fundamentals", "issuer": "LinkedIn Learning", "year": 2021 }
+  ],
+
+  "achievements": [
+    "Team player at Vedantu – recognized in town hall"
+  ],
+
+  "languages_known": ["Hindi (Native)", "English (Conversational)"],
+
+  "soft_skills": ["Communication", "Team Management", "Adaptability"],
+
+  "interests": ["Cricket", "Bollywood", "Travel"],
+
+  "ats_score": {
+    "total": 44,
+    "breakdown": {
+      "skills_match": 12,
+      "experience": 11,
+      "projects": 4,
+      "education": 7,
+      "certifications": 4,
+      "resume_quality": 6
+    },
+    "rank": 5,
+    "shortlisted": false
+  }
+}

@@ -1,0 +1,591 @@
+openapi: "3.0.3"
+info:
+  title: TalentAI — AI-Powered Smart Recruitment System API
+  description: |
+    RESTful API for the AI-Powered Smart Recruitment System.
+    Handles Job Descriptions, Resume Parsing, ATS Scoring, Interview Generation, Bias Detection, and Dashboard Analytics.
+  version: "1.0.0"
+  contact:
+    name: TalentAI API
+    email: api@technova.com
+
+servers:
+  - url: http://localhost:5000/api/v1
+    description: Local Flask Development Server
+  - url: https://api.talentai.technova.com/v1
+    description: Production Server (FastAPI/Gunicorn)
+
+tags:
+  - name: Jobs
+    description: Job Description CRUD
+  - name: Candidates
+    description: Candidate management
+  - name: Resume Parser
+    description: AI resume parsing
+  - name: ATS Engine
+    description: AI scoring and ranking
+  - name: Interviews
+    description: Interview questions and evaluations
+  - name: Bias Detection
+    description: Bias analysis and audit reports
+  - name: Dashboard
+    description: Analytics and pipeline metrics
+  - name: Auth
+    description: User authentication
+
+paths:
+
+  # ─── HEALTH ──────────────────────────────────────────────────────────────
+  /health:
+    get:
+      summary: Health check
+      responses:
+        "200":
+          description: System healthy
+          content:
+            application/json:
+              example: { "status": "healthy", "version": "1.0.0", "timestamp": "2024-06-28T10:00:00" }
+
+  # ─── AUTH ────────────────────────────────────────────────────────────────
+  /auth/login:
+    post:
+      tags: [Auth]
+      summary: Recruiter login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email: { type: string, example: "shreya.rawat@technova.com" }
+                password: { type: string, example: "••••••••" }
+      responses:
+        "200":
+          description: Login successful
+          content:
+            application/json:
+              example: { "access_token": "eyJhbGciOiJIUzI1NiJ9...", "user": { "id": "USR-001", "name": "Shreya Rawat", "role": "Recruiter" } }
+        "401":
+          description: Invalid credentials
+
+  # ─── JOB DESCRIPTIONS ────────────────────────────────────────────────────
+  /jobs:
+    get:
+      tags: [Jobs]
+      summary: List all job descriptions
+      parameters:
+        - name: status
+          in: query
+          schema: { type: string, enum: [Active, Closed, Draft] }
+        - name: role
+          in: query
+          schema: { type: string }
+      responses:
+        "200":
+          description: List of job descriptions
+          content:
+            application/json:
+              example:
+                jobs:
+                  - jd_id: "JD-001"
+                    title: "Software Engineer"
+                    company: "TechNova Solutions"
+                    status: "Active"
+                    applications_count: 6
+                    shortlisted_count: 4
+    post:
+      tags: [Jobs]
+      summary: Create a new job description
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [title, company]
+              properties:
+                title: { type: string, example: "Software Engineer" }
+                company: { type: string, example: "TechNova Solutions" }
+                location: { type: string, example: "Bengaluru" }
+                ctc_min_lpa: { type: number, example: 6.0 }
+                ctc_max_lpa: { type: number, example: 9.0 }
+                required_skills: { type: array, items: { type: string } }
+                responsibilities: { type: array, items: { type: string } }
+      responses:
+        "201":
+          description: Job created
+          content:
+            application/json:
+              example: { "jd_id": "JD-006", "message": "Job Description created successfully" }
+
+  /jobs/{jd_id}:
+    get:
+      tags: [Jobs]
+      summary: Get a specific job description
+      parameters:
+        - name: jd_id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Job description object
+        "404":
+          description: Job not found
+    put:
+      tags: [Jobs]
+      summary: Update a job description
+      parameters:
+        - name: jd_id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        "200":
+          description: Job updated
+    delete:
+      tags: [Jobs]
+      summary: Close/archive a job
+      parameters:
+        - name: jd_id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Job archived
+
+  # ─── CANDIDATES ──────────────────────────────────────────────────────────
+  /candidates:
+    get:
+      tags: [Candidates]
+      summary: List all candidates
+      parameters:
+        - name: role
+          in: query
+          schema: { type: string }
+        - name: stage
+          in: query
+          schema: { type: string }
+        - name: shortlisted
+          in: query
+          schema: { type: boolean }
+        - name: sort_by
+          in: query
+          schema: { type: string, enum: [ats_score, name, applied_at] }
+        - name: order
+          in: query
+          schema: { type: string, enum: [asc, desc] }
+        - name: limit
+          in: query
+          schema: { type: integer, default: 50 }
+        - name: offset
+          in: query
+          schema: { type: integer, default: 0 }
+      responses:
+        "200":
+          description: List of candidates
+          content:
+            application/json:
+              example:
+                total: 30
+                candidates:
+                  - candidate_id: "CAND-PM-003"
+                    name: "Saurabh Tiwari"
+                    role_applied: "Product Manager"
+                    ats_score: 98.0
+                    shortlisted: true
+                    current_stage: "Shortlisted"
+
+  /candidates/{candidate_id}:
+    get:
+      tags: [Candidates]
+      summary: Get full candidate profile
+      parameters:
+        - name: candidate_id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Full candidate object with resume, ATS scores, and pipeline history
+        "404":
+          description: Candidate not found
+    patch:
+      tags: [Candidates]
+      summary: Update candidate stage or notes
+      parameters:
+        - name: candidate_id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                current_stage: { type: string, example: "Technical" }
+                notes: { type: string }
+      responses:
+        "200":
+          description: Candidate updated
+
+  # ─── RESUME PARSER ───────────────────────────────────────────────────────
+  /resumes/parse:
+    post:
+      tags: [Resume Parser]
+      summary: Parse a single resume JSON and extract structured data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [resume_id]
+              properties:
+                resume_id: { type: string, example: "SE-001" }
+                raw_json:  { type: object, description: "Full resume JSON object" }
+      responses:
+        "200":
+          description: Parsed resume output
+          content:
+            application/json:
+              example:
+                resume_id: "SE-001"
+                name: "Aarav Mehta"
+                years_experience: 1.1
+                skill_count: 20
+                certification_count: 2
+                parsed_at: "2024-06-28T10:00:00"
+
+  /resumes/parse/batch:
+    post:
+      tags: [Resume Parser]
+      summary: Parse all resumes in the dataset (batch mode)
+      responses:
+        "200":
+          description: Batch parse results
+          content:
+            application/json:
+              example:
+                total: 30
+                parsed: 30
+                failed: 0
+                time_taken_seconds: 0.8
+
+  /resumes/{resume_id}:
+    get:
+      tags: [Resume Parser]
+      summary: Get parsed resume by ID
+      parameters:
+        - name: resume_id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Parsed resume data
+        "404":
+          description: Resume not found
+
+  # ─── ATS ENGINE ──────────────────────────────────────────────────────────
+  /ats/score:
+    post:
+      tags: [ATS Engine]
+      summary: Score a single candidate against a job description
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [candidate_id, jd_id]
+              properties:
+                candidate_id: { type: string, example: "CAND-SE-001" }
+                jd_id:        { type: string, example: "JD-001" }
+      responses:
+        "200":
+          description: ATS score result
+          content:
+            application/json:
+              example:
+                candidate_id: "CAND-SE-001"
+                name: "Aarav Mehta"
+                ats_score: 86.3
+                shortlisted: true
+                breakdown:
+                  skills_match: 23.2
+                  experience: 25.0
+                  projects: 14.2
+                  education: 9.9
+                  certifications: 10.0
+                  resume_quality: 4.0
+                recommendation: "RECOMMEND – Good match. Schedule interview."
+
+  /ats/score/batch:
+    post:
+      tags: [ATS Engine]
+      summary: Score all parsed candidates (batch mode)
+      responses:
+        "200":
+          description: All scores with rankings
+          content:
+            application/json:
+              example:
+                total: 30
+                shortlisted: 19
+                rejected: 11
+                average_score: 67.2
+
+  /ats/rankings/{role}:
+    get:
+      tags: [ATS Engine]
+      summary: Get ranked candidates for a specific role
+      parameters:
+        - name: role
+          in: path
+          required: true
+          schema: { type: string, example: "Software Engineer" }
+        - name: min_score
+          in: query
+          schema: { type: number, default: 0 }
+      responses:
+        "200":
+          description: Ranked candidate list for the role
+
+  /ats/shortlist/{jd_id}:
+    get:
+      tags: [ATS Engine]
+      summary: Get shortlisted candidates for a job
+      parameters:
+        - name: jd_id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Shortlisted candidates list
+
+  # ─── INTERVIEWS ──────────────────────────────────────────────────────────
+  /interviews/questions:
+    get:
+      tags: [Interviews]
+      summary: Get interview questions (filterable)
+      parameters:
+        - name: role
+          in: query
+          schema: { type: string, example: "Software Engineer" }
+        - name: type
+          in: query
+          schema: { type: string, enum: [Technical, Behavioural, Situational] }
+        - name: difficulty
+          in: query
+          schema: { type: string, enum: [Easy, Medium, Hard] }
+        - name: count
+          in: query
+          schema: { type: integer, default: 10 }
+      responses:
+        "200":
+          description: List of interview questions with rubrics
+
+  /interviews/questions/generate:
+    post:
+      tags: [Interviews]
+      summary: Generate a custom interview pack for a candidate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [candidate_id, interview_round]
+              properties:
+                candidate_id: { type: string }
+                interview_round: { type: string, enum: [Technical-1, Behavioural, Panel] }
+                difficulty_mix: { type: object, example: { Easy: 2, Medium: 5, Hard: 3 } }
+      responses:
+        "200":
+          description: Generated interview question pack (10 questions)
+
+  /interviews/evaluations:
+    post:
+      tags: [Interviews]
+      summary: Submit interview evaluation scores
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [candidate_id, interview_round, scores_per_question]
+              properties:
+                candidate_id: { type: string }
+                interviewer_id: { type: string }
+                interview_round: { type: string }
+                interview_date: { type: string, format: date }
+                scores_per_question: { type: object, example: { "SE-T-01": 8, "SE-T-02": 6 } }
+                feedback_notes: { type: string }
+      responses:
+        "201":
+          description: Evaluation saved
+          content:
+            application/json:
+              example:
+                eval_id: "EVAL-001"
+                total_score: 72.0
+                percentage: 72.0
+                overall_assessment: "Good"
+                recommendation: "Proceed"
+
+  /interviews/evaluations/{candidate_id}:
+    get:
+      tags: [Interviews]
+      summary: Get all evaluations for a candidate
+      parameters:
+        - name: candidate_id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: All interview evaluations for the candidate
+
+  # ─── BIAS DETECTION ──────────────────────────────────────────────────────
+  /bias/run:
+    post:
+      tags: [Bias Detection]
+      summary: Run full bias analysis on the current scored batch
+      responses:
+        "200":
+          description: Bias analysis results
+          content:
+            application/json:
+              example:
+                overall_risk_level: "HIGH"
+                total_candidates_analysed: 30
+                severity_summary: { High: 4, Medium: 2, Low: 2, "Unobservable Risk": 2 }
+                bias_dimensions: [ { dimension: "Institution/College Tier", severity: "HIGH", score_gap: 25.2 } ]
+
+  /bias/report/{audit_id}:
+    get:
+      tags: [Bias Detection]
+      summary: Get a specific bias audit report
+      parameters:
+        - name: audit_id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Full bias audit report JSON
+        "404":
+          description: Report not found
+
+  /bias/reports:
+    get:
+      tags: [Bias Detection]
+      summary: List all bias audit reports
+      responses:
+        "200":
+          description: List of bias audit report summaries
+
+  # ─── DASHBOARD / ANALYTICS ───────────────────────────────────────────────
+  /dashboard/summary:
+    get:
+      tags: [Dashboard]
+      summary: Top-level KPI summary for dashboard
+      responses:
+        "200":
+          description: KPI data
+          content:
+            application/json:
+              example:
+                total_applications: 30
+                shortlisted: 19
+                rejected: 11
+                shortlist_rate: "63.3%"
+                avg_ats_score: 67.2
+                offers_sent: 8
+                offers_accepted: 6
+                time_to_hire_days: 18
+
+  /dashboard/funnel:
+    get:
+      tags: [Dashboard]
+      summary: Hiring funnel stage counts
+      responses:
+        "200":
+          description: Funnel stage breakdown
+          content:
+            application/json:
+              example:
+                stages:
+                  - { stage: "Applications", count: 30, pct: "100%" }
+                  - { stage: "Shortlisted", count: 19, pct: "63.3%" }
+                  - { stage: "Interviews",  count: 14, pct: "46.7%" }
+                  - { stage: "Offers",      count: 8,  pct: "26.7%" }
+                  - { stage: "Joined",      count: 5,  pct: "16.7%" }
+
+  /dashboard/analytics/by-role:
+    get:
+      tags: [Dashboard]
+      summary: Per-role analytics (applications, scores, shortlists)
+      responses:
+        "200":
+          description: Role-level analytics breakdown
+
+  /dashboard/analytics/diversity:
+    get:
+      tags: [Dashboard]
+      summary: Gender and diversity analytics
+      responses:
+        "200":
+          description: Diversity metrics
+          content:
+            application/json:
+              example:
+                female_count: 16
+                male_count: 14
+                female_pct: "53%"
+                female_shortlist_rate: "71%"
+                male_shortlist_rate: "56%"
+
+  /dashboard/analytics/score-distribution:
+    get:
+      tags: [Dashboard]
+      summary: ATS score distribution buckets for histogram
+      responses:
+        "200":
+          description: Score distribution data
+          content:
+            application/json:
+              example:
+                buckets:
+                  - { range: "0-19",   count: 0 }
+                  - { range: "20-39",  count: 5 }
+                  - { range: "40-59",  count: 4 }
+                  - { range: "60-69",  count: 3 }
+                  - { range: "70-79",  count: 9 }
+                  - { range: "80-89",  count: 6 }
+                  - { range: "90-100", count: 3 }
+
+  /dashboard/activity:
+    get:
+      tags: [Dashboard]
+      summary: Recent pipeline activity feed
+      parameters:
+        - name: limit
+          in: query
+          schema: { type: integer, default: 20 }
+      responses:
+        "200":
+          description: Activity feed events

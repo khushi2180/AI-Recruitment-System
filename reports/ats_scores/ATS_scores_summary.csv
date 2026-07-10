@@ -1,0 +1,31 @@
+rank,resume_id,name,role,ats_score,skills,experience,projects,education,certifications,quality,shortlisted,recommendation
+1,DA-001,Vivek Rao,Data Analyst,92.1,28.9,25,14.2,10,10,4.0,True,STRONGLY RECOMMEND
+1,CSA-001,Rohan Kapoor,Cyber Security Analyst,88.4,25.9,23.7,14.8,10,10.0,4.0,True,STRONGLY RECOMMEND
+2,DA-003,Harshita Gupta,Data Analyst,87.0,23.0,25,15,10,10,4.0,True,STRONGLY RECOMMEND
+1,SE-001,Aarav Mehta,Software Engineer,86.3,23.2,25,14.2,9.9,10.0,4.0,True,STRONGLY RECOMMEND
+2,SE-003,Devansh Trivedi,Software Engineer,84.5,20.5,25,15,10,10,4.0,True,RECOMMEND
+1,PM-001,Aditya Malhotra,Product Manager,80.6,21.0,25,12.8,10.0,8.8,3.0,True,RECOMMEND
+1,UX-001,Karan Joshi,UI/UX Designer,80.2,16.2,25,15,10,10.0,4.0,True,RECOMMEND
+2,UX-003,Nandita Roy,UI/UX Designer,79.7,15.7,25,15,10,10.0,4.0,True,RECOMMEND
+2,CSA-005,Arjun Das,Cyber Security Analyst,78.2,15.1,24.9,14.2,10,10,4.0,True,RECOMMEND
+3,DA-005,Riya Shah,Data Analyst,78.2,21.5,25,10.2,10,7.5,4.0,True,RECOMMEND
+2,PM-002,Neha Verma,Product Manager,78.2,22.9,25,9.8,10,7.5,3.0,True,RECOMMEND
+3,SE-004,Simran Kaur,Software Engineer,78.2,17.9,25,13.8,10,7.5,4.0,True,RECOMMEND
+4,SE-006,Tanvi Patel,Software Engineer,78.1,15.8,24.0,15,10,9.3,4.0,True,RECOMMEND
+3,CSA-003,Vikram Sinha,Cyber Security Analyst,75.8,19.2,25,10.2,9.9,7.5,4.0,True,RECOMMEND
+3,UX-005,Ayesha Khan,UI/UX Designer,74.5,11.7,25,13.8,10,10.0,4.0,True,RECOMMEND
+3,PM-003,Saurabh Tiwari,Product Manager,74.3,13.5,25,12.8,10.0,10,3.0,True,RECOMMEND
+4,CSA-004,Meera Pillai,Cyber Security Analyst,73.1,16.4,25,10.2,10,7.5,4.0,True,RECOMMEND
+4,UX-002,Isha Bhatia,UI/UX Designer,73.1,10.3,25,13.8,10,10.0,4.0,True,RECOMMEND
+4,DA-002,Sneha Kulkarni,Data Analyst,72.9,16.3,25,10.2,9.9,7.5,4.0,True,RECOMMEND
+4,PM-004,Divya Krishnan,Product Manager,63.7,19.1,16.8,9.8,10.0,5.0,3.0,False,CONSIDER
+5,SE-002,Priya Nair,Software Engineer,56.8,6.7,25.0,10.2,9.9,2.5,2.5,False,CONSIDER
+5,DA-006,Pranav Nambiar,Data Analyst,48.7,4.0,25.0,10.2,8.0,0.0,1.5,False,WEAK
+5,CSA-002,Ananya Sharma,Cyber Security Analyst,46.6,7.5,15.0,10.2,9.9,2.5,1.5,False,WEAK
+6,SE-005,Rahul Ghosh,Software Engineer,43.7,4.6,15.0,10.2,8.9,2.5,2.5,False,WEAK
+5,UX-004,Sameer Malik,UI/UX Designer,42.9,4.9,17.5,6.5,9.0,2.5,2.5,False,WEAK
+5,PM-005,Manish Aggarwal,Product Manager,42.6,9.8,17.8,0.0,10.0,2.5,2.5,False,WEAK
+6,DA-004,Amit Chandra,Data Analyst,41.5,7.5,25,0.0,5.0,2.5,1.5,False,WEAK
+6,PM-006,Pooja Reddy,Product Manager,39.5,0.0,25,0.0,10.0,2.5,2.0,False,REJECT
+6,UX-006,Deepak Sundaram,UI/UX Designer,37.8,2.9,17.5,6.5,9.9,0.0,1.0,False,REJECT
+6,CSA-006,Snehal Patil,Cyber Security Analyst,37.6,0.0,15.0,10.2,8.9,2.5,1.0,False,REJECT

@@ -1,0 +1,198 @@
+{
+  "resume_id": "UX-001",
+  "name": "Karan Joshi",
+  "email": "karan.joshi.design@gmail.com",
+  "phone": "+919818111234",
+  "linkedin": "linkedin.com/in/karanjoshi-ux",
+  "github": null,
+  "portfolio": "behance.net/karanjoshi | figma.com/@karanjoshi",
+  "address": "Sector 15A, Noida, Uttar Pradesh - 201301",
+  "role_applied": "UI/UX Designer",
+  "quality_tier": "Excellent",
+  "education": [
+    {
+      "degree": "B.Des – Interaction Design",
+      "institution": "National Institute of Design (NID), Ahmedabad",
+      "university": "National Institute of Design (Autonomous)",
+      "cgpa": 8.7,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2021
+    }
+  ],
+  "highest_degree": "B.Des – Interaction Design",
+  "institution": "National Institute of Design (NID), Ahmedabad",
+  "cgpa": 8.7,
+  "experience": [
+    {
+      "company": "Slice (fintech startup)",
+      "title": "Product Designer (UI/UX)",
+      "location": "Bengaluru / Noida (Hybrid)",
+      "type": "Full-Time",
+      "start_date": "Aug 2021",
+      "end_date": "Present",
+      "duration_months": 34,
+      "responsibilities": [
+        "Led end-to-end UX for Slice's card management and rewards product used by 2.5M+ monthly active users.",
+        "Built and maintained Slice Design System — 120+ components in Figma, adopted across 4 product squads (8 designers).",
+        "Reduced onboarding drop-off by 38% through a complete redesign of the KYC flow based on 25 user interviews and 3 usability tests.",
+        "Designed accessible UX (WCAG 2.1 AA) for low-literacy users — tap target optimization, icon-first navigation — leading to 22% increase in rural user retention.",
+        "Launched Slice Rewards Hub: 0-to-1 design from research → prototype → shipped in 8 weeks. Feature adopted by 68% of active users.",
+        "Conducted monthly design crits with cross-functional team; established design review framework adopted company-wide."
+      ]
+    },
+    {
+      "company": "91Springboard Design Studio",
+      "title": "UI/UX Designer (Junior)",
+      "location": "Noida, UP",
+      "type": "Internship + Full-Time",
+      "start_date": "Jan 2021",
+      "end_date": "Jul 2021",
+      "duration_months": 7,
+      "responsibilities": [
+        "Designed 3 client web apps (edtech, healthcare, e-commerce) from wireframe to hi-fi Figma prototypes.",
+        "Conducted usability tests with 5–7 users per project; iterated on 2-week design sprints.",
+        "Contributed 30+ reusable components to agency's shared design library."
+      ]
+    }
+  ],
+  "years_experience": 3.1,
+  "companies": [
+    "Slice (fintech startup)",
+    "91Springboard Design Studio"
+  ],
+  "skills": {
+    "design_tools": [
+      "Figma (Expert: Auto Layout v5, Variables, Dev Mode, Branching)",
+      "Adobe Illustrator",
+      "Adobe XD",
+      "Principle",
+      "Lottie Files"
+    ],
+    "research_methods": [
+      "Moderated Usability Testing",
+      "Card Sorting",
+      "A/B Testing",
+      "Heuristic Evaluation",
+      "User Interviews",
+      "Tree Testing"
+    ],
+    "design_disciplines": [
+      "Interaction Design",
+      "Visual UI Design",
+      "Responsive Web Design",
+      "Mobile App Design (iOS + Android)",
+      "Design Systems",
+      "Accessibility (WCAG 2.1 AA)"
+    ],
+    "code_knowledge": [
+      "HTML/CSS (sufficient for design QA)",
+      "CSS animations",
+      "React component vocabulary"
+    ],
+    "collaboration": [
+      "Figma Dev Mode",
+      "Zeplin",
+      "Storybook (reading)",
+      "JIRA",
+      "Confluence",
+      "Miro",
+      "Notion"
+    ]
+  },
+  "skills_flat": [
+    "Figma (Expert: Auto Layout v5, Variables, Dev Mode, Branching)",
+    "Adobe Illustrator",
+    "Adobe XD",
+    "Principle",
+    "Lottie Files",
+    "Moderated Usability Testing",
+    "Card Sorting",
+    "A/B Testing",
+    "Heuristic Evaluation",
+    "User Interviews",
+    "Tree Testing",
+    "Interaction Design",
+    "Visual UI Design",
+    "Responsive Web Design",
+    "Mobile App Design (iOS + Android)",
+    "Design Systems",
+    "Accessibility (WCAG 2.1 AA)",
+    "HTML/CSS (sufficient for design QA)",
+    "CSS animations",
+    "React component vocabulary",
+    "Figma Dev Mode",
+    "Zeplin",
+    "Storybook (reading)",
+    "JIRA",
+    "Confluence",
+    "Miro",
+    "Notion"
+  ],
+  "skill_count": 27,
+  "projects": [
+    {
+      "name": "Slice Rewards Hub — Case Study",
+      "description": "0-to-1 product design: Discovery (user interviews, competitive audit), IA, wireframing, visual design, prototype testing, launch. 68% adoption rate post-launch. Available on Behance with full case study.",
+      "portfolio_link": "behance.net/karanjoshi/slice-rewards"
+    },
+    {
+      "name": "HealthTrack Dashboard — SaaS Design",
+      "description": "Designed complex data-heavy healthcare analytics dashboard for a Series A startup. Solved for cognitive overload through progressive disclosure and contextual data hierarchy. Figma Community featured file — 3,400 duplicates.",
+      "portfolio_link": "figma.com/community/file/karanjoshi-healthtrack"
+    },
+    {
+      "name": "AccessFirst Design System",
+      "description": "Open-source Figma design system built with WCAG 2.1 AA compliance from the ground up. Includes accessibility annotations, color token system, and component documentation. 2,100+ Figma duplicates.",
+      "portfolio_link": "figma.com/community/file/accessfirst-karanjoshi"
+    }
+  ],
+  "project_count": 3,
+  "certifications": [
+    {
+      "name": "Google UX Design Professional Certificate",
+      "issuer": "Coursera / Google",
+      "year": 2021
+    },
+    {
+      "name": "Interaction Design Foundation – UX Designer",
+      "issuer": "IDF",
+      "year": 2022
+    },
+    {
+      "name": "Figma Advanced Prototyping",
+      "issuer": "Figma Academy",
+      "year": 2023
+    }
+  ],
+  "certification_names": [
+    "Google UX Design Professional Certificate",
+    "Interaction Design Foundation – UX Designer",
+    "Figma Advanced Prototyping"
+  ],
+  "certification_count": 3,
+  "achievements": [
+    "Behance Featured Creator – UI/UX category (March 2023)",
+    "Figma Community Most Duplicated File — AccessFirst Design System (2,100+ duplicates)",
+    "NID Design Award — Excellence in Interaction Design (Final Year Project 2021)",
+    "Slice All-Hands Innovation Award — KYC Redesign (Q3 2022)"
+  ],
+  "languages_known": [
+    "English (Fluent)",
+    "Hindi (Native)"
+  ],
+  "soft_skills": [
+    "Design Leadership",
+    "User Empathy",
+    "Facilitating Design Critique",
+    "Storytelling",
+    "Accessibility Advocacy"
+  ],
+  "interests": [
+    "Accessibility Research",
+    "Type Design",
+    "Street Photography",
+    "Mentoring Junior Designers (ADPList)"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.638670",
+  "source_file": "UX_001_Karan_Joshi.json"
+}

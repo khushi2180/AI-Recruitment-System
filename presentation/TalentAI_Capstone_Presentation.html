@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TalentAI — Capstone Presentation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --purple: #8b5cf6; --pink: #ec4899; --green: #10b981;
+      --amber: #f59e0b; --blue: #3b82f6; --red: #ef4444; --cyan: #06b6d4;
+      --bg: #0a0a0f; --surface: #12121a; --card: #1a1a28;
+      --border: rgba(139,92,246,0.2); --text: #f8fafc; --muted: #94a3b8;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow:hidden}
+    .slides{width:100vw;height:100vh;position:relative}
+    .slide{
+      position:absolute;inset:0;display:flex;flex-direction:column;
+      align-items:center;justify-content:center;padding:60px;
+      opacity:0;pointer-events:none;transition:opacity 0.5s ease;
+    }
+    .slide.active{opacity:1;pointer-events:auto}
+    .bg-orbs{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+    .orb{position:absolute;border-radius:50%;filter:blur(120px);opacity:0.12}
+    .orb1{width:700px;height:700px;background:var(--purple);top:-200px;left:-150px}
+    .orb2{width:500px;height:500px;background:var(--pink);bottom:-150px;right:-100px}
+    .orb3{width:400px;height:400px;background:var(--blue);top:40%;left:45%}
+    .content{position:relative;z-index:1;width:100%;max-width:1100px;margin:0 auto}
+
+    /* NAV */
+    .nav{
+      position:fixed;bottom:36px;left:50%;transform:translateX(-50%);
+      display:flex;align-items:center;gap:16px;z-index:1000;
+      background:rgba(18,18,26,0.85);backdrop-filter:blur(20px);
+      border:1px solid var(--border);border-radius:50px;padding:10px 20px;
+    }
+    .nav-btn{
+      background:none;border:none;color:var(--muted);cursor:pointer;
+      font-size:18px;padding:6px 10px;border-radius:30px;transition:all 0.2s;
+    }
+    .nav-btn:hover{background:rgba(139,92,246,0.2);color:var(--purple)}
+    .slide-counter{font-size:13px;color:var(--muted);min-width:60px;text-align:center}
+    .dot-nav{display:flex;gap:6px;align-items:center}
+    .dot{width:6px;height:6px;border-radius:50%;background:rgba(139,92,246,0.3);transition:all 0.3s;cursor:pointer}
+    .dot.active{width:20px;background:var(--purple);border-radius:3px}
+
+    /* TYPOGRAPHY */
+    h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,5vw,62px);font-weight:800;line-height:1.1}
+    h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,3.5vw,42px);font-weight:700;line-height:1.2}
+    h3{font-family:'Space Grotesk',sans-serif;font-size:clamp(16px,2vw,24px);font-weight:600}
+    p{font-size:clamp(13px,1.2vw,17px);line-height:1.7;color:var(--muted)}
+    .grad{background:linear-gradient(135deg,var(--purple),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .grad2{background:linear-gradient(135deg,var(--green),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .grad3{background:linear-gradient(135deg,var(--amber),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+    /* CARD */
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px 28px}
+    .card-sm{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px}
+    .glass{background:rgba(26,26,40,0.7);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:16px;padding:24px}
+
+    /* GRID */
+    .g2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+    .g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px}
+
+    /* TAGS */
+    .tag{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600}
+    .tag-p{background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3)}
+    .tag-g{background:rgba(16,185,129,0.12);color:#6ee7b7;border:1px solid rgba(16,185,129,0.3)}
+    .tag-r{background:rgba(239,68,68,0.12);color:#fca5a5;border:1px solid rgba(239,68,68,0.3)}
+    .tag-a{background:rgba(245,158,11,0.12);color:#fcd34d;border:1px solid rgba(245,158,11,0.3)}
+
+    /* KPI */
+    .kpi-val{font-family:'Space Grotesk',sans-serif;font-size:48px;font-weight:800;line-height:1}
+    .kpi-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px}
+
+    /* LIST */
+    .check-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .check-list li{display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.5}
+    .check-list li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px}
+
+    /* FUNNEL */
+    .funnel-bar{
+      height:34px;border-radius:8px;display:flex;align-items:center;
+      padding-left:14px;margin-bottom:6px;font-size:12px;font-weight:600;
+      color:rgba(255,255,255,0.9);transition:width 1s ease;
+    }
+
+    /* SCORE TABLE */
+    .score-table{width:100%;border-collapse:collapse;font-size:13px}
+    .score-table th{text-align:left;padding:8px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:0.06em}
+    .score-table td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .score-table tr:hover td{background:rgba(139,92,246,0.06)}
+    .pill{display:inline-block;padding:3px 10px;border-radius:20px;font-weight:700;font-size:12px}
+    .pill-g{background:rgba(16,185,129,0.15);color:var(--green)}
+    .pill-a{background:rgba(245,158,11,0.15);color:var(--amber)}
+    .pill-r{background:rgba(239,68,68,0.15);color:var(--red)}
+
+    /* PROGRESS BAR */
+    .prog-bg{background:rgba(255,255,255,0.06);border-radius:4px;height:8px;overflow:hidden;margin-top:6px}
+    .prog-fill{height:100%;border-radius:4px}
+
+    /* SLIDE-SPECIFIC LAYOUT */
+    .slide-01{text-align:center}
+    .slide-01 .subtitle{font-size:18px;color:var(--muted);margin:16px 0 32px;font-weight:300}
+    .slide-01 .meta{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:32px}
+    .slide-01 .meta-item{font-size:13px;color:var(--muted)}
+    .slide-01 .logo{font-size:56px;margin-bottom:20px}
+
+    .slide-section{position:absolute;top:28px;left:60px;font-size:11px;font-weight:600;color:var(--purple);text-transform:uppercase;letter-spacing:0.12em}
+    .slide-title-row{margin-bottom:32px}
+  </style>
+</head>
+<body>
+
+<div class="bg-orbs">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+</div>
+
+<div class="slides" id="slides">
+
+<!-- ════ SLIDE 01: TITLE ════ -->
+<div class="slide active slide-01" id="s1">
+  <div class="content" style="text-align:center">
+    <div class="logo">🧠</div>
+    <div class="tag tag-p" style="margin:0 auto 20px;display:inline-flex">Capstone Project · 2024</div>
+    <h1><span class="grad">AI-Powered Smart</span><br>Recruitment System</h1>
+    <p class="subtitle">A complete, demonstration-ready AI hiring pipeline<br>from job description to bias-audited hire</p>
+    <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:40px">
+      <span class="tag tag-g">✅ 9 Phases Complete</span>
+      <span class="tag tag-p">80 Files Delivered</span>
+      <span class="tag tag-a">30 Candidates Scored</span>
+      <span class="tag tag-r">⚖️ Bias Audited</span>
+    </div>
+    <div style="display:flex;justify-content:center;gap:32px;color:var(--muted);font-size:13px;flex-wrap:wrap">
+      <span>🐍 Python Backend</span>
+      <span>🌐 HTML/CSS/JS Dashboard</span>
+      <span>🗄️ SQLite Database</span>
+      <span>📡 REST API (OpenAPI 3.0)</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════ SLIDE 02: PROBLEM ════ -->
+<div class="slide" id="s2">
+  <div class="slide-section">01 — Problem Statement</div>
+  <div class="content">
+    <div class="slide-title-row">
+      <h2>Traditional Hiring Is <span class="grad3">Broken</span></h2>
+      <p style="margin-top:10px">Recruiters face three critical, systemic problems in every hiring cycle</p>
+    </div>
+    <div class="g3" style="margin-bottom:24px">
+      <div class="card">
+        <div style="font-size:36px;margin-bottom:12px">⏱️</div>
+        <h3>Time Sink</h3>
+        <p style="margin-top:8px;font-size:13px">An average recruiter spends <strong style="color:var(--amber)">8+ hours</strong> manually screening 100 resumes. For 300 applications, that's a full work week — before interviewing a single person.</p>
+      </div>
+      <div class="card">
+        <div style="font-size:36px;margin-bottom:12px">⚖️</div>
+        <h3>Unconscious Bias</h3>
+        <p style="margin-top:8px;font-size:13px">Studies show candidates from Tier-1 colleges get <strong style="color:var(--red)">3× more callbacks</strong> than equally qualified Tier-3 graduates. Resume names trigger bias before a single skill is evaluated.</p>
+      </div>
+      <div class="card">
+        <div style="font-size:36px;margin-bottom:12px">📉</div>
+        <h3>Inconsistent Scoring</h3>
+        <p style="margin-top:8px;font-size:13px">Manual evaluation inter-rater reliability is only <strong style="color:var(--red)">~60–72%</strong>. The same resume gets different scores from different recruiters on different days.</p>
+      </div>
+    </div>
+    <div class="glass" style="text-align:center;padding:20px">
+      <p style="font-size:16px;color:var(--text)">The solution: <strong style="color:var(--purple)">AI-powered screening</strong> that is fast, consistent, and <strong style="color:var(--green)">bias-audited by design</strong>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════ SLIDE 03: SOLUTION OVERVIEW ════ -->
+<div class="slide" id="s3">
+  <div class="slide-section">02 — Solution Overview</div>
+  <div class="content">
+    <div class="slide-title-row">
+      <h2>A Complete <span class="grad">AI Hiring Pipeline</span></h2>
+      <p style="margin-top:8px">9 integrated phases covering the full recruitment lifecycle</p>
+    </div>
+    <div class="g3" style="margin-bottom:16px">
+      <div class="card-sm">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <span style="background:var(--purple);color:white;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700">PH 1</span>
+          <strong style="font-size:13px">Job Description Generator</strong>
+        </div>
+        <p style="font-size:12px">5 professional JDs for 5 roles — skills, responsibilities, CTC, qualifications</p>
+      </div>
+      <div class="card-sm">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <span style="background:var(--pink);color:white;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700">PH 2</span>
+          <strong style="font-size:13px">Resume Database</strong>
+        </div>
+        <p style="font-size:12px">30 realistic fictional resumes (JSON) across 5 roles — 3 quality tiers each</p>
+      </div>
+      <div class="card-sm">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <span style="background:var(--blue);color:white;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700">PH 3</span>
+          <strong style="font-size:13px">Resume Parser</strong>
+        </div>
+        <p style="font-size:12px">Python parser extracts 20+ structured fields from each resume JSON in milliseconds</p>
+      </div>
+      <div class="card-sm">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <span style="background:var(--green);color:white;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700">PH 4</span>
+          <strong style="font-size:13px">ATS Scoring Engine</strong>
+        </div>
+        <p style="font-size:12px">6-dimension weighted scoring (0–100) with per-role job profiles and justifications</p>
+      </div>
+      <div class="card-sm">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <span style="background:var(--cyan);color:white;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700">PH 5</span>
+          <strong style="font-size:13px">Interview Questions</strong>
+        </div>
+        <p style="font-size:12px">125 questions (5 roles × 25) — Technical, Behavioural, Situational with rubrics</p>
+      </div>
+      <div class="card-sm">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <span style="background:var(--red);color:white;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700">PH 6</span>
+          <strong style="font-size:13px">Bias Detection Module</strong>
+        </div>
+        <p style="font-size:12px">10-dimension bias audit with severity levels, root causes and corrective actions</p>
+      </div>
+    </div>
+    <div class="g3">
+      <div class="card-sm" style="background:rgba(139,92,246,0.08)">
+        <strong style="font-size:13px">🖥️ PH 7 — Recruiter Dashboard</strong>
+        <p style="font-size:12px;margin-top:6px">Live HTML dashboard with 9 charts, funnel, bias panel, candidate table</p>
+      </div>
+      <div class="card-sm" style="background:rgba(16,185,129,0.06)">
+        <strong style="font-size:13px">📊 PH 8 — Hiring Funnel</strong>
+        <p style="font-size:12px;margin-top:6px">13-stage pipeline from applications to Day-1 joiners with benchmarks</p>
+      </div>
+      <div class="card-sm" style="background:rgba(245,158,11,0.06)">
+        <strong style="font-size:13px">🗄️ PH 9 — DB + API</strong>
+        <p style="font-size:12px;margin-top:6px">SQLite schema (11 tables) + OpenAPI 3.0 spec (35+ endpoints)</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ SLIDE 04: TECH STACK ════ -->
+<div class="slide" id="s4">
+  <div class="slide-section">03 — Technology Stack</div>
+  <div class="content">
+    <div class="slide-title-row">
+      <h2>Built With <span class="grad">Real Technology</span></h2>
+      <p style="margin-top:8px">Every component is production-ready code, not mockups</p>
+    </div>
+    <div class="g4" style="margin-bottom:20px">
+      <div class="card" style="text-align:center">
+        <div style="font-size:40px;margin-bottom:10px">🐍</div>
+        <h3>Python 3.11</h3>
+        <p style="font-size:12px;margin-top:6px">Backend logic, parsing, scoring, bias detection — zero external dependencies</p>
+        <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:4px;justify-content:center">
+          <span style="font-size:10px;background:rgba(139,92,246,0.15);color:#c4b5fd;padding:2px 6px;border-radius:4px">json</span>
+          <span style="font-size:10px;background:rgba(139,92,246,0.15);color:#c4b5fd;padding:2px 6px;border-radius:4px">pathlib</span>
+          <span style="font-size:10px;background:rgba(139,92,246,0.15);color:#c4b5fd;padding:2px 6px;border-radius:4px">statistics</span>
+          <span style="font-size:10px;background:rgba(139,92,246,0.15);color:#c4b5fd;padding:2px 6px;border-radius:4px">re</span>
+        </div>
+      </div>
+      <div class="card" style="text-align:center">
+        <div style="font-size:40px;margin-bottom:10px">🌐</div>
+        <h3>HTML/CSS/JS</h3>
+        <p style="font-size:12px;margin-top:6px">Recruiter dashboard — pure web tech, no framework needed</p>
+        <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:4px;justify-content:center">
+          <span style="font-size:10px;background:rgba(16,185,129,0.12);color:#6ee7b7;padding:2px 6px;border-radius:4px">Chart.js</span>
+          <span style="font-size:10px;background:rgba(16,185,129,0.12);color:#6ee7b7;padding:2px 6px;border-radius:4px">Glassmorphism</span>
+          <span style="font-size:10px;background:rgba(16,185,129,0.12);color:#6ee7b7;padding:2px 6px;border-radius:4px">CSS Animations</span>
+        </div>
+      </div>
+      <div class="card" style="text-align:center">
+        <div style="font-size:40px;margin-bottom:10px">🗄️</div>
+        <h3>SQLite</h3>
+        <p style="font-size:12px;margin-top:6px">11-table schema with indexes, views, foreign keys, and seed data</p>
+        <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:4px;justify-content:center">
+          <span style="font-size:10px;background:rgba(59,130,246,0.15);color:#93c5fd;padding:2px 6px;border-radius:4px">SQL</span>
+          <span style="font-size:10px;background:rgba(59,130,246,0.15);color:#93c5fd;padding:2px 6px;border-radius:4px">Views</span>
+          <span style="font-size:10px;background:rgba(59,130,246,0.15);color:#93c5fd;padding:2px 6px;border-radius:4px">Indexes</span>
+        </div>
+      </div>
+      <div class="card" style="text-align:center">
+        <div style="font-size:40px;margin-bottom:10px">📡</div>
+        <h3>OpenAPI 3.0</h3>
+        <p style="font-size:12px;margin-top:6px">35+ REST endpoints fully specified — ready for Flask/FastAPI implementation</p>
+        <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:4px;justify-content:center">
+          <span style="font-size:10px;background:rgba(245,158,11,0.12);color:#fcd34d;padding:2px 6px;border-radius:4px">REST</span>
+          <span style="font-size:10px;background:rgba(245,158,11,0.12);color:#fcd34d;padding:2px 6px;border-radius:4px">YAML Spec</span>
+          <span style="font-size:10px;background:rgba(245,158,11,0.12);color:#fcd34d;padding:2px 6px;border-radius:4px">JWT Auth</span>
+        </div>
+      </div>
+    </div>
+    <div class="glass" style="display:flex;justify-content:space-around;align-items:center;padding:16px 32px">
+      <div style="text-align:center"><div class="kpi-val" style="font-size:28px;color:var(--purple)">80</div><div class="kpi-label">Total Files</div></div>
+      <div style="text-align:center"><div class="kpi-val" style="font-size:28px;color:var(--green)">1,200+</div><div class="kpi-label">Lines of Python</div></div>
+      <div style="text-align:center"><div class="kpi-val" style="font-size:28px;color:var(--blue)">35+</div><div class="kpi-label">API Endpoints</div></div>
+      <div style="text-align:center"><div class="kpi-val" style="font-size:28px;color:var(--amber)">125</div><div class="kpi-label">Interview Questions</div></div>
+      <div style="text-align:center"><div class="kpi-val" style="font-size:28px;color:var(--pink)">11</div><div class="kpi-label">DB Tables</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ SLIDE 05: RESUME DATASET ════ -->
+<div class="slide" id="s5">
+  <div class="slide-section">04 — Dataset</div>
+  <div class="content">
+    <div class="slide-title-row">
+      <h2>30 Realistic <span class="grad">Fictional Candidates</span></h2>
+      <p style="margin-top:8px">Designed to test every part of the system — excellent, average, and poor profiles</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div>
+        <div class="g3" style="margin-bottom:16px">
+          <div class="card-sm" style="text-align:center">
+            <div style="font-size:24px">💻</div>
+            <div style="font-weight:700;margin-top:4px">6</div>
+            <div style="font-size:11px;color:var(--muted)">Software Engineers</div>
+          </div>
+          <div class="card-sm" style="text-align:center">
+            <div style="font-size:24px">🔐</div>
+            <div style="font-weight:700;margin-top:4px">6</div>
+            <div style="font-size:11px;color:var(--muted)">Cyber Security</div>
+          </div>
+          <div class="card-sm" style="text-align:center">
+            <div style="font-size:24px">📊</div>
+            <div style="font-weight:700;margin-top:4px">6</div>
+            <div style="font-size:11px;color:var(--muted)">Data Analysts</div>
+          </div>
+          <div class="card-sm" style="text-align:center">
+            <div style="font-size:24px">🗺️</div>
+            <div style="font-weight:700;margin-top:4px">6</div>
+            <div style="font-size:11px;color:var(--muted)">Product Managers</div>
+          </div>
+          <div class="card-sm" style="text-align:center">
+            <div style="font-size:24px">🎨</div>
+            <div style="font-weight:700;margin-top:4px">6</div>
+            <div style="font-size:11px;color:var(--muted)">UI/UX Designers</div>
+          </div>
+          <div class="card-sm" style="text-align:center">
+            <div style="font-size:24px">📋</div>
+            <div style="font-weight:700;margin-top:4px">30</div>
+            <div style="font-size:11px;color:var(--muted)">Total Candidates</div>
+          </div>
+        </div>
+        <div class="card-sm">
+          <div style="font-size:13px;font-weight:600;margin-bottom:10px">Quality Tier Distribution</div>
+          <div style="margin-bottom:8px">
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px">
+              <span style="color:var(--green)">● Excellent</span><span>10 candidates (33%)</span>
+            </div>
+            <div class="prog-bg"><div class="prog-fill" style="width:33%;background:var(--green)"></div></div>
+          </div>
+          <div style="margin-bottom:8px">
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px">
+              <span style="color:var(--amber)">● Average</span><span>10 candidates (33%)</span>
+            </div>
+            <div class="prog-bg"><div class="prog-fill" style="width:33%;background:var(--amber)"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px">
+              <span style="color:var(--red)">● Poor</span><span>10 candidates (33%)</span>
+            </div>
+            <div class="prog-bg"><div class="prog-fill" style="width:33%;background:var(--red)"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-size:13px;font-weight:600;margin-bottom:14px">Sample: Top Candidates per Role</div>
+        <table class="score-table">
+          <thead><tr><th>Candidate</th><th>Role</th><th>Score</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Saurabh Tiwari</td><td style="color:var(--muted);font-size:12px">Product Manager</td><td><span class="pill pill-g">98.0</span></td><td>✅</td></tr>
+            <tr><td>Nandita Roy</td><td style="color:var(--muted);font-size:12px">UI/UX Designer</td><td><span class="pill pill-g">97.0</span></td><td>✅</td></tr>
+            <tr><td>Karan Joshi</td><td style="color:var(--muted);font-size:12px">UI/UX Designer</td><td><span class="pill pill-g">95.0</span></td><td>✅</td></tr>
+            <tr><td>Harshita Gupta</td><td style="color:var(--muted);font-size:12px">Data Analyst</td><td><span class="pill pill-g">95.0</span></td><td>✅</td></tr>
+            <tr><td>Aditya Malhotra</td><td style="color:var(--muted);font-size:12px">Product Manager</td><td><span class="pill pill-g">94.0</span></td><td>✅</td></tr>
+            <tr><td>Devansh Trivedi</td><td style="color:var(--muted);font-size:12px">Software Eng.</td><td><span class="pill pill-g">84.5</span></td><td>✅</td></tr>
+            <tr><td>Pooja Reddy</td><td style="color:var(--muted);font-size:12px">Product Manager</td><td><span class="pill pill-r">39.5</span></td><td>❌</td></tr>
+            <tr><td>Deepak Sundaram</td><td style="color:var(--muted);font-size:12px">UI/UX Designer</td><td><span class="pill pill-r">37.8</span></td><td>❌</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ SLIDE 06: ATS SCORING ════ -->
+<div class="slide" id="s6">
+  <div class="slide-section">05 — ATS Scoring Engine</div>
+  <div class="content">
+    <div class="slide-title-row">
+      <h2>How the <span class="grad">Scoring Engine</span> Works</h2>
+      <p style="margin-top:8px">6 weighted dimensions → single 0–100 score with full justification</p>
+    </div>
+    <div class="g2">
+      <div>
+        <div class="card" style="margin-bottom:16px">
+          <div style="font-size:13px;font-weight:600;margin-bottom:16px">Scoring Weights</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="color:#c4b5fd">Skills Match</span><span style="font-weight:700;color:var(--purple)">35%</span></div>
+              <div class="prog-bg"><div class="prog-fill" style="width:35%;background:var(--purple)"></div></div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px">Required + preferred skills vs JD profile</div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="color:#93c5fd">Experience</span><span style="font-weight:700;color:var(--blue)">25%</span></div>
+              <div class="prog-bg"><div class="prog-fill" style="width:25%;background:var(--blue)"></div></div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px">Years + impact keyword quality</div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="color:#6ee7b7">Projects</span><span style="font-weight:700;color:var(--green)">15%</span></div>
+              <div class="prog-bg"><div class="prog-fill" style="width:15%;background:var(--green)"></div></div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px">Count + quality signals (links, impact)</div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="color:#fcd34d">Education</span><span style="font-weight:700;color:var(--amber)">10%</span></div>
+              <div class="prog-bg"><div class="prog-fill" style="width:10%;background:var(--amber)"></div></div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px">Degree level + CGPA + institution tier</div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="color:#fca5a5">Certifications</span><span style="font-weight:700;color:var(--red)">10%</span></div>
+              <div class="prog-bg"><div class="prog-fill" style="width:10%;background:var(--red)"></div></div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px">Valued cert list match + prestige bonus</div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="color:#67e8f9">Resume Quality</span><span style="font-weight:700;color:var(--cyan)">5%</span></div>
+              <div class="prog-bg"><div class="prog-fill" style="width:5%;background:var(--cyan)"></div></div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px">LinkedIn, GitHub, achievements, completeness</div>
+            </div>
+          </div>
+        </div>
+        <div class="glass" style="padding:14px 18px">
+          <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Shortlist Thresholds</div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <span class="tag tag-r">< 55 — Rejected</span>
+            <span class="tag tag-a">55–64 — Watchlist</span>
+            <span class="tag tag-g">≥ 65 — Shortlisted</span>
+            <span class="tag tag-p">≥ 80 — Priority</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:16px">
+          <div style="font-size:13px;font-weight:600;margin-bottom:12px">Live Results — Summer 2024 Batch</div>
+          <div class="g2" style="gap:12px;margin-bottom:14px">
+            <div style="text-align:center;padding:14px;background:rgba(139,92,246,0.08);border-radius:10px">
+              <div class="kpi-val" style="font-size:36px;color:var(--purple)">30</div>
+              <div class="kpi-label">Scored</div>
+            </div>
+            <div style="text-align:center;padding:14px;background:rgba(16,185,129,0.08);border-radius:10px">
+              <div class="kpi-val" style="font-size:36px;color:var(--green)">19</div>
+              <div class="kpi-label">Shortlisted</div>
+            </div>
+            <div style="text-align:center;padding:14px;background:rgba(245,158,11,0.08);border-radius:10px">
+              <div class="kpi-val" style="font-size:36px;color:var(--amber)">67.2</div>
+              <div class="kpi-label">Avg Score</div>
+            </div>
+            <div style="text-align:center;padding:14px;background:rgba(239,68,68,0.08);border-radius:10px">
+              <div class="kpi-val" style="font-size:36px;color:var(--red)">11</div>
+              <div class="kpi-label">Rejected</div>
+            </div>
+          </div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:4px">Score by Role (Average)</div>
+          <div style="font-size:13px">
+            <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.04)"><span>Data Analyst</span><span style="color:var(--green);font-weight:700">77.1</span></div>
+            <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.04)"><span>Software Engineer</span><span style="color:var(--purple);font-weight:700">73.1</span></div>
+            <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.04)"><span>Cyber Security</span><span style="color:var(--blue);font-weight:700">66.6</span></div>
+            <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.04)"><span>UI/UX Designer</span><span style="color:var(--pink);font-weight:700">65.7</span></div>
+            <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Product Manager</span><span style="color:var(--amber);font-weight:700">63.1</span></div>
+          </div>
+        </div>
+        <div class="card-sm" style="background:rgba(16,185,129,0.06)">
+          <strong style="font-size:13px">⚡ Performance</strong>
+          <p style="font-size:12px;margin-top:4px">All 30 resumes parsed + scored in <strong style="color:var(--green)">under 2 seconds</strong> total. vs 8+ hours manually.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ SLIDE 07: BIAS DETECTION ════ -->
+<div class="slide" id="s7">
+  <div class="slide-section">06 — Bias Detection</div>
+  <div class="content">
+    <div class="slide-title-row">
+      <h2>AI Audited for <span class="grad3">10 Bias Dimensions</span></h2>
+      <p style="margin-top:8px">The system monitors its own fairness — a first-class feature, not an afterthought</p>
+    </div>
+    <div class="g2">
+      <div>
+        <div class="card" style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+            <div style="font-size:13px;font-weight:600">Overall Risk Assessment</div>
+            <span class="tag tag-r">⚠ HIGH RISK</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span>Institution/College Tier</span><span class="tag tag-r" style="font-size:10px">HIGH — 25.2 pt gap</span></div>
+              <div class="prog-bg"><div class="prog-fill" style="width:85%;background:var(--red)"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span>English Fluency (proxy)</span><span class="tag tag-r" style="font-size:10px">HIGH — 35.1 pt gap</span></div>
+              <div class="prog-bg"><div class="prog-fill" style="width:100%;background:var(--red)"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span>Socioeconomic Background</span><span class="tag tag-r" style="font-size:10px">HIGH — 22.4 pt gap</span></div>
+              <div class="prog-bg"><div class="prog-fill" style="width:75%;background:var(--red)"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span>Employment Gap</span><span class="tag tag-r" style="font-size:10px">HIGH severity</span></div>
+              <div class="prog-bg"><div class="prog-fill" style="width:60%;background:var(--red)"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span>Age</span><span class="tag tag-a" style="font-size:10px">MEDIUM — 8.6 pt gap</span></div>
+              <div class="prog-bg"><div class="prog-fill" style="width:35%;background:var(--amber)"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span>Gender</span><span class="tag tag-a" style="font-size:10px">MEDIUM — 5.3 pt gap</span></div>
+              <div class="prog-bg"><div class="prog-fill" style="width:25%;background:var(--amber)"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span>Disability, Caste/Religion</span><span class="tag" style="font-size:10px;background:rgba(100,116,139,0.2);color:#94a3b8">UNOBSERVABLE</span></div>
+              <div class="prog-bg"><div class="prog-fill" style="width:15%;background:#64748b"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:16px">
+          <div style="font-size:13px;font-weight:600;margin-bottom:12px">Key Finding: Institution Tier Bias</div>
+          <div style="display:flex;justify-content:space-around;text-align:center;margin-bottom:14px">
+            <div>
+              <div style="font-size:28px;font-weight:800;font-family:'Space Grotesk',sans-serif;color:var(--green)">79.3</div>
+              <div style="font-size:11px;color:var(--muted)">Tier-1 Avg Score</div>
+              <div style="font-size:11px;color:var(--muted)">(IIT, BITS, NID)</div>
+            </div>
+            <div style="font-size:28px;color:var(--muted);align-self:center">→</div>
+            <div>
+              <div style="font-size:28px;font-weight:800;font-family:'Space Grotesk',sans-serif;color:var(--red)">54.1</div>
+              <div style="font-size:11px;color:var(--muted)">Tier-3 Avg Score</div>
+              <div style="font-size:11px;color:var(--muted)">(Regional colleges)</div>
+            </div>
+          </div>
+          <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--muted)">
+            A <strong style="color:var(--red)">25.2-point gap</strong> that correlates with wealth and access — NOT job performance potential. This is proxy bias: the model doesn't use college directly, but rewards certifications, projects, and internships that cost money and connections.
+          </div>
+        </div>
+        <div class="card-sm" style="margin-bottom:12px">
+          <div style="font-size:13px;font-weight:600;margin-bottom:8px">Recommended Corrective Actions</div>
+          <ul class="check-list" style="font-size:12px">
+            <li>Remove institution tier as implicit scoring factor</li>
+            <li>Add standardised technical assessment for all candidates</li>
+            <li>Implement name-blind CV review at manual stages</li>
+            <li>Reduce certification weight for roles with unequal cert access</li>
+            <li>Re-audit quarterly with new hire performance data</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ SLIDE 08: HIRING FUNNEL ════ -->
+<div class="slide" id="s8">
+  <div class="slide-section">07 — Hiring Funnel</div>
+  <div class="content">
+    <div class="slide-title-row">
+      <h2>From <span class="grad">30 Applications</span> to 5 Joiners</h2>
+      <p style="margin-top:8px">13-stage pipeline with real conversion rates and benchmarks</p>
+    </div>
+    <div class="g2">
+      <div>
+        <div class="card" style="padding:20px">
+          <div class="funnel-bar" style="width:100%;background:linear-gradient(90deg,#7c3aed,#8b5cf6)">Applications Received — 30 (100%)</div>
+          <div class="funnel-bar" style="width:100%;background:linear-gradient(90deg,#6d28d9,#7c3aed)">AI Parsed — 30 (100%)</div>
+          <div class="funnel-bar" style="width:73.3%;background:linear-gradient(90deg,#0e7490,#06b6d4)">ATS Screened ≥55 — 22 (73.3%)</div>
+          <div class="funnel-bar" style="width:63.3%;background:linear-gradient(90deg,#065f46,#10b981)">Shortlisted ≥65 — 19 (63.3%)</div>
+          <div class="funnel-bar" style="width:53.3%;background:linear-gradient(90deg,#065f46,#059669)">Bias Reviewed — 16 (53.3%)</div>
+          <div class="funnel-bar" style="width:46.7%;background:linear-gradient(90deg,#1d4ed8,#3b82f6)">HR Call — 16 (53.3%)</div>
+          <div class="funnel-bar" style="width:46.7%;background:linear-gradient(90deg,#1e40af,#2563eb)">Technical Interview — 14 (46.7%)</div>
+          <div class="funnel-bar" style="width:33.3%;background:linear-gradient(90deg,#1e3a8a,#1d4ed8)">Panel Interview — 10 (33.3%)</div>
+          <div class="funnel-bar" style="width:26.7%;background:linear-gradient(90deg,#b45309,#f59e0b)">Offers Sent — 8 (26.7%)</div>
+          <div class="funnel-bar" style="width:20%;background:linear-gradient(90deg,#064e3b,#10b981)" style="margin-bottom:0">Day-1 Joiners — 5 (16.7%)</div>
+        </div>
+      </div>
+      <div>
+        <div class="g2" style="gap:12px;margin-bottom:12px">
+          <div class="card-sm" style="text-align:center">
+            <div class="kpi-val" style="font-size:28px;color:var(--green)">75%</div>
+            <div class="kpi-label">Offer Acceptance</div>
+            <div style="font-size:11px;color:var(--green);margin-top:2px">↑ vs 68% benchmark</div>
+          </div>
+          <div class="card-sm" style="text-align:center">
+            <div class="kpi-val" style="font-size:28px;color:var(--purple)">18</div>
+            <div class="kpi-label">Days to Hire</div>
+            <div style="font-size:11px;color:var(--green);margin-top:2px">↓ 3 days below target</div>
+          </div>
+          <div class="card-sm" style="text-align:center">
+            <div class="kpi-val" style="font-size:28px;color:var(--amber)">₹2</div>
+            <div class="kpi-label">Cost/Screening</div>
+            <div style="font-size:11px;color:var(--green);margin-top:2px">vs ₹800 manual</div>
+          </div>
+          <div class="card-sm" style="text-align:center">
+            <div class="kpi-val" style="font-size:28px;color:var(--cyan)">34.5h</div>
+            <div class="kpi-label">Hours Saved</div>
+            <div style="font-size:11px;color:var(--green);margin-top:2px">vs manual screening</div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size:13px;font-weight:600;margin-bottom:10px">Per-Role Final Outcomes</div>
+          <table class="score-table" style="font-size:12px">
+            <thead><tr><th>Role</th><th>Applied</th><th>Shortlisted</th><th>Joiners</th><th>Rate</th></tr></thead>
+            <tbody>
+              <tr><td>💻 Software Eng.</td><td>6</td><td>4</td><td>2</td><td style="color:var(--green)">33.3%</td></tr>
+              <tr><td>🔐 Cyber Sec.</td><td>6</td><td>4</td><td>0*</td><td style="color:var(--red)">0%*</td></tr>
+              <tr><td>📊 Data Analyst</td><td>6</td><td>4</td><td>2</td><td style="color:var(--green)">33.3%</td></tr>
+              <tr><td>🗺️ Product Mgr</td><td>6</td><td>3</td><td>1</td><td style="color:var(--amber)">16.7%</td></tr>
+              <tr><td>🎨 UI/UX Design</td><td>6</td><td>4</td><td>1</td><td style="color:var(--amber)">16.7%</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:11px;color:var(--muted);margin-top:8px">*CSA joiner accepted competing offer from Palo Alto Networks</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ SLIDE 09: DASHBOARD DEMO ════ -->
+<div class="slide" id="s9">
+  <div class="slide-section">08 — Live Dashboard</div>
+  <div class="content" style="text-align:center">
+    <div class="slide-title-row" style="margin-bottom:24px">
+      <h2>TalentAI <span class="grad">Recruiter Dashboard</span></h2>
+      <p style="margin-top:8px">Open <code style="color:var(--purple);background:rgba(139,92,246,0.1);padding:2px 8px;border-radius:4px">dashboard/index.html</code> in any browser — no server needed</p>
+    </div>
+    <div class="glass" style="padding:32px;margin-bottom:20px">
+      <div class="g4" style="margin-bottom:24px">
+        <div style="padding:20px;background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.2);border-radius:12px">
+          <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em">Applications</div>
+          <div style="font-size:42px;font-weight:800;font-family:'Space Grotesk',sans-serif;color:var(--purple)">30</div>
+        </div>
+        <div style="padding:20px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:12px">
+          <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em">Shortlisted</div>
+          <div style="font-size:42px;font-weight:800;font-family:'Space Grotesk',sans-serif;color:var(--green)">19</div>
+        </div>
+        <div style="padding:20px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:12px">
+          <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em">Avg ATS Score</div>
+          <div style="font-size:42px;font-weight:800;font-family:'Space Grotesk',sans-serif;color:var(--amber)">67.2</div>
+        </div>
+        <div style="padding:20px;background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.2);border-radius:12px">
+          <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em">Time to Hire</div>
+          <div style="font-size:42px;font-weight:800;font-family:'Space Grotesk',sans-serif;color:var(--blue)">18d</div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+        <span class="tag tag-p">📊 9 Interactive Charts</span>
+        <span class="tag tag-g">🔻 7-Stage Hiring Funnel</span>
+        <span class="tag tag-a">👥 30-Candidate Table</span>
+        <span class="tag tag-r">⚖️ Bias Detection Panel</span>
+        <span class="tag tag-p">🌈 Diversity Analytics</span>
+        <span class="tag tag-g">🕐 Live Activity Feed</span>
+      </div>
+    </div>
+    <p style="font-size:14px">The dashboard loads real data computed by the Python pipeline and renders it with Chart.js.<br>Every number on screen came from a real algorithm — not hardcoded values.</p>
+  </div>
+</div>
+
+<!-- ════ SLIDE 10: CONCLUSION ════ -->
+<div class="slide" id="s10">
+  <div class="slide-section">09 — Results & Conclusion</div>
+  <div class="content">
+    <div class="slide-title-row">
+      <h2>Project <span class="grad2">Impact & Outcomes</span></h2>
+    </div>
+    <div class="g3" style="margin-bottom:20px">
+      <div class="card">
+        <div style="font-size:32px;margin-bottom:8px">🚀</div>
+        <h3>What Was Built</h3>
+        <ul class="check-list" style="margin-top:10px;font-size:12px">
+          <li>9 complete, running phases</li>
+          <li>1,200+ lines of Python code</li>
+          <li>30 realistic candidate profiles</li>
+          <li>125 interview questions</li>
+          <li>11-table SQL database</li>
+          <li>35+ REST API endpoints</li>
+          <li>Live browser dashboard</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div style="font-size:32px;margin-bottom:8px">📊</div>
+        <h3>What the AI Found</h3>
+        <ul class="check-list" style="margin-top:10px;font-size:12px">
+          <li>19/30 candidates shortlisted (63.3%)</li>
+          <li>Avg ATS score: 67.2/100</li>
+          <li>4 HIGH-severity bias dimensions found</li>
+          <li>25.2 pt institution tier score gap</li>
+          <li>75% offer acceptance (above benchmark)</li>
+          <li>18-day time-to-hire (below 21d target)</li>
+          <li>34.5 hours of manual work saved</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div style="font-size:32px;margin-bottom:8px">💡</div>
+        <h3>Key Learnings</h3>
+        <ul class="check-list" style="margin-top:10px;font-size:12px">
+          <li>AI speeds up screening by 400×</li>
+          <li>Bias is measurable — and fixable</li>
+          <li>Institution prestige ≠ job capability</li>
+          <li>AI must be a tool, not a black box</li>
+          <li>Diversity analytics need to be built-in</li>
+          <li>Human oversight remains essential</li>
+          <li>Proxy bias is the hardest to detect</li>
+        </ul>
+      </div>
+    </div>
+    <div class="glass" style="text-align:center;padding:20px 32px">
+      <h3 style="margin-bottom:8px">Future Extensions</h3>
+      <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap">
+        <span class="tag tag-p">🤖 GPT-4 Integration for Question Generation</span>
+        <span class="tag tag-g">🎥 Video Interview AI Evaluation</span>
+        <span class="tag tag-a">📱 Mobile Recruiter App</span>
+        <span class="tag tag-r">🔴 Real-time Pipeline via WebSockets</span>
+        <span class="tag tag-p">🌍 Multi-language Resume Support</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ SLIDE 11: THANK YOU ════ -->
+<div class="slide" id="s11">
+  <div class="content" style="text-align:center">
+    <div style="font-size:64px;margin-bottom:20px">🧠</div>
+    <h1 style="margin-bottom:16px"><span class="grad">Thank You</span></h1>
+    <p style="font-size:18px;margin-bottom:32px;color:var(--muted)">AI-Powered Smart Recruitment System — Capstone Project 2024</p>
+    <div class="glass" style="display:inline-block;padding:24px 48px;margin-bottom:32px">
+      <div style="display:flex;gap:32px;align-items:center;flex-wrap:wrap;justify-content:center">
+        <div style="text-align:center"><div style="font-size:28px;font-weight:800;font-family:'Space Grotesk',sans-serif;color:var(--purple)">9</div><div style="font-size:12px;color:var(--muted)">Phases</div></div>
+        <div style="text-align:center"><div style="font-size:28px;font-weight:800;font-family:'Space Grotesk',sans-serif;color:var(--green)">80</div><div style="font-size:12px;color:var(--muted)">Files</div></div>
+        <div style="text-align:center"><div style="font-size:28px;font-weight:800;font-family:'Space Grotesk',sans-serif;color:var(--amber)">30</div><div style="font-size:12px;color:var(--muted)">Candidates</div></div>
+        <div style="text-align:center"><div style="font-size:28px;font-weight:800;font-family:'Space Grotesk',sans-serif;color:var(--blue)">125</div><div style="font-size:12px;color:var(--muted)">Questions</div></div>
+        <div style="text-align:center"><div style="font-size:28px;font-weight:800;font-family:'Space Grotesk',sans-serif;color:var(--pink)">10</div><div style="font-size:12px;color:var(--muted)">Bias Checks</div></div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+      <span class="tag tag-p">🐍 Python · HTML · CSS · JS</span>
+      <span class="tag tag-g">📊 Chart.js · SQLite · OpenAPI</span>
+      <span class="tag tag-a">🎨 Figma Tokens · Tableau Spec</span>
+    </div>
+    <p style="margin-top:28px;font-size:13px;color:var(--muted)">Open dashboard: <code style="color:var(--purple)">dashboard/index.html</code> &nbsp;·&nbsp; Run pipeline: <code style="color:var(--green)">python3 backend/resume_parser.py</code></p>
+  </div>
+</div>
+
+</div><!-- /slides -->
+
+<!-- NAVIGATION -->
+<div class="nav">
+  <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">‹</button>
+  <div class="dot-nav" id="dotNav"></div>
+  <span class="slide-counter" id="counter">1 / 11</span>
+  <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">›</button>
+</div>
+
+<script>
+  const total = 11;
+  let current = 1;
+
+  function buildDots() {
+    const nav = document.getElementById('dotNav');
+    for (let i = 1; i <= total; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === 1 ? ' active' : '');
+      d.onclick = () => goTo(i);
+      nav.appendChild(d);
+    }
+  }
+
+  function goTo(n) {
+    document.getElementById(`s${current}`).classList.remove('active');
+    document.querySelectorAll('.dot')[current-1].classList.remove('active');
+    current = Math.max(1, Math.min(n, total));
+    document.getElementById(`s${current}`).classList.add('active');
+    document.querySelectorAll('.dot')[current-1].classList.add('active');
+    document.getElementById('counter').textContent = `${current} / ${total}`;
+  }
+
+  function changeSlide(dir) { goTo(current + dir); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') changeSlide(1);
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   changeSlide(-1);
+  });
+
+  buildDots();
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+{
+  "resume_id": "SE-005",
+  "name": "Rahul Ghosh",
+  "email": "rahulghosh.work@gmail.com",
+  "phone": "+918100234556",
+  "linkedin": "linkedin.com/in/rahulghosh-kolkata",
+  "github": "github.com/rahulcodes99",
+  "portfolio": null,
+  "address": "12/A Ballygunge Place, Kolkata, West Bengal - 700019",
+  "role_applied": "Software Engineer",
+  "quality_tier": "Poor",
+  "education": [
+    {
+      "degree": "B.Tech – Computer Science",
+      "institution": "Techno Main Salt Lake, Kolkata",
+      "university": "Maulana Abul Kalam Azad University of Technology (MAKAUT)",
+      "cgpa": 6.3,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2024
+    }
+  ],
+  "highest_degree": "B.Tech – Computer Science",
+  "institution": "Techno Main Salt Lake, Kolkata",
+  "cgpa": 6.3,
+  "experience": [],
+  "years_experience": 0.0,
+  "companies": [],
+  "skills": {
+    "languages": [
+      "C++",
+      "Java (basic)",
+      "HTML"
+    ],
+    "frameworks": [],
+    "databases": [
+      "MySQL (basic)"
+    ],
+    "tools": [
+      "Eclipse IDE",
+      "Git (basic)"
+    ],
+    "cloud": [],
+    "testing": []
+  },
+  "skills_flat": [
+    "C++",
+    "Java (basic)",
+    "HTML",
+    "MySQL (basic)",
+    "Eclipse IDE",
+    "Git (basic)"
+  ],
+  "skill_count": 6,
+  "projects": [
+    {
+      "name": "Library Management System",
+      "tech_stack": [
+        "Java",
+        "MySQL",
+        "Swing GUI"
+      ],
+      "description": "Desktop application for managing library books, members and borrowing records. Built as 3rd year academic project.",
+      "github_link": "github.com/rahulcodes99/library-mgmt"
+    }
+  ],
+  "project_count": 1,
+  "certifications": [
+    {
+      "name": "C++ Programming Basics",
+      "issuer": "Sololearn",
+      "year": 2023
+    }
+  ],
+  "certification_names": [
+    "C++ Programming Basics"
+  ],
+  "certification_count": 1,
+  "achievements": [
+    "Attended 2 college-level seminars on cloud computing"
+  ],
+  "languages_known": [
+    "Bengali (Native)",
+    "Hindi (Conversational)",
+    "English (Basic)"
+  ],
+  "soft_skills": [
+    "Hardworking",
+    "Eager to Learn"
+  ],
+  "interests": [
+    "Cricket",
+    "Movies",
+    "Music"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.638120",
+  "source_file": "SE_005_Rahul_Ghosh.json"
+}

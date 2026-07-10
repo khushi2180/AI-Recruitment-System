@@ -1,0 +1,178 @@
+{
+  "resume_id": "PM-002",
+  "name": "Neha Verma",
+  "email": "neha.verma.product@gmail.com",
+  "phone": "+919205566778",
+  "linkedin": "linkedin.com/in/nehaverma-pm",
+  "github": null,
+  "portfolio": null,
+  "address": "Viman Nagar, Pune, Maharashtra - 411014",
+  "role_applied": "Product Manager",
+  "quality_tier": "Average",
+  "education": [
+    {
+      "degree": "MBA – Marketing & Operations",
+      "institution": "Symbiosis Institute of Business Management (SIBM), Pune",
+      "university": "Symbiosis International University",
+      "cgpa": 7.8,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2021
+    },
+    {
+      "degree": "B.E. – Computer Engineering",
+      "institution": "Pune Institute of Computer Technology (PICT)",
+      "university": "Savitribai Phule Pune University",
+      "cgpa": 7.4,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2019
+    }
+  ],
+  "highest_degree": "MBA – Marketing & Operations",
+  "institution": "Symbiosis Institute of Business Management (SIBM), Pune",
+  "cgpa": 7.8,
+  "experience": [
+    {
+      "company": "Shopalyst Technologies",
+      "title": "Product Manager",
+      "location": "Pune, MH",
+      "type": "Full-Time",
+      "start_date": "Jul 2021",
+      "end_date": "Present",
+      "duration_months": 35,
+      "responsibilities": [
+        "Managed roadmap for Shopalyst's Ad Placement Optimization product used by 50+ FMCG brands.",
+        "Led delivery of 4 quarterly feature launches, coordinating engineering (6 devs), data science, and design teams.",
+        "Conducted user interviews with brand managers and agency media planners (6–8 per quarter).",
+        "Created PRDs and user stories for 3 major feature areas; reduced average sprint rework to 12%.",
+        "Tracked product KPIs (CTR, ROAS, feature adoption) using internal BI dashboard and Amplitude.",
+        "Managed backlog of 95 items; facilitated bi-weekly backlog grooming sessions."
+      ]
+    },
+    {
+      "company": "Infosys BPM – Digital Commerce",
+      "title": "Business Analyst",
+      "location": "Pune, MH",
+      "type": "Full-Time",
+      "start_date": "Aug 2019",
+      "end_date": "Jun 2021",
+      "duration_months": 22,
+      "responsibilities": [
+        "Gathered and documented requirements for a UK retail client's e-commerce re-platforming project.",
+        "Created 40+ user stories and facilitated UAT sessions.",
+        "Acted as liaison between offshore development team and onshore client stakeholders."
+      ]
+    }
+  ],
+  "years_experience": 4.8,
+  "companies": [
+    "Shopalyst Technologies",
+    "Infosys BPM – Digital Commerce"
+  ],
+  "skills": {
+    "core_pm": [
+      "Product Roadmapping",
+      "PRD Writing",
+      "User Story Writing",
+      "Backlog Management",
+      "Sprint Planning"
+    ],
+    "research": [
+      "User Interviews",
+      "Competitive Benchmarking",
+      "Surveys",
+      "Persona Development"
+    ],
+    "analytics": [
+      "Amplitude",
+      "Google Analytics",
+      "Excel Analytics",
+      "SQL (basic)"
+    ],
+    "tools": [
+      "JIRA",
+      "Confluence",
+      "Notion",
+      "Miro",
+      "Figma (reviewing specs)"
+    ],
+    "frameworks": [
+      "RICE",
+      "MoSCoW",
+      "Scrum",
+      "OKRs (basic)"
+    ]
+  },
+  "skills_flat": [
+    "Product Roadmapping",
+    "PRD Writing",
+    "User Story Writing",
+    "Backlog Management",
+    "Sprint Planning",
+    "User Interviews",
+    "Competitive Benchmarking",
+    "Surveys",
+    "Persona Development",
+    "Amplitude",
+    "Google Analytics",
+    "Excel Analytics",
+    "SQL (basic)",
+    "JIRA",
+    "Confluence",
+    "Notion",
+    "Miro",
+    "Figma (reviewing specs)",
+    "RICE",
+    "MoSCoW",
+    "Scrum",
+    "OKRs (basic)"
+  ],
+  "skill_count": 22,
+  "projects": [
+    {
+      "name": "Ad Placement Optimization – Self-Serve Module",
+      "description": "Led PRD + delivery of self-serve campaign setup for FMCG brands — reducing onboarding TAT from 5 days to same-day. Feature adopted by 28 brand clients within 60 days.",
+      "impact": "28/50 brands adopted; ₹1.1 Crore in new contract renewals attributed"
+    }
+  ],
+  "project_count": 1,
+  "certifications": [
+    {
+      "name": "Certified Scrum Product Owner (CSPO)",
+      "issuer": "Scrum Alliance",
+      "year": 2022
+    },
+    {
+      "name": "Digital Product Management",
+      "issuer": "University of Virginia (Coursera)",
+      "year": 2021
+    }
+  ],
+  "certification_names": [
+    "Certified Scrum Product Owner (CSPO)",
+    "Digital Product Management"
+  ],
+  "certification_count": 2,
+  "achievements": [
+    "SIBM Academic Topper – Consumer Behaviour (2021)",
+    "Shopalyst All-Hands Innovation Pitch – Runner-up (built AI campaign recommendation MVP)"
+  ],
+  "languages_known": [
+    "English (Fluent)",
+    "Hindi (Native)",
+    "Marathi (Conversational)"
+  ],
+  "soft_skills": [
+    "Stakeholder Communication",
+    "Documentation Quality",
+    "Structured Thinking",
+    "Facilitation",
+    "Empathy"
+  ],
+  "interests": [
+    "Product Design Blogs (Substack)",
+    "Yoga",
+    "Startup Podcasts"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.635103",
+  "source_file": "PM_002_Neha_Verma.json"
+}

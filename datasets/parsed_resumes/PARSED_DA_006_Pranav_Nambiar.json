@@ -1,0 +1,104 @@
+{
+  "resume_id": "DA-006",
+  "name": "Pranav Nambiar",
+  "email": "pranavnambiar.work@gmail.com",
+  "phone": "+919496001234",
+  "linkedin": "linkedin.com/in/pranavnambiar",
+  "github": null,
+  "portfolio": null,
+  "address": "Edappally, Kochi, Kerala - 682024",
+  "role_applied": "Data Analyst",
+  "quality_tier": "Poor",
+  "education": [
+    {
+      "degree": "BCA – Bachelor of Computer Applications",
+      "institution": "St. Albert's College, Ernakulam",
+      "university": "Mahatma Gandhi University, Kottayam",
+      "cgpa": 6.4,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2022
+    }
+  ],
+  "highest_degree": "BCA – Bachelor of Computer Applications",
+  "institution": "St. Albert's College, Ernakulam",
+  "cgpa": 6.4,
+  "experience": [
+    {
+      "company": "Muthoot Finance Ltd.",
+      "title": "Data Entry Operator",
+      "location": "Kochi, KL",
+      "type": "Full-Time",
+      "start_date": "Nov 2022",
+      "end_date": "Present",
+      "duration_months": 19,
+      "responsibilities": [
+        "Entered loan application data into internal system.",
+        "Prepared daily Excel reports for branch manager.",
+        "Maintained physical and digital records of customer files."
+      ]
+    }
+  ],
+  "years_experience": 1.6,
+  "companies": [
+    "Muthoot Finance Ltd."
+  ],
+  "skills": {
+    "languages": [
+      "Excel (intermediate)",
+      "SQL (SELECT basics only)"
+    ],
+    "bi_tools": [
+      "Excel Charts (basic)"
+    ],
+    "databases": [
+      "MS Access (basic)"
+    ],
+    "etl_tools": [],
+    "stats": [],
+    "tools": [
+      "MS Office",
+      "Google Sheets"
+    ]
+  },
+  "skills_flat": [
+    "Excel (intermediate)",
+    "SQL (SELECT basics only)",
+    "Excel Charts (basic)",
+    "MS Access (basic)",
+    "MS Office",
+    "Google Sheets"
+  ],
+  "skill_count": 6,
+  "projects": [
+    {
+      "name": "Branch Sales Tracker (Excel)",
+      "tech_stack": [
+        "Excel"
+      ],
+      "description": "Made an Excel file to track daily loan disbursements and target vs. actual for the branch. Used PivotTables and basic charts.",
+      "github_link": null
+    }
+  ],
+  "project_count": 1,
+  "certifications": [],
+  "certification_names": [],
+  "certification_count": 0,
+  "achievements": [],
+  "languages_known": [
+    "Malayalam (Native)",
+    "English (Conversational)",
+    "Hindi (Basic)"
+  ],
+  "soft_skills": [
+    "Reliable",
+    "Punctual",
+    "Team Player"
+  ],
+  "interests": [
+    "Football",
+    "Movies",
+    "Gaming"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.634425",
+  "source_file": "DA_006_Pranav_Nambiar.json"
+}

@@ -1,0 +1,169 @@
+{
+  "resume_id": "DA-002",
+  "name": "Sneha Kulkarni",
+  "email": "sneha.kulkarni.data@gmail.com",
+  "phone": "+919763001122",
+  "linkedin": "linkedin.com/in/snehakulkarni-analyst",
+  "github": "github.com/snehakulkarni-da",
+  "portfolio": null,
+  "address": "Plot 44, Baner Road, Pune, Maharashtra - 411045",
+  "role_applied": "Data Analyst",
+  "quality_tier": "Average",
+  "education": [
+    {
+      "degree": "B.Sc. – Statistics",
+      "institution": "Fergusson College, Pune",
+      "university": "Savitribai Phule Pune University (SPPU)",
+      "cgpa": 7.9,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2023
+    }
+  ],
+  "highest_degree": "B.Sc. – Statistics",
+  "institution": "Fergusson College, Pune",
+  "cgpa": 7.9,
+  "experience": [
+    {
+      "company": "Accenture India (Strategy & Consulting)",
+      "title": "Junior Data Analyst (Consulting)",
+      "location": "Pune, MH",
+      "type": "Full-Time",
+      "start_date": "Jul 2023",
+      "end_date": "Present",
+      "duration_months": 11,
+      "responsibilities": [
+        "Created 4 Power BI dashboards for a top-5 Indian pharma company tracking clinical trial KPIs.",
+        "Wrote 20+ complex SQL queries (MS SQL Server) for weekly operational reports.",
+        "Performed data cleaning and validation on Excel datasets with 50K+ rows.",
+        "Supported senior consultants in data interpretation and PowerPoint deck preparation for client presentations.",
+        "Conducted initial EDA using Python (Pandas, Matplotlib) for a supply chain project."
+      ]
+    },
+    {
+      "company": "Analytics Vidhya",
+      "title": "Data Science Intern (Virtual)",
+      "location": "Remote",
+      "type": "Internship",
+      "start_date": "Nov 2022",
+      "end_date": "Feb 2023",
+      "duration_months": 4,
+      "responsibilities": [
+        "Completed 5 guided data analysis projects on AV's learning platform.",
+        "Built a supervised ML model (Decision Tree) for loan default prediction — 78% accuracy.",
+        "Wrote 2 blog posts on data cleaning techniques published on Analytics Vidhya platform."
+      ]
+    }
+  ],
+  "years_experience": 1.1,
+  "companies": [
+    "Accenture India (Strategy & Consulting)",
+    "Analytics Vidhya"
+  ],
+  "skills": {
+    "languages": [
+      "SQL (intermediate)",
+      "Python (Pandas, Matplotlib — learning)",
+      "R (statistical analysis)"
+    ],
+    "bi_tools": [
+      "Power BI (intermediate)",
+      "Excel (Advanced)",
+      "Google Sheets"
+    ],
+    "databases": [
+      "MS SQL Server",
+      "MySQL (basic)"
+    ],
+    "etl_tools": [
+      "Excel Power Query"
+    ],
+    "spreadsheets": [
+      "Advanced Excel (VLOOKUP, PivotTables, Conditional Formatting)"
+    ],
+    "stats": [
+      "Descriptive Statistics",
+      "Correlation Analysis",
+      "Basic Regression",
+      "Probability Distributions"
+    ],
+    "tools": [
+      "JIRA (basic)",
+      "Notion",
+      "MS Office Suite",
+      "Git (very basic)"
+    ]
+  },
+  "skills_flat": [
+    "SQL (intermediate)",
+    "Python (Pandas, Matplotlib — learning)",
+    "R (statistical analysis)",
+    "Power BI (intermediate)",
+    "Excel (Advanced)",
+    "Google Sheets",
+    "MS SQL Server",
+    "MySQL (basic)",
+    "Excel Power Query",
+    "Advanced Excel (VLOOKUP, PivotTables, Conditional Formatting)",
+    "Descriptive Statistics",
+    "Correlation Analysis",
+    "Basic Regression",
+    "Probability Distributions",
+    "JIRA (basic)",
+    "Notion",
+    "MS Office Suite",
+    "Git (very basic)"
+  ],
+  "skill_count": 18,
+  "projects": [
+    {
+      "name": "Pharma Sales Analytics – Personal Project",
+      "tech_stack": [
+        "Python",
+        "Pandas",
+        "Power BI"
+      ],
+      "description": "Analyzed 2 years of pharmaceutical sales data (publicly available dataset) to identify seasonal trends and top-selling SKUs. Created an interactive Power BI report.",
+      "github_link": "github.com/snehakulkarni-da/pharma-analysis"
+    }
+  ],
+  "project_count": 1,
+  "certifications": [
+    {
+      "name": "Microsoft PL-300: Power BI Data Analyst – In Progress",
+      "issuer": "Microsoft",
+      "year": 2024
+    },
+    {
+      "name": "Excel Skills for Data Analytics and Visualization",
+      "issuer": "Coursera / Macquarie University",
+      "year": 2023
+    }
+  ],
+  "certification_names": [
+    "Microsoft PL-300: Power BI Data Analyst – In Progress",
+    "Excel Skills for Data Analytics and Visualization"
+  ],
+  "certification_count": 2,
+  "achievements": [
+    "Fergusson College Statistics Gold Medal – Final Year (2023)",
+    "Analytics Vidhya Hackathon Participant – Ranked 215/1200"
+  ],
+  "languages_known": [
+    "English (Professional)",
+    "Marathi (Native)",
+    "Hindi (Fluent)"
+  ],
+  "soft_skills": [
+    "Attention to Detail",
+    "Quick Learner",
+    "Structured Thinking",
+    "Excel Proficiency"
+  ],
+  "interests": [
+    "Data Visualization",
+    "Statistics Blogging",
+    "Classical Music (Hindustani)"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.633282",
+  "source_file": "DA_002_Sneha_Kulkarni.json"
+}

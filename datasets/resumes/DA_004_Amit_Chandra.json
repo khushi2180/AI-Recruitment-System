@@ -1,0 +1,81 @@
+{
+  "resume_id": "DA-004",
+  "name": "Amit Chandra",
+  "email": "amit_chandra88@yahoo.co.in",
+  "phone": "+91-8879001234",
+  "linkedin": null,
+  "github": null,
+  "address": "Andheri East, Mumbai, Maharashtra - 400069",
+  "role_applied": "Data Analyst",
+  "quality_tier": "Poor",
+
+  "summary": "I am a data analyst with 1 year experience. I know Excel and some SQL. I am hardworking and a fast learner. Looking for a data analyst job.",
+
+  "education": [
+    {
+      "degree": "B.Com – Commerce",
+      "institution": "Narsee Monjee College of Commerce, Mumbai",
+      "university": "University of Mumbai",
+      "cgpa": 6.0,
+      "year_of_passing": 2022,
+      "relevant_courses": ["Business Statistics", "Accountancy", "Economics"]
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "QuickBooks India (freelance, unofficial)",
+      "title": "Data Entry & Reporting Executive",
+      "location": "Mumbai, MH",
+      "type": "Full-Time",
+      "start_date": "Jun 2023",
+      "end_date": "Present",
+      "duration_months": 12,
+      "responsibilities": [
+        "Prepared Excel reports for the sales team every week.",
+        "Entered data from paper forms into Excel spreadsheets.",
+        "Made pie charts and bar charts in Excel for management meetings."
+      ]
+    }
+  ],
+
+  "skills": {
+    "languages": ["SQL (basic SELECT queries)", "Python – None"],
+    "bi_tools": ["Excel (intermediate: PivotTables, basic charts)", "Google Sheets"],
+    "databases": ["MySQL (basic)"],
+    "etl_tools": [],
+    "spreadsheets": ["Excel PivotTables", "VLOOKUP"],
+    "stats": ["Basic Averages", "Percentages"],
+    "tools": ["MS Office", "WhatsApp Business (reporting)"]
+  },
+
+  "projects": [],
+
+  "certifications": [
+    { "name": "Excel for Beginners", "issuer": "LinkedIn Learning (free)", "year": 2023 }
+  ],
+
+  "achievements": [
+    "Employee of the month (internal recognition at current company, April 2024)"
+  ],
+
+  "languages_known": ["Hindi (Native)", "Marathi (Conversational)", "English (Basic)"],
+
+  "soft_skills": ["Punctual", "Hardworking", "Reliable"],
+
+  "interests": ["Bollywood Movies", "Cricket", "Travel"],
+
+  "ats_score": {
+    "total": 28,
+    "breakdown": {
+      "skills_match": 7,
+      "experience": 5,
+      "projects": 4,
+      "education": 5,
+      "certifications": 3,
+      "resume_quality": 4
+    },
+    "rank": 6,
+    "shortlisted": false
+  }
+}

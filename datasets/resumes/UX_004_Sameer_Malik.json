@@ -1,0 +1,87 @@
+{
+  "resume_id": "UX-004",
+  "name": "Sameer Malik",
+  "email": "sameer.malik.design99@gmail.com",
+  "phone": "+91-9456789012",
+  "linkedin": "linkedin.com/in/sameermalik-ui",
+  "github": null,
+  "address": "Gomti Nagar, Lucknow, Uttar Pradesh - 226010",
+  "role_applied": "UI/UX Designer",
+  "portfolio": "dribbble.com/sameermalik99",
+  "quality_tier": "Poor",
+
+  "summary": "UI Designer with 2 years of experience making beautiful apps and websites. I am good at Figma and Photoshop. I love creating nice-looking designs. Looking for a UI/UX job in a good company.",
+
+  "education": [
+    {
+      "degree": "BCA – Bachelor of Computer Applications",
+      "institution": "Integral University, Lucknow",
+      "university": "Integral University",
+      "cgpa": 6.5,
+      "year_of_passing": 2022,
+      "relevant_courses": ["Computer Graphics", "Web Design Basics", "C Programming"]
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "Webisdom Technologies",
+      "title": "UI Designer",
+      "location": "Lucknow, UP",
+      "type": "Full-Time",
+      "start_date": "Sep 2022",
+      "end_date": "Present",
+      "duration_months": 21,
+      "responsibilities": [
+        "Designed website pages for client websites in Figma.",
+        "Made social media posts in Canva and Photoshop.",
+        "Worked on mobile app screens for 2 client projects.",
+        "Attended client calls with senior team members."
+      ]
+    }
+  ],
+
+  "skills": {
+    "design_tools": ["Figma (basic)", "Canva", "Adobe Photoshop (intermediate)"],
+    "research_methods": [],
+    "design_disciplines": ["UI Design (static screens)", "Social Media Graphics"],
+    "code_knowledge": ["HTML (very basic)"],
+    "collaboration": ["JIRA (basic ticket updates)", "WhatsApp for client communication"]
+  },
+
+  "projects": [
+    {
+      "name": "FoodOrder App UI (Personal Project)",
+      "description": "Designed screens for a food ordering mobile app UI — home screen, restaurant listing, cart, and order tracking. No usability testing or research conducted.",
+      "portfolio_link": "dribbble.com/sameermalik99/foodorder"
+    }
+  ],
+
+  "certifications": [
+    { "name": "UI/UX Design Bootcamp", "issuer": "Udemy (beginner level)", "year": 2022 }
+  ],
+
+  "achievements": [
+    "Client appreciated work at Webisdom in a feedback email"
+  ],
+
+  "languages_known": ["Urdu (Native)", "Hindi (Native)", "English (Basic)"],
+
+  "soft_skills": ["Creative", "Hardworking", "Friendly"],
+
+  "interests": ["Gaming", "Drawing", "Movies"],
+
+  "ats_score": {
+    "total": 34,
+    "breakdown": {
+      "skills_match": 9,
+      "experience": 7,
+      "projects": 6,
+      "education": 6,
+      "certifications": 3,
+      "resume_quality": 3
+    },
+    "rank": 5,
+    "shortlisted": false
+  }
+}

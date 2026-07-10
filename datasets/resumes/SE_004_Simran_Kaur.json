@@ -1,0 +1,111 @@
+{
+  "resume_id": "SE-004",
+  "name": "Simran Kaur",
+  "email": "simran.kaur.dev@gmail.com",
+  "phone": "+91-9988776655",
+  "linkedin": "linkedin.com/in/simrankaur-dev",
+  "github": "github.com/simrankaur-dev",
+  "address": "B-14, Sector 62, Noida, Uttar Pradesh - 201309",
+  "role_applied": "Software Engineer",
+  "quality_tier": "Average",
+
+  "summary": "Backend-focused Software Engineer with 1.5 years of experience in Python and Django. Built REST APIs for two early-stage startups. Solid grasp of SQL and API integration. Comfortable working in fast-paced Agile environments. Currently looking to move into a product-based company.",
+
+  "education": [
+    {
+      "degree": "B.Tech – Information Technology",
+      "institution": "Thapar Institute of Engineering & Technology, Patiala",
+      "university": "Thapar University",
+      "cgpa": 7.8,
+      "year_of_passing": 2022,
+      "relevant_courses": ["Software Engineering", "Web Application Development", "Database Management", "Cloud Computing Basics"]
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "HireIn Technologies",
+      "title": "Software Engineer",
+      "location": "Noida, UP",
+      "type": "Full-Time",
+      "start_date": "Aug 2022",
+      "end_date": "Feb 2024",
+      "duration_months": 18,
+      "responsibilities": [
+        "Developed 5 REST API modules using Django REST Framework for a B2B HR SaaS product.",
+        "Optimized 12 slow SQL queries reducing average response time from 2.1s to 340ms.",
+        "Integrated third-party APIs (WhatsApp Business, SendGrid, Razorpay) into the platform.",
+        "Wrote API documentation using Swagger/OpenAPI for 30+ endpoints.",
+        "Assisted in migrating legacy MySQL schema to PostgreSQL with zero data loss."
+      ]
+    },
+    {
+      "company": "Nexora Labs",
+      "title": "Backend Intern",
+      "location": "Gurugram, HR",
+      "type": "Internship",
+      "start_date": "Jan 2022",
+      "end_date": "Jun 2022",
+      "duration_months": 6,
+      "responsibilities": [
+        "Built CRUD APIs for a logistics tracking system using Flask and MySQL.",
+        "Wrote Bash scripts to automate daily database backups.",
+        "Participated in code reviews and fixed 20+ bugs across the codebase."
+      ]
+    }
+  ],
+
+  "skills": {
+    "languages": ["Python", "SQL", "JavaScript (basic)", "Bash"],
+    "frameworks": ["Django", "Django REST Framework", "Flask"],
+    "databases": ["PostgreSQL", "MySQL", "Redis (basic)"],
+    "tools": ["Git", "Postman", "Swagger", "Docker (basic)", "JIRA", "VS Code"],
+    "cloud": ["AWS EC2 (basic)", "Heroku"],
+    "testing": ["Pytest", "DRF Test Client"]
+  },
+
+  "projects": [
+    {
+      "name": "QuickShip – Logistics Tracking Dashboard",
+      "tech_stack": ["Django", "PostgreSQL", "Celery", "Redis", "Bootstrap"],
+      "description": "Built a logistics tracking system with real-time shipment status updates using Celery beat tasks and Redis pub/sub. Handles 500 daily orders.",
+      "github_link": "github.com/simrankaur-dev/quickship"
+    },
+    {
+      "name": "DevBlog API",
+      "tech_stack": ["Django REST Framework", "PostgreSQL", "JWT", "Markdown"],
+      "description": "Built a blogging platform REST API with Markdown rendering, JWT auth, tagging, and full-text search using pg_trgm.",
+      "github_link": "github.com/simrankaur-dev/devblog-api"
+    }
+  ],
+
+  "certifications": [
+    { "name": "Django REST Framework – Full Course", "issuer": "Udemy (Jose Portilla)", "year": 2022 },
+    { "name": "AWS Cloud Practitioner Essentials", "issuer": "AWS Training (in progress)", "year": 2024 }
+  ],
+
+  "achievements": [
+    "Employee of the Month – HireIn Technologies (March 2023)",
+    "Thapar Coding League – Top 20 finisher (350+ participants)"
+  ],
+
+  "languages_known": ["English (Fluent)", "Hindi (Native)", "Punjabi (Native)"],
+
+  "soft_skills": ["Communication", "Initiative", "Deadline-Oriented", "Collaborative"],
+
+  "interests": ["Backend Architecture", "Travel", "Photography"],
+
+  "ats_score": {
+    "total": 68,
+    "breakdown": {
+      "skills_match": 22,
+      "experience": 17,
+      "projects": 11,
+      "education": 8,
+      "certifications": 6,
+      "resume_quality": 4
+    },
+    "rank": 4,
+    "shortlisted": true
+  }
+}

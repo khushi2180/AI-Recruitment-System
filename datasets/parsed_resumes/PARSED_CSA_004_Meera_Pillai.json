@@ -1,0 +1,174 @@
+{
+  "resume_id": "CSA-004",
+  "name": "Meera Pillai",
+  "email": "meera.pillai.cyber@gmail.com",
+  "phone": "+919400112233",
+  "linkedin": "linkedin.com/in/meerapillai-soc",
+  "github": "github.com/meerasec",
+  "portfolio": null,
+  "address": "TC 26/1250, Kowdiar, Thiruvananthapuram, Kerala - 695003",
+  "role_applied": "Cyber Security Analyst",
+  "quality_tier": "Average",
+  "education": [
+    {
+      "degree": "B.Tech – Computer Science & Engineering",
+      "institution": "College of Engineering Trivandrum (CET)",
+      "university": "APJ Abdul Kalam Technological University (KTU)",
+      "cgpa": 8.1,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2023
+    }
+  ],
+  "highest_degree": "B.Tech – Computer Science & Engineering",
+  "institution": "College of Engineering Trivandrum (CET)",
+  "cgpa": 8.1,
+  "experience": [
+    {
+      "company": "Cyber Vigil Solutions",
+      "title": "Junior SOC Analyst",
+      "location": "Thiruvananthapuram, KL",
+      "type": "Full-Time",
+      "start_date": "Jul 2023",
+      "end_date": "Present",
+      "duration_months": 11,
+      "responsibilities": [
+        "Monitored 1,800+ daily alerts on IBM QRadar for 5 government sector clients.",
+        "Performed initial triage and categorized incidents per client SLA; maintained 96% SLA compliance.",
+        "Wrote 3 incident response post-mortems for significant security events.",
+        "Conducted basic vulnerability scans using Nessus on client network segments.",
+        "Updated and maintained 20+ SOC playbooks for common attack vectors."
+      ]
+    },
+    {
+      "company": "Sify Technologies",
+      "title": "VAPT Intern",
+      "location": "Chennai, TN",
+      "type": "Internship",
+      "start_date": "Jan 2023",
+      "end_date": "May 2023",
+      "duration_months": 5,
+      "responsibilities": [
+        "Assisted in web application penetration testing using Burp Suite for 3 client engagements.",
+        "Performed reconnaissance using Shodan and OSINT techniques.",
+        "Contributed to VAPT report writing — CVSS scoring, risk classification, remediation steps."
+      ]
+    }
+  ],
+  "years_experience": 1.1,
+  "companies": [
+    "Cyber Vigil Solutions",
+    "Sify Technologies"
+  ],
+  "skills": {
+    "security_tools": [
+      "IBM QRadar",
+      "Nessus Essentials",
+      "Burp Suite Community",
+      "Nmap",
+      "Wireshark"
+    ],
+    "frameworks": [
+      "MITRE ATT&CK",
+      "OWASP Top 10",
+      "NIST CSF"
+    ],
+    "os_platforms": [
+      "Kali Linux",
+      "Ubuntu",
+      "Windows Server",
+      "Active Directory (basic)"
+    ],
+    "scripting": [
+      "Python (basic scripting)",
+      "Bash (basic)"
+    ],
+    "networking": [
+      "TCP/IP",
+      "HTTP/S",
+      "DNS",
+      "SSL/TLS",
+      "VPN"
+    ],
+    "cloud_security": [
+      "AWS basics (no security specialization)"
+    ]
+  },
+  "skills_flat": [
+    "IBM QRadar",
+    "Nessus Essentials",
+    "Burp Suite Community",
+    "Nmap",
+    "Wireshark",
+    "MITRE ATT&CK",
+    "OWASP Top 10",
+    "NIST CSF",
+    "Kali Linux",
+    "Ubuntu",
+    "Windows Server",
+    "Active Directory (basic)",
+    "Python (basic scripting)",
+    "Bash (basic)",
+    "TCP/IP",
+    "HTTP/S",
+    "DNS",
+    "SSL/TLS",
+    "VPN",
+    "AWS basics (no security specialization)"
+  ],
+  "skill_count": 20,
+  "projects": [
+    {
+      "name": "Network Intrusion Detection System (IDS)",
+      "tech_stack": [
+        "Python",
+        "Scapy",
+        "Snort",
+        "MySQL"
+      ],
+      "description": "Built a lightweight network IDS that detects port scans, ARP poisoning, and brute-force patterns. Final year project — achieved 88% detection accuracy on test dataset.",
+      "github_link": "github.com/meerasec/network-ids"
+    }
+  ],
+  "project_count": 1,
+  "certifications": [
+    {
+      "name": "CompTIA Security+ (SY0-701)",
+      "issuer": "CompTIA",
+      "year": 2023
+    },
+    {
+      "name": "Google Cybersecurity Certificate",
+      "issuer": "Coursera / Google",
+      "year": 2023
+    }
+  ],
+  "certification_names": [
+    "CompTIA Security+ (SY0-701)",
+    "Google Cybersecurity Certificate"
+  ],
+  "certification_count": 2,
+  "achievements": [
+    "KTU Scholarship for Academic Excellence – 7th Semester",
+    "1st Place – Inter-College CTF (College of Engineering Trivandrum, 2022)"
+  ],
+  "languages_known": [
+    "English (Fluent)",
+    "Malayalam (Native)",
+    "Hindi (Conversational)",
+    "Tamil (Basic)"
+  ],
+  "soft_skills": [
+    "Meticulous Documentation",
+    "Calm Under Pressure",
+    "Continuous Learning",
+    "Cross-Team Communication"
+  ],
+  "interests": [
+    "OSINT Research",
+    "Bug Bounty (HackerOne)",
+    "Yoga",
+    "Classical Dance (Bharatanatyam)"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.632092",
+  "source_file": "CSA_004_Meera_Pillai.json"
+}

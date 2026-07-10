@@ -1,0 +1,118 @@
+{
+  "resume_id": "DA-004",
+  "name": "Amit Chandra",
+  "email": "amit_chandra88@yahoo.co.in",
+  "phone": "+918879001234",
+  "linkedin": null,
+  "github": null,
+  "portfolio": null,
+  "address": "Andheri East, Mumbai, Maharashtra - 400069",
+  "role_applied": "Data Analyst",
+  "quality_tier": "Poor",
+  "education": [
+    {
+      "degree": "B.Com – Commerce",
+      "institution": "Narsee Monjee College of Commerce, Mumbai",
+      "university": "University of Mumbai",
+      "cgpa": 6.0,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2022
+    }
+  ],
+  "highest_degree": "B.Com – Commerce",
+  "institution": "Narsee Monjee College of Commerce, Mumbai",
+  "cgpa": 6.0,
+  "experience": [
+    {
+      "company": "QuickBooks India (freelance, unofficial)",
+      "title": "Data Entry & Reporting Executive",
+      "location": "Mumbai, MH",
+      "type": "Full-Time",
+      "start_date": "Jun 2023",
+      "end_date": "Present",
+      "duration_months": 12,
+      "responsibilities": [
+        "Prepared Excel reports for the sales team every week.",
+        "Entered data from paper forms into Excel spreadsheets.",
+        "Made pie charts and bar charts in Excel for management meetings."
+      ]
+    }
+  ],
+  "years_experience": 1.0,
+  "companies": [
+    "QuickBooks India (freelance, unofficial)"
+  ],
+  "skills": {
+    "languages": [
+      "SQL (basic SELECT queries)",
+      "Python – None"
+    ],
+    "bi_tools": [
+      "Excel (intermediate: PivotTables, basic charts)",
+      "Google Sheets"
+    ],
+    "databases": [
+      "MySQL (basic)"
+    ],
+    "etl_tools": [],
+    "spreadsheets": [
+      "Excel PivotTables",
+      "VLOOKUP"
+    ],
+    "stats": [
+      "Basic Averages",
+      "Percentages"
+    ],
+    "tools": [
+      "MS Office",
+      "WhatsApp Business (reporting)"
+    ]
+  },
+  "skills_flat": [
+    "SQL (basic SELECT queries)",
+    "Python – None",
+    "Excel (intermediate: PivotTables, basic charts)",
+    "Google Sheets",
+    "MySQL (basic)",
+    "Excel PivotTables",
+    "VLOOKUP",
+    "Basic Averages",
+    "Percentages",
+    "MS Office",
+    "WhatsApp Business (reporting)"
+  ],
+  "skill_count": 11,
+  "projects": [],
+  "project_count": 0,
+  "certifications": [
+    {
+      "name": "Excel for Beginners",
+      "issuer": "LinkedIn Learning (free)",
+      "year": 2023
+    }
+  ],
+  "certification_names": [
+    "Excel for Beginners"
+  ],
+  "certification_count": 1,
+  "achievements": [
+    "Employee of the month (internal recognition at current company, April 2024)"
+  ],
+  "languages_known": [
+    "Hindi (Native)",
+    "Marathi (Conversational)",
+    "English (Basic)"
+  ],
+  "soft_skills": [
+    "Punctual",
+    "Hardworking",
+    "Reliable"
+  ],
+  "interests": [
+    "Bollywood Movies",
+    "Cricket",
+    "Travel"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.633899",
+  "source_file": "DA_004_Amit_Chandra.json"
+}

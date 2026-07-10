@@ -1,0 +1,72 @@
+{
+  "resume_id": "SE-005",
+  "name": "Rahul Ghosh",
+  "email": "rahulghosh.work@gmail.com",
+  "phone": "+91-8100234556",
+  "linkedin": "linkedin.com/in/rahulghosh-kolkata",
+  "github": "github.com/rahulcodes99",
+  "address": "12/A Ballygunge Place, Kolkata, West Bengal - 700019",
+  "role_applied": "Software Engineer",
+  "quality_tier": "Poor",
+
+  "summary": "Recent computer science graduate with interest in web development. Familiar with Java and C++. Looking for software engineering role to apply my skills.",
+
+  "education": [
+    {
+      "degree": "B.Tech – Computer Science",
+      "institution": "Techno Main Salt Lake, Kolkata",
+      "university": "Maulana Abul Kalam Azad University of Technology (MAKAUT)",
+      "cgpa": 6.3,
+      "year_of_passing": 2024,
+      "relevant_courses": ["Data Structures", "Programming in C++", "DBMS", "Digital Electronics"]
+    }
+  ],
+
+  "experience": [],
+
+  "skills": {
+    "languages": ["C++", "Java (basic)", "HTML"],
+    "frameworks": [],
+    "databases": ["MySQL (basic)"],
+    "tools": ["Eclipse IDE", "Git (basic)"],
+    "cloud": [],
+    "testing": []
+  },
+
+  "projects": [
+    {
+      "name": "Library Management System",
+      "tech_stack": ["Java", "MySQL", "Swing GUI"],
+      "description": "Desktop application for managing library books, members and borrowing records. Built as 3rd year academic project.",
+      "github_link": "github.com/rahulcodes99/library-mgmt"
+    }
+  ],
+
+  "certifications": [
+    { "name": "C++ Programming Basics", "issuer": "Sololearn", "year": 2023 }
+  ],
+
+  "achievements": [
+    "Attended 2 college-level seminars on cloud computing"
+  ],
+
+  "languages_known": ["Bengali (Native)", "Hindi (Conversational)", "English (Basic)"],
+
+  "soft_skills": ["Hardworking", "Eager to Learn"],
+
+  "interests": ["Cricket", "Movies", "Music"],
+
+  "ats_score": {
+    "total": 29,
+    "breakdown": {
+      "skills_match": 7,
+      "experience": 0,
+      "projects": 8,
+      "education": 6,
+      "certifications": 4,
+      "resume_quality": 4
+    },
+    "rank": 5,
+    "shortlisted": false
+  }
+}

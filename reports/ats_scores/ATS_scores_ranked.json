@@ -1,0 +1,6611 @@
+{
+  "generated_at": "2026-06-28T15:12:05.072509",
+  "total_candidates": 30,
+  "shortlisted": 19,
+  "rejected": 11,
+  "average_ats_score": 67.2,
+  "ranked_by_role": {
+    "Cyber Security Analyst": [
+      {
+        "resume_id": "CSA-001",
+        "name": "Rohan Kapoor",
+        "role_applied": "Cyber Security Analyst",
+        "quality_tier": "Excellent",
+        "ats_score": 88.4,
+        "breakdown": {
+          "skills_match": 25.9,
+          "experience": 23.7,
+          "projects": 14.8,
+          "education": 10,
+          "certifications": 10.0,
+          "resume_quality": 4.0,
+          "total": 88.4
+        },
+        "justification": {
+          "skills_match": {
+            "score": 25.9,
+            "max": 35,
+            "required_matched": [
+              "splunk",
+              "siem",
+              "mitre att&ck",
+              "wireshark",
+              "kali linux",
+              "python",
+              "firewall",
+              "tcp/ip",
+              "nessus",
+              "burp suite",
+              "microsoft sentinel",
+              "crowdstrike"
+            ],
+            "required_missing": [
+              "nmap",
+              "incident response",
+              "vapt"
+            ],
+            "preferred_matched": [
+              "volatility",
+              "metasploit",
+              "ibm qradar",
+              "aws security",
+              "active directory",
+              "powershell",
+              "bash"
+            ],
+            "required_match_rate": "12/15 (80%)",
+            "preferred_match_rate": "7/14 (50%)"
+          },
+          "experience": {
+            "score": 23.7,
+            "max": 25,
+            "years_experience": 2.1,
+            "target_range": "0–2 years",
+            "status": "Overqualified",
+            "impact_keywords_detected": 4,
+            "companies": [
+              "CyberSafe India Pvt. Ltd. (MSSP)",
+              "Wipro Limited – Cybersecurity Practice"
+            ]
+          },
+          "projects": {
+            "score": 14.8,
+            "max": 15,
+            "project_count": 2,
+            "min_required": 1,
+            "project_names": [
+              "PhishGuard – Email Phishing Detection Tool",
+              "SplunkHunter – Automated Threat Hunting Scripts"
+            ],
+            "quality_bonus": 2.0
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "B.Tech – Computer Science (Cybersecurity Specialization)",
+            "institution": "Manipal Institute of Technology, Manipal",
+            "cgpa": 8.6,
+            "min_cgpa_required": 6.0,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 10.0,
+            "max": 10,
+            "total_certs": 4,
+            "matched_to_role": [
+              "Certified Ethical Hacker (CEH v12)",
+              "CompTIA Security+ (SY0-701)",
+              "eLearnSecurity Junior Penetration Tester (eJPT)",
+              "Splunk Core Certified Power User"
+            ],
+            "all_certs": [
+              "Certified Ethical Hacker (CEH v12)",
+              "CompTIA Security+ (SY0-701)",
+              "eLearnSecurity Junior Penetration Tester (eJPT)",
+              "Splunk Core Certified Power User"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "STRONGLY RECOMMEND – Excellent match. Priority interview.",
+        "scored_at": "2026-06-28T15:12:05.070741",
+        "rank": 1
+      },
+      {
+        "resume_id": "CSA-005",
+        "name": "Arjun Das",
+        "role_applied": "Cyber Security Analyst",
+        "quality_tier": "Excellent",
+        "ats_score": 78.2,
+        "breakdown": {
+          "skills_match": 15.1,
+          "experience": 24.9,
+          "projects": 14.2,
+          "education": 10,
+          "certifications": 10,
+          "resume_quality": 4.0,
+          "total": 78.2
+        },
+        "justification": {
+          "skills_match": {
+            "score": 15.1,
+            "max": 35,
+            "required_matched": [
+              "mitre att&ck",
+              "nmap",
+              "kali linux",
+              "python",
+              "tcp/ip",
+              "nessus",
+              "burp suite"
+            ],
+            "required_missing": [
+              "splunk",
+              "siem",
+              "wireshark",
+              "firewall",
+              "incident response",
+              "vapt",
+              "microsoft sentinel",
+              "crowdstrike"
+            ],
+            "preferred_matched": [
+              "volatility",
+              "metasploit",
+              "powershell",
+              "bash"
+            ],
+            "required_match_rate": "7/15 (47%)",
+            "preferred_match_rate": "4/14 (29%)"
+          },
+          "experience": {
+            "score": 24.9,
+            "max": 25,
+            "years_experience": 3.5,
+            "target_range": "0–2 years",
+            "status": "Overqualified",
+            "impact_keywords_detected": 8,
+            "companies": [
+              "RedForce Security Labs",
+              "Independent (Bug Bounty)"
+            ]
+          },
+          "projects": {
+            "score": 14.2,
+            "max": 15,
+            "project_count": 2,
+            "min_required": 1,
+            "project_names": [
+              "ADExploit – AD Enumeration & Attack Toolkit",
+              "WebFuzz – Smart Web Application Fuzzer"
+            ],
+            "quality_bonus": 1.5
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "B.Tech – Information Technology",
+            "institution": "Jadavpur University, Kolkata",
+            "cgpa": 8.7,
+            "min_cgpa_required": 6.0,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 10,
+            "max": 10,
+            "total_certs": 3,
+            "matched_to_role": [
+              "Offensive Security Certified Professional (OSCP)",
+              "CEH Practical",
+              "CompTIA PenTest+"
+            ],
+            "all_certs": [
+              "Offensive Security Certified Professional (OSCP)",
+              "CEH Practical",
+              "CompTIA PenTest+"
+            ],
+            "prestige_bonus": 0.5
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.071003",
+        "rank": 2
+      },
+      {
+        "resume_id": "CSA-003",
+        "name": "Vikram Sinha",
+        "role_applied": "Cyber Security Analyst",
+        "quality_tier": "Average",
+        "ats_score": 75.8,
+        "breakdown": {
+          "skills_match": 19.2,
+          "experience": 25,
+          "projects": 10.2,
+          "education": 9.9,
+          "certifications": 7.5,
+          "resume_quality": 4.0,
+          "total": 75.8
+        },
+        "justification": {
+          "skills_match": {
+            "score": 19.2,
+            "max": 35,
+            "required_matched": [
+              "splunk",
+              "mitre att&ck",
+              "nmap",
+              "wireshark",
+              "kali linux",
+              "python",
+              "firewall",
+              "tcp/ip",
+              "microsoft sentinel",
+              "crowdstrike"
+            ],
+            "required_missing": [
+              "siem",
+              "incident response",
+              "vapt",
+              "nessus",
+              "burp suite"
+            ],
+            "preferred_matched": [
+              "active directory"
+            ],
+            "required_match_rate": "10/15 (67%)",
+            "preferred_match_rate": "1/14 (7%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 1.7,
+            "target_range": "0–2 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 3,
+            "companies": [
+              "NetGuard Security Services",
+              "Infosys BPM"
+            ]
+          },
+          "projects": {
+            "score": 10.2,
+            "max": 15,
+            "project_count": 1,
+            "min_required": 1,
+            "project_names": [
+              "IOC Enrichment Script"
+            ],
+            "quality_bonus": 0.5
+          },
+          "education": {
+            "score": 9.9,
+            "max": 10,
+            "degree": "B.Tech – Computer Science",
+            "institution": "SRM Institute of Science and Technology, Chennai",
+            "cgpa": 7.5,
+            "min_cgpa_required": 6.0,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 7.5,
+            "max": 10,
+            "total_certs": 2,
+            "matched_to_role": [
+              "CompTIA Security+ (SY0-601)"
+            ],
+            "all_certs": [
+              "CompTIA Security+ (SY0-601)",
+              "Microsoft Security Operations Analyst (SC-200) – In Progress"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.070867",
+        "rank": 3
+      },
+      {
+        "resume_id": "CSA-004",
+        "name": "Meera Pillai",
+        "role_applied": "Cyber Security Analyst",
+        "quality_tier": "Average",
+        "ats_score": 73.1,
+        "breakdown": {
+          "skills_match": 16.4,
+          "experience": 25,
+          "projects": 10.2,
+          "education": 10,
+          "certifications": 7.5,
+          "resume_quality": 4.0,
+          "total": 73.1
+        },
+        "justification": {
+          "skills_match": {
+            "score": 16.4,
+            "max": 35,
+            "required_matched": [
+              "mitre att&ck",
+              "nmap",
+              "wireshark",
+              "kali linux",
+              "python",
+              "tcp/ip",
+              "nessus",
+              "burp suite"
+            ],
+            "required_missing": [
+              "splunk",
+              "siem",
+              "firewall",
+              "incident response",
+              "vapt",
+              "microsoft sentinel",
+              "crowdstrike"
+            ],
+            "preferred_matched": [
+              "ibm qradar",
+              "active directory",
+              "bash"
+            ],
+            "required_match_rate": "8/15 (53%)",
+            "preferred_match_rate": "3/14 (21%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 1.1,
+            "target_range": "0–2 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 2,
+            "companies": [
+              "Cyber Vigil Solutions",
+              "Sify Technologies"
+            ]
+          },
+          "projects": {
+            "score": 10.2,
+            "max": 15,
+            "project_count": 1,
+            "min_required": 1,
+            "project_names": [
+              "Network Intrusion Detection System (IDS)"
+            ],
+            "quality_bonus": 0.5
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "B.Tech – Computer Science & Engineering",
+            "institution": "College of Engineering Trivandrum (CET)",
+            "cgpa": 8.1,
+            "min_cgpa_required": 6.0,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 7.5,
+            "max": 10,
+            "total_certs": 2,
+            "matched_to_role": [
+              "CompTIA Security+ (SY0-701)"
+            ],
+            "all_certs": [
+              "CompTIA Security+ (SY0-701)",
+              "Google Cybersecurity Certificate"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.070927",
+        "rank": 4
+      },
+      {
+        "resume_id": "CSA-002",
+        "name": "Ananya Sharma",
+        "role_applied": "Cyber Security Analyst",
+        "quality_tier": "Poor",
+        "ats_score": 46.6,
+        "breakdown": {
+          "skills_match": 7.5,
+          "experience": 15.0,
+          "projects": 10.2,
+          "education": 9.9,
+          "certifications": 2.5,
+          "resume_quality": 1.5,
+          "total": 46.6
+        },
+        "justification": {
+          "skills_match": {
+            "score": 7.5,
+            "max": 35,
+            "required_matched": [
+              "nmap",
+              "kali linux",
+              "python",
+              "tcp/ip"
+            ],
+            "required_missing": [
+              "splunk",
+              "siem",
+              "mitre att&ck",
+              "wireshark",
+              "firewall",
+              "incident response",
+              "vapt",
+              "nessus",
+              "burp suite",
+              "microsoft sentinel",
+              "crowdstrike"
+            ],
+            "preferred_matched": [],
+            "required_match_rate": "4/15 (27%)",
+            "preferred_match_rate": "0/14 (0%)"
+          },
+          "experience": {
+            "score": 15.0,
+            "max": 25,
+            "years_experience": 0.0,
+            "target_range": "0–2 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 0,
+            "companies": []
+          },
+          "projects": {
+            "score": 10.2,
+            "max": 15,
+            "project_count": 1,
+            "min_required": 1,
+            "project_names": [
+              "Password Strength Checker"
+            ],
+            "quality_bonus": 0.5
+          },
+          "education": {
+            "score": 9.9,
+            "max": 10,
+            "degree": "B.Tech – Electronics & Communication Engineering",
+            "institution": "Inderprastha Engineering College, Ghaziabad",
+            "cgpa": 6.2,
+            "min_cgpa_required": 6.0,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 2.5,
+            "max": 10,
+            "total_certs": 1,
+            "matched_to_role": [],
+            "all_certs": [
+              "Ethical Hacking Basics"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 1.5,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": false,
+        "recommendation": "WEAK – Significant gaps. May not be suitable.",
+        "scored_at": "2026-06-28T15:12:05.070798",
+        "rank": 5
+      },
+      {
+        "resume_id": "CSA-006",
+        "name": "Snehal Patil",
+        "role_applied": "Cyber Security Analyst",
+        "quality_tier": "Poor",
+        "ats_score": 37.6,
+        "breakdown": {
+          "skills_match": 0.0,
+          "experience": 15.0,
+          "projects": 10.2,
+          "education": 8.9,
+          "certifications": 2.5,
+          "resume_quality": 1.0,
+          "total": 37.6
+        },
+        "justification": {
+          "skills_match": {
+            "score": 0.0,
+            "max": 35,
+            "required_matched": [],
+            "required_missing": [
+              "splunk",
+              "siem",
+              "mitre att&ck",
+              "nmap",
+              "wireshark",
+              "kali linux",
+              "python",
+              "firewall",
+              "tcp/ip",
+              "incident response",
+              "vapt",
+              "nessus",
+              "burp suite",
+              "microsoft sentinel",
+              "crowdstrike"
+            ],
+            "preferred_matched": [],
+            "required_match_rate": "0/15 (0%)",
+            "preferred_match_rate": "0/14 (0%)"
+          },
+          "experience": {
+            "score": 15.0,
+            "max": 25,
+            "years_experience": 0.0,
+            "target_range": "0–2 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 0,
+            "companies": []
+          },
+          "projects": {
+            "score": 10.2,
+            "max": 15,
+            "project_count": 1,
+            "min_required": 1,
+            "project_names": [
+              "Firewall Basics Study"
+            ],
+            "quality_bonus": 0.5
+          },
+          "education": {
+            "score": 8.9,
+            "max": 10,
+            "degree": "B.Tech – Electronics & Telecommunication",
+            "institution": "Padmashri Dr. Vikhe Patil College of Engineering, Ahmednagar",
+            "cgpa": 5.9,
+            "min_cgpa_required": 6.0,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 2.5,
+            "max": 10,
+            "total_certs": 1,
+            "matched_to_role": [],
+            "all_certs": [
+              "Cybersecurity Awareness (3-day workshop)"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 1.0,
+            "max": 5,
+            "signals_detected": [
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": false,
+        "recommendation": "REJECT – Insufficient match for this role.",
+        "scored_at": "2026-06-28T15:12:05.071036",
+        "rank": 6
+      }
+    ],
+    "Data Analyst": [
+      {
+        "resume_id": "DA-001",
+        "name": "Vivek Rao",
+        "role_applied": "Data Analyst",
+        "quality_tier": "Excellent",
+        "ats_score": 92.1,
+        "breakdown": {
+          "skills_match": 28.9,
+          "experience": 25,
+          "projects": 14.2,
+          "education": 10,
+          "certifications": 10,
+          "resume_quality": 4.0,
+          "total": 92.1
+        },
+        "justification": {
+          "skills_match": {
+            "score": 28.9,
+            "max": 35,
+            "required_matched": [
+              "sql",
+              "python",
+              "pandas",
+              "numpy",
+              "tableau",
+              "power bi",
+              "excel",
+              "statistics",
+              "regression",
+              "matplotlib",
+              "seaborn",
+              "postgresql",
+              "bigquery",
+              "a/b testing",
+              "hypothesis testing"
+            ],
+            "required_missing": [
+              "mysql"
+            ],
+            "preferred_matched": [
+              "dbt",
+              "airflow",
+              "snowflake",
+              "looker",
+              "r"
+            ],
+            "required_match_rate": "15/16 (94%)",
+            "preferred_match_rate": "5/13 (38%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 2.1,
+            "target_range": "1–3 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 7,
+            "companies": [
+              "DataBridge Analytics Pvt. Ltd.",
+              "Cognizant Technology Solutions"
+            ]
+          },
+          "projects": {
+            "score": 14.2,
+            "max": 15,
+            "project_count": 2,
+            "min_required": 1,
+            "project_names": [
+              "RetailPulse – Retail Analytics Dashboard",
+              "ChurnPredict – Customer Churn Analysis"
+            ],
+            "quality_bonus": 1.5
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "B.Tech – Computer Science & Engineering",
+            "institution": "Osmania University College of Engineering, Hyderabad",
+            "cgpa": 8.4,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 10,
+            "max": 10,
+            "total_certs": 3,
+            "matched_to_role": [
+              "Tableau Certified Data Analyst",
+              "Google Data Analytics Professional Certificate",
+              "Microsoft PL-300: Power BI Data Analyst"
+            ],
+            "all_certs": [
+              "Tableau Certified Data Analyst",
+              "Google Data Analytics Professional Certificate",
+              "Microsoft PL-300: Power BI Data Analyst"
+            ],
+            "prestige_bonus": 0.5
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "STRONGLY RECOMMEND – Excellent match. Priority interview.",
+        "scored_at": "2026-06-28T15:12:05.071101",
+        "rank": 1
+      },
+      {
+        "resume_id": "DA-003",
+        "name": "Harshita Gupta",
+        "role_applied": "Data Analyst",
+        "quality_tier": "Excellent",
+        "ats_score": 87.0,
+        "breakdown": {
+          "skills_match": 23.0,
+          "experience": 25,
+          "projects": 15,
+          "education": 10,
+          "certifications": 10,
+          "resume_quality": 4.0,
+          "total": 87.0
+        },
+        "justification": {
+          "skills_match": {
+            "score": 23.0,
+            "max": 35,
+            "required_matched": [
+              "sql",
+              "python",
+              "pandas",
+              "numpy",
+              "tableau",
+              "power bi",
+              "excel",
+              "regression",
+              "postgresql",
+              "bigquery",
+              "a/b testing"
+            ],
+            "required_missing": [
+              "statistics",
+              "matplotlib",
+              "seaborn",
+              "mysql",
+              "hypothesis testing"
+            ],
+            "preferred_matched": [
+              "dbt",
+              "airflow",
+              "snowflake",
+              "redshift",
+              "looker",
+              "r",
+              "scikit-learn"
+            ],
+            "required_match_rate": "11/16 (69%)",
+            "preferred_match_rate": "7/13 (54%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 3.0,
+            "target_range": "1–3 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 7,
+            "companies": [
+              "HDFC Bank Ltd. – Data & Analytics COE",
+              "EY (Ernst & Young) – Advisory"
+            ]
+          },
+          "projects": {
+            "score": 15,
+            "max": 15,
+            "project_count": 2,
+            "min_required": 1,
+            "project_names": [
+              "OpenFinMetrics – Financial KPI Dashboard Template",
+              "CLV Predictor – Customer Lifetime Value Model"
+            ],
+            "quality_bonus": 2.5
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "MBA – Business Analytics",
+            "institution": "FORE School of Management, New Delhi",
+            "cgpa": 8.8,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 10,
+            "max": 10,
+            "total_certs": 3,
+            "matched_to_role": [
+              "Tableau Certified Data Analyst",
+              "dbt Analytics Engineering Certification",
+              "AWS Certified Data Analytics – Specialty"
+            ],
+            "all_certs": [
+              "Tableau Certified Data Analyst",
+              "dbt Analytics Engineering Certification",
+              "AWS Certified Data Analytics – Specialty"
+            ],
+            "prestige_bonus": 1.0
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "STRONGLY RECOMMEND – Excellent match. Priority interview.",
+        "scored_at": "2026-06-28T15:12:05.071227",
+        "rank": 2
+      },
+      {
+        "resume_id": "DA-005",
+        "name": "Riya Shah",
+        "role_applied": "Data Analyst",
+        "quality_tier": "Average",
+        "ats_score": 78.2,
+        "breakdown": {
+          "skills_match": 21.5,
+          "experience": 25,
+          "projects": 10.2,
+          "education": 10,
+          "certifications": 7.5,
+          "resume_quality": 4.0,
+          "total": 78.2
+        },
+        "justification": {
+          "skills_match": {
+            "score": 21.5,
+            "max": 35,
+            "required_matched": [
+              "sql",
+              "python",
+              "pandas",
+              "tableau",
+              "power bi",
+              "excel",
+              "regression",
+              "seaborn",
+              "postgresql",
+              "mysql",
+              "bigquery",
+              "a/b testing"
+            ],
+            "required_missing": [
+              "numpy",
+              "statistics",
+              "matplotlib",
+              "hypothesis testing"
+            ],
+            "preferred_matched": [
+              "r"
+            ],
+            "required_match_rate": "12/16 (75%)",
+            "preferred_match_rate": "1/13 (8%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 2.1,
+            "target_range": "1–3 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 4,
+            "companies": [
+              "LogiSense Analytics",
+              "Infosys – BPO Analytics Unit"
+            ]
+          },
+          "projects": {
+            "score": 10.2,
+            "max": 15,
+            "project_count": 1,
+            "min_required": 1,
+            "project_names": [
+              "Supply Chain KPI Dashboard"
+            ],
+            "quality_bonus": 0.5
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "B.Tech – Information Technology",
+            "institution": "Nirma University, Ahmedabad",
+            "cgpa": 7.6,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 7.5,
+            "max": 10,
+            "total_certs": 2,
+            "matched_to_role": [
+              "Tableau Desktop Specialist"
+            ],
+            "all_certs": [
+              "Tableau Desktop Specialist",
+              "SQL for Data Science"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.071321",
+        "rank": 3
+      },
+      {
+        "resume_id": "DA-002",
+        "name": "Sneha Kulkarni",
+        "role_applied": "Data Analyst",
+        "quality_tier": "Average",
+        "ats_score": 72.9,
+        "breakdown": {
+          "skills_match": 16.3,
+          "experience": 25,
+          "projects": 10.2,
+          "education": 9.9,
+          "certifications": 7.5,
+          "resume_quality": 4.0,
+          "total": 72.9
+        },
+        "justification": {
+          "skills_match": {
+            "score": 16.3,
+            "max": 35,
+            "required_matched": [
+              "sql",
+              "python",
+              "pandas",
+              "power bi",
+              "excel",
+              "statistics",
+              "regression",
+              "matplotlib",
+              "mysql"
+            ],
+            "required_missing": [
+              "numpy",
+              "tableau",
+              "seaborn",
+              "postgresql",
+              "bigquery",
+              "a/b testing",
+              "hypothesis testing"
+            ],
+            "preferred_matched": [
+              "r"
+            ],
+            "required_match_rate": "9/16 (56%)",
+            "preferred_match_rate": "1/13 (8%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 1.1,
+            "target_range": "1–3 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 2,
+            "companies": [
+              "Accenture India (Strategy & Consulting)",
+              "Analytics Vidhya"
+            ]
+          },
+          "projects": {
+            "score": 10.2,
+            "max": 15,
+            "project_count": 1,
+            "min_required": 1,
+            "project_names": [
+              "Pharma Sales Analytics – Personal Project"
+            ],
+            "quality_bonus": 0.5
+          },
+          "education": {
+            "score": 9.9,
+            "max": 10,
+            "degree": "B.Sc. – Statistics",
+            "institution": "Fergusson College, Pune",
+            "cgpa": 7.9,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 7.5,
+            "max": 10,
+            "total_certs": 2,
+            "matched_to_role": [
+              "Microsoft PL-300: Power BI Data Analyst – In Progress"
+            ],
+            "all_certs": [
+              "Microsoft PL-300: Power BI Data Analyst – In Progress",
+              "Excel Skills for Data Analytics and Visualization"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.071160",
+        "rank": 4
+      },
+      {
+        "resume_id": "DA-006",
+        "name": "Pranav Nambiar",
+        "role_applied": "Data Analyst",
+        "quality_tier": "Poor",
+        "ats_score": 48.7,
+        "breakdown": {
+          "skills_match": 4.0,
+          "experience": 25.0,
+          "projects": 10.2,
+          "education": 8.0,
+          "certifications": 0.0,
+          "resume_quality": 1.5,
+          "total": 48.7
+        },
+        "justification": {
+          "skills_match": {
+            "score": 4.0,
+            "max": 35,
+            "required_matched": [
+              "sql",
+              "excel"
+            ],
+            "required_missing": [
+              "python",
+              "pandas",
+              "numpy",
+              "tableau",
+              "power bi",
+              "statistics",
+              "regression",
+              "matplotlib",
+              "seaborn",
+              "postgresql",
+              "mysql",
+              "bigquery",
+              "a/b testing",
+              "hypothesis testing"
+            ],
+            "preferred_matched": [
+              "r"
+            ],
+            "required_match_rate": "2/16 (12%)",
+            "preferred_match_rate": "1/13 (8%)"
+          },
+          "experience": {
+            "score": 25.0,
+            "max": 25,
+            "years_experience": 1.6,
+            "target_range": "1–3 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 0,
+            "companies": [
+              "Muthoot Finance Ltd."
+            ]
+          },
+          "projects": {
+            "score": 10.2,
+            "max": 15,
+            "project_count": 1,
+            "min_required": 1,
+            "project_names": [
+              "Branch Sales Tracker (Excel)"
+            ],
+            "quality_bonus": 0.5
+          },
+          "education": {
+            "score": 8.0,
+            "max": 10,
+            "degree": "BCA – Bachelor of Computer Applications",
+            "institution": "St. Albert's College, Ernakulam",
+            "cgpa": 6.4,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 0.0,
+            "max": 10,
+            "total_certs": 0,
+            "matched_to_role": [],
+            "all_certs": [],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 1.5,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": false,
+        "recommendation": "WEAK – Significant gaps. May not be suitable.",
+        "scored_at": "2026-06-28T15:12:05.071354",
+        "rank": 5
+      },
+      {
+        "resume_id": "DA-004",
+        "name": "Amit Chandra",
+        "role_applied": "Data Analyst",
+        "quality_tier": "Poor",
+        "ats_score": 41.5,
+        "breakdown": {
+          "skills_match": 7.5,
+          "experience": 25,
+          "projects": 0.0,
+          "education": 5.0,
+          "certifications": 2.5,
+          "resume_quality": 1.5,
+          "total": 41.5
+        },
+        "justification": {
+          "skills_match": {
+            "score": 7.5,
+            "max": 35,
+            "required_matched": [
+              "sql",
+              "python",
+              "excel",
+              "mysql"
+            ],
+            "required_missing": [
+              "pandas",
+              "numpy",
+              "tableau",
+              "power bi",
+              "statistics",
+              "regression",
+              "matplotlib",
+              "seaborn",
+              "postgresql",
+              "bigquery",
+              "a/b testing",
+              "hypothesis testing"
+            ],
+            "preferred_matched": [
+              "r"
+            ],
+            "required_match_rate": "4/16 (25%)",
+            "preferred_match_rate": "1/13 (8%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 1.0,
+            "target_range": "1–3 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 1,
+            "companies": [
+              "QuickBooks India (freelance, unofficial)"
+            ]
+          },
+          "projects": {
+            "score": 0.0,
+            "max": 15,
+            "project_count": 0,
+            "min_required": 1,
+            "project_names": [],
+            "quality_bonus": 0
+          },
+          "education": {
+            "score": 5.0,
+            "max": 10,
+            "degree": "B.Com – Commerce",
+            "institution": "Narsee Monjee College of Commerce, Mumbai",
+            "cgpa": 6.0,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 2.5,
+            "max": 10,
+            "total_certs": 1,
+            "matched_to_role": [],
+            "all_certs": [
+              "Excel for Beginners"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 1.5,
+            "max": 5,
+            "signals_detected": [
+              "10+ skills listed",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": false,
+        "recommendation": "WEAK – Significant gaps. May not be suitable.",
+        "scored_at": "2026-06-28T15:12:05.071265",
+        "rank": 6
+      }
+    ],
+    "Product Manager": [
+      {
+        "resume_id": "PM-001",
+        "name": "Aditya Malhotra",
+        "role_applied": "Product Manager",
+        "quality_tier": "Excellent",
+        "ats_score": 80.6,
+        "breakdown": {
+          "skills_match": 21.0,
+          "experience": 25,
+          "projects": 12.8,
+          "education": 10.0,
+          "certifications": 8.8,
+          "resume_quality": 3.0,
+          "total": 80.6
+        },
+        "justification": {
+          "skills_match": {
+            "score": 21.0,
+            "max": 35,
+            "required_matched": [
+              "product roadmap",
+              "prd",
+              "okr",
+              "jira",
+              "confluence",
+              "user interviews",
+              "analytics",
+              "figma",
+              "miro"
+            ],
+            "required_missing": [
+              "user stories",
+              "backlog",
+              "agile",
+              "scrum",
+              "a/b testing",
+              "stakeholder"
+            ],
+            "preferred_matched": [
+              "sql",
+              "mixpanel",
+              "amplitude",
+              "notion",
+              "productboard",
+              "rice",
+              "moscow",
+              "kano",
+              "jtbd"
+            ],
+            "required_match_rate": "9/15 (60%)",
+            "preferred_match_rate": "9/15 (60%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 3.9,
+            "target_range": "3–5 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 7,
+            "companies": [
+              "Darwinbox Digital Solutions",
+              "Razorpay"
+            ]
+          },
+          "projects": {
+            "score": 12.8,
+            "max": 15,
+            "project_count": 2,
+            "min_required": 1,
+            "project_names": [
+              "Payroll Analytics Module – Darwinbox",
+              "HR Compliance Automation Engine"
+            ],
+            "quality_bonus": 0
+          },
+          "education": {
+            "score": 10.0,
+            "max": 10,
+            "degree": "MBA – Strategy & Technology Management",
+            "institution": "Indian School of Business (ISB), Hyderabad",
+            "cgpa": 3.7,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 8.8,
+            "max": 10,
+            "total_certs": 3,
+            "matched_to_role": [
+              "AIPMM Certified Product Manager (CPM)",
+              "Reforge – Product Strategy"
+            ],
+            "all_certs": [
+              "AIPMM Certified Product Manager (CPM)",
+              "Reforge – Product Strategy",
+              "SQL for Product Managers"
+            ],
+            "prestige_bonus": 0.5
+          },
+          "resume_quality": {
+            "score": 3.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.071429",
+        "rank": 1
+      },
+      {
+        "resume_id": "PM-002",
+        "name": "Neha Verma",
+        "role_applied": "Product Manager",
+        "quality_tier": "Average",
+        "ats_score": 78.2,
+        "breakdown": {
+          "skills_match": 22.9,
+          "experience": 25,
+          "projects": 9.8,
+          "education": 10,
+          "certifications": 7.5,
+          "resume_quality": 3.0,
+          "total": 78.2
+        },
+        "justification": {
+          "skills_match": {
+            "score": 22.9,
+            "max": 35,
+            "required_matched": [
+              "product roadmap",
+              "prd",
+              "okr",
+              "backlog",
+              "scrum",
+              "jira",
+              "confluence",
+              "user interviews",
+              "analytics",
+              "figma",
+              "miro"
+            ],
+            "required_missing": [
+              "user stories",
+              "agile",
+              "a/b testing",
+              "stakeholder"
+            ],
+            "preferred_matched": [
+              "sql",
+              "amplitude",
+              "notion",
+              "rice",
+              "moscow"
+            ],
+            "required_match_rate": "11/15 (73%)",
+            "preferred_match_rate": "5/15 (33%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 4.8,
+            "target_range": "3–5 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 4,
+            "companies": [
+              "Shopalyst Technologies",
+              "Infosys BPM – Digital Commerce"
+            ]
+          },
+          "projects": {
+            "score": 9.8,
+            "max": 15,
+            "project_count": 1,
+            "min_required": 1,
+            "project_names": [
+              "Ad Placement Optimization – Self-Serve Module"
+            ],
+            "quality_bonus": 0
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "MBA – Marketing & Operations",
+            "institution": "Symbiosis Institute of Business Management (SIBM), Pune",
+            "cgpa": 7.8,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 7.5,
+            "max": 10,
+            "total_certs": 2,
+            "matched_to_role": [
+              "Certified Scrum Product Owner (CSPO)"
+            ],
+            "all_certs": [
+              "Certified Scrum Product Owner (CSPO)",
+              "Digital Product Management"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 3.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.071489",
+        "rank": 2
+      },
+      {
+        "resume_id": "PM-003",
+        "name": "Saurabh Tiwari",
+        "role_applied": "Product Manager",
+        "quality_tier": "Excellent",
+        "ats_score": 74.3,
+        "breakdown": {
+          "skills_match": 13.5,
+          "experience": 25,
+          "projects": 12.8,
+          "education": 10.0,
+          "certifications": 10,
+          "resume_quality": 3.0,
+          "total": 74.3
+        },
+        "justification": {
+          "skills_match": {
+            "score": 13.5,
+            "max": 35,
+            "required_matched": [
+              "prd",
+              "okr",
+              "jira",
+              "figma",
+              "miro"
+            ],
+            "required_missing": [
+              "product roadmap",
+              "user stories",
+              "backlog",
+              "agile",
+              "scrum",
+              "confluence",
+              "user interviews",
+              "a/b testing",
+              "analytics",
+              "stakeholder"
+            ],
+            "preferred_matched": [
+              "sql",
+              "mixpanel",
+              "amplitude",
+              "notion",
+              "productboard",
+              "rice",
+              "jtbd",
+              "plg",
+              "pricing"
+            ],
+            "required_match_rate": "5/15 (33%)",
+            "preferred_match_rate": "9/15 (60%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 4.8,
+            "target_range": "3–5 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 5,
+            "companies": [
+              "Leegality (e-Signature SaaS)",
+              "Capillary Technologies"
+            ]
+          },
+          "projects": {
+            "score": 12.8,
+            "max": 15,
+            "project_count": 2,
+            "min_required": 1,
+            "project_names": [
+              "AI Document Intelligence – Leegality",
+              "PLG Onboarding Redesign"
+            ],
+            "quality_bonus": 0
+          },
+          "education": {
+            "score": 10.0,
+            "max": 10,
+            "degree": "MBA – Marketing & Strategy",
+            "institution": "Indian Institute of Management (IIM) Calcutta",
+            "cgpa": 3.8,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 10,
+            "max": 10,
+            "total_certs": 3,
+            "matched_to_role": [
+              "Reforge – Product-Led Growth",
+              "Reforge – Product Strategy",
+              "AIPMM Certified Product Manager"
+            ],
+            "all_certs": [
+              "Reforge – Product-Led Growth",
+              "Reforge – Product Strategy",
+              "AIPMM Certified Product Manager"
+            ],
+            "prestige_bonus": 0.5
+          },
+          "resume_quality": {
+            "score": 3.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.071570",
+        "rank": 3
+      },
+      {
+        "resume_id": "PM-004",
+        "name": "Divya Krishnan",
+        "role_applied": "Product Manager",
+        "quality_tier": "Average",
+        "ats_score": 63.7,
+        "breakdown": {
+          "skills_match": 19.1,
+          "experience": 16.8,
+          "projects": 9.8,
+          "education": 10.0,
+          "certifications": 5.0,
+          "resume_quality": 3.0,
+          "total": 63.7
+        },
+        "justification": {
+          "skills_match": {
+            "score": 19.1,
+            "max": 35,
+            "required_matched": [
+              "prd",
+              "okr",
+              "backlog",
+              "jira",
+              "confluence",
+              "user interviews",
+              "analytics",
+              "figma",
+              "miro"
+            ],
+            "required_missing": [
+              "product roadmap",
+              "user stories",
+              "agile",
+              "scrum",
+              "a/b testing",
+              "stakeholder"
+            ],
+            "preferred_matched": [
+              "sql",
+              "amplitude",
+              "notion",
+              "moscow",
+              "kano"
+            ],
+            "required_match_rate": "9/15 (60%)",
+            "preferred_match_rate": "5/15 (33%)"
+          },
+          "experience": {
+            "score": 16.8,
+            "max": 25,
+            "years_experience": 2.4,
+            "target_range": "3–5 years",
+            "status": "Below minimum",
+            "impact_keywords_detected": 6,
+            "companies": [
+              "Byju's (Think & Learn Pvt. Ltd.)",
+              "Unacademy"
+            ]
+          },
+          "projects": {
+            "score": 9.8,
+            "max": 15,
+            "project_count": 1,
+            "min_required": 1,
+            "project_names": [
+              "Session Quality Score System"
+            ],
+            "quality_bonus": 0
+          },
+          "education": {
+            "score": 10.0,
+            "max": 10,
+            "degree": "MBA – Marketing",
+            "institution": "Great Lakes Institute of Management, Chennai",
+            "cgpa": 7.5,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 5.0,
+            "max": 10,
+            "total_certs": 2,
+            "matched_to_role": [],
+            "all_certs": [
+              "ProductSpace PM Launchpad (Cohort 12)",
+              "Product Analytics Certification"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 3.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": false,
+        "recommendation": "CONSIDER – Borderline match. Phone screen first.",
+        "scored_at": "2026-06-28T15:12:05.071634",
+        "rank": 4
+      },
+      {
+        "resume_id": "PM-005",
+        "name": "Manish Aggarwal",
+        "role_applied": "Product Manager",
+        "quality_tier": "Poor",
+        "ats_score": 42.6,
+        "breakdown": {
+          "skills_match": 9.8,
+          "experience": 17.8,
+          "projects": 0.0,
+          "education": 10.0,
+          "certifications": 2.5,
+          "resume_quality": 2.5,
+          "total": 42.6
+        },
+        "justification": {
+          "skills_match": {
+            "score": 9.8,
+            "max": 35,
+            "required_matched": [
+              "prd",
+              "scrum",
+              "jira",
+              "confluence",
+              "analytics"
+            ],
+            "required_missing": [
+              "product roadmap",
+              "user stories",
+              "okr",
+              "backlog",
+              "agile",
+              "user interviews",
+              "a/b testing",
+              "stakeholder",
+              "figma",
+              "miro"
+            ],
+            "preferred_matched": [
+              "moscow"
+            ],
+            "required_match_rate": "5/15 (33%)",
+            "preferred_match_rate": "1/15 (7%)"
+          },
+          "experience": {
+            "score": 17.8,
+            "max": 25,
+            "years_experience": 2.8,
+            "target_range": "3–5 years",
+            "status": "Below minimum",
+            "impact_keywords_detected": 1,
+            "companies": [
+              "Vedantu Innovations",
+              "Freelance Consulting"
+            ]
+          },
+          "projects": {
+            "score": 0.0,
+            "max": 15,
+            "project_count": 0,
+            "min_required": 1,
+            "project_names": [],
+            "quality_bonus": 0
+          },
+          "education": {
+            "score": 10.0,
+            "max": 10,
+            "degree": "MBA – General Management",
+            "institution": "Amity Business School, Noida",
+            "cgpa": 6.9,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 2.5,
+            "max": 10,
+            "total_certs": 1,
+            "matched_to_role": [],
+            "all_certs": [
+              "Product Management Fundamentals"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 2.5,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": false,
+        "recommendation": "WEAK – Significant gaps. May not be suitable.",
+        "scored_at": "2026-06-28T15:12:05.071675",
+        "rank": 5
+      },
+      {
+        "resume_id": "PM-006",
+        "name": "Pooja Reddy",
+        "role_applied": "Product Manager",
+        "quality_tier": "Poor",
+        "ats_score": 39.5,
+        "breakdown": {
+          "skills_match": 0.0,
+          "experience": 25,
+          "projects": 0.0,
+          "education": 10.0,
+          "certifications": 2.5,
+          "resume_quality": 2.0,
+          "total": 39.5
+        },
+        "justification": {
+          "skills_match": {
+            "score": 0.0,
+            "max": 35,
+            "required_matched": [],
+            "required_missing": [
+              "product roadmap",
+              "prd",
+              "user stories",
+              "okr",
+              "backlog",
+              "agile",
+              "scrum",
+              "jira",
+              "confluence",
+              "user interviews",
+              "a/b testing",
+              "analytics",
+              "stakeholder",
+              "figma",
+              "miro"
+            ],
+            "preferred_matched": [],
+            "required_match_rate": "0/15 (0%)",
+            "preferred_match_rate": "0/15 (0%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 4.0,
+            "target_range": "3–5 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 1,
+            "companies": [
+              "Hindustan Unilever Limited"
+            ]
+          },
+          "projects": {
+            "score": 0.0,
+            "max": 15,
+            "project_count": 0,
+            "min_required": 1,
+            "project_names": [],
+            "quality_bonus": 0
+          },
+          "education": {
+            "score": 10.0,
+            "max": 10,
+            "degree": "MBA – FMCG & Retail Management",
+            "institution": "ICFAI Business School (IBS), Hyderabad",
+            "cgpa": 7.1,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 2.5,
+            "max": 10,
+            "total_certs": 1,
+            "matched_to_role": [],
+            "all_certs": [
+              "Introduction to Product Management"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 2.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "2+ achievements listed",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": false,
+        "recommendation": "REJECT – Insufficient match for this role.",
+        "scored_at": "2026-06-28T15:12:05.071709",
+        "rank": 6
+      }
+    ],
+    "Software Engineer": [
+      {
+        "resume_id": "SE-001",
+        "name": "Aarav Mehta",
+        "role_applied": "Software Engineer",
+        "quality_tier": "Average",
+        "ats_score": 86.3,
+        "breakdown": {
+          "skills_match": 23.2,
+          "experience": 25,
+          "projects": 14.2,
+          "education": 9.9,
+          "certifications": 10.0,
+          "resume_quality": 4.0,
+          "total": 86.3
+        },
+        "justification": {
+          "skills_match": {
+            "score": 23.2,
+            "max": 35,
+            "required_matched": [
+              "python",
+              "javascript",
+              "typescript",
+              "react",
+              "node.js",
+              "django",
+              "postgresql",
+              "mysql",
+              "git",
+              "docker",
+              "html",
+              "css",
+              "aws",
+              "github",
+              "jest",
+              "pytest"
+            ],
+            "required_missing": [
+              "flask",
+              "redis",
+              "rest api",
+              "agile",
+              "scrum"
+            ],
+            "preferred_matched": [
+              "go",
+              "java",
+              "github actions"
+            ],
+            "required_match_rate": "16/21 (76%)",
+            "preferred_match_rate": "3/11 (27%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 1.1,
+            "target_range": "0–2 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 4,
+            "companies": [
+              "Zoho Corporation",
+              "StartupDen Technologies"
+            ]
+          },
+          "projects": {
+            "score": 14.2,
+            "max": 15,
+            "project_count": 2,
+            "min_required": 1,
+            "project_names": [
+              "TaskFlow – Project Management Tool",
+              "MediAlert – Hospital Appointment System"
+            ],
+            "quality_bonus": 1.5
+          },
+          "education": {
+            "score": 9.9,
+            "max": 10,
+            "degree": "B.Tech – Computer Science & Engineering",
+            "institution": "RV College of Engineering, Bengaluru",
+            "cgpa": 7.4,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 10.0,
+            "max": 10,
+            "total_certs": 2,
+            "matched_to_role": [
+              "AWS Certified Cloud Practitioner",
+              "Meta Front-End Developer Certificate"
+            ],
+            "all_certs": [
+              "AWS Certified Cloud Practitioner",
+              "Meta Front-End Developer Certificate"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "STRONGLY RECOMMEND – Excellent match. Priority interview.",
+        "scored_at": "2026-06-28T15:12:05.071768",
+        "rank": 1
+      },
+      {
+        "resume_id": "SE-003",
+        "name": "Devansh Trivedi",
+        "role_applied": "Software Engineer",
+        "quality_tier": "Excellent",
+        "ats_score": 84.5,
+        "breakdown": {
+          "skills_match": 20.5,
+          "experience": 25,
+          "projects": 15,
+          "education": 10,
+          "certifications": 10,
+          "resume_quality": 4.0,
+          "total": 84.5
+        },
+        "justification": {
+          "skills_match": {
+            "score": 20.5,
+            "max": 35,
+            "required_matched": [
+              "python",
+              "javascript",
+              "typescript",
+              "react",
+              "postgresql",
+              "redis",
+              "git",
+              "docker",
+              "aws",
+              "github",
+              "jest",
+              "pytest"
+            ],
+            "required_missing": [
+              "node.js",
+              "django",
+              "flask",
+              "mysql",
+              "rest api",
+              "html",
+              "css",
+              "agile",
+              "scrum"
+            ],
+            "preferred_matched": [
+              "kubernetes",
+              "kafka",
+              "graphql",
+              "go",
+              "java",
+              "spring boot",
+              "github actions"
+            ],
+            "required_match_rate": "12/21 (57%)",
+            "preferred_match_rate": "7/11 (64%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 2.0,
+            "target_range": "0–2 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 10,
+            "companies": [
+              "Flipkart Internet Pvt. Ltd.",
+              "Microsoft India (GSDC)"
+            ]
+          },
+          "projects": {
+            "score": 15,
+            "max": 15,
+            "project_count": 2,
+            "min_required": 1,
+            "project_names": [
+              "OpenExpense – Open Source Expense Tracker API",
+              "ScaleQ – Distributed Task Queue"
+            ],
+            "quality_bonus": 2.5
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "B.Tech – Computer Science & Engineering",
+            "institution": "BITS Pilani, Goa Campus",
+            "cgpa": 8.9,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 10,
+            "max": 10,
+            "total_certs": 3,
+            "matched_to_role": [
+              "AWS Certified Solutions Architect – Associate",
+              "Certified Kubernetes Application Developer (CKAD)",
+              "Meta Backend Developer Certificate"
+            ],
+            "all_certs": [
+              "AWS Certified Solutions Architect – Associate",
+              "Certified Kubernetes Application Developer (CKAD)",
+              "Meta Backend Developer Certificate"
+            ],
+            "prestige_bonus": 1.5
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.071871",
+        "rank": 2
+      },
+      {
+        "resume_id": "SE-004",
+        "name": "Simran Kaur",
+        "role_applied": "Software Engineer",
+        "quality_tier": "Average",
+        "ats_score": 78.2,
+        "breakdown": {
+          "skills_match": 17.9,
+          "experience": 25,
+          "projects": 13.8,
+          "education": 10,
+          "certifications": 7.5,
+          "resume_quality": 4.0,
+          "total": 78.2
+        },
+        "justification": {
+          "skills_match": {
+            "score": 17.9,
+            "max": 35,
+            "required_matched": [
+              "python",
+              "javascript",
+              "django",
+              "flask",
+              "postgresql",
+              "mysql",
+              "redis",
+              "git",
+              "docker",
+              "aws",
+              "github",
+              "pytest"
+            ],
+            "required_missing": [
+              "typescript",
+              "react",
+              "node.js",
+              "rest api",
+              "html",
+              "css",
+              "agile",
+              "scrum",
+              "jest"
+            ],
+            "preferred_matched": [
+              "go",
+              "java",
+              "github actions"
+            ],
+            "required_match_rate": "12/21 (57%)",
+            "preferred_match_rate": "3/11 (27%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 1.8,
+            "target_range": "0–2 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 1,
+            "companies": [
+              "HireIn Technologies",
+              "Nexora Labs"
+            ]
+          },
+          "projects": {
+            "score": 13.8,
+            "max": 15,
+            "project_count": 2,
+            "min_required": 1,
+            "project_names": [
+              "QuickShip – Logistics Tracking Dashboard",
+              "DevBlog API"
+            ],
+            "quality_bonus": 1.0
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "B.Tech – Information Technology",
+            "institution": "Thapar Institute of Engineering & Technology, Patiala",
+            "cgpa": 7.8,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 7.5,
+            "max": 10,
+            "total_certs": 2,
+            "matched_to_role": [
+              "AWS Cloud Practitioner Essentials"
+            ],
+            "all_certs": [
+              "Django REST Framework – Full Course",
+              "AWS Cloud Practitioner Essentials"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.071931",
+        "rank": 3
+      },
+      {
+        "resume_id": "SE-006",
+        "name": "Tanvi Patel",
+        "role_applied": "Software Engineer",
+        "quality_tier": "Excellent",
+        "ats_score": 78.1,
+        "breakdown": {
+          "skills_match": 15.8,
+          "experience": 24.0,
+          "projects": 15,
+          "education": 10,
+          "certifications": 9.3,
+          "resume_quality": 4.0,
+          "total": 78.1
+        },
+        "justification": {
+          "skills_match": {
+            "score": 15.8,
+            "max": 35,
+            "required_matched": [
+              "python",
+              "django",
+              "postgresql",
+              "mysql",
+              "redis",
+              "git",
+              "docker",
+              "aws",
+              "github"
+            ],
+            "required_missing": [
+              "javascript",
+              "typescript",
+              "react",
+              "node.js",
+              "flask",
+              "rest api",
+              "html",
+              "css",
+              "agile",
+              "scrum",
+              "jest",
+              "pytest"
+            ],
+            "preferred_matched": [
+              "kubernetes",
+              "kafka",
+              "terraform",
+              "grpc",
+              "go",
+              "github actions"
+            ],
+            "required_match_rate": "9/21 (43%)",
+            "preferred_match_rate": "6/11 (55%)"
+          },
+          "experience": {
+            "score": 24.0,
+            "max": 25,
+            "years_experience": 2.1,
+            "target_range": "0–2 years",
+            "status": "Overqualified",
+            "impact_keywords_detected": 5,
+            "companies": [
+              "Razorpay Software Pvt. Ltd.",
+              "Google Summer of Code (GSoC)"
+            ]
+          },
+          "projects": {
+            "score": 15,
+            "max": 15,
+            "project_count": 2,
+            "min_required": 1,
+            "project_names": [
+              "Sentinel – Lightweight APM Tool",
+              "PgMigrate – Safe PostgreSQL Migration CLI"
+            ],
+            "quality_bonus": 3.0
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "B.Tech – Computer Science & Engineering (Honours)",
+            "institution": "Dhirubhai Ambani Institute of Information and Communication Technology (DAIICT), Gandhinagar",
+            "cgpa": 9.1,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 9.3,
+            "max": 10,
+            "total_certs": 3,
+            "matched_to_role": [
+              "AWS Certified Solutions Architect – Professional",
+              "Certified Kubernetes Administrator (CKA)"
+            ],
+            "all_certs": [
+              "AWS Certified Solutions Architect – Professional",
+              "Certified Kubernetes Administrator (CKA)",
+              "HashiCorp Certified: Terraform Associate"
+            ],
+            "prestige_bonus": 1.0
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.072037",
+        "rank": 4
+      },
+      {
+        "resume_id": "SE-002",
+        "name": "Priya Nair",
+        "role_applied": "Software Engineer",
+        "quality_tier": "Poor",
+        "ats_score": 56.8,
+        "breakdown": {
+          "skills_match": 6.7,
+          "experience": 25.0,
+          "projects": 10.2,
+          "education": 9.9,
+          "certifications": 2.5,
+          "resume_quality": 2.5,
+          "total": 56.8
+        },
+        "justification": {
+          "skills_match": {
+            "score": 6.7,
+            "max": 35,
+            "required_matched": [
+              "python",
+              "mysql",
+              "git",
+              "html",
+              "css"
+            ],
+            "required_missing": [
+              "javascript",
+              "typescript",
+              "react",
+              "node.js",
+              "django",
+              "flask",
+              "postgresql",
+              "redis",
+              "docker",
+              "rest api",
+              "aws",
+              "github",
+              "agile",
+              "scrum",
+              "jest",
+              "pytest"
+            ],
+            "preferred_matched": [],
+            "required_match_rate": "5/21 (24%)",
+            "preferred_match_rate": "0/11 (0%)"
+          },
+          "experience": {
+            "score": 25.0,
+            "max": 25,
+            "years_experience": 0.2,
+            "target_range": "0–2 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 0,
+            "companies": [
+              "Softech Infoways"
+            ]
+          },
+          "projects": {
+            "score": 10.2,
+            "max": 15,
+            "project_count": 1,
+            "min_required": 1,
+            "project_names": [
+              "Student Result Management System"
+            ],
+            "quality_bonus": 0.5
+          },
+          "education": {
+            "score": 9.9,
+            "max": 10,
+            "degree": "B.Tech – Computer Science",
+            "institution": "Nitte Meenakshi Institute of Technology, Bengaluru",
+            "cgpa": 6.1,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 2.5,
+            "max": 10,
+            "total_certs": 1,
+            "matched_to_role": [],
+            "all_certs": [
+              "Python for Beginners"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 2.5,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": false,
+        "recommendation": "CONSIDER – Borderline match. Phone screen first.",
+        "scored_at": "2026-06-28T15:12:05.071803",
+        "rank": 5
+      },
+      {
+        "resume_id": "SE-005",
+        "name": "Rahul Ghosh",
+        "role_applied": "Software Engineer",
+        "quality_tier": "Poor",
+        "ats_score": 43.7,
+        "breakdown": {
+          "skills_match": 4.6,
+          "experience": 15.0,
+          "projects": 10.2,
+          "education": 8.9,
+          "certifications": 2.5,
+          "resume_quality": 2.5,
+          "total": 43.7
+        },
+        "justification": {
+          "skills_match": {
+            "score": 4.6,
+            "max": 35,
+            "required_matched": [
+              "mysql",
+              "git",
+              "html"
+            ],
+            "required_missing": [
+              "python",
+              "javascript",
+              "typescript",
+              "react",
+              "node.js",
+              "django",
+              "flask",
+              "postgresql",
+              "redis",
+              "docker",
+              "rest api",
+              "css",
+              "aws",
+              "github",
+              "agile",
+              "scrum",
+              "jest",
+              "pytest"
+            ],
+            "preferred_matched": [
+              "java"
+            ],
+            "required_match_rate": "3/21 (14%)",
+            "preferred_match_rate": "1/11 (9%)"
+          },
+          "experience": {
+            "score": 15.0,
+            "max": 25,
+            "years_experience": 0.0,
+            "target_range": "0–2 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 0,
+            "companies": []
+          },
+          "projects": {
+            "score": 10.2,
+            "max": 15,
+            "project_count": 1,
+            "min_required": 1,
+            "project_names": [
+              "Library Management System"
+            ],
+            "quality_bonus": 0.5
+          },
+          "education": {
+            "score": 8.9,
+            "max": 10,
+            "degree": "B.Tech – Computer Science",
+            "institution": "Techno Main Salt Lake, Kolkata",
+            "cgpa": 6.3,
+            "min_cgpa_required": 6.5,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 2.5,
+            "max": 10,
+            "total_certs": 1,
+            "matched_to_role": [],
+            "all_certs": [
+              "C++ Programming Basics"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 2.5,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": false,
+        "recommendation": "WEAK – Significant gaps. May not be suitable.",
+        "scored_at": "2026-06-28T15:12:05.071965",
+        "rank": 6
+      }
+    ],
+    "UI/UX Designer": [
+      {
+        "resume_id": "UX-001",
+        "name": "Karan Joshi",
+        "role_applied": "UI/UX Designer",
+        "quality_tier": "Excellent",
+        "ats_score": 80.2,
+        "breakdown": {
+          "skills_match": 16.2,
+          "experience": 25,
+          "projects": 15,
+          "education": 10,
+          "certifications": 10.0,
+          "resume_quality": 4.0,
+          "total": 80.2
+        },
+        "justification": {
+          "skills_match": {
+            "score": 16.2,
+            "max": 35,
+            "required_matched": [
+              "figma",
+              "usability testing",
+              "design system",
+              "ui design",
+              "accessibility",
+              "wcag"
+            ],
+            "required_missing": [
+              "prototyping",
+              "wireframing",
+              "user research",
+              "ux design",
+              "responsive design",
+              "mobile design",
+              "typography",
+              "color theory"
+            ],
+            "preferred_matched": [
+              "principle",
+              "lottie",
+              "html",
+              "css",
+              "storybook",
+              "adobe xd",
+              "illustrator",
+              "zeplin",
+              "a/b testing"
+            ],
+            "required_match_rate": "6/14 (43%)",
+            "preferred_match_rate": "9/15 (60%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 3.1,
+            "target_range": "2–4 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 8,
+            "companies": [
+              "Slice (fintech startup)",
+              "91Springboard Design Studio"
+            ]
+          },
+          "projects": {
+            "score": 15,
+            "max": 15,
+            "project_count": 3,
+            "min_required": 2,
+            "project_names": [
+              "Slice Rewards Hub — Case Study",
+              "HealthTrack Dashboard — SaaS Design",
+              "AccessFirst Design System"
+            ],
+            "quality_bonus": 2.5
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "B.Des – Interaction Design",
+            "institution": "National Institute of Design (NID), Ahmedabad",
+            "cgpa": 8.7,
+            "min_cgpa_required": 6.0,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 10.0,
+            "max": 10,
+            "total_certs": 3,
+            "matched_to_role": [
+              "Google UX Design Professional Certificate",
+              "Interaction Design Foundation – UX Designer",
+              "Figma Advanced Prototyping"
+            ],
+            "all_certs": [
+              "Google UX Design Professional Certificate",
+              "Interaction Design Foundation – UX Designer",
+              "Figma Advanced Prototyping"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.072114",
+        "rank": 1
+      },
+      {
+        "resume_id": "UX-003",
+        "name": "Nandita Roy",
+        "role_applied": "UI/UX Designer",
+        "quality_tier": "Excellent",
+        "ats_score": 79.7,
+        "breakdown": {
+          "skills_match": 15.7,
+          "experience": 25,
+          "projects": 15,
+          "education": 10,
+          "certifications": 10.0,
+          "resume_quality": 4.0,
+          "total": 79.7
+        },
+        "justification": {
+          "skills_match": {
+            "score": 15.7,
+            "max": 35,
+            "required_matched": [
+              "figma",
+              "usability testing",
+              "design system",
+              "mobile design",
+              "accessibility",
+              "wcag"
+            ],
+            "required_missing": [
+              "prototyping",
+              "wireframing",
+              "user research",
+              "ui design",
+              "ux design",
+              "responsive design",
+              "typography",
+              "color theory"
+            ],
+            "preferred_matched": [
+              "principle",
+              "framer",
+              "after effects",
+              "lottie",
+              "motion design",
+              "html",
+              "css",
+              "storybook"
+            ],
+            "required_match_rate": "6/14 (43%)",
+            "preferred_match_rate": "8/15 (53%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 3.8,
+            "target_range": "2–4 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 7,
+            "companies": [
+              "HealthPlix Technologies",
+              "Intuit India (TurboTax / QuickBooks)"
+            ]
+          },
+          "projects": {
+            "score": 15,
+            "max": 15,
+            "project_count": 3,
+            "min_required": 2,
+            "project_names": [
+              "HealthPlix Doctor Prescription Redesign",
+              "NeuroViz – Neuro Analytics Dashboard",
+              "Enterprise Design System — HealthPlix"
+            ],
+            "quality_bonus": 2.0
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "M.Des – Interaction & Experience Design",
+            "institution": "IDC School of Design, IIT Bombay",
+            "cgpa": 9.0,
+            "min_cgpa_required": 6.0,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 10.0,
+            "max": 10,
+            "total_certs": 3,
+            "matched_to_role": [
+              "Interaction Design Foundation – UX Management",
+              "IAAP – Certified Professional in Accessibility Core Competencies (CPACC)",
+              "Figma Config Speaker Badge – Advanced Design Systems"
+            ],
+            "all_certs": [
+              "Interaction Design Foundation – UX Management",
+              "IAAP – Certified Professional in Accessibility Core Competencies (CPACC)",
+              "Figma Config Speaker Badge – Advanced Design Systems"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.072257",
+        "rank": 2
+      },
+      {
+        "resume_id": "UX-005",
+        "name": "Ayesha Khan",
+        "role_applied": "UI/UX Designer",
+        "quality_tier": "Average",
+        "ats_score": 74.5,
+        "breakdown": {
+          "skills_match": 11.7,
+          "experience": 25,
+          "projects": 13.8,
+          "education": 10,
+          "certifications": 10.0,
+          "resume_quality": 4.0,
+          "total": 74.5
+        },
+        "justification": {
+          "skills_match": {
+            "score": 11.7,
+            "max": 35,
+            "required_matched": [
+              "figma",
+              "wireframing",
+              "usability testing",
+              "ui design"
+            ],
+            "required_missing": [
+              "prototyping",
+              "user research",
+              "design system",
+              "ux design",
+              "responsive design",
+              "mobile design",
+              "typography",
+              "color theory",
+              "accessibility",
+              "wcag"
+            ],
+            "preferred_matched": [
+              "principle",
+              "html",
+              "css",
+              "adobe xd",
+              "illustrator",
+              "photoshop",
+              "zeplin",
+              "maze"
+            ],
+            "required_match_rate": "4/14 (29%)",
+            "preferred_match_rate": "8/15 (53%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 3.1,
+            "target_range": "2–4 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 3,
+            "companies": [
+              "OYO Rooms (Oravel Stays Pvt. Ltd.)",
+              "Cleartrip (Flipkart Group)"
+            ]
+          },
+          "projects": {
+            "score": 13.8,
+            "max": 15,
+            "project_count": 2,
+            "min_required": 2,
+            "project_names": [
+              "OYO Business – Corporate Travel Booking",
+              "TravelLight – Minimalist Travel App"
+            ],
+            "quality_bonus": 1.0
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "B.Des – Visual Communication Design",
+            "institution": "MIT Institute of Design, Pune",
+            "cgpa": 7.8,
+            "min_cgpa_required": 6.0,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 10.0,
+            "max": 10,
+            "total_certs": 2,
+            "matched_to_role": [
+              "Google UX Design Professional Certificate",
+              "IDF – UX Research Bootcamp"
+            ],
+            "all_certs": [
+              "Google UX Design Professional Certificate",
+              "IDF – UX Research Bootcamp"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.072363",
+        "rank": 3
+      },
+      {
+        "resume_id": "UX-002",
+        "name": "Isha Bhatia",
+        "role_applied": "UI/UX Designer",
+        "quality_tier": "Average",
+        "ats_score": 73.1,
+        "breakdown": {
+          "skills_match": 10.3,
+          "experience": 25,
+          "projects": 13.8,
+          "education": 10,
+          "certifications": 10.0,
+          "resume_quality": 4.0,
+          "total": 73.1
+        },
+        "justification": {
+          "skills_match": {
+            "score": 10.3,
+            "max": 35,
+            "required_matched": [
+              "figma",
+              "prototyping",
+              "wireframing",
+              "usability testing"
+            ],
+            "required_missing": [
+              "user research",
+              "design system",
+              "ui design",
+              "ux design",
+              "responsive design",
+              "mobile design",
+              "typography",
+              "color theory",
+              "accessibility",
+              "wcag"
+            ],
+            "preferred_matched": [
+              "html",
+              "css",
+              "illustrator",
+              "photoshop",
+              "zeplin"
+            ],
+            "required_match_rate": "4/14 (29%)",
+            "preferred_match_rate": "5/15 (33%)"
+          },
+          "experience": {
+            "score": 25,
+            "max": 25,
+            "years_experience": 2.2,
+            "target_range": "2–4 years",
+            "status": "Within target range",
+            "impact_keywords_detected": 4,
+            "companies": [
+              "Vedantu Innovations",
+              "The Design Studio (Agency)"
+            ]
+          },
+          "projects": {
+            "score": 13.8,
+            "max": 15,
+            "project_count": 2,
+            "min_required": 2,
+            "project_names": [
+              "Vedantu Practice Test Redesign",
+              "FreshCart – Grocery App UI"
+            ],
+            "quality_bonus": 1.0
+          },
+          "education": {
+            "score": 10,
+            "max": 10,
+            "degree": "B.Des – Communication Design",
+            "institution": "Pearl Academy, New Delhi",
+            "cgpa": 8.0,
+            "min_cgpa_required": 6.0,
+            "tier1_institution": true
+          },
+          "certifications": {
+            "score": 10.0,
+            "max": 10,
+            "total_certs": 2,
+            "matched_to_role": [
+              "Google UX Design Certificate (Foundations)",
+              "Figma UI Design Masterclass"
+            ],
+            "all_certs": [
+              "Google UX Design Certificate (Foundations)",
+              "Figma UI Design Masterclass"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 4.0,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "10+ skills listed",
+              "2+ experience entries",
+              "2+ achievements listed",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": true,
+        "recommendation": "RECOMMEND – Good match. Schedule interview.",
+        "scored_at": "2026-06-28T15:12:05.072172",
+        "rank": 4
+      },
+      {
+        "resume_id": "UX-004",
+        "name": "Sameer Malik",
+        "role_applied": "UI/UX Designer",
+        "quality_tier": "Poor",
+        "ats_score": 42.9,
+        "breakdown": {
+          "skills_match": 4.9,
+          "experience": 17.5,
+          "projects": 6.5,
+          "education": 9.0,
+          "certifications": 2.5,
+          "resume_quality": 2.5,
+          "total": 42.9
+        },
+        "justification": {
+          "skills_match": {
+            "score": 4.9,
+            "max": 35,
+            "required_matched": [
+              "figma",
+              "ui design"
+            ],
+            "required_missing": [
+              "prototyping",
+              "wireframing",
+              "user research",
+              "usability testing",
+              "design system",
+              "ux design",
+              "responsive design",
+              "mobile design",
+              "typography",
+              "color theory",
+              "accessibility",
+              "wcag"
+            ],
+            "preferred_matched": [
+              "html",
+              "photoshop"
+            ],
+            "required_match_rate": "2/14 (14%)",
+            "preferred_match_rate": "2/15 (13%)"
+          },
+          "experience": {
+            "score": 17.5,
+            "max": 25,
+            "years_experience": 1.8,
+            "target_range": "2–4 years",
+            "status": "Below minimum",
+            "impact_keywords_detected": 2,
+            "companies": [
+              "Webisdom Technologies"
+            ]
+          },
+          "projects": {
+            "score": 6.5,
+            "max": 15,
+            "project_count": 1,
+            "min_required": 2,
+            "project_names": [
+              "FoodOrder App UI (Personal Project)"
+            ],
+            "quality_bonus": 0.5
+          },
+          "education": {
+            "score": 9.0,
+            "max": 10,
+            "degree": "BCA – Bachelor of Computer Applications",
+            "institution": "Integral University, Lucknow",
+            "cgpa": 6.5,
+            "min_cgpa_required": 6.0,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 2.5,
+            "max": 10,
+            "total_certs": 1,
+            "matched_to_role": [],
+            "all_certs": [
+              "UI/UX Design Bootcamp"
+            ],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 2.5,
+            "max": 5,
+            "signals_detected": [
+              "LinkedIn present",
+              "GitHub/Portfolio present",
+              "Project with link",
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": false,
+        "recommendation": "WEAK – Significant gaps. May not be suitable.",
+        "scored_at": "2026-06-28T15:12:05.072297",
+        "rank": 5
+      },
+      {
+        "resume_id": "UX-006",
+        "name": "Deepak Sundaram",
+        "role_applied": "UI/UX Designer",
+        "quality_tier": "Poor",
+        "ats_score": 37.8,
+        "breakdown": {
+          "skills_match": 2.9,
+          "experience": 17.5,
+          "projects": 6.5,
+          "education": 9.9,
+          "certifications": 0.0,
+          "resume_quality": 1.0,
+          "total": 37.8
+        },
+        "justification": {
+          "skills_match": {
+            "score": 2.9,
+            "max": 35,
+            "required_matched": [
+              "figma"
+            ],
+            "required_missing": [
+              "prototyping",
+              "wireframing",
+              "user research",
+              "usability testing",
+              "design system",
+              "ui design",
+              "ux design",
+              "responsive design",
+              "mobile design",
+              "typography",
+              "color theory",
+              "accessibility",
+              "wcag"
+            ],
+            "preferred_matched": [
+              "photoshop",
+              "user testing"
+            ],
+            "required_match_rate": "1/14 (7%)",
+            "preferred_match_rate": "2/15 (13%)"
+          },
+          "experience": {
+            "score": 17.5,
+            "max": 25,
+            "years_experience": 1.8,
+            "target_range": "2–4 years",
+            "status": "Below minimum",
+            "impact_keywords_detected": 2,
+            "companies": [
+              "PrintMagic Advertising"
+            ]
+          },
+          "projects": {
+            "score": 6.5,
+            "max": 15,
+            "project_count": 1,
+            "min_required": 2,
+            "project_names": [
+              "Taxi App Screens (Personal Practice)"
+            ],
+            "quality_bonus": 0.5
+          },
+          "education": {
+            "score": 9.9,
+            "max": 10,
+            "degree": "B.Sc. – Visual Communication",
+            "institution": "Loyola College, Chennai",
+            "cgpa": 6.1,
+            "min_cgpa_required": 6.0,
+            "tier1_institution": false
+          },
+          "certifications": {
+            "score": 0.0,
+            "max": 10,
+            "total_certs": 0,
+            "matched_to_role": [],
+            "all_certs": [],
+            "prestige_bonus": 0
+          },
+          "resume_quality": {
+            "score": 1.0,
+            "max": 5,
+            "signals_detected": [
+              "Soft skills & languages listed",
+              "Interests listed"
+            ]
+          }
+        },
+        "shortlisted": false,
+        "recommendation": "REJECT – Insufficient match for this role.",
+        "scored_at": "2026-06-28T15:12:05.072401",
+        "rank": 6
+      }
+    ]
+  },
+  "all_candidates_flat": [
+    {
+      "resume_id": "DA-001",
+      "name": "Vivek Rao",
+      "role_applied": "Data Analyst",
+      "quality_tier": "Excellent",
+      "ats_score": 92.1,
+      "breakdown": {
+        "skills_match": 28.9,
+        "experience": 25,
+        "projects": 14.2,
+        "education": 10,
+        "certifications": 10,
+        "resume_quality": 4.0,
+        "total": 92.1
+      },
+      "justification": {
+        "skills_match": {
+          "score": 28.9,
+          "max": 35,
+          "required_matched": [
+            "sql",
+            "python",
+            "pandas",
+            "numpy",
+            "tableau",
+            "power bi",
+            "excel",
+            "statistics",
+            "regression",
+            "matplotlib",
+            "seaborn",
+            "postgresql",
+            "bigquery",
+            "a/b testing",
+            "hypothesis testing"
+          ],
+          "required_missing": [
+            "mysql"
+          ],
+          "preferred_matched": [
+            "dbt",
+            "airflow",
+            "snowflake",
+            "looker",
+            "r"
+          ],
+          "required_match_rate": "15/16 (94%)",
+          "preferred_match_rate": "5/13 (38%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 2.1,
+          "target_range": "1–3 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 7,
+          "companies": [
+            "DataBridge Analytics Pvt. Ltd.",
+            "Cognizant Technology Solutions"
+          ]
+        },
+        "projects": {
+          "score": 14.2,
+          "max": 15,
+          "project_count": 2,
+          "min_required": 1,
+          "project_names": [
+            "RetailPulse – Retail Analytics Dashboard",
+            "ChurnPredict – Customer Churn Analysis"
+          ],
+          "quality_bonus": 1.5
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "B.Tech – Computer Science & Engineering",
+          "institution": "Osmania University College of Engineering, Hyderabad",
+          "cgpa": 8.4,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 10,
+          "max": 10,
+          "total_certs": 3,
+          "matched_to_role": [
+            "Tableau Certified Data Analyst",
+            "Google Data Analytics Professional Certificate",
+            "Microsoft PL-300: Power BI Data Analyst"
+          ],
+          "all_certs": [
+            "Tableau Certified Data Analyst",
+            "Google Data Analytics Professional Certificate",
+            "Microsoft PL-300: Power BI Data Analyst"
+          ],
+          "prestige_bonus": 0.5
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "STRONGLY RECOMMEND – Excellent match. Priority interview.",
+      "scored_at": "2026-06-28T15:12:05.071101",
+      "rank": 1
+    },
+    {
+      "resume_id": "CSA-001",
+      "name": "Rohan Kapoor",
+      "role_applied": "Cyber Security Analyst",
+      "quality_tier": "Excellent",
+      "ats_score": 88.4,
+      "breakdown": {
+        "skills_match": 25.9,
+        "experience": 23.7,
+        "projects": 14.8,
+        "education": 10,
+        "certifications": 10.0,
+        "resume_quality": 4.0,
+        "total": 88.4
+      },
+      "justification": {
+        "skills_match": {
+          "score": 25.9,
+          "max": 35,
+          "required_matched": [
+            "splunk",
+            "siem",
+            "mitre att&ck",
+            "wireshark",
+            "kali linux",
+            "python",
+            "firewall",
+            "tcp/ip",
+            "nessus",
+            "burp suite",
+            "microsoft sentinel",
+            "crowdstrike"
+          ],
+          "required_missing": [
+            "nmap",
+            "incident response",
+            "vapt"
+          ],
+          "preferred_matched": [
+            "volatility",
+            "metasploit",
+            "ibm qradar",
+            "aws security",
+            "active directory",
+            "powershell",
+            "bash"
+          ],
+          "required_match_rate": "12/15 (80%)",
+          "preferred_match_rate": "7/14 (50%)"
+        },
+        "experience": {
+          "score": 23.7,
+          "max": 25,
+          "years_experience": 2.1,
+          "target_range": "0–2 years",
+          "status": "Overqualified",
+          "impact_keywords_detected": 4,
+          "companies": [
+            "CyberSafe India Pvt. Ltd. (MSSP)",
+            "Wipro Limited – Cybersecurity Practice"
+          ]
+        },
+        "projects": {
+          "score": 14.8,
+          "max": 15,
+          "project_count": 2,
+          "min_required": 1,
+          "project_names": [
+            "PhishGuard – Email Phishing Detection Tool",
+            "SplunkHunter – Automated Threat Hunting Scripts"
+          ],
+          "quality_bonus": 2.0
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "B.Tech – Computer Science (Cybersecurity Specialization)",
+          "institution": "Manipal Institute of Technology, Manipal",
+          "cgpa": 8.6,
+          "min_cgpa_required": 6.0,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 10.0,
+          "max": 10,
+          "total_certs": 4,
+          "matched_to_role": [
+            "Certified Ethical Hacker (CEH v12)",
+            "CompTIA Security+ (SY0-701)",
+            "eLearnSecurity Junior Penetration Tester (eJPT)",
+            "Splunk Core Certified Power User"
+          ],
+          "all_certs": [
+            "Certified Ethical Hacker (CEH v12)",
+            "CompTIA Security+ (SY0-701)",
+            "eLearnSecurity Junior Penetration Tester (eJPT)",
+            "Splunk Core Certified Power User"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "STRONGLY RECOMMEND – Excellent match. Priority interview.",
+      "scored_at": "2026-06-28T15:12:05.070741",
+      "rank": 1
+    },
+    {
+      "resume_id": "DA-003",
+      "name": "Harshita Gupta",
+      "role_applied": "Data Analyst",
+      "quality_tier": "Excellent",
+      "ats_score": 87.0,
+      "breakdown": {
+        "skills_match": 23.0,
+        "experience": 25,
+        "projects": 15,
+        "education": 10,
+        "certifications": 10,
+        "resume_quality": 4.0,
+        "total": 87.0
+      },
+      "justification": {
+        "skills_match": {
+          "score": 23.0,
+          "max": 35,
+          "required_matched": [
+            "sql",
+            "python",
+            "pandas",
+            "numpy",
+            "tableau",
+            "power bi",
+            "excel",
+            "regression",
+            "postgresql",
+            "bigquery",
+            "a/b testing"
+          ],
+          "required_missing": [
+            "statistics",
+            "matplotlib",
+            "seaborn",
+            "mysql",
+            "hypothesis testing"
+          ],
+          "preferred_matched": [
+            "dbt",
+            "airflow",
+            "snowflake",
+            "redshift",
+            "looker",
+            "r",
+            "scikit-learn"
+          ],
+          "required_match_rate": "11/16 (69%)",
+          "preferred_match_rate": "7/13 (54%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 3.0,
+          "target_range": "1–3 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 7,
+          "companies": [
+            "HDFC Bank Ltd. – Data & Analytics COE",
+            "EY (Ernst & Young) – Advisory"
+          ]
+        },
+        "projects": {
+          "score": 15,
+          "max": 15,
+          "project_count": 2,
+          "min_required": 1,
+          "project_names": [
+            "OpenFinMetrics – Financial KPI Dashboard Template",
+            "CLV Predictor – Customer Lifetime Value Model"
+          ],
+          "quality_bonus": 2.5
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "MBA – Business Analytics",
+          "institution": "FORE School of Management, New Delhi",
+          "cgpa": 8.8,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 10,
+          "max": 10,
+          "total_certs": 3,
+          "matched_to_role": [
+            "Tableau Certified Data Analyst",
+            "dbt Analytics Engineering Certification",
+            "AWS Certified Data Analytics – Specialty"
+          ],
+          "all_certs": [
+            "Tableau Certified Data Analyst",
+            "dbt Analytics Engineering Certification",
+            "AWS Certified Data Analytics – Specialty"
+          ],
+          "prestige_bonus": 1.0
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "STRONGLY RECOMMEND – Excellent match. Priority interview.",
+      "scored_at": "2026-06-28T15:12:05.071227",
+      "rank": 2
+    },
+    {
+      "resume_id": "SE-001",
+      "name": "Aarav Mehta",
+      "role_applied": "Software Engineer",
+      "quality_tier": "Average",
+      "ats_score": 86.3,
+      "breakdown": {
+        "skills_match": 23.2,
+        "experience": 25,
+        "projects": 14.2,
+        "education": 9.9,
+        "certifications": 10.0,
+        "resume_quality": 4.0,
+        "total": 86.3
+      },
+      "justification": {
+        "skills_match": {
+          "score": 23.2,
+          "max": 35,
+          "required_matched": [
+            "python",
+            "javascript",
+            "typescript",
+            "react",
+            "node.js",
+            "django",
+            "postgresql",
+            "mysql",
+            "git",
+            "docker",
+            "html",
+            "css",
+            "aws",
+            "github",
+            "jest",
+            "pytest"
+          ],
+          "required_missing": [
+            "flask",
+            "redis",
+            "rest api",
+            "agile",
+            "scrum"
+          ],
+          "preferred_matched": [
+            "go",
+            "java",
+            "github actions"
+          ],
+          "required_match_rate": "16/21 (76%)",
+          "preferred_match_rate": "3/11 (27%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 1.1,
+          "target_range": "0–2 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 4,
+          "companies": [
+            "Zoho Corporation",
+            "StartupDen Technologies"
+          ]
+        },
+        "projects": {
+          "score": 14.2,
+          "max": 15,
+          "project_count": 2,
+          "min_required": 1,
+          "project_names": [
+            "TaskFlow – Project Management Tool",
+            "MediAlert – Hospital Appointment System"
+          ],
+          "quality_bonus": 1.5
+        },
+        "education": {
+          "score": 9.9,
+          "max": 10,
+          "degree": "B.Tech – Computer Science & Engineering",
+          "institution": "RV College of Engineering, Bengaluru",
+          "cgpa": 7.4,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 10.0,
+          "max": 10,
+          "total_certs": 2,
+          "matched_to_role": [
+            "AWS Certified Cloud Practitioner",
+            "Meta Front-End Developer Certificate"
+          ],
+          "all_certs": [
+            "AWS Certified Cloud Practitioner",
+            "Meta Front-End Developer Certificate"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "STRONGLY RECOMMEND – Excellent match. Priority interview.",
+      "scored_at": "2026-06-28T15:12:05.071768",
+      "rank": 1
+    },
+    {
+      "resume_id": "SE-003",
+      "name": "Devansh Trivedi",
+      "role_applied": "Software Engineer",
+      "quality_tier": "Excellent",
+      "ats_score": 84.5,
+      "breakdown": {
+        "skills_match": 20.5,
+        "experience": 25,
+        "projects": 15,
+        "education": 10,
+        "certifications": 10,
+        "resume_quality": 4.0,
+        "total": 84.5
+      },
+      "justification": {
+        "skills_match": {
+          "score": 20.5,
+          "max": 35,
+          "required_matched": [
+            "python",
+            "javascript",
+            "typescript",
+            "react",
+            "postgresql",
+            "redis",
+            "git",
+            "docker",
+            "aws",
+            "github",
+            "jest",
+            "pytest"
+          ],
+          "required_missing": [
+            "node.js",
+            "django",
+            "flask",
+            "mysql",
+            "rest api",
+            "html",
+            "css",
+            "agile",
+            "scrum"
+          ],
+          "preferred_matched": [
+            "kubernetes",
+            "kafka",
+            "graphql",
+            "go",
+            "java",
+            "spring boot",
+            "github actions"
+          ],
+          "required_match_rate": "12/21 (57%)",
+          "preferred_match_rate": "7/11 (64%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 2.0,
+          "target_range": "0–2 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 10,
+          "companies": [
+            "Flipkart Internet Pvt. Ltd.",
+            "Microsoft India (GSDC)"
+          ]
+        },
+        "projects": {
+          "score": 15,
+          "max": 15,
+          "project_count": 2,
+          "min_required": 1,
+          "project_names": [
+            "OpenExpense – Open Source Expense Tracker API",
+            "ScaleQ – Distributed Task Queue"
+          ],
+          "quality_bonus": 2.5
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "B.Tech – Computer Science & Engineering",
+          "institution": "BITS Pilani, Goa Campus",
+          "cgpa": 8.9,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 10,
+          "max": 10,
+          "total_certs": 3,
+          "matched_to_role": [
+            "AWS Certified Solutions Architect – Associate",
+            "Certified Kubernetes Application Developer (CKAD)",
+            "Meta Backend Developer Certificate"
+          ],
+          "all_certs": [
+            "AWS Certified Solutions Architect – Associate",
+            "Certified Kubernetes Application Developer (CKAD)",
+            "Meta Backend Developer Certificate"
+          ],
+          "prestige_bonus": 1.5
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.071871",
+      "rank": 2
+    },
+    {
+      "resume_id": "PM-001",
+      "name": "Aditya Malhotra",
+      "role_applied": "Product Manager",
+      "quality_tier": "Excellent",
+      "ats_score": 80.6,
+      "breakdown": {
+        "skills_match": 21.0,
+        "experience": 25,
+        "projects": 12.8,
+        "education": 10.0,
+        "certifications": 8.8,
+        "resume_quality": 3.0,
+        "total": 80.6
+      },
+      "justification": {
+        "skills_match": {
+          "score": 21.0,
+          "max": 35,
+          "required_matched": [
+            "product roadmap",
+            "prd",
+            "okr",
+            "jira",
+            "confluence",
+            "user interviews",
+            "analytics",
+            "figma",
+            "miro"
+          ],
+          "required_missing": [
+            "user stories",
+            "backlog",
+            "agile",
+            "scrum",
+            "a/b testing",
+            "stakeholder"
+          ],
+          "preferred_matched": [
+            "sql",
+            "mixpanel",
+            "amplitude",
+            "notion",
+            "productboard",
+            "rice",
+            "moscow",
+            "kano",
+            "jtbd"
+          ],
+          "required_match_rate": "9/15 (60%)",
+          "preferred_match_rate": "9/15 (60%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 3.9,
+          "target_range": "3–5 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 7,
+          "companies": [
+            "Darwinbox Digital Solutions",
+            "Razorpay"
+          ]
+        },
+        "projects": {
+          "score": 12.8,
+          "max": 15,
+          "project_count": 2,
+          "min_required": 1,
+          "project_names": [
+            "Payroll Analytics Module – Darwinbox",
+            "HR Compliance Automation Engine"
+          ],
+          "quality_bonus": 0
+        },
+        "education": {
+          "score": 10.0,
+          "max": 10,
+          "degree": "MBA – Strategy & Technology Management",
+          "institution": "Indian School of Business (ISB), Hyderabad",
+          "cgpa": 3.7,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 8.8,
+          "max": 10,
+          "total_certs": 3,
+          "matched_to_role": [
+            "AIPMM Certified Product Manager (CPM)",
+            "Reforge – Product Strategy"
+          ],
+          "all_certs": [
+            "AIPMM Certified Product Manager (CPM)",
+            "Reforge – Product Strategy",
+            "SQL for Product Managers"
+          ],
+          "prestige_bonus": 0.5
+        },
+        "resume_quality": {
+          "score": 3.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.071429",
+      "rank": 1
+    },
+    {
+      "resume_id": "UX-001",
+      "name": "Karan Joshi",
+      "role_applied": "UI/UX Designer",
+      "quality_tier": "Excellent",
+      "ats_score": 80.2,
+      "breakdown": {
+        "skills_match": 16.2,
+        "experience": 25,
+        "projects": 15,
+        "education": 10,
+        "certifications": 10.0,
+        "resume_quality": 4.0,
+        "total": 80.2
+      },
+      "justification": {
+        "skills_match": {
+          "score": 16.2,
+          "max": 35,
+          "required_matched": [
+            "figma",
+            "usability testing",
+            "design system",
+            "ui design",
+            "accessibility",
+            "wcag"
+          ],
+          "required_missing": [
+            "prototyping",
+            "wireframing",
+            "user research",
+            "ux design",
+            "responsive design",
+            "mobile design",
+            "typography",
+            "color theory"
+          ],
+          "preferred_matched": [
+            "principle",
+            "lottie",
+            "html",
+            "css",
+            "storybook",
+            "adobe xd",
+            "illustrator",
+            "zeplin",
+            "a/b testing"
+          ],
+          "required_match_rate": "6/14 (43%)",
+          "preferred_match_rate": "9/15 (60%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 3.1,
+          "target_range": "2–4 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 8,
+          "companies": [
+            "Slice (fintech startup)",
+            "91Springboard Design Studio"
+          ]
+        },
+        "projects": {
+          "score": 15,
+          "max": 15,
+          "project_count": 3,
+          "min_required": 2,
+          "project_names": [
+            "Slice Rewards Hub — Case Study",
+            "HealthTrack Dashboard — SaaS Design",
+            "AccessFirst Design System"
+          ],
+          "quality_bonus": 2.5
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "B.Des – Interaction Design",
+          "institution": "National Institute of Design (NID), Ahmedabad",
+          "cgpa": 8.7,
+          "min_cgpa_required": 6.0,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 10.0,
+          "max": 10,
+          "total_certs": 3,
+          "matched_to_role": [
+            "Google UX Design Professional Certificate",
+            "Interaction Design Foundation – UX Designer",
+            "Figma Advanced Prototyping"
+          ],
+          "all_certs": [
+            "Google UX Design Professional Certificate",
+            "Interaction Design Foundation – UX Designer",
+            "Figma Advanced Prototyping"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.072114",
+      "rank": 1
+    },
+    {
+      "resume_id": "UX-003",
+      "name": "Nandita Roy",
+      "role_applied": "UI/UX Designer",
+      "quality_tier": "Excellent",
+      "ats_score": 79.7,
+      "breakdown": {
+        "skills_match": 15.7,
+        "experience": 25,
+        "projects": 15,
+        "education": 10,
+        "certifications": 10.0,
+        "resume_quality": 4.0,
+        "total": 79.7
+      },
+      "justification": {
+        "skills_match": {
+          "score": 15.7,
+          "max": 35,
+          "required_matched": [
+            "figma",
+            "usability testing",
+            "design system",
+            "mobile design",
+            "accessibility",
+            "wcag"
+          ],
+          "required_missing": [
+            "prototyping",
+            "wireframing",
+            "user research",
+            "ui design",
+            "ux design",
+            "responsive design",
+            "typography",
+            "color theory"
+          ],
+          "preferred_matched": [
+            "principle",
+            "framer",
+            "after effects",
+            "lottie",
+            "motion design",
+            "html",
+            "css",
+            "storybook"
+          ],
+          "required_match_rate": "6/14 (43%)",
+          "preferred_match_rate": "8/15 (53%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 3.8,
+          "target_range": "2–4 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 7,
+          "companies": [
+            "HealthPlix Technologies",
+            "Intuit India (TurboTax / QuickBooks)"
+          ]
+        },
+        "projects": {
+          "score": 15,
+          "max": 15,
+          "project_count": 3,
+          "min_required": 2,
+          "project_names": [
+            "HealthPlix Doctor Prescription Redesign",
+            "NeuroViz – Neuro Analytics Dashboard",
+            "Enterprise Design System — HealthPlix"
+          ],
+          "quality_bonus": 2.0
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "M.Des – Interaction & Experience Design",
+          "institution": "IDC School of Design, IIT Bombay",
+          "cgpa": 9.0,
+          "min_cgpa_required": 6.0,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 10.0,
+          "max": 10,
+          "total_certs": 3,
+          "matched_to_role": [
+            "Interaction Design Foundation – UX Management",
+            "IAAP – Certified Professional in Accessibility Core Competencies (CPACC)",
+            "Figma Config Speaker Badge – Advanced Design Systems"
+          ],
+          "all_certs": [
+            "Interaction Design Foundation – UX Management",
+            "IAAP – Certified Professional in Accessibility Core Competencies (CPACC)",
+            "Figma Config Speaker Badge – Advanced Design Systems"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.072257",
+      "rank": 2
+    },
+    {
+      "resume_id": "CSA-005",
+      "name": "Arjun Das",
+      "role_applied": "Cyber Security Analyst",
+      "quality_tier": "Excellent",
+      "ats_score": 78.2,
+      "breakdown": {
+        "skills_match": 15.1,
+        "experience": 24.9,
+        "projects": 14.2,
+        "education": 10,
+        "certifications": 10,
+        "resume_quality": 4.0,
+        "total": 78.2
+      },
+      "justification": {
+        "skills_match": {
+          "score": 15.1,
+          "max": 35,
+          "required_matched": [
+            "mitre att&ck",
+            "nmap",
+            "kali linux",
+            "python",
+            "tcp/ip",
+            "nessus",
+            "burp suite"
+          ],
+          "required_missing": [
+            "splunk",
+            "siem",
+            "wireshark",
+            "firewall",
+            "incident response",
+            "vapt",
+            "microsoft sentinel",
+            "crowdstrike"
+          ],
+          "preferred_matched": [
+            "volatility",
+            "metasploit",
+            "powershell",
+            "bash"
+          ],
+          "required_match_rate": "7/15 (47%)",
+          "preferred_match_rate": "4/14 (29%)"
+        },
+        "experience": {
+          "score": 24.9,
+          "max": 25,
+          "years_experience": 3.5,
+          "target_range": "0–2 years",
+          "status": "Overqualified",
+          "impact_keywords_detected": 8,
+          "companies": [
+            "RedForce Security Labs",
+            "Independent (Bug Bounty)"
+          ]
+        },
+        "projects": {
+          "score": 14.2,
+          "max": 15,
+          "project_count": 2,
+          "min_required": 1,
+          "project_names": [
+            "ADExploit – AD Enumeration & Attack Toolkit",
+            "WebFuzz – Smart Web Application Fuzzer"
+          ],
+          "quality_bonus": 1.5
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "B.Tech – Information Technology",
+          "institution": "Jadavpur University, Kolkata",
+          "cgpa": 8.7,
+          "min_cgpa_required": 6.0,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 10,
+          "max": 10,
+          "total_certs": 3,
+          "matched_to_role": [
+            "Offensive Security Certified Professional (OSCP)",
+            "CEH Practical",
+            "CompTIA PenTest+"
+          ],
+          "all_certs": [
+            "Offensive Security Certified Professional (OSCP)",
+            "CEH Practical",
+            "CompTIA PenTest+"
+          ],
+          "prestige_bonus": 0.5
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.071003",
+      "rank": 2
+    },
+    {
+      "resume_id": "DA-005",
+      "name": "Riya Shah",
+      "role_applied": "Data Analyst",
+      "quality_tier": "Average",
+      "ats_score": 78.2,
+      "breakdown": {
+        "skills_match": 21.5,
+        "experience": 25,
+        "projects": 10.2,
+        "education": 10,
+        "certifications": 7.5,
+        "resume_quality": 4.0,
+        "total": 78.2
+      },
+      "justification": {
+        "skills_match": {
+          "score": 21.5,
+          "max": 35,
+          "required_matched": [
+            "sql",
+            "python",
+            "pandas",
+            "tableau",
+            "power bi",
+            "excel",
+            "regression",
+            "seaborn",
+            "postgresql",
+            "mysql",
+            "bigquery",
+            "a/b testing"
+          ],
+          "required_missing": [
+            "numpy",
+            "statistics",
+            "matplotlib",
+            "hypothesis testing"
+          ],
+          "preferred_matched": [
+            "r"
+          ],
+          "required_match_rate": "12/16 (75%)",
+          "preferred_match_rate": "1/13 (8%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 2.1,
+          "target_range": "1–3 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 4,
+          "companies": [
+            "LogiSense Analytics",
+            "Infosys – BPO Analytics Unit"
+          ]
+        },
+        "projects": {
+          "score": 10.2,
+          "max": 15,
+          "project_count": 1,
+          "min_required": 1,
+          "project_names": [
+            "Supply Chain KPI Dashboard"
+          ],
+          "quality_bonus": 0.5
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "B.Tech – Information Technology",
+          "institution": "Nirma University, Ahmedabad",
+          "cgpa": 7.6,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 7.5,
+          "max": 10,
+          "total_certs": 2,
+          "matched_to_role": [
+            "Tableau Desktop Specialist"
+          ],
+          "all_certs": [
+            "Tableau Desktop Specialist",
+            "SQL for Data Science"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.071321",
+      "rank": 3
+    },
+    {
+      "resume_id": "PM-002",
+      "name": "Neha Verma",
+      "role_applied": "Product Manager",
+      "quality_tier": "Average",
+      "ats_score": 78.2,
+      "breakdown": {
+        "skills_match": 22.9,
+        "experience": 25,
+        "projects": 9.8,
+        "education": 10,
+        "certifications": 7.5,
+        "resume_quality": 3.0,
+        "total": 78.2
+      },
+      "justification": {
+        "skills_match": {
+          "score": 22.9,
+          "max": 35,
+          "required_matched": [
+            "product roadmap",
+            "prd",
+            "okr",
+            "backlog",
+            "scrum",
+            "jira",
+            "confluence",
+            "user interviews",
+            "analytics",
+            "figma",
+            "miro"
+          ],
+          "required_missing": [
+            "user stories",
+            "agile",
+            "a/b testing",
+            "stakeholder"
+          ],
+          "preferred_matched": [
+            "sql",
+            "amplitude",
+            "notion",
+            "rice",
+            "moscow"
+          ],
+          "required_match_rate": "11/15 (73%)",
+          "preferred_match_rate": "5/15 (33%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 4.8,
+          "target_range": "3–5 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 4,
+          "companies": [
+            "Shopalyst Technologies",
+            "Infosys BPM – Digital Commerce"
+          ]
+        },
+        "projects": {
+          "score": 9.8,
+          "max": 15,
+          "project_count": 1,
+          "min_required": 1,
+          "project_names": [
+            "Ad Placement Optimization – Self-Serve Module"
+          ],
+          "quality_bonus": 0
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "MBA – Marketing & Operations",
+          "institution": "Symbiosis Institute of Business Management (SIBM), Pune",
+          "cgpa": 7.8,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 7.5,
+          "max": 10,
+          "total_certs": 2,
+          "matched_to_role": [
+            "Certified Scrum Product Owner (CSPO)"
+          ],
+          "all_certs": [
+            "Certified Scrum Product Owner (CSPO)",
+            "Digital Product Management"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 3.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.071489",
+      "rank": 2
+    },
+    {
+      "resume_id": "SE-004",
+      "name": "Simran Kaur",
+      "role_applied": "Software Engineer",
+      "quality_tier": "Average",
+      "ats_score": 78.2,
+      "breakdown": {
+        "skills_match": 17.9,
+        "experience": 25,
+        "projects": 13.8,
+        "education": 10,
+        "certifications": 7.5,
+        "resume_quality": 4.0,
+        "total": 78.2
+      },
+      "justification": {
+        "skills_match": {
+          "score": 17.9,
+          "max": 35,
+          "required_matched": [
+            "python",
+            "javascript",
+            "django",
+            "flask",
+            "postgresql",
+            "mysql",
+            "redis",
+            "git",
+            "docker",
+            "aws",
+            "github",
+            "pytest"
+          ],
+          "required_missing": [
+            "typescript",
+            "react",
+            "node.js",
+            "rest api",
+            "html",
+            "css",
+            "agile",
+            "scrum",
+            "jest"
+          ],
+          "preferred_matched": [
+            "go",
+            "java",
+            "github actions"
+          ],
+          "required_match_rate": "12/21 (57%)",
+          "preferred_match_rate": "3/11 (27%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 1.8,
+          "target_range": "0–2 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 1,
+          "companies": [
+            "HireIn Technologies",
+            "Nexora Labs"
+          ]
+        },
+        "projects": {
+          "score": 13.8,
+          "max": 15,
+          "project_count": 2,
+          "min_required": 1,
+          "project_names": [
+            "QuickShip – Logistics Tracking Dashboard",
+            "DevBlog API"
+          ],
+          "quality_bonus": 1.0
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "B.Tech – Information Technology",
+          "institution": "Thapar Institute of Engineering & Technology, Patiala",
+          "cgpa": 7.8,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 7.5,
+          "max": 10,
+          "total_certs": 2,
+          "matched_to_role": [
+            "AWS Cloud Practitioner Essentials"
+          ],
+          "all_certs": [
+            "Django REST Framework – Full Course",
+            "AWS Cloud Practitioner Essentials"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.071931",
+      "rank": 3
+    },
+    {
+      "resume_id": "SE-006",
+      "name": "Tanvi Patel",
+      "role_applied": "Software Engineer",
+      "quality_tier": "Excellent",
+      "ats_score": 78.1,
+      "breakdown": {
+        "skills_match": 15.8,
+        "experience": 24.0,
+        "projects": 15,
+        "education": 10,
+        "certifications": 9.3,
+        "resume_quality": 4.0,
+        "total": 78.1
+      },
+      "justification": {
+        "skills_match": {
+          "score": 15.8,
+          "max": 35,
+          "required_matched": [
+            "python",
+            "django",
+            "postgresql",
+            "mysql",
+            "redis",
+            "git",
+            "docker",
+            "aws",
+            "github"
+          ],
+          "required_missing": [
+            "javascript",
+            "typescript",
+            "react",
+            "node.js",
+            "flask",
+            "rest api",
+            "html",
+            "css",
+            "agile",
+            "scrum",
+            "jest",
+            "pytest"
+          ],
+          "preferred_matched": [
+            "kubernetes",
+            "kafka",
+            "terraform",
+            "grpc",
+            "go",
+            "github actions"
+          ],
+          "required_match_rate": "9/21 (43%)",
+          "preferred_match_rate": "6/11 (55%)"
+        },
+        "experience": {
+          "score": 24.0,
+          "max": 25,
+          "years_experience": 2.1,
+          "target_range": "0–2 years",
+          "status": "Overqualified",
+          "impact_keywords_detected": 5,
+          "companies": [
+            "Razorpay Software Pvt. Ltd.",
+            "Google Summer of Code (GSoC)"
+          ]
+        },
+        "projects": {
+          "score": 15,
+          "max": 15,
+          "project_count": 2,
+          "min_required": 1,
+          "project_names": [
+            "Sentinel – Lightweight APM Tool",
+            "PgMigrate – Safe PostgreSQL Migration CLI"
+          ],
+          "quality_bonus": 3.0
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "B.Tech – Computer Science & Engineering (Honours)",
+          "institution": "Dhirubhai Ambani Institute of Information and Communication Technology (DAIICT), Gandhinagar",
+          "cgpa": 9.1,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 9.3,
+          "max": 10,
+          "total_certs": 3,
+          "matched_to_role": [
+            "AWS Certified Solutions Architect – Professional",
+            "Certified Kubernetes Administrator (CKA)"
+          ],
+          "all_certs": [
+            "AWS Certified Solutions Architect – Professional",
+            "Certified Kubernetes Administrator (CKA)",
+            "HashiCorp Certified: Terraform Associate"
+          ],
+          "prestige_bonus": 1.0
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.072037",
+      "rank": 4
+    },
+    {
+      "resume_id": "CSA-003",
+      "name": "Vikram Sinha",
+      "role_applied": "Cyber Security Analyst",
+      "quality_tier": "Average",
+      "ats_score": 75.8,
+      "breakdown": {
+        "skills_match": 19.2,
+        "experience": 25,
+        "projects": 10.2,
+        "education": 9.9,
+        "certifications": 7.5,
+        "resume_quality": 4.0,
+        "total": 75.8
+      },
+      "justification": {
+        "skills_match": {
+          "score": 19.2,
+          "max": 35,
+          "required_matched": [
+            "splunk",
+            "mitre att&ck",
+            "nmap",
+            "wireshark",
+            "kali linux",
+            "python",
+            "firewall",
+            "tcp/ip",
+            "microsoft sentinel",
+            "crowdstrike"
+          ],
+          "required_missing": [
+            "siem",
+            "incident response",
+            "vapt",
+            "nessus",
+            "burp suite"
+          ],
+          "preferred_matched": [
+            "active directory"
+          ],
+          "required_match_rate": "10/15 (67%)",
+          "preferred_match_rate": "1/14 (7%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 1.7,
+          "target_range": "0–2 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 3,
+          "companies": [
+            "NetGuard Security Services",
+            "Infosys BPM"
+          ]
+        },
+        "projects": {
+          "score": 10.2,
+          "max": 15,
+          "project_count": 1,
+          "min_required": 1,
+          "project_names": [
+            "IOC Enrichment Script"
+          ],
+          "quality_bonus": 0.5
+        },
+        "education": {
+          "score": 9.9,
+          "max": 10,
+          "degree": "B.Tech – Computer Science",
+          "institution": "SRM Institute of Science and Technology, Chennai",
+          "cgpa": 7.5,
+          "min_cgpa_required": 6.0,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 7.5,
+          "max": 10,
+          "total_certs": 2,
+          "matched_to_role": [
+            "CompTIA Security+ (SY0-601)"
+          ],
+          "all_certs": [
+            "CompTIA Security+ (SY0-601)",
+            "Microsoft Security Operations Analyst (SC-200) – In Progress"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.070867",
+      "rank": 3
+    },
+    {
+      "resume_id": "UX-005",
+      "name": "Ayesha Khan",
+      "role_applied": "UI/UX Designer",
+      "quality_tier": "Average",
+      "ats_score": 74.5,
+      "breakdown": {
+        "skills_match": 11.7,
+        "experience": 25,
+        "projects": 13.8,
+        "education": 10,
+        "certifications": 10.0,
+        "resume_quality": 4.0,
+        "total": 74.5
+      },
+      "justification": {
+        "skills_match": {
+          "score": 11.7,
+          "max": 35,
+          "required_matched": [
+            "figma",
+            "wireframing",
+            "usability testing",
+            "ui design"
+          ],
+          "required_missing": [
+            "prototyping",
+            "user research",
+            "design system",
+            "ux design",
+            "responsive design",
+            "mobile design",
+            "typography",
+            "color theory",
+            "accessibility",
+            "wcag"
+          ],
+          "preferred_matched": [
+            "principle",
+            "html",
+            "css",
+            "adobe xd",
+            "illustrator",
+            "photoshop",
+            "zeplin",
+            "maze"
+          ],
+          "required_match_rate": "4/14 (29%)",
+          "preferred_match_rate": "8/15 (53%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 3.1,
+          "target_range": "2–4 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 3,
+          "companies": [
+            "OYO Rooms (Oravel Stays Pvt. Ltd.)",
+            "Cleartrip (Flipkart Group)"
+          ]
+        },
+        "projects": {
+          "score": 13.8,
+          "max": 15,
+          "project_count": 2,
+          "min_required": 2,
+          "project_names": [
+            "OYO Business – Corporate Travel Booking",
+            "TravelLight – Minimalist Travel App"
+          ],
+          "quality_bonus": 1.0
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "B.Des – Visual Communication Design",
+          "institution": "MIT Institute of Design, Pune",
+          "cgpa": 7.8,
+          "min_cgpa_required": 6.0,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 10.0,
+          "max": 10,
+          "total_certs": 2,
+          "matched_to_role": [
+            "Google UX Design Professional Certificate",
+            "IDF – UX Research Bootcamp"
+          ],
+          "all_certs": [
+            "Google UX Design Professional Certificate",
+            "IDF – UX Research Bootcamp"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.072363",
+      "rank": 3
+    },
+    {
+      "resume_id": "PM-003",
+      "name": "Saurabh Tiwari",
+      "role_applied": "Product Manager",
+      "quality_tier": "Excellent",
+      "ats_score": 74.3,
+      "breakdown": {
+        "skills_match": 13.5,
+        "experience": 25,
+        "projects": 12.8,
+        "education": 10.0,
+        "certifications": 10,
+        "resume_quality": 3.0,
+        "total": 74.3
+      },
+      "justification": {
+        "skills_match": {
+          "score": 13.5,
+          "max": 35,
+          "required_matched": [
+            "prd",
+            "okr",
+            "jira",
+            "figma",
+            "miro"
+          ],
+          "required_missing": [
+            "product roadmap",
+            "user stories",
+            "backlog",
+            "agile",
+            "scrum",
+            "confluence",
+            "user interviews",
+            "a/b testing",
+            "analytics",
+            "stakeholder"
+          ],
+          "preferred_matched": [
+            "sql",
+            "mixpanel",
+            "amplitude",
+            "notion",
+            "productboard",
+            "rice",
+            "jtbd",
+            "plg",
+            "pricing"
+          ],
+          "required_match_rate": "5/15 (33%)",
+          "preferred_match_rate": "9/15 (60%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 4.8,
+          "target_range": "3–5 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 5,
+          "companies": [
+            "Leegality (e-Signature SaaS)",
+            "Capillary Technologies"
+          ]
+        },
+        "projects": {
+          "score": 12.8,
+          "max": 15,
+          "project_count": 2,
+          "min_required": 1,
+          "project_names": [
+            "AI Document Intelligence – Leegality",
+            "PLG Onboarding Redesign"
+          ],
+          "quality_bonus": 0
+        },
+        "education": {
+          "score": 10.0,
+          "max": 10,
+          "degree": "MBA – Marketing & Strategy",
+          "institution": "Indian Institute of Management (IIM) Calcutta",
+          "cgpa": 3.8,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 10,
+          "max": 10,
+          "total_certs": 3,
+          "matched_to_role": [
+            "Reforge – Product-Led Growth",
+            "Reforge – Product Strategy",
+            "AIPMM Certified Product Manager"
+          ],
+          "all_certs": [
+            "Reforge – Product-Led Growth",
+            "Reforge – Product Strategy",
+            "AIPMM Certified Product Manager"
+          ],
+          "prestige_bonus": 0.5
+        },
+        "resume_quality": {
+          "score": 3.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.071570",
+      "rank": 3
+    },
+    {
+      "resume_id": "CSA-004",
+      "name": "Meera Pillai",
+      "role_applied": "Cyber Security Analyst",
+      "quality_tier": "Average",
+      "ats_score": 73.1,
+      "breakdown": {
+        "skills_match": 16.4,
+        "experience": 25,
+        "projects": 10.2,
+        "education": 10,
+        "certifications": 7.5,
+        "resume_quality": 4.0,
+        "total": 73.1
+      },
+      "justification": {
+        "skills_match": {
+          "score": 16.4,
+          "max": 35,
+          "required_matched": [
+            "mitre att&ck",
+            "nmap",
+            "wireshark",
+            "kali linux",
+            "python",
+            "tcp/ip",
+            "nessus",
+            "burp suite"
+          ],
+          "required_missing": [
+            "splunk",
+            "siem",
+            "firewall",
+            "incident response",
+            "vapt",
+            "microsoft sentinel",
+            "crowdstrike"
+          ],
+          "preferred_matched": [
+            "ibm qradar",
+            "active directory",
+            "bash"
+          ],
+          "required_match_rate": "8/15 (53%)",
+          "preferred_match_rate": "3/14 (21%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 1.1,
+          "target_range": "0–2 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 2,
+          "companies": [
+            "Cyber Vigil Solutions",
+            "Sify Technologies"
+          ]
+        },
+        "projects": {
+          "score": 10.2,
+          "max": 15,
+          "project_count": 1,
+          "min_required": 1,
+          "project_names": [
+            "Network Intrusion Detection System (IDS)"
+          ],
+          "quality_bonus": 0.5
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "B.Tech – Computer Science & Engineering",
+          "institution": "College of Engineering Trivandrum (CET)",
+          "cgpa": 8.1,
+          "min_cgpa_required": 6.0,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 7.5,
+          "max": 10,
+          "total_certs": 2,
+          "matched_to_role": [
+            "CompTIA Security+ (SY0-701)"
+          ],
+          "all_certs": [
+            "CompTIA Security+ (SY0-701)",
+            "Google Cybersecurity Certificate"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.070927",
+      "rank": 4
+    },
+    {
+      "resume_id": "UX-002",
+      "name": "Isha Bhatia",
+      "role_applied": "UI/UX Designer",
+      "quality_tier": "Average",
+      "ats_score": 73.1,
+      "breakdown": {
+        "skills_match": 10.3,
+        "experience": 25,
+        "projects": 13.8,
+        "education": 10,
+        "certifications": 10.0,
+        "resume_quality": 4.0,
+        "total": 73.1
+      },
+      "justification": {
+        "skills_match": {
+          "score": 10.3,
+          "max": 35,
+          "required_matched": [
+            "figma",
+            "prototyping",
+            "wireframing",
+            "usability testing"
+          ],
+          "required_missing": [
+            "user research",
+            "design system",
+            "ui design",
+            "ux design",
+            "responsive design",
+            "mobile design",
+            "typography",
+            "color theory",
+            "accessibility",
+            "wcag"
+          ],
+          "preferred_matched": [
+            "html",
+            "css",
+            "illustrator",
+            "photoshop",
+            "zeplin"
+          ],
+          "required_match_rate": "4/14 (29%)",
+          "preferred_match_rate": "5/15 (33%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 2.2,
+          "target_range": "2–4 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 4,
+          "companies": [
+            "Vedantu Innovations",
+            "The Design Studio (Agency)"
+          ]
+        },
+        "projects": {
+          "score": 13.8,
+          "max": 15,
+          "project_count": 2,
+          "min_required": 2,
+          "project_names": [
+            "Vedantu Practice Test Redesign",
+            "FreshCart – Grocery App UI"
+          ],
+          "quality_bonus": 1.0
+        },
+        "education": {
+          "score": 10,
+          "max": 10,
+          "degree": "B.Des – Communication Design",
+          "institution": "Pearl Academy, New Delhi",
+          "cgpa": 8.0,
+          "min_cgpa_required": 6.0,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 10.0,
+          "max": 10,
+          "total_certs": 2,
+          "matched_to_role": [
+            "Google UX Design Certificate (Foundations)",
+            "Figma UI Design Masterclass"
+          ],
+          "all_certs": [
+            "Google UX Design Certificate (Foundations)",
+            "Figma UI Design Masterclass"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.072172",
+      "rank": 4
+    },
+    {
+      "resume_id": "DA-002",
+      "name": "Sneha Kulkarni",
+      "role_applied": "Data Analyst",
+      "quality_tier": "Average",
+      "ats_score": 72.9,
+      "breakdown": {
+        "skills_match": 16.3,
+        "experience": 25,
+        "projects": 10.2,
+        "education": 9.9,
+        "certifications": 7.5,
+        "resume_quality": 4.0,
+        "total": 72.9
+      },
+      "justification": {
+        "skills_match": {
+          "score": 16.3,
+          "max": 35,
+          "required_matched": [
+            "sql",
+            "python",
+            "pandas",
+            "power bi",
+            "excel",
+            "statistics",
+            "regression",
+            "matplotlib",
+            "mysql"
+          ],
+          "required_missing": [
+            "numpy",
+            "tableau",
+            "seaborn",
+            "postgresql",
+            "bigquery",
+            "a/b testing",
+            "hypothesis testing"
+          ],
+          "preferred_matched": [
+            "r"
+          ],
+          "required_match_rate": "9/16 (56%)",
+          "preferred_match_rate": "1/13 (8%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 1.1,
+          "target_range": "1–3 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 2,
+          "companies": [
+            "Accenture India (Strategy & Consulting)",
+            "Analytics Vidhya"
+          ]
+        },
+        "projects": {
+          "score": 10.2,
+          "max": 15,
+          "project_count": 1,
+          "min_required": 1,
+          "project_names": [
+            "Pharma Sales Analytics – Personal Project"
+          ],
+          "quality_bonus": 0.5
+        },
+        "education": {
+          "score": 9.9,
+          "max": 10,
+          "degree": "B.Sc. – Statistics",
+          "institution": "Fergusson College, Pune",
+          "cgpa": 7.9,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 7.5,
+          "max": 10,
+          "total_certs": 2,
+          "matched_to_role": [
+            "Microsoft PL-300: Power BI Data Analyst – In Progress"
+          ],
+          "all_certs": [
+            "Microsoft PL-300: Power BI Data Analyst – In Progress",
+            "Excel Skills for Data Analytics and Visualization"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 4.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": true,
+      "recommendation": "RECOMMEND – Good match. Schedule interview.",
+      "scored_at": "2026-06-28T15:12:05.071160",
+      "rank": 4
+    },
+    {
+      "resume_id": "PM-004",
+      "name": "Divya Krishnan",
+      "role_applied": "Product Manager",
+      "quality_tier": "Average",
+      "ats_score": 63.7,
+      "breakdown": {
+        "skills_match": 19.1,
+        "experience": 16.8,
+        "projects": 9.8,
+        "education": 10.0,
+        "certifications": 5.0,
+        "resume_quality": 3.0,
+        "total": 63.7
+      },
+      "justification": {
+        "skills_match": {
+          "score": 19.1,
+          "max": 35,
+          "required_matched": [
+            "prd",
+            "okr",
+            "backlog",
+            "jira",
+            "confluence",
+            "user interviews",
+            "analytics",
+            "figma",
+            "miro"
+          ],
+          "required_missing": [
+            "product roadmap",
+            "user stories",
+            "agile",
+            "scrum",
+            "a/b testing",
+            "stakeholder"
+          ],
+          "preferred_matched": [
+            "sql",
+            "amplitude",
+            "notion",
+            "moscow",
+            "kano"
+          ],
+          "required_match_rate": "9/15 (60%)",
+          "preferred_match_rate": "5/15 (33%)"
+        },
+        "experience": {
+          "score": 16.8,
+          "max": 25,
+          "years_experience": 2.4,
+          "target_range": "3–5 years",
+          "status": "Below minimum",
+          "impact_keywords_detected": 6,
+          "companies": [
+            "Byju's (Think & Learn Pvt. Ltd.)",
+            "Unacademy"
+          ]
+        },
+        "projects": {
+          "score": 9.8,
+          "max": 15,
+          "project_count": 1,
+          "min_required": 1,
+          "project_names": [
+            "Session Quality Score System"
+          ],
+          "quality_bonus": 0
+        },
+        "education": {
+          "score": 10.0,
+          "max": 10,
+          "degree": "MBA – Marketing",
+          "institution": "Great Lakes Institute of Management, Chennai",
+          "cgpa": 7.5,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 5.0,
+          "max": 10,
+          "total_certs": 2,
+          "matched_to_role": [],
+          "all_certs": [
+            "ProductSpace PM Launchpad (Cohort 12)",
+            "Product Analytics Certification"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 3.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "2+ achievements listed",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": false,
+      "recommendation": "CONSIDER – Borderline match. Phone screen first.",
+      "scored_at": "2026-06-28T15:12:05.071634",
+      "rank": 4
+    },
+    {
+      "resume_id": "SE-002",
+      "name": "Priya Nair",
+      "role_applied": "Software Engineer",
+      "quality_tier": "Poor",
+      "ats_score": 56.8,
+      "breakdown": {
+        "skills_match": 6.7,
+        "experience": 25.0,
+        "projects": 10.2,
+        "education": 9.9,
+        "certifications": 2.5,
+        "resume_quality": 2.5,
+        "total": 56.8
+      },
+      "justification": {
+        "skills_match": {
+          "score": 6.7,
+          "max": 35,
+          "required_matched": [
+            "python",
+            "mysql",
+            "git",
+            "html",
+            "css"
+          ],
+          "required_missing": [
+            "javascript",
+            "typescript",
+            "react",
+            "node.js",
+            "django",
+            "flask",
+            "postgresql",
+            "redis",
+            "docker",
+            "rest api",
+            "aws",
+            "github",
+            "agile",
+            "scrum",
+            "jest",
+            "pytest"
+          ],
+          "preferred_matched": [],
+          "required_match_rate": "5/21 (24%)",
+          "preferred_match_rate": "0/11 (0%)"
+        },
+        "experience": {
+          "score": 25.0,
+          "max": 25,
+          "years_experience": 0.2,
+          "target_range": "0–2 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 0,
+          "companies": [
+            "Softech Infoways"
+          ]
+        },
+        "projects": {
+          "score": 10.2,
+          "max": 15,
+          "project_count": 1,
+          "min_required": 1,
+          "project_names": [
+            "Student Result Management System"
+          ],
+          "quality_bonus": 0.5
+        },
+        "education": {
+          "score": 9.9,
+          "max": 10,
+          "degree": "B.Tech – Computer Science",
+          "institution": "Nitte Meenakshi Institute of Technology, Bengaluru",
+          "cgpa": 6.1,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": true
+        },
+        "certifications": {
+          "score": 2.5,
+          "max": 10,
+          "total_certs": 1,
+          "matched_to_role": [],
+          "all_certs": [
+            "Python for Beginners"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 2.5,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": false,
+      "recommendation": "CONSIDER – Borderline match. Phone screen first.",
+      "scored_at": "2026-06-28T15:12:05.071803",
+      "rank": 5
+    },
+    {
+      "resume_id": "DA-006",
+      "name": "Pranav Nambiar",
+      "role_applied": "Data Analyst",
+      "quality_tier": "Poor",
+      "ats_score": 48.7,
+      "breakdown": {
+        "skills_match": 4.0,
+        "experience": 25.0,
+        "projects": 10.2,
+        "education": 8.0,
+        "certifications": 0.0,
+        "resume_quality": 1.5,
+        "total": 48.7
+      },
+      "justification": {
+        "skills_match": {
+          "score": 4.0,
+          "max": 35,
+          "required_matched": [
+            "sql",
+            "excel"
+          ],
+          "required_missing": [
+            "python",
+            "pandas",
+            "numpy",
+            "tableau",
+            "power bi",
+            "statistics",
+            "regression",
+            "matplotlib",
+            "seaborn",
+            "postgresql",
+            "mysql",
+            "bigquery",
+            "a/b testing",
+            "hypothesis testing"
+          ],
+          "preferred_matched": [
+            "r"
+          ],
+          "required_match_rate": "2/16 (12%)",
+          "preferred_match_rate": "1/13 (8%)"
+        },
+        "experience": {
+          "score": 25.0,
+          "max": 25,
+          "years_experience": 1.6,
+          "target_range": "1–3 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 0,
+          "companies": [
+            "Muthoot Finance Ltd."
+          ]
+        },
+        "projects": {
+          "score": 10.2,
+          "max": 15,
+          "project_count": 1,
+          "min_required": 1,
+          "project_names": [
+            "Branch Sales Tracker (Excel)"
+          ],
+          "quality_bonus": 0.5
+        },
+        "education": {
+          "score": 8.0,
+          "max": 10,
+          "degree": "BCA – Bachelor of Computer Applications",
+          "institution": "St. Albert's College, Ernakulam",
+          "cgpa": 6.4,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 0.0,
+          "max": 10,
+          "total_certs": 0,
+          "matched_to_role": [],
+          "all_certs": [],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 1.5,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": false,
+      "recommendation": "WEAK – Significant gaps. May not be suitable.",
+      "scored_at": "2026-06-28T15:12:05.071354",
+      "rank": 5
+    },
+    {
+      "resume_id": "CSA-002",
+      "name": "Ananya Sharma",
+      "role_applied": "Cyber Security Analyst",
+      "quality_tier": "Poor",
+      "ats_score": 46.6,
+      "breakdown": {
+        "skills_match": 7.5,
+        "experience": 15.0,
+        "projects": 10.2,
+        "education": 9.9,
+        "certifications": 2.5,
+        "resume_quality": 1.5,
+        "total": 46.6
+      },
+      "justification": {
+        "skills_match": {
+          "score": 7.5,
+          "max": 35,
+          "required_matched": [
+            "nmap",
+            "kali linux",
+            "python",
+            "tcp/ip"
+          ],
+          "required_missing": [
+            "splunk",
+            "siem",
+            "mitre att&ck",
+            "wireshark",
+            "firewall",
+            "incident response",
+            "vapt",
+            "nessus",
+            "burp suite",
+            "microsoft sentinel",
+            "crowdstrike"
+          ],
+          "preferred_matched": [],
+          "required_match_rate": "4/15 (27%)",
+          "preferred_match_rate": "0/14 (0%)"
+        },
+        "experience": {
+          "score": 15.0,
+          "max": 25,
+          "years_experience": 0.0,
+          "target_range": "0–2 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 0,
+          "companies": []
+        },
+        "projects": {
+          "score": 10.2,
+          "max": 15,
+          "project_count": 1,
+          "min_required": 1,
+          "project_names": [
+            "Password Strength Checker"
+          ],
+          "quality_bonus": 0.5
+        },
+        "education": {
+          "score": 9.9,
+          "max": 10,
+          "degree": "B.Tech – Electronics & Communication Engineering",
+          "institution": "Inderprastha Engineering College, Ghaziabad",
+          "cgpa": 6.2,
+          "min_cgpa_required": 6.0,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 2.5,
+          "max": 10,
+          "total_certs": 1,
+          "matched_to_role": [],
+          "all_certs": [
+            "Ethical Hacking Basics"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 1.5,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": false,
+      "recommendation": "WEAK – Significant gaps. May not be suitable.",
+      "scored_at": "2026-06-28T15:12:05.070798",
+      "rank": 5
+    },
+    {
+      "resume_id": "SE-005",
+      "name": "Rahul Ghosh",
+      "role_applied": "Software Engineer",
+      "quality_tier": "Poor",
+      "ats_score": 43.7,
+      "breakdown": {
+        "skills_match": 4.6,
+        "experience": 15.0,
+        "projects": 10.2,
+        "education": 8.9,
+        "certifications": 2.5,
+        "resume_quality": 2.5,
+        "total": 43.7
+      },
+      "justification": {
+        "skills_match": {
+          "score": 4.6,
+          "max": 35,
+          "required_matched": [
+            "mysql",
+            "git",
+            "html"
+          ],
+          "required_missing": [
+            "python",
+            "javascript",
+            "typescript",
+            "react",
+            "node.js",
+            "django",
+            "flask",
+            "postgresql",
+            "redis",
+            "docker",
+            "rest api",
+            "css",
+            "aws",
+            "github",
+            "agile",
+            "scrum",
+            "jest",
+            "pytest"
+          ],
+          "preferred_matched": [
+            "java"
+          ],
+          "required_match_rate": "3/21 (14%)",
+          "preferred_match_rate": "1/11 (9%)"
+        },
+        "experience": {
+          "score": 15.0,
+          "max": 25,
+          "years_experience": 0.0,
+          "target_range": "0–2 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 0,
+          "companies": []
+        },
+        "projects": {
+          "score": 10.2,
+          "max": 15,
+          "project_count": 1,
+          "min_required": 1,
+          "project_names": [
+            "Library Management System"
+          ],
+          "quality_bonus": 0.5
+        },
+        "education": {
+          "score": 8.9,
+          "max": 10,
+          "degree": "B.Tech – Computer Science",
+          "institution": "Techno Main Salt Lake, Kolkata",
+          "cgpa": 6.3,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 2.5,
+          "max": 10,
+          "total_certs": 1,
+          "matched_to_role": [],
+          "all_certs": [
+            "C++ Programming Basics"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 2.5,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": false,
+      "recommendation": "WEAK – Significant gaps. May not be suitable.",
+      "scored_at": "2026-06-28T15:12:05.071965",
+      "rank": 6
+    },
+    {
+      "resume_id": "UX-004",
+      "name": "Sameer Malik",
+      "role_applied": "UI/UX Designer",
+      "quality_tier": "Poor",
+      "ats_score": 42.9,
+      "breakdown": {
+        "skills_match": 4.9,
+        "experience": 17.5,
+        "projects": 6.5,
+        "education": 9.0,
+        "certifications": 2.5,
+        "resume_quality": 2.5,
+        "total": 42.9
+      },
+      "justification": {
+        "skills_match": {
+          "score": 4.9,
+          "max": 35,
+          "required_matched": [
+            "figma",
+            "ui design"
+          ],
+          "required_missing": [
+            "prototyping",
+            "wireframing",
+            "user research",
+            "usability testing",
+            "design system",
+            "ux design",
+            "responsive design",
+            "mobile design",
+            "typography",
+            "color theory",
+            "accessibility",
+            "wcag"
+          ],
+          "preferred_matched": [
+            "html",
+            "photoshop"
+          ],
+          "required_match_rate": "2/14 (14%)",
+          "preferred_match_rate": "2/15 (13%)"
+        },
+        "experience": {
+          "score": 17.5,
+          "max": 25,
+          "years_experience": 1.8,
+          "target_range": "2–4 years",
+          "status": "Below minimum",
+          "impact_keywords_detected": 2,
+          "companies": [
+            "Webisdom Technologies"
+          ]
+        },
+        "projects": {
+          "score": 6.5,
+          "max": 15,
+          "project_count": 1,
+          "min_required": 2,
+          "project_names": [
+            "FoodOrder App UI (Personal Project)"
+          ],
+          "quality_bonus": 0.5
+        },
+        "education": {
+          "score": 9.0,
+          "max": 10,
+          "degree": "BCA – Bachelor of Computer Applications",
+          "institution": "Integral University, Lucknow",
+          "cgpa": 6.5,
+          "min_cgpa_required": 6.0,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 2.5,
+          "max": 10,
+          "total_certs": 1,
+          "matched_to_role": [],
+          "all_certs": [
+            "UI/UX Design Bootcamp"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 2.5,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "GitHub/Portfolio present",
+            "Project with link",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": false,
+      "recommendation": "WEAK – Significant gaps. May not be suitable.",
+      "scored_at": "2026-06-28T15:12:05.072297",
+      "rank": 5
+    },
+    {
+      "resume_id": "PM-005",
+      "name": "Manish Aggarwal",
+      "role_applied": "Product Manager",
+      "quality_tier": "Poor",
+      "ats_score": 42.6,
+      "breakdown": {
+        "skills_match": 9.8,
+        "experience": 17.8,
+        "projects": 0.0,
+        "education": 10.0,
+        "certifications": 2.5,
+        "resume_quality": 2.5,
+        "total": 42.6
+      },
+      "justification": {
+        "skills_match": {
+          "score": 9.8,
+          "max": 35,
+          "required_matched": [
+            "prd",
+            "scrum",
+            "jira",
+            "confluence",
+            "analytics"
+          ],
+          "required_missing": [
+            "product roadmap",
+            "user stories",
+            "okr",
+            "backlog",
+            "agile",
+            "user interviews",
+            "a/b testing",
+            "stakeholder",
+            "figma",
+            "miro"
+          ],
+          "preferred_matched": [
+            "moscow"
+          ],
+          "required_match_rate": "5/15 (33%)",
+          "preferred_match_rate": "1/15 (7%)"
+        },
+        "experience": {
+          "score": 17.8,
+          "max": 25,
+          "years_experience": 2.8,
+          "target_range": "3–5 years",
+          "status": "Below minimum",
+          "impact_keywords_detected": 1,
+          "companies": [
+            "Vedantu Innovations",
+            "Freelance Consulting"
+          ]
+        },
+        "projects": {
+          "score": 0.0,
+          "max": 15,
+          "project_count": 0,
+          "min_required": 1,
+          "project_names": [],
+          "quality_bonus": 0
+        },
+        "education": {
+          "score": 10.0,
+          "max": 10,
+          "degree": "MBA – General Management",
+          "institution": "Amity Business School, Noida",
+          "cgpa": 6.9,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 2.5,
+          "max": 10,
+          "total_certs": 1,
+          "matched_to_role": [],
+          "all_certs": [
+            "Product Management Fundamentals"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 2.5,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "10+ skills listed",
+            "2+ experience entries",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": false,
+      "recommendation": "WEAK – Significant gaps. May not be suitable.",
+      "scored_at": "2026-06-28T15:12:05.071675",
+      "rank": 5
+    },
+    {
+      "resume_id": "DA-004",
+      "name": "Amit Chandra",
+      "role_applied": "Data Analyst",
+      "quality_tier": "Poor",
+      "ats_score": 41.5,
+      "breakdown": {
+        "skills_match": 7.5,
+        "experience": 25,
+        "projects": 0.0,
+        "education": 5.0,
+        "certifications": 2.5,
+        "resume_quality": 1.5,
+        "total": 41.5
+      },
+      "justification": {
+        "skills_match": {
+          "score": 7.5,
+          "max": 35,
+          "required_matched": [
+            "sql",
+            "python",
+            "excel",
+            "mysql"
+          ],
+          "required_missing": [
+            "pandas",
+            "numpy",
+            "tableau",
+            "power bi",
+            "statistics",
+            "regression",
+            "matplotlib",
+            "seaborn",
+            "postgresql",
+            "bigquery",
+            "a/b testing",
+            "hypothesis testing"
+          ],
+          "preferred_matched": [
+            "r"
+          ],
+          "required_match_rate": "4/16 (25%)",
+          "preferred_match_rate": "1/13 (8%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 1.0,
+          "target_range": "1–3 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 1,
+          "companies": [
+            "QuickBooks India (freelance, unofficial)"
+          ]
+        },
+        "projects": {
+          "score": 0.0,
+          "max": 15,
+          "project_count": 0,
+          "min_required": 1,
+          "project_names": [],
+          "quality_bonus": 0
+        },
+        "education": {
+          "score": 5.0,
+          "max": 10,
+          "degree": "B.Com – Commerce",
+          "institution": "Narsee Monjee College of Commerce, Mumbai",
+          "cgpa": 6.0,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 2.5,
+          "max": 10,
+          "total_certs": 1,
+          "matched_to_role": [],
+          "all_certs": [
+            "Excel for Beginners"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 1.5,
+          "max": 5,
+          "signals_detected": [
+            "10+ skills listed",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": false,
+      "recommendation": "WEAK – Significant gaps. May not be suitable.",
+      "scored_at": "2026-06-28T15:12:05.071265",
+      "rank": 6
+    },
+    {
+      "resume_id": "PM-006",
+      "name": "Pooja Reddy",
+      "role_applied": "Product Manager",
+      "quality_tier": "Poor",
+      "ats_score": 39.5,
+      "breakdown": {
+        "skills_match": 0.0,
+        "experience": 25,
+        "projects": 0.0,
+        "education": 10.0,
+        "certifications": 2.5,
+        "resume_quality": 2.0,
+        "total": 39.5
+      },
+      "justification": {
+        "skills_match": {
+          "score": 0.0,
+          "max": 35,
+          "required_matched": [],
+          "required_missing": [
+            "product roadmap",
+            "prd",
+            "user stories",
+            "okr",
+            "backlog",
+            "agile",
+            "scrum",
+            "jira",
+            "confluence",
+            "user interviews",
+            "a/b testing",
+            "analytics",
+            "stakeholder",
+            "figma",
+            "miro"
+          ],
+          "preferred_matched": [],
+          "required_match_rate": "0/15 (0%)",
+          "preferred_match_rate": "0/15 (0%)"
+        },
+        "experience": {
+          "score": 25,
+          "max": 25,
+          "years_experience": 4.0,
+          "target_range": "3–5 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 1,
+          "companies": [
+            "Hindustan Unilever Limited"
+          ]
+        },
+        "projects": {
+          "score": 0.0,
+          "max": 15,
+          "project_count": 0,
+          "min_required": 1,
+          "project_names": [],
+          "quality_bonus": 0
+        },
+        "education": {
+          "score": 10.0,
+          "max": 10,
+          "degree": "MBA – FMCG & Retail Management",
+          "institution": "ICFAI Business School (IBS), Hyderabad",
+          "cgpa": 7.1,
+          "min_cgpa_required": 6.5,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 2.5,
+          "max": 10,
+          "total_certs": 1,
+          "matched_to_role": [],
+          "all_certs": [
+            "Introduction to Product Management"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 2.0,
+          "max": 5,
+          "signals_detected": [
+            "LinkedIn present",
+            "2+ achievements listed",
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": false,
+      "recommendation": "REJECT – Insufficient match for this role.",
+      "scored_at": "2026-06-28T15:12:05.071709",
+      "rank": 6
+    },
+    {
+      "resume_id": "UX-006",
+      "name": "Deepak Sundaram",
+      "role_applied": "UI/UX Designer",
+      "quality_tier": "Poor",
+      "ats_score": 37.8,
+      "breakdown": {
+        "skills_match": 2.9,
+        "experience": 17.5,
+        "projects": 6.5,
+        "education": 9.9,
+        "certifications": 0.0,
+        "resume_quality": 1.0,
+        "total": 37.8
+      },
+      "justification": {
+        "skills_match": {
+          "score": 2.9,
+          "max": 35,
+          "required_matched": [
+            "figma"
+          ],
+          "required_missing": [
+            "prototyping",
+            "wireframing",
+            "user research",
+            "usability testing",
+            "design system",
+            "ui design",
+            "ux design",
+            "responsive design",
+            "mobile design",
+            "typography",
+            "color theory",
+            "accessibility",
+            "wcag"
+          ],
+          "preferred_matched": [
+            "photoshop",
+            "user testing"
+          ],
+          "required_match_rate": "1/14 (7%)",
+          "preferred_match_rate": "2/15 (13%)"
+        },
+        "experience": {
+          "score": 17.5,
+          "max": 25,
+          "years_experience": 1.8,
+          "target_range": "2–4 years",
+          "status": "Below minimum",
+          "impact_keywords_detected": 2,
+          "companies": [
+            "PrintMagic Advertising"
+          ]
+        },
+        "projects": {
+          "score": 6.5,
+          "max": 15,
+          "project_count": 1,
+          "min_required": 2,
+          "project_names": [
+            "Taxi App Screens (Personal Practice)"
+          ],
+          "quality_bonus": 0.5
+        },
+        "education": {
+          "score": 9.9,
+          "max": 10,
+          "degree": "B.Sc. – Visual Communication",
+          "institution": "Loyola College, Chennai",
+          "cgpa": 6.1,
+          "min_cgpa_required": 6.0,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 0.0,
+          "max": 10,
+          "total_certs": 0,
+          "matched_to_role": [],
+          "all_certs": [],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 1.0,
+          "max": 5,
+          "signals_detected": [
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": false,
+      "recommendation": "REJECT – Insufficient match for this role.",
+      "scored_at": "2026-06-28T15:12:05.072401",
+      "rank": 6
+    },
+    {
+      "resume_id": "CSA-006",
+      "name": "Snehal Patil",
+      "role_applied": "Cyber Security Analyst",
+      "quality_tier": "Poor",
+      "ats_score": 37.6,
+      "breakdown": {
+        "skills_match": 0.0,
+        "experience": 15.0,
+        "projects": 10.2,
+        "education": 8.9,
+        "certifications": 2.5,
+        "resume_quality": 1.0,
+        "total": 37.6
+      },
+      "justification": {
+        "skills_match": {
+          "score": 0.0,
+          "max": 35,
+          "required_matched": [],
+          "required_missing": [
+            "splunk",
+            "siem",
+            "mitre att&ck",
+            "nmap",
+            "wireshark",
+            "kali linux",
+            "python",
+            "firewall",
+            "tcp/ip",
+            "incident response",
+            "vapt",
+            "nessus",
+            "burp suite",
+            "microsoft sentinel",
+            "crowdstrike"
+          ],
+          "preferred_matched": [],
+          "required_match_rate": "0/15 (0%)",
+          "preferred_match_rate": "0/14 (0%)"
+        },
+        "experience": {
+          "score": 15.0,
+          "max": 25,
+          "years_experience": 0.0,
+          "target_range": "0–2 years",
+          "status": "Within target range",
+          "impact_keywords_detected": 0,
+          "companies": []
+        },
+        "projects": {
+          "score": 10.2,
+          "max": 15,
+          "project_count": 1,
+          "min_required": 1,
+          "project_names": [
+            "Firewall Basics Study"
+          ],
+          "quality_bonus": 0.5
+        },
+        "education": {
+          "score": 8.9,
+          "max": 10,
+          "degree": "B.Tech – Electronics & Telecommunication",
+          "institution": "Padmashri Dr. Vikhe Patil College of Engineering, Ahmednagar",
+          "cgpa": 5.9,
+          "min_cgpa_required": 6.0,
+          "tier1_institution": false
+        },
+        "certifications": {
+          "score": 2.5,
+          "max": 10,
+          "total_certs": 1,
+          "matched_to_role": [],
+          "all_certs": [
+            "Cybersecurity Awareness (3-day workshop)"
+          ],
+          "prestige_bonus": 0
+        },
+        "resume_quality": {
+          "score": 1.0,
+          "max": 5,
+          "signals_detected": [
+            "Soft skills & languages listed",
+            "Interests listed"
+          ]
+        }
+      },
+      "shortlisted": false,
+      "recommendation": "REJECT – Insufficient match for this role.",
+      "scored_at": "2026-06-28T15:12:05.071036",
+      "rank": 6
+    }
+  ]
+}

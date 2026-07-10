@@ -1,0 +1,90 @@
+{
+  "resume_id": "CSA-006",
+  "name": "Snehal Patil",
+  "email": "snehalpatil.2024@rediffmail.com",
+  "phone": "+919823000112",
+  "linkedin": null,
+  "github": null,
+  "portfolio": null,
+  "address": "Near Shivajinagar Bus Stand, Pune, Maharashtra - 411005",
+  "role_applied": "Cyber Security Analyst",
+  "quality_tier": "Poor",
+  "education": [
+    {
+      "degree": "B.Tech – Electronics & Telecommunication",
+      "institution": "Padmashri Dr. Vikhe Patil College of Engineering, Ahmednagar",
+      "university": "Savitribai Phule Pune University (SPPU)",
+      "cgpa": 5.9,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2024
+    }
+  ],
+  "highest_degree": "B.Tech – Electronics & Telecommunication",
+  "institution": "Padmashri Dr. Vikhe Patil College of Engineering, Ahmednagar",
+  "cgpa": 5.9,
+  "experience": [],
+  "years_experience": 0.0,
+  "companies": [],
+  "skills": {
+    "security_tools": [],
+    "frameworks": [],
+    "os_platforms": [
+      "Windows",
+      "Ubuntu (basic)"
+    ],
+    "scripting": [],
+    "networking": [
+      "OSI Model (theoretical)",
+      "IP Addressing"
+    ],
+    "cloud_security": []
+  },
+  "skills_flat": [
+    "Windows",
+    "Ubuntu (basic)",
+    "OSI Model (theoretical)",
+    "IP Addressing"
+  ],
+  "skill_count": 4,
+  "projects": [
+    {
+      "name": "Firewall Basics Study",
+      "tech_stack": [
+        "N/A – Theoretical"
+      ],
+      "description": "Studied types of firewalls, packet filtering, and stateful inspection as part of coursework. No code or practical implementation.",
+      "github_link": null
+    }
+  ],
+  "project_count": 1,
+  "certifications": [
+    {
+      "name": "Cybersecurity Awareness (3-day workshop)",
+      "issuer": "Symbiosis Skills and Professional University",
+      "year": 2023
+    }
+  ],
+  "certification_names": [
+    "Cybersecurity Awareness (3-day workshop)"
+  ],
+  "certification_count": 1,
+  "achievements": [
+    "Attendance Certificate – National Cyber Security Awareness Month Seminar (2023)"
+  ],
+  "languages_known": [
+    "Marathi (Native)",
+    "Hindi (Native)",
+    "English (Basic)"
+  ],
+  "soft_skills": [
+    "Willingness to Learn",
+    "Sincere"
+  ],
+  "interests": [
+    "Cricket",
+    "Cycling",
+    "Tech News"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.632712",
+  "source_file": "CSA_006_Snehal_Patil.json"
+}

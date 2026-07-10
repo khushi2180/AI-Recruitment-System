@@ -1,0 +1,110 @@
+{
+  "resume_id": "UX-005",
+  "name": "Ayesha Khan",
+  "email": "ayesha.khan.uxdesign@gmail.com",
+  "phone": "+91-9677889900",
+  "linkedin": "linkedin.com/in/ayeshakhan-ux",
+  "github": null,
+  "address": "Banjara Hills Road 12, Hyderabad, Telangana - 500034",
+  "role_applied": "UI/UX Designer",
+  "portfolio": "ayeshakhandesign.com | behance.net/ayeshakhan",
+  "quality_tier": "Average",
+
+  "summary": "UX Designer with 3 years of experience designing consumer and B2B mobile apps in the hospitality and travel domain. Strong in user research, wireframing, and visual UI design. Fluent in Figma. Good instincts for interaction design patterns. Currently deepening expertise in design systems and motion design.",
+
+  "education": [
+    {
+      "degree": "B.Des – Visual Communication Design",
+      "institution": "MIT Institute of Design, Pune",
+      "university": "MIT Art, Design and Technology University",
+      "cgpa": 7.8,
+      "year_of_passing": 2021,
+      "relevant_courses": ["Interaction Design", "User Research", "Typography", "Brand Identity", "Illustration", "Web Design"]
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "OYO Rooms (Oravel Stays Pvt. Ltd.)",
+      "title": "UX Designer",
+      "location": "Hyderabad / Remote",
+      "type": "Full-Time",
+      "start_date": "Aug 2021",
+      "end_date": "Present",
+      "duration_months": 34,
+      "responsibilities": [
+        "Designed core booking flows for OYO's guest-facing mobile app — hotel search, date selection, room upgrades, and review submission.",
+        "Ran 4 rounds of usability testing per quarter using Maze and live sessions; average 8 participants per test.",
+        "Improved booking conversion rate by 17% through redesign of room selection screen based on eye-tracking study findings.",
+        "Contributed 35 components to OYO's design system; collaborated with 3 other designers on token architecture.",
+        "Designed OYO Business — corporate travel booking flow from scratch — onboarded by 200+ corporate accounts within 6 months.",
+        "Worked with iOS and Android developers on platform-specific interaction patterns."
+      ]
+    },
+    {
+      "company": "Cleartrip (Flipkart Group)",
+      "title": "UI Design Intern",
+      "location": "Bengaluru / Remote",
+      "type": "Internship",
+      "start_date": "Feb 2021",
+      "end_date": "Jul 2021",
+      "duration_months": 6,
+      "responsibilities": [
+        "Assisted in redesigning the flight search results page — implemented new filter UX.",
+        "Created visual design specs for 3 new features; participated in design reviews.",
+        "Maintained component library entries for 10+ new UI patterns."
+      ]
+    }
+  ],
+
+  "skills": {
+    "design_tools": ["Figma (intermediate-advanced)", "Principle", "Adobe XD", "Photoshop", "Illustrator"],
+    "research_methods": ["Usability Testing (Maze, live)", "Eye-Tracking (Tobii — supervised)", "User Interviews", "Competitive Audit"],
+    "design_disciplines": ["Mobile App Design (iOS + Android)", "Responsive Web", "Wireframing", "Visual UI Design", "Component Design"],
+    "code_knowledge": ["HTML/CSS (design QA level)"],
+    "collaboration": ["Figma Dev Mode", "Zeplin", "JIRA", "Confluence", "Slack"]
+  },
+
+  "projects": [
+    {
+      "name": "OYO Business – Corporate Travel Booking",
+      "description": "0-to-1 design for OYO Business — corporate travel management and hotel booking for company employees. Full design ownership. 200+ corporate accounts onboarded in 6 months.",
+      "portfolio_link": "ayeshakhandesign.com/oyo-business"
+    },
+    {
+      "name": "TravelLight – Minimalist Travel App",
+      "description": "Personal project: UX exploration for a minimalist solo-travel companion app. Includes trip journal, offline maps, and local experience discovery. Published full case study on Behance.",
+      "portfolio_link": "behance.net/ayeshakhan/travellight"
+    }
+  ],
+
+  "certifications": [
+    { "name": "Google UX Design Professional Certificate", "issuer": "Coursera / Google", "year": 2021 },
+    { "name": "IDF – UX Research Bootcamp", "issuer": "Interaction Design Foundation", "year": 2022 }
+  ],
+
+  "achievements": [
+    "MIT Institute of Design Best Portfolio Award – Final Year (2021)",
+    "Maze Design Impact Report — OYO booking conversion case study featured (2023)"
+  ],
+
+  "languages_known": ["English (Fluent)", "Hindi (Native)", "Urdu (Native)", "Telegu (Basic)"],
+
+  "soft_skills": ["Empathy-Driven Design", "Research Synthesis", "Constructive Critique", "Cross-Platform Awareness", "Stakeholder Facilitation"],
+
+  "interests": ["Travel Photography", "Motion Design (learning After Effects)", "Cooking", "Design Conference Talks"],
+
+  "ats_score": {
+    "total": 79,
+    "breakdown": {
+      "skills_match": 26,
+      "experience": 20,
+      "projects": 13,
+      "education": 9,
+      "certifications": 7,
+      "resume_quality": 4
+    },
+    "rank": 2,
+    "shortlisted": true
+  }
+}

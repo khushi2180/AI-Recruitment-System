@@ -1,0 +1,84 @@
+{
+  "resume_id": "UX-006",
+  "name": "Deepak Sundaram",
+  "email": "deepaksundaram.design@rediffmail.com",
+  "phone": "+91-9444001122",
+  "linkedin": null,
+  "github": null,
+  "address": "Chromepet, Chennai, Tamil Nadu - 600044",
+  "role_applied": "UI/UX Designer",
+  "portfolio": null,
+  "quality_tier": "Poor",
+
+  "summary": "I am a graphic designer with 2 years experience who wants to become a UI/UX designer. I know Photoshop and have made some Figma screens. I am creative and I work hard.",
+
+  "education": [
+    {
+      "degree": "B.Sc. – Visual Communication",
+      "institution": "Loyola College, Chennai",
+      "university": "University of Madras",
+      "cgpa": 6.1,
+      "year_of_passing": 2022,
+      "relevant_courses": ["Graphic Design", "Photography", "Desktop Publishing", "Media Studies"]
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "PrintMagic Advertising",
+      "title": "Graphic Designer",
+      "location": "Chennai, TN",
+      "type": "Full-Time",
+      "start_date": "Aug 2022",
+      "end_date": "Present",
+      "duration_months": 22,
+      "responsibilities": [
+        "Designed print advertisements, brochures, and banner stands for local clients.",
+        "Made social media graphics using Canva and Photoshop.",
+        "Worked with print vendors to finalize designs for production."
+      ]
+    }
+  ],
+
+  "skills": {
+    "design_tools": ["Adobe Photoshop (intermediate)", "Canva", "Figma (beginner — self-taught from YouTube)"],
+    "research_methods": [],
+    "design_disciplines": ["Print Design", "Social Media Graphics", "Basic Digital UI (no user testing experience)"],
+    "code_knowledge": [],
+    "collaboration": ["WhatsApp", "Email"]
+  },
+
+  "projects": [
+    {
+      "name": "Taxi App Screens (Personal Practice)",
+      "description": "Copied and recreated a taxi booking app UI from a YouTube tutorial in Figma. No original design work or user research involved.",
+      "portfolio_link": null
+    }
+  ],
+
+  "certifications": [],
+
+  "achievements": [
+    "Designed award-winning brochure for a local NGO charity run (2023)"
+  ],
+
+  "languages_known": ["Tamil (Native)", "English (Basic)"],
+
+  "soft_skills": ["Creative", "Hardworking", "Punctual"],
+
+  "interests": ["Movies", "Drawing", "Cricket"],
+
+  "ats_score": {
+    "total": 21,
+    "breakdown": {
+      "skills_match": 5,
+      "experience": 4,
+      "projects": 4,
+      "education": 4,
+      "certifications": 0,
+      "resume_quality": 4
+    },
+    "rank": 6,
+    "shortlisted": false
+  }
+}

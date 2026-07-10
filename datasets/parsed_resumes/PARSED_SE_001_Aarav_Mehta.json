@@ -1,0 +1,183 @@
+{
+  "resume_id": "SE-001",
+  "name": "Aarav Mehta",
+  "email": "aarav.mehta97@gmail.com",
+  "phone": "+919845123670",
+  "linkedin": "linkedin.com/in/aaravmehta",
+  "github": "github.com/aarav-mehta",
+  "portfolio": null,
+  "address": "Flat 4B, Koramangala 5th Block, Bengaluru, Karnataka - 560095",
+  "role_applied": "Software Engineer",
+  "quality_tier": "Average",
+  "education": [
+    {
+      "degree": "B.Tech – Computer Science & Engineering",
+      "institution": "RV College of Engineering, Bengaluru",
+      "university": "Visvesvaraya Technological University (VTU)",
+      "cgpa": 7.4,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2023
+    }
+  ],
+  "highest_degree": "B.Tech – Computer Science & Engineering",
+  "institution": "RV College of Engineering, Bengaluru",
+  "cgpa": 7.4,
+  "experience": [
+    {
+      "company": "Zoho Corporation",
+      "title": "Junior Software Engineer",
+      "location": "Bengaluru, KA",
+      "type": "Full-Time",
+      "start_date": "Aug 2023",
+      "end_date": "Present",
+      "duration_months": 10,
+      "responsibilities": [
+        "Developed 3 new frontend modules for Zoho CRM using React.js and TypeScript, improving UI load time by 18%.",
+        "Wrote RESTful APIs using Node.js (Express) integrated with PostgreSQL, handling 10K+ daily API calls.",
+        "Participated in bi-weekly code reviews and resolved 40+ production bugs in first quarter.",
+        "Wrote unit tests using Jest achieving 75% code coverage for assigned modules."
+      ]
+    },
+    {
+      "company": "StartupDen Technologies",
+      "title": "Frontend Developer Intern",
+      "location": "Remote",
+      "type": "Internship",
+      "start_date": "Jan 2023",
+      "end_date": "Jun 2023",
+      "duration_months": 6,
+      "responsibilities": [
+        "Built responsive landing pages using React.js and Tailwind CSS for 3 client projects.",
+        "Integrated payment gateway (Razorpay) and reduced checkout abandonment by 12%.",
+        "Collaborated with the design team to implement Figma specs with pixel accuracy."
+      ]
+    }
+  ],
+  "years_experience": 1.1,
+  "companies": [
+    "Zoho Corporation",
+    "StartupDen Technologies"
+  ],
+  "skills": {
+    "languages": [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "React.js",
+      "Node.js (Express)",
+      "Django (basic)"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB (basic)"
+    ],
+    "tools": [
+      "Git",
+      "GitHub",
+      "Docker (basic)",
+      "Postman",
+      "JIRA",
+      "VS Code"
+    ],
+    "cloud": [
+      "AWS S3 (basic)"
+    ],
+    "testing": [
+      "Jest",
+      "Pytest (basic)"
+    ]
+  },
+  "skills_flat": [
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "HTML5",
+    "CSS3",
+    "React.js",
+    "Node.js (Express)",
+    "Django (basic)",
+    "PostgreSQL",
+    "MySQL",
+    "MongoDB (basic)",
+    "Git",
+    "GitHub",
+    "Docker (basic)",
+    "Postman",
+    "JIRA",
+    "VS Code",
+    "AWS S3 (basic)",
+    "Jest",
+    "Pytest (basic)"
+  ],
+  "skill_count": 20,
+  "projects": [
+    {
+      "name": "TaskFlow – Project Management Tool",
+      "tech_stack": [
+        "React.js",
+        "Node.js",
+        "PostgreSQL",
+        "Socket.io"
+      ],
+      "description": "Built a real-time project management app with kanban boards, task assignment, and deadline tracking. 200+ GitHub stars. Deployed on Railway.app.",
+      "github_link": "github.com/aarav-mehta/taskflow"
+    },
+    {
+      "name": "MediAlert – Hospital Appointment System",
+      "tech_stack": [
+        "Django",
+        "SQLite",
+        "Bootstrap",
+        "Twilio SMS API"
+      ],
+      "description": "Developed a hospital appointment booking system with automated SMS reminders. Used as final year project. Presented at VTU Tech Fest 2023.",
+      "github_link": "github.com/aarav-mehta/medialert"
+    }
+  ],
+  "project_count": 2,
+  "certifications": [
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "year": 2023
+    },
+    {
+      "name": "Meta Front-End Developer Certificate",
+      "issuer": "Coursera / Meta",
+      "year": 2022
+    }
+  ],
+  "certification_names": [
+    "AWS Certified Cloud Practitioner",
+    "Meta Front-End Developer Certificate"
+  ],
+  "certification_count": 2,
+  "achievements": [
+    "Ranked in Top 100 in ZCoder Internal Coding Contest at Zoho (Q1 2024)",
+    "Won 2nd prize at StartupDen Hackathon (24-hour product build challenge)",
+    "Dean's List — 5th and 6th semester (CGPA > 8.0 in both)"
+  ],
+  "languages_known": [
+    "English (Professional)",
+    "Hindi (Native)",
+    "Kannada (Conversational)"
+  ],
+  "soft_skills": [
+    "Problem Solving",
+    "Team Collaboration",
+    "Attention to Detail",
+    "Adaptability"
+  ],
+  "interests": [
+    "Open Source Contributing",
+    "Competitive Programming",
+    "Tech Blogging"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.636931",
+  "source_file": "SE_001_Aarav_Mehta.json"
+}

@@ -1,0 +1,4958 @@
+{
+  "total": 30,
+  "parsed_at": "2026-06-28T15:11:39.640267",
+  "resumes": [
+    {
+      "resume_id": "CSA-001",
+      "name": "Rohan Kapoor",
+      "email": "rohan.kapoor.sec@gmail.com",
+      "phone": "+919871234560",
+      "linkedin": "linkedin.com/in/rohankapoor-cybersec",
+      "github": "github.com/rohanksec",
+      "portfolio": null,
+      "address": "Flat 8C, DLF Phase 2, Gurugram, Haryana - 122002",
+      "role_applied": "Cyber Security Analyst",
+      "quality_tier": "Excellent",
+      "education": [
+        {
+          "degree": "B.Tech – Computer Science (Cybersecurity Specialization)",
+          "institution": "Manipal Institute of Technology, Manipal",
+          "university": "Manipal Academy of Higher Education (MAHE)",
+          "cgpa": 8.6,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2022
+        }
+      ],
+      "highest_degree": "B.Tech – Computer Science (Cybersecurity Specialization)",
+      "institution": "Manipal Institute of Technology, Manipal",
+      "cgpa": 8.6,
+      "experience": [
+        {
+          "company": "CyberSafe India Pvt. Ltd. (MSSP)",
+          "title": "Cyber Security Analyst (L2 SOC)",
+          "location": "Gurugram, HR",
+          "type": "Full-Time",
+          "start_date": "Aug 2022",
+          "end_date": "Present",
+          "duration_months": 22,
+          "responsibilities": [
+            "Monitored and triaged 10,000+ daily security alerts using Splunk SIEM, achieving MTTD of 9 minutes for critical P1 incidents.",
+            "Led 4 major incident response engagements involving ransomware (LockBit variant) and BEC attacks on BFSI clients.",
+            "Conducted 12 VAPT engagements (web + network) using Burp Suite, Nessus, and Metasploit; delivered formal pentest reports with CVSS-scored findings.",
+            "Developed 30+ custom Splunk detection rules reducing false positive rate from 18% to 6%.",
+            "Authored 8 threat intelligence reports on emerging APT groups targeting Indian financial sector, shared with CERT-In.",
+            "Mentored 3 L1 analysts through SOC onboarding and playbook training."
+          ]
+        },
+        {
+          "company": "Wipro Limited – Cybersecurity Practice",
+          "title": "Cybersecurity Intern",
+          "location": "Bengaluru, KA",
+          "type": "Internship",
+          "start_date": "Jan 2022",
+          "end_date": "Jun 2022",
+          "duration_months": 6,
+          "responsibilities": [
+            "Assisted in ISO 27001 gap assessment for a mid-sized manufacturing client.",
+            "Performed manual vulnerability scanning using Nmap and Nessus Essentials.",
+            "Contributed to SOC runbook documentation for 15 alert categories."
+          ]
+        }
+      ],
+      "years_experience": 2.1,
+      "companies": [
+        "CyberSafe India Pvt. Ltd. (MSSP)",
+        "Wipro Limited – Cybersecurity Practice"
+      ],
+      "skills": {
+        "security_tools": [
+          "Splunk (SPL)",
+          "IBM QRadar",
+          "Microsoft Sentinel",
+          "CrowdStrike Falcon",
+          "Nessus",
+          "Burp Suite Pro",
+          "Metasploit Framework",
+          "Wireshark",
+          "Volatility"
+        ],
+        "frameworks": [
+          "MITRE ATT&CK",
+          "Cyber Kill Chain",
+          "NIST CSF",
+          "ISO 27001",
+          "OWASP Top 10"
+        ],
+        "os_platforms": [
+          "Kali Linux",
+          "Ubuntu",
+          "Windows Server 2019",
+          "Active Directory",
+          "Parrot OS"
+        ],
+        "scripting": [
+          "Python (SIEM automation, log parsing)",
+          "Bash",
+          "PowerShell"
+        ],
+        "networking": [
+          "TCP/IP",
+          "DNS",
+          "HTTP/S",
+          "VPN",
+          "Firewall Rule Analysis",
+          "Packet Capture"
+        ],
+        "cloud_security": [
+          "AWS Security Hub",
+          "GuardDuty",
+          "Azure Defender (basic)"
+        ]
+      },
+      "skills_flat": [
+        "Splunk (SPL)",
+        "IBM QRadar",
+        "Microsoft Sentinel",
+        "CrowdStrike Falcon",
+        "Nessus",
+        "Burp Suite Pro",
+        "Metasploit Framework",
+        "Wireshark",
+        "Volatility",
+        "MITRE ATT&CK",
+        "Cyber Kill Chain",
+        "NIST CSF",
+        "ISO 27001",
+        "OWASP Top 10",
+        "Kali Linux",
+        "Ubuntu",
+        "Windows Server 2019",
+        "Active Directory",
+        "Parrot OS",
+        "Python (SIEM automation, log parsing)",
+        "Bash",
+        "PowerShell",
+        "TCP/IP",
+        "DNS",
+        "HTTP/S",
+        "VPN",
+        "Firewall Rule Analysis",
+        "Packet Capture",
+        "AWS Security Hub",
+        "GuardDuty",
+        "Azure Defender (basic)"
+      ],
+      "skill_count": 31,
+      "projects": [
+        {
+          "name": "PhishGuard – Email Phishing Detection Tool",
+          "tech_stack": [
+            "Python",
+            "NLP (scikit-learn)",
+            "IMAP",
+            "Flask"
+          ],
+          "description": "Built an ML-powered phishing email classifier achieving 96.3% accuracy on 10,000-email dataset. Deployed as internal tool at CyberSafe reducing SOC analyst phishing triage time by 40%.",
+          "github_link": "github.com/rohanksec/phishguard"
+        },
+        {
+          "name": "SplunkHunter – Automated Threat Hunting Scripts",
+          "tech_stack": [
+            "Python",
+            "Splunk REST API",
+            "MITRE ATT&CK Navigator"
+          ],
+          "description": "Collection of 25+ automated threat hunting queries and scripts mapped to MITRE ATT&CK techniques. Used internally at CyberSafe and shared on GitHub with 400+ stars.",
+          "github_link": "github.com/rohanksec/splunkhunter"
+        }
+      ],
+      "project_count": 2,
+      "certifications": [
+        {
+          "name": "Certified Ethical Hacker (CEH v12)",
+          "issuer": "EC-Council",
+          "year": 2023
+        },
+        {
+          "name": "CompTIA Security+ (SY0-701)",
+          "issuer": "CompTIA",
+          "year": 2022
+        },
+        {
+          "name": "eLearnSecurity Junior Penetration Tester (eJPT)",
+          "issuer": "INE / eLearnSecurity",
+          "year": 2022
+        },
+        {
+          "name": "Splunk Core Certified Power User",
+          "issuer": "Splunk",
+          "year": 2023
+        }
+      ],
+      "certification_names": [
+        "Certified Ethical Hacker (CEH v12)",
+        "CompTIA Security+ (SY0-701)",
+        "eLearnSecurity Junior Penetration Tester (eJPT)",
+        "Splunk Core Certified Power User"
+      ],
+      "certification_count": 4,
+      "achievements": [
+        "Top 50 Ranked – HackTheBox India (Hall of Fame entry)",
+        "1st Place – CyberSafe Internal Red vs Blue Team Exercise (2023)",
+        "Published CVE-2023-XXXXX: Discovered XSS vulnerability in open-source SIEM plugin (responsibly disclosed)",
+        "Manipal Institute Gold Medal – Cybersecurity Specialization (Batch 2022)"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Hindi (Native)",
+        "Punjabi (Conversational)"
+      ],
+      "soft_skills": [
+        "Analytical Thinking",
+        "Attention to Detail",
+        "Cool Under Pressure",
+        "Report Writing",
+        "Stakeholder Communication"
+      ],
+      "interests": [
+        "CTF Competitions",
+        "Malware Analysis",
+        "OSINT Research",
+        "Bug Bounty Hunting"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.630752",
+      "source_file": "CSA_001_Rohan_Kapoor.json"
+    },
+    {
+      "resume_id": "CSA-002",
+      "name": "Ananya Sharma",
+      "email": "ananya.s2024@gmail.com",
+      "phone": "+919711223344",
+      "linkedin": "linkedin.com/in/ananyasharma-sec",
+      "github": null,
+      "portfolio": null,
+      "address": "C-45, Shalimar Bagh, Delhi - 110088",
+      "role_applied": "Cyber Security Analyst",
+      "quality_tier": "Poor",
+      "education": [
+        {
+          "degree": "B.Tech – Electronics & Communication Engineering",
+          "institution": "Inderprastha Engineering College, Ghaziabad",
+          "university": "Abdul Kalam Technical University (AKTU)",
+          "cgpa": 6.2,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2024
+        }
+      ],
+      "highest_degree": "B.Tech – Electronics & Communication Engineering",
+      "institution": "Inderprastha Engineering College, Ghaziabad",
+      "cgpa": 6.2,
+      "experience": [],
+      "years_experience": 0.0,
+      "companies": [],
+      "skills": {
+        "security_tools": [
+          "Nmap (basic)",
+          "Kali Linux (beginner)"
+        ],
+        "frameworks": [],
+        "os_platforms": [
+          "Windows 10",
+          "Kali Linux"
+        ],
+        "scripting": [
+          "Python (very basic)"
+        ],
+        "networking": [
+          "OSI Model",
+          "TCP/IP (theoretical)"
+        ],
+        "cloud_security": []
+      },
+      "skills_flat": [
+        "Nmap (basic)",
+        "Kali Linux (beginner)",
+        "Windows 10",
+        "Kali Linux",
+        "Python (very basic)",
+        "OSI Model",
+        "TCP/IP (theoretical)"
+      ],
+      "skill_count": 7,
+      "projects": [
+        {
+          "name": "Password Strength Checker",
+          "tech_stack": [
+            "Python"
+          ],
+          "description": "A simple Python script that checks password strength based on length, special characters, and uppercase letters. Built as a practice project.",
+          "github_link": null
+        }
+      ],
+      "project_count": 1,
+      "certifications": [
+        {
+          "name": "Ethical Hacking Basics",
+          "issuer": "Udemy (100-level course)",
+          "year": 2024
+        }
+      ],
+      "certification_names": [
+        "Ethical Hacking Basics"
+      ],
+      "certification_count": 1,
+      "achievements": [
+        "Attended 1 cybersecurity webinar (ISACA Delhi chapter)"
+      ],
+      "languages_known": [
+        "Hindi (Native)",
+        "English (Basic)"
+      ],
+      "soft_skills": [
+        "Eager to Learn",
+        "Hardworking"
+      ],
+      "interests": [
+        "Cybersecurity",
+        "Reading Tech Blogs",
+        "Watching Security YouTube Channels"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.631314",
+      "source_file": "CSA_002_Ananya_Sharma.json"
+    },
+    {
+      "resume_id": "CSA-003",
+      "name": "Vikram Sinha",
+      "email": "vikram.sinha.csec@outlook.com",
+      "phone": "+919334567890",
+      "linkedin": "linkedin.com/in/vikramsinha-security",
+      "github": "github.com/vikramsec",
+      "portfolio": null,
+      "address": "Flat 3A, Sector 49, Gurugram, Haryana - 122018",
+      "role_applied": "Cyber Security Analyst",
+      "quality_tier": "Average",
+      "education": [
+        {
+          "degree": "B.Tech – Computer Science",
+          "institution": "SRM Institute of Science and Technology, Chennai",
+          "university": "SRM University",
+          "cgpa": 7.5,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2022
+        }
+      ],
+      "highest_degree": "B.Tech – Computer Science",
+      "institution": "SRM Institute of Science and Technology, Chennai",
+      "cgpa": 7.5,
+      "experience": [
+        {
+          "company": "NetGuard Security Services",
+          "title": "SOC Analyst – L1",
+          "location": "Gurugram, HR",
+          "type": "Full-Time",
+          "start_date": "Jan 2023",
+          "end_date": "Present",
+          "duration_months": 17,
+          "responsibilities": [
+            "Monitored 2,500+ daily alerts on Microsoft Sentinel for 8 enterprise clients across BFSI and retail sectors.",
+            "Triaged and classified security alerts; escalated 40–60 incidents per month to L2/L3 team.",
+            "Created and maintained 15 alert suppression rules to reduce false positives by 22%.",
+            "Participated in 3 tabletop IR exercises with client CISO teams.",
+            "Generated daily shift reports and monthly security summary dashboards for client stakeholders."
+          ]
+        },
+        {
+          "company": "Infosys BPM",
+          "title": "IT Security Intern",
+          "location": "Hyderabad, TS",
+          "type": "Internship",
+          "start_date": "Jul 2021",
+          "end_date": "Dec 2021",
+          "duration_months": 6,
+          "responsibilities": [
+            "Assisted in access control reviews and IAM audit for internal Active Directory.",
+            "Documented security SOPs for phishing email handling procedures.",
+            "Supported evidence collection for ISO 27001 certification audit."
+          ]
+        }
+      ],
+      "years_experience": 1.7,
+      "companies": [
+        "NetGuard Security Services",
+        "Infosys BPM"
+      ],
+      "skills": {
+        "security_tools": [
+          "Microsoft Sentinel (KQL queries)",
+          "Splunk (basic SPL)",
+          "CrowdStrike Falcon",
+          "Nmap",
+          "Wireshark (basic)"
+        ],
+        "frameworks": [
+          "MITRE ATT&CK (basic)",
+          "NIST CSF",
+          "ISO 27001 (awareness)"
+        ],
+        "os_platforms": [
+          "Windows Server",
+          "Active Directory",
+          "Ubuntu",
+          "Kali Linux (learning)"
+        ],
+        "scripting": [
+          "Python (basic log automation)",
+          "KQL (Microsoft Sentinel)"
+        ],
+        "networking": [
+          "TCP/IP",
+          "DNS",
+          "Firewall rules",
+          "VPN concepts"
+        ],
+        "cloud_security": [
+          "Azure Defender (basic)",
+          "Azure AD"
+        ]
+      },
+      "skills_flat": [
+        "Microsoft Sentinel (KQL queries)",
+        "Splunk (basic SPL)",
+        "CrowdStrike Falcon",
+        "Nmap",
+        "Wireshark (basic)",
+        "MITRE ATT&CK (basic)",
+        "NIST CSF",
+        "ISO 27001 (awareness)",
+        "Windows Server",
+        "Active Directory",
+        "Ubuntu",
+        "Kali Linux (learning)",
+        "Python (basic log automation)",
+        "KQL (Microsoft Sentinel)",
+        "TCP/IP",
+        "DNS",
+        "Firewall rules",
+        "VPN concepts",
+        "Azure Defender (basic)",
+        "Azure AD"
+      ],
+      "skill_count": 20,
+      "projects": [
+        {
+          "name": "IOC Enrichment Script",
+          "tech_stack": [
+            "Python",
+            "VirusTotal API",
+            "AbuseIPDB API"
+          ],
+          "description": "Wrote a Python script to auto-enrich IP/domain IoCs from Sentinel alerts using VirusTotal and AbuseIPDB APIs. Reduced manual lookups from 5 min to 30 sec per alert.",
+          "github_link": "github.com/vikramsec/ioc-enricher"
+        }
+      ],
+      "project_count": 1,
+      "certifications": [
+        {
+          "name": "CompTIA Security+ (SY0-601)",
+          "issuer": "CompTIA",
+          "year": 2022
+        },
+        {
+          "name": "Microsoft Security Operations Analyst (SC-200) – In Progress",
+          "issuer": "Microsoft",
+          "year": 2024
+        }
+      ],
+      "certification_names": [
+        "CompTIA Security+ (SY0-601)",
+        "Microsoft Security Operations Analyst (SC-200) – In Progress"
+      ],
+      "certification_count": 2,
+      "achievements": [
+        "Most Improved Analyst – NetGuard Security Q4 2023",
+        "TryHackMe – Top 10% Global Rank (as of May 2024)"
+      ],
+      "languages_known": [
+        "English (Professional)",
+        "Hindi (Native)",
+        "Maithili (Conversational)"
+      ],
+      "soft_skills": [
+        "Attention to Detail",
+        "Documentation",
+        "Night-Shift Adaptability",
+        "Escalation Judgment"
+      ],
+      "interests": [
+        "CTF (TryHackMe, PicoCTF)",
+        "Threat Intelligence",
+        "Football"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.631672",
+      "source_file": "CSA_003_Vikram_Sinha.json"
+    },
+    {
+      "resume_id": "CSA-004",
+      "name": "Meera Pillai",
+      "email": "meera.pillai.cyber@gmail.com",
+      "phone": "+919400112233",
+      "linkedin": "linkedin.com/in/meerapillai-soc",
+      "github": "github.com/meerasec",
+      "portfolio": null,
+      "address": "TC 26/1250, Kowdiar, Thiruvananthapuram, Kerala - 695003",
+      "role_applied": "Cyber Security Analyst",
+      "quality_tier": "Average",
+      "education": [
+        {
+          "degree": "B.Tech – Computer Science & Engineering",
+          "institution": "College of Engineering Trivandrum (CET)",
+          "university": "APJ Abdul Kalam Technological University (KTU)",
+          "cgpa": 8.1,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2023
+        }
+      ],
+      "highest_degree": "B.Tech – Computer Science & Engineering",
+      "institution": "College of Engineering Trivandrum (CET)",
+      "cgpa": 8.1,
+      "experience": [
+        {
+          "company": "Cyber Vigil Solutions",
+          "title": "Junior SOC Analyst",
+          "location": "Thiruvananthapuram, KL",
+          "type": "Full-Time",
+          "start_date": "Jul 2023",
+          "end_date": "Present",
+          "duration_months": 11,
+          "responsibilities": [
+            "Monitored 1,800+ daily alerts on IBM QRadar for 5 government sector clients.",
+            "Performed initial triage and categorized incidents per client SLA; maintained 96% SLA compliance.",
+            "Wrote 3 incident response post-mortems for significant security events.",
+            "Conducted basic vulnerability scans using Nessus on client network segments.",
+            "Updated and maintained 20+ SOC playbooks for common attack vectors."
+          ]
+        },
+        {
+          "company": "Sify Technologies",
+          "title": "VAPT Intern",
+          "location": "Chennai, TN",
+          "type": "Internship",
+          "start_date": "Jan 2023",
+          "end_date": "May 2023",
+          "duration_months": 5,
+          "responsibilities": [
+            "Assisted in web application penetration testing using Burp Suite for 3 client engagements.",
+            "Performed reconnaissance using Shodan and OSINT techniques.",
+            "Contributed to VAPT report writing — CVSS scoring, risk classification, remediation steps."
+          ]
+        }
+      ],
+      "years_experience": 1.1,
+      "companies": [
+        "Cyber Vigil Solutions",
+        "Sify Technologies"
+      ],
+      "skills": {
+        "security_tools": [
+          "IBM QRadar",
+          "Nessus Essentials",
+          "Burp Suite Community",
+          "Nmap",
+          "Wireshark"
+        ],
+        "frameworks": [
+          "MITRE ATT&CK",
+          "OWASP Top 10",
+          "NIST CSF"
+        ],
+        "os_platforms": [
+          "Kali Linux",
+          "Ubuntu",
+          "Windows Server",
+          "Active Directory (basic)"
+        ],
+        "scripting": [
+          "Python (basic scripting)",
+          "Bash (basic)"
+        ],
+        "networking": [
+          "TCP/IP",
+          "HTTP/S",
+          "DNS",
+          "SSL/TLS",
+          "VPN"
+        ],
+        "cloud_security": [
+          "AWS basics (no security specialization)"
+        ]
+      },
+      "skills_flat": [
+        "IBM QRadar",
+        "Nessus Essentials",
+        "Burp Suite Community",
+        "Nmap",
+        "Wireshark",
+        "MITRE ATT&CK",
+        "OWASP Top 10",
+        "NIST CSF",
+        "Kali Linux",
+        "Ubuntu",
+        "Windows Server",
+        "Active Directory (basic)",
+        "Python (basic scripting)",
+        "Bash (basic)",
+        "TCP/IP",
+        "HTTP/S",
+        "DNS",
+        "SSL/TLS",
+        "VPN",
+        "AWS basics (no security specialization)"
+      ],
+      "skill_count": 20,
+      "projects": [
+        {
+          "name": "Network Intrusion Detection System (IDS)",
+          "tech_stack": [
+            "Python",
+            "Scapy",
+            "Snort",
+            "MySQL"
+          ],
+          "description": "Built a lightweight network IDS that detects port scans, ARP poisoning, and brute-force patterns. Final year project — achieved 88% detection accuracy on test dataset.",
+          "github_link": "github.com/meerasec/network-ids"
+        }
+      ],
+      "project_count": 1,
+      "certifications": [
+        {
+          "name": "CompTIA Security+ (SY0-701)",
+          "issuer": "CompTIA",
+          "year": 2023
+        },
+        {
+          "name": "Google Cybersecurity Certificate",
+          "issuer": "Coursera / Google",
+          "year": 2023
+        }
+      ],
+      "certification_names": [
+        "CompTIA Security+ (SY0-701)",
+        "Google Cybersecurity Certificate"
+      ],
+      "certification_count": 2,
+      "achievements": [
+        "KTU Scholarship for Academic Excellence – 7th Semester",
+        "1st Place – Inter-College CTF (College of Engineering Trivandrum, 2022)"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Malayalam (Native)",
+        "Hindi (Conversational)",
+        "Tamil (Basic)"
+      ],
+      "soft_skills": [
+        "Meticulous Documentation",
+        "Calm Under Pressure",
+        "Continuous Learning",
+        "Cross-Team Communication"
+      ],
+      "interests": [
+        "OSINT Research",
+        "Bug Bounty (HackerOne)",
+        "Yoga",
+        "Classical Dance (Bharatanatyam)"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.632092",
+      "source_file": "CSA_004_Meera_Pillai.json"
+    },
+    {
+      "resume_id": "CSA-005",
+      "name": "Arjun Das",
+      "email": "arjun.das.infosec@gmail.com",
+      "phone": "+919051234567",
+      "linkedin": "linkedin.com/in/arjundas-redteam",
+      "github": "github.com/arjundas-sec",
+      "portfolio": null,
+      "address": "Salt Lake Sector V, Kolkata, West Bengal - 700091",
+      "role_applied": "Cyber Security Analyst",
+      "quality_tier": "Excellent",
+      "education": [
+        {
+          "degree": "B.Tech – Information Technology",
+          "institution": "Jadavpur University, Kolkata",
+          "university": "Jadavpur University",
+          "cgpa": 8.7,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2022
+        }
+      ],
+      "highest_degree": "B.Tech – Information Technology",
+      "institution": "Jadavpur University, Kolkata",
+      "cgpa": 8.7,
+      "experience": [
+        {
+          "company": "RedForce Security Labs",
+          "title": "Junior Penetration Tester",
+          "location": "Kolkata, WB",
+          "type": "Full-Time",
+          "start_date": "Sep 2022",
+          "end_date": "Present",
+          "duration_months": 21,
+          "responsibilities": [
+            "Delivered 20+ VAPT engagements including web apps (OWASP), internal networks, and AD environments for BFSI and e-commerce clients.",
+            "Discovered critical SQL Injection vulnerability in a PSU bank's loan management portal — CVSS 9.1 — responsibly disclosed and patched.",
+            "Developed a custom C2 framework extension for an adversary simulation exercise, evading 3 major AV/EDR solutions.",
+            "Wrote detailed pentest reports with executive summaries for C-suite clients; presentations to CISOs.",
+            "Built automated Active Directory enumeration and privilege escalation toolkit in Python used by team of 12 testers.",
+            "Conducted 3 phishing simulation campaigns with 2,000+ target employees; achieved 28% click rate on baseline."
+          ]
+        },
+        {
+          "company": "Independent (Bug Bounty)",
+          "title": "Bug Bounty Hunter",
+          "location": "Remote",
+          "type": "Freelance",
+          "start_date": "Jan 2021",
+          "end_date": "Present",
+          "duration_months": 41,
+          "responsibilities": [
+            "Reported 45+ valid vulnerabilities across 20+ programs on HackerOne and Bugcrowd.",
+            "Total earnings: ₹4,20,000 in bounty payouts (P1: 6, P2: 14, P3+: 25).",
+            "Specializations: IDOR, SSRF, Race Conditions, JWT flaws, SAML Injection."
+          ]
+        }
+      ],
+      "years_experience": 3.5,
+      "companies": [
+        "RedForce Security Labs",
+        "Independent (Bug Bounty)"
+      ],
+      "skills": {
+        "security_tools": [
+          "Metasploit",
+          "Burp Suite Pro",
+          "Cobalt Strike (exposure)",
+          "BloodHound",
+          "Responder",
+          "Mimikatz",
+          "Nessus Pro",
+          "Nmap",
+          "SQLmap",
+          "ffuf",
+          "Volatility"
+        ],
+        "frameworks": [
+          "OWASP Top 10",
+          "PTES",
+          "MITRE ATT&CK",
+          "PTES",
+          "Cyber Kill Chain"
+        ],
+        "os_platforms": [
+          "Kali Linux (daily driver)",
+          "Parrot OS",
+          "Windows (AD exploitation)",
+          "macOS"
+        ],
+        "scripting": [
+          "Python",
+          "Bash",
+          "PowerShell",
+          "Go (basic)"
+        ],
+        "networking": [
+          "Full TCP/IP stack",
+          "BGP/OSPF basics",
+          "Packet crafting (Scapy)"
+        ],
+        "cloud_security": [
+          "AWS Pentest (S3, IAM, Lambda misconfigurations)",
+          "GCP basics"
+        ]
+      },
+      "skills_flat": [
+        "Metasploit",
+        "Burp Suite Pro",
+        "Cobalt Strike (exposure)",
+        "BloodHound",
+        "Responder",
+        "Mimikatz",
+        "Nessus Pro",
+        "Nmap",
+        "SQLmap",
+        "ffuf",
+        "Volatility",
+        "OWASP Top 10",
+        "PTES",
+        "MITRE ATT&CK",
+        "Cyber Kill Chain",
+        "Kali Linux (daily driver)",
+        "Parrot OS",
+        "Windows (AD exploitation)",
+        "macOS",
+        "Python",
+        "Bash",
+        "PowerShell",
+        "Go (basic)",
+        "Full TCP/IP stack",
+        "BGP/OSPF basics",
+        "Packet crafting (Scapy)",
+        "AWS Pentest (S3, IAM, Lambda misconfigurations)",
+        "GCP basics"
+      ],
+      "skill_count": 28,
+      "projects": [
+        {
+          "name": "ADExploit – AD Enumeration & Attack Toolkit",
+          "tech_stack": [
+            "Python",
+            "Impacket",
+            "BloodHound API",
+            "LDAP"
+          ],
+          "description": "Automated Active Directory enumeration toolkit. Performs ACL abuse detection, Kerberoasting, and ASREProasting automation. Used in 5+ real engagements. 500+ GitHub stars.",
+          "github_link": "github.com/arjundas-sec/adexploit"
+        },
+        {
+          "name": "WebFuzz – Smart Web Application Fuzzer",
+          "tech_stack": [
+            "Go",
+            "HTTP/2 support",
+            "Custom wordlists"
+          ],
+          "description": "High-speed, context-aware web fuzzer with support for HTTP/2, custom auth headers, and mutation strategies. 3x faster than ffuf on tested benchmarks.",
+          "github_link": "github.com/arjundas-sec/webfuzz"
+        }
+      ],
+      "project_count": 2,
+      "certifications": [
+        {
+          "name": "Offensive Security Certified Professional (OSCP)",
+          "issuer": "Offensive Security",
+          "year": 2023
+        },
+        {
+          "name": "CEH Practical",
+          "issuer": "EC-Council",
+          "year": 2023
+        },
+        {
+          "name": "CompTIA PenTest+",
+          "issuer": "CompTIA",
+          "year": 2022
+        }
+      ],
+      "certification_names": [
+        "Offensive Security Certified Professional (OSCP)",
+        "CEH Practical",
+        "CompTIA PenTest+"
+      ],
+      "certification_count": 3,
+      "achievements": [
+        "OSCP Certification — Passed on first attempt (2023)",
+        "HackerOne Hall of Fame — Paytm, OLA, MakeMyTrip programs",
+        "CVE Author: CVE-2023-31456, CVE-2023-35821, CVE-2024-11029 (among others)",
+        "Speaker: null0x0 Security Conference Kolkata 2023 — 'Breaking JWT: Real-World Case Studies'"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Bengali (Native)",
+        "Hindi (Fluent)"
+      ],
+      "soft_skills": [
+        "Adversarial Thinking",
+        "Precision & Accuracy",
+        "Discretion & Ethics",
+        "Report Writing Excellence",
+        "Research Mindset"
+      ],
+      "interests": [
+        "Vulnerability Research",
+        "CTF Competitions (HackTheBox Pro Labs)",
+        "Reverse Engineering (Malware)",
+        "Rock Climbing"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.632399",
+      "source_file": "CSA_005_Arjun_Das.json"
+    },
+    {
+      "resume_id": "CSA-006",
+      "name": "Snehal Patil",
+      "email": "snehalpatil.2024@rediffmail.com",
+      "phone": "+919823000112",
+      "linkedin": null,
+      "github": null,
+      "portfolio": null,
+      "address": "Near Shivajinagar Bus Stand, Pune, Maharashtra - 411005",
+      "role_applied": "Cyber Security Analyst",
+      "quality_tier": "Poor",
+      "education": [
+        {
+          "degree": "B.Tech – Electronics & Telecommunication",
+          "institution": "Padmashri Dr. Vikhe Patil College of Engineering, Ahmednagar",
+          "university": "Savitribai Phule Pune University (SPPU)",
+          "cgpa": 5.9,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2024
+        }
+      ],
+      "highest_degree": "B.Tech – Electronics & Telecommunication",
+      "institution": "Padmashri Dr. Vikhe Patil College of Engineering, Ahmednagar",
+      "cgpa": 5.9,
+      "experience": [],
+      "years_experience": 0.0,
+      "companies": [],
+      "skills": {
+        "security_tools": [],
+        "frameworks": [],
+        "os_platforms": [
+          "Windows",
+          "Ubuntu (basic)"
+        ],
+        "scripting": [],
+        "networking": [
+          "OSI Model (theoretical)",
+          "IP Addressing"
+        ],
+        "cloud_security": []
+      },
+      "skills_flat": [
+        "Windows",
+        "Ubuntu (basic)",
+        "OSI Model (theoretical)",
+        "IP Addressing"
+      ],
+      "skill_count": 4,
+      "projects": [
+        {
+          "name": "Firewall Basics Study",
+          "tech_stack": [
+            "N/A – Theoretical"
+          ],
+          "description": "Studied types of firewalls, packet filtering, and stateful inspection as part of coursework. No code or practical implementation.",
+          "github_link": null
+        }
+      ],
+      "project_count": 1,
+      "certifications": [
+        {
+          "name": "Cybersecurity Awareness (3-day workshop)",
+          "issuer": "Symbiosis Skills and Professional University",
+          "year": 2023
+        }
+      ],
+      "certification_names": [
+        "Cybersecurity Awareness (3-day workshop)"
+      ],
+      "certification_count": 1,
+      "achievements": [
+        "Attendance Certificate – National Cyber Security Awareness Month Seminar (2023)"
+      ],
+      "languages_known": [
+        "Marathi (Native)",
+        "Hindi (Native)",
+        "English (Basic)"
+      ],
+      "soft_skills": [
+        "Willingness to Learn",
+        "Sincere"
+      ],
+      "interests": [
+        "Cricket",
+        "Cycling",
+        "Tech News"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.632712",
+      "source_file": "CSA_006_Snehal_Patil.json"
+    },
+    {
+      "resume_id": "DA-001",
+      "name": "Vivek Rao",
+      "email": "vivek.rao.analytics@gmail.com",
+      "phone": "+919908765432",
+      "linkedin": "linkedin.com/in/vivekrao-data",
+      "github": "github.com/vivekrao-da",
+      "portfolio": null,
+      "address": "Flat 7, Madhapur, Hyderabad, Telangana - 500081",
+      "role_applied": "Data Analyst",
+      "quality_tier": "Excellent",
+      "education": [
+        {
+          "degree": "B.Tech – Computer Science & Engineering",
+          "institution": "Osmania University College of Engineering, Hyderabad",
+          "university": "Osmania University",
+          "cgpa": 8.4,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2022
+        }
+      ],
+      "highest_degree": "B.Tech – Computer Science & Engineering",
+      "institution": "Osmania University College of Engineering, Hyderabad",
+      "cgpa": 8.4,
+      "experience": [
+        {
+          "company": "DataBridge Analytics Pvt. Ltd.",
+          "title": "Data Analyst",
+          "location": "Hyderabad, TS",
+          "type": "Full-Time",
+          "start_date": "Aug 2022",
+          "end_date": "Present",
+          "duration_months": 22,
+          "responsibilities": [
+            "Built end-to-end sales analytics pipeline using Python (Pandas, SQLAlchemy) + BigQuery + Tableau, reducing weekly reporting from 5 days to 4 hours for a top-5 FMCG client.",
+            "Designed 8 executive-level Tableau dashboards tracking ₹1,200 Crore in annual revenue across 22 product categories.",
+            "Performed customer segmentation (RFM + K-Means) on 2M+ transaction records, identifying 3 high-value segments worth ₹180 Crores combined.",
+            "Led an A/B testing program for a D2C brand — tested 6 marketing hypotheses, resulting in 23% increase in conversion rate.",
+            "Automated 14 recurring Excel reports with Python scripts, saving 18 man-hours per week across the team.",
+            "Mentored 2 junior analysts in SQL and Tableau fundamentals."
+          ]
+        },
+        {
+          "company": "Cognizant Technology Solutions",
+          "title": "Data Analyst Intern",
+          "location": "Hyderabad, TS",
+          "type": "Internship",
+          "start_date": "Jan 2022",
+          "end_date": "Jun 2022",
+          "duration_months": 6,
+          "responsibilities": [
+            "Created SQL-based weekly sales reports for a US retail client using MS SQL Server.",
+            "Developed Power BI dashboard for supply chain KPIs — on-time delivery, fill rate, inventory turnover.",
+            "Cleaned and transformed 500K+ row dataset from legacy ERP for migration."
+          ]
+        }
+      ],
+      "years_experience": 2.1,
+      "companies": [
+        "DataBridge Analytics Pvt. Ltd.",
+        "Cognizant Technology Solutions"
+      ],
+      "skills": {
+        "languages": [
+          "Python (Pandas, NumPy, Matplotlib, Seaborn, Plotly)",
+          "SQL (Advanced: CTEs, Window Functions, Pivoting)",
+          "R (basic)"
+        ],
+        "bi_tools": [
+          "Tableau Desktop & Server",
+          "Power BI",
+          "Google Looker Studio"
+        ],
+        "databases": [
+          "BigQuery",
+          "PostgreSQL",
+          "MS SQL Server",
+          "Snowflake (learning)"
+        ],
+        "etl_tools": [
+          "dbt (basic)",
+          "Python ETL scripts",
+          "Apache Airflow (basic)"
+        ],
+        "spreadsheets": [
+          "Advanced Excel (Macros, Power Query, Pivot Tables, VLOOKUP/INDEX-MATCH)"
+        ],
+        "stats": [
+          "Descriptive Statistics",
+          "Regression Analysis",
+          "A/B Testing",
+          "Hypothesis Testing",
+          "K-Means Clustering"
+        ],
+        "tools": [
+          "Git",
+          "JIRA",
+          "Confluence",
+          "Notion",
+          "Google Sheets API"
+        ]
+      },
+      "skills_flat": [
+        "Python (Pandas, NumPy, Matplotlib, Seaborn, Plotly)",
+        "SQL (Advanced: CTEs, Window Functions, Pivoting)",
+        "R (basic)",
+        "Tableau Desktop & Server",
+        "Power BI",
+        "Google Looker Studio",
+        "BigQuery",
+        "PostgreSQL",
+        "MS SQL Server",
+        "Snowflake (learning)",
+        "dbt (basic)",
+        "Python ETL scripts",
+        "Apache Airflow (basic)",
+        "Advanced Excel (Macros, Power Query, Pivot Tables, VLOOKUP/INDEX-MATCH)",
+        "Descriptive Statistics",
+        "Regression Analysis",
+        "A/B Testing",
+        "Hypothesis Testing",
+        "K-Means Clustering",
+        "Git",
+        "JIRA",
+        "Confluence",
+        "Notion",
+        "Google Sheets API"
+      ],
+      "skill_count": 24,
+      "projects": [
+        {
+          "name": "RetailPulse – Retail Analytics Dashboard",
+          "tech_stack": [
+            "Python",
+            "BigQuery",
+            "Tableau",
+            "Pandas"
+          ],
+          "description": "Open-source retail analytics starter kit with sample e-commerce dataset, Tableau workbook, and Python EDA notebook. 150+ GitHub stars. Used by 3 freelance data analysts.",
+          "github_link": "github.com/vivekrao-da/retailpulse"
+        },
+        {
+          "name": "ChurnPredict – Customer Churn Analysis",
+          "tech_stack": [
+            "Python",
+            "scikit-learn",
+            "Seaborn",
+            "Logistic Regression"
+          ],
+          "description": "Built a customer churn prediction model with 89.4% accuracy. Feature engineering on 30+ behavioral variables. EDA published on Medium with 2,400 views.",
+          "github_link": "github.com/vivekrao-da/churnpredict"
+        }
+      ],
+      "project_count": 2,
+      "certifications": [
+        {
+          "name": "Tableau Certified Data Analyst",
+          "issuer": "Tableau / Salesforce",
+          "year": 2023
+        },
+        {
+          "name": "Google Data Analytics Professional Certificate",
+          "issuer": "Coursera / Google",
+          "year": 2022
+        },
+        {
+          "name": "Microsoft PL-300: Power BI Data Analyst",
+          "issuer": "Microsoft",
+          "year": 2024
+        }
+      ],
+      "certification_names": [
+        "Tableau Certified Data Analyst",
+        "Google Data Analytics Professional Certificate",
+        "Microsoft PL-300: Power BI Data Analyst"
+      ],
+      "certification_count": 3,
+      "achievements": [
+        "Promoted to Senior Analyst track after 18 months (youngest in team)",
+        "DataBridge Analytics Innovation Award — Q2 2023 (for automated reporting pipeline)",
+        "Medium Data Science Author — 8,000+ total views on analytics articles",
+        "Osmania University Topper — Statistics & Data Mining (2022)"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Telugu (Native)",
+        "Hindi (Fluent)"
+      ],
+      "soft_skills": [
+        "Data Storytelling",
+        "Stakeholder Management",
+        "Attention to Detail",
+        "Problem Decomposition",
+        "Presentation Skills"
+      ],
+      "interests": [
+        "Data Visualization",
+        "Kaggle Competitions",
+        "Cricket Analytics",
+        "Teaching (Mentoring on DataCamp)"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.632968",
+      "source_file": "DA_001_Vivek_Rao.json"
+    },
+    {
+      "resume_id": "DA-002",
+      "name": "Sneha Kulkarni",
+      "email": "sneha.kulkarni.data@gmail.com",
+      "phone": "+919763001122",
+      "linkedin": "linkedin.com/in/snehakulkarni-analyst",
+      "github": "github.com/snehakulkarni-da",
+      "portfolio": null,
+      "address": "Plot 44, Baner Road, Pune, Maharashtra - 411045",
+      "role_applied": "Data Analyst",
+      "quality_tier": "Average",
+      "education": [
+        {
+          "degree": "B.Sc. – Statistics",
+          "institution": "Fergusson College, Pune",
+          "university": "Savitribai Phule Pune University (SPPU)",
+          "cgpa": 7.9,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2023
+        }
+      ],
+      "highest_degree": "B.Sc. – Statistics",
+      "institution": "Fergusson College, Pune",
+      "cgpa": 7.9,
+      "experience": [
+        {
+          "company": "Accenture India (Strategy & Consulting)",
+          "title": "Junior Data Analyst (Consulting)",
+          "location": "Pune, MH",
+          "type": "Full-Time",
+          "start_date": "Jul 2023",
+          "end_date": "Present",
+          "duration_months": 11,
+          "responsibilities": [
+            "Created 4 Power BI dashboards for a top-5 Indian pharma company tracking clinical trial KPIs.",
+            "Wrote 20+ complex SQL queries (MS SQL Server) for weekly operational reports.",
+            "Performed data cleaning and validation on Excel datasets with 50K+ rows.",
+            "Supported senior consultants in data interpretation and PowerPoint deck preparation for client presentations.",
+            "Conducted initial EDA using Python (Pandas, Matplotlib) for a supply chain project."
+          ]
+        },
+        {
+          "company": "Analytics Vidhya",
+          "title": "Data Science Intern (Virtual)",
+          "location": "Remote",
+          "type": "Internship",
+          "start_date": "Nov 2022",
+          "end_date": "Feb 2023",
+          "duration_months": 4,
+          "responsibilities": [
+            "Completed 5 guided data analysis projects on AV's learning platform.",
+            "Built a supervised ML model (Decision Tree) for loan default prediction — 78% accuracy.",
+            "Wrote 2 blog posts on data cleaning techniques published on Analytics Vidhya platform."
+          ]
+        }
+      ],
+      "years_experience": 1.1,
+      "companies": [
+        "Accenture India (Strategy & Consulting)",
+        "Analytics Vidhya"
+      ],
+      "skills": {
+        "languages": [
+          "SQL (intermediate)",
+          "Python (Pandas, Matplotlib — learning)",
+          "R (statistical analysis)"
+        ],
+        "bi_tools": [
+          "Power BI (intermediate)",
+          "Excel (Advanced)",
+          "Google Sheets"
+        ],
+        "databases": [
+          "MS SQL Server",
+          "MySQL (basic)"
+        ],
+        "etl_tools": [
+          "Excel Power Query"
+        ],
+        "spreadsheets": [
+          "Advanced Excel (VLOOKUP, PivotTables, Conditional Formatting)"
+        ],
+        "stats": [
+          "Descriptive Statistics",
+          "Correlation Analysis",
+          "Basic Regression",
+          "Probability Distributions"
+        ],
+        "tools": [
+          "JIRA (basic)",
+          "Notion",
+          "MS Office Suite",
+          "Git (very basic)"
+        ]
+      },
+      "skills_flat": [
+        "SQL (intermediate)",
+        "Python (Pandas, Matplotlib — learning)",
+        "R (statistical analysis)",
+        "Power BI (intermediate)",
+        "Excel (Advanced)",
+        "Google Sheets",
+        "MS SQL Server",
+        "MySQL (basic)",
+        "Excel Power Query",
+        "Advanced Excel (VLOOKUP, PivotTables, Conditional Formatting)",
+        "Descriptive Statistics",
+        "Correlation Analysis",
+        "Basic Regression",
+        "Probability Distributions",
+        "JIRA (basic)",
+        "Notion",
+        "MS Office Suite",
+        "Git (very basic)"
+      ],
+      "skill_count": 18,
+      "projects": [
+        {
+          "name": "Pharma Sales Analytics – Personal Project",
+          "tech_stack": [
+            "Python",
+            "Pandas",
+            "Power BI"
+          ],
+          "description": "Analyzed 2 years of pharmaceutical sales data (publicly available dataset) to identify seasonal trends and top-selling SKUs. Created an interactive Power BI report.",
+          "github_link": "github.com/snehakulkarni-da/pharma-analysis"
+        }
+      ],
+      "project_count": 1,
+      "certifications": [
+        {
+          "name": "Microsoft PL-300: Power BI Data Analyst – In Progress",
+          "issuer": "Microsoft",
+          "year": 2024
+        },
+        {
+          "name": "Excel Skills for Data Analytics and Visualization",
+          "issuer": "Coursera / Macquarie University",
+          "year": 2023
+        }
+      ],
+      "certification_names": [
+        "Microsoft PL-300: Power BI Data Analyst – In Progress",
+        "Excel Skills for Data Analytics and Visualization"
+      ],
+      "certification_count": 2,
+      "achievements": [
+        "Fergusson College Statistics Gold Medal – Final Year (2023)",
+        "Analytics Vidhya Hackathon Participant – Ranked 215/1200"
+      ],
+      "languages_known": [
+        "English (Professional)",
+        "Marathi (Native)",
+        "Hindi (Fluent)"
+      ],
+      "soft_skills": [
+        "Attention to Detail",
+        "Quick Learner",
+        "Structured Thinking",
+        "Excel Proficiency"
+      ],
+      "interests": [
+        "Data Visualization",
+        "Statistics Blogging",
+        "Classical Music (Hindustani)"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.633282",
+      "source_file": "DA_002_Sneha_Kulkarni.json"
+    },
+    {
+      "resume_id": "DA-003",
+      "name": "Harshita Gupta",
+      "email": "harshita.gupta.bi@gmail.com",
+      "phone": "+919711334455",
+      "linkedin": "linkedin.com/in/harshitagupta-analytics",
+      "github": "github.com/harshita-data",
+      "portfolio": null,
+      "address": "F-12, Rajouri Garden, New Delhi - 110027",
+      "role_applied": "Data Analyst",
+      "quality_tier": "Excellent",
+      "education": [
+        {
+          "degree": "MBA – Business Analytics",
+          "institution": "FORE School of Management, New Delhi",
+          "university": "FORE School of Management (Autonomous)",
+          "cgpa": 8.8,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2021
+        },
+        {
+          "degree": "B.Sc. – Mathematics (Hons.)",
+          "institution": "Kirori Mal College, University of Delhi",
+          "university": "University of Delhi",
+          "cgpa": 8.1,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2019
+        }
+      ],
+      "highest_degree": "MBA – Business Analytics",
+      "institution": "FORE School of Management, New Delhi",
+      "cgpa": 8.8,
+      "experience": [
+        {
+          "company": "HDFC Bank Ltd. – Data & Analytics COE",
+          "title": "Data Analyst",
+          "location": "Mumbai / Delhi (Hybrid)",
+          "type": "Full-Time",
+          "start_date": "Aug 2021",
+          "end_date": "Present",
+          "duration_months": 34,
+          "responsibilities": [
+            "Built and maintained a self-serve BI platform (Tableau + Redshift + dbt) enabling 400+ business users to access real-time banking KPIs without analyst intervention.",
+            "Developed credit card portfolio analytics model tracking ₹28,000 Crore in receivables across 12 customer segments.",
+            "Designed customer lifetime value (CLV) model using Python (scikit-learn), identifying top-decile customers contributing 62% of revenue.",
+            "Implemented automated data quality framework with 200+ DQ checks, reducing reporting errors by 91%.",
+            "Presented monthly analytics insights directly to VP Analytics and CFO; authored 4 internal white papers on customer behaviour patterns.",
+            "Reduced Redshift query costs by 35% through query optimization and materialized views implementation."
+          ]
+        },
+        {
+          "company": "EY (Ernst & Young) – Advisory",
+          "title": "Data Analytics Consultant (intern)",
+          "location": "New Delhi",
+          "type": "Internship",
+          "start_date": "Apr 2021",
+          "end_date": "Jul 2021",
+          "duration_months": 4,
+          "responsibilities": [
+            "Supported IFRS 9 provisioning model validation project for a public sector bank.",
+            "Built Tableau workbooks for risk dashboard showing NPAs, LGD, and PD metrics.",
+            "Automated 3 Excel-based reports using Python — saving 6 hours weekly."
+          ]
+        }
+      ],
+      "years_experience": 3.0,
+      "companies": [
+        "HDFC Bank Ltd. – Data & Analytics COE",
+        "EY (Ernst & Young) – Advisory"
+      ],
+      "skills": {
+        "languages": [
+          "Python (Pandas, NumPy, scikit-learn, Plotly, statsmodels)",
+          "SQL (Expert: CTEs, Window, QUALIFY, PIVOT)",
+          "R (statistical modelling)"
+        ],
+        "bi_tools": [
+          "Tableau (Desktop, Server, Prep)",
+          "Power BI (advanced DAX)",
+          "Google Looker Studio",
+          "Metabase"
+        ],
+        "databases": [
+          "Amazon Redshift",
+          "PostgreSQL",
+          "Snowflake",
+          "BigQuery",
+          "Oracle SQL"
+        ],
+        "etl_tools": [
+          "dbt (intermediate)",
+          "Apache Airflow",
+          "Fivetran (configuration)",
+          "Python ETL pipelines"
+        ],
+        "stats": [
+          "Regression (Linear, Logistic, Ridge)",
+          "Clustering (K-Means, DBSCAN)",
+          "Time Series (ARIMA, Prophet)",
+          "A/B Testing",
+          "Cohort Analysis"
+        ],
+        "tools": [
+          "Confluence",
+          "JIRA",
+          "Git",
+          "Notion",
+          "Tableau Prep",
+          "Excel (Advanced)"
+        ]
+      },
+      "skills_flat": [
+        "Python (Pandas, NumPy, scikit-learn, Plotly, statsmodels)",
+        "SQL (Expert: CTEs, Window, QUALIFY, PIVOT)",
+        "R (statistical modelling)",
+        "Tableau (Desktop, Server, Prep)",
+        "Power BI (advanced DAX)",
+        "Google Looker Studio",
+        "Metabase",
+        "Amazon Redshift",
+        "PostgreSQL",
+        "Snowflake",
+        "BigQuery",
+        "Oracle SQL",
+        "dbt (intermediate)",
+        "Apache Airflow",
+        "Fivetran (configuration)",
+        "Python ETL pipelines",
+        "Regression (Linear, Logistic, Ridge)",
+        "Clustering (K-Means, DBSCAN)",
+        "Time Series (ARIMA, Prophet)",
+        "A/B Testing",
+        "Cohort Analysis",
+        "Confluence",
+        "JIRA",
+        "Git",
+        "Notion",
+        "Tableau Prep",
+        "Excel (Advanced)"
+      ],
+      "skill_count": 27,
+      "projects": [
+        {
+          "name": "OpenFinMetrics – Financial KPI Dashboard Template",
+          "tech_stack": [
+            "Tableau",
+            "PostgreSQL",
+            "Python",
+            "dbt"
+          ],
+          "description": "Open-source Tableau dashboard template for banking analytics — NPA tracking, CASA ratio, credit cost. 200+ downloads on Tableau Public. Featured in Tableau Community blog.",
+          "github_link": "github.com/harshita-data/openfinmetrics"
+        },
+        {
+          "name": "CLV Predictor – Customer Lifetime Value Model",
+          "tech_stack": [
+            "Python",
+            "scikit-learn",
+            "XGBoost",
+            "Streamlit"
+          ],
+          "description": "ML model predicting 12-month customer lifetime value for subscription businesses. Deployed as Streamlit app. Kaggle kernel with 1,200 votes.",
+          "github_link": "github.com/harshita-data/clv-predictor"
+        }
+      ],
+      "project_count": 2,
+      "certifications": [
+        {
+          "name": "Tableau Certified Data Analyst",
+          "issuer": "Tableau / Salesforce",
+          "year": 2022
+        },
+        {
+          "name": "dbt Analytics Engineering Certification",
+          "issuer": "dbt Labs",
+          "year": 2023
+        },
+        {
+          "name": "AWS Certified Data Analytics – Specialty",
+          "issuer": "Amazon Web Services",
+          "year": 2024
+        }
+      ],
+      "certification_names": [
+        "Tableau Certified Data Analyst",
+        "dbt Analytics Engineering Certification",
+        "AWS Certified Data Analytics – Specialty"
+      ],
+      "certification_count": 3,
+      "achievements": [
+        "HDFC Bank Analytics Excellence Award 2023 (recognition from CHRO)",
+        "Top Rated Tableau Public Author – 18,000 total views across published workbooks",
+        "FORE School Valedictorian – MBA Batch 2021",
+        "Selected for Data Leadership Program (DLP) at HDFC – cohort of 10/1,200 analysts"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Hindi (Native)",
+        "French (A2 – conversational)"
+      ],
+      "soft_skills": [
+        "Executive Communication",
+        "Strategic Thinking",
+        "Data Governance",
+        "Stakeholder Influence",
+        "Mentoring"
+      ],
+      "interests": [
+        "Financial Data Research",
+        "Macroeconomics",
+        "Long-Distance Cycling",
+        "Teaching (Teaches data analysis to NGO students on weekends)"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.633597",
+      "source_file": "DA_003_Harshita_Gupta.json"
+    },
+    {
+      "resume_id": "DA-004",
+      "name": "Amit Chandra",
+      "email": "amit_chandra88@yahoo.co.in",
+      "phone": "+918879001234",
+      "linkedin": null,
+      "github": null,
+      "portfolio": null,
+      "address": "Andheri East, Mumbai, Maharashtra - 400069",
+      "role_applied": "Data Analyst",
+      "quality_tier": "Poor",
+      "education": [
+        {
+          "degree": "B.Com – Commerce",
+          "institution": "Narsee Monjee College of Commerce, Mumbai",
+          "university": "University of Mumbai",
+          "cgpa": 6.0,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2022
+        }
+      ],
+      "highest_degree": "B.Com – Commerce",
+      "institution": "Narsee Monjee College of Commerce, Mumbai",
+      "cgpa": 6.0,
+      "experience": [
+        {
+          "company": "QuickBooks India (freelance, unofficial)",
+          "title": "Data Entry & Reporting Executive",
+          "location": "Mumbai, MH",
+          "type": "Full-Time",
+          "start_date": "Jun 2023",
+          "end_date": "Present",
+          "duration_months": 12,
+          "responsibilities": [
+            "Prepared Excel reports for the sales team every week.",
+            "Entered data from paper forms into Excel spreadsheets.",
+            "Made pie charts and bar charts in Excel for management meetings."
+          ]
+        }
+      ],
+      "years_experience": 1.0,
+      "companies": [
+        "QuickBooks India (freelance, unofficial)"
+      ],
+      "skills": {
+        "languages": [
+          "SQL (basic SELECT queries)",
+          "Python – None"
+        ],
+        "bi_tools": [
+          "Excel (intermediate: PivotTables, basic charts)",
+          "Google Sheets"
+        ],
+        "databases": [
+          "MySQL (basic)"
+        ],
+        "etl_tools": [],
+        "spreadsheets": [
+          "Excel PivotTables",
+          "VLOOKUP"
+        ],
+        "stats": [
+          "Basic Averages",
+          "Percentages"
+        ],
+        "tools": [
+          "MS Office",
+          "WhatsApp Business (reporting)"
+        ]
+      },
+      "skills_flat": [
+        "SQL (basic SELECT queries)",
+        "Python – None",
+        "Excel (intermediate: PivotTables, basic charts)",
+        "Google Sheets",
+        "MySQL (basic)",
+        "Excel PivotTables",
+        "VLOOKUP",
+        "Basic Averages",
+        "Percentages",
+        "MS Office",
+        "WhatsApp Business (reporting)"
+      ],
+      "skill_count": 11,
+      "projects": [],
+      "project_count": 0,
+      "certifications": [
+        {
+          "name": "Excel for Beginners",
+          "issuer": "LinkedIn Learning (free)",
+          "year": 2023
+        }
+      ],
+      "certification_names": [
+        "Excel for Beginners"
+      ],
+      "certification_count": 1,
+      "achievements": [
+        "Employee of the month (internal recognition at current company, April 2024)"
+      ],
+      "languages_known": [
+        "Hindi (Native)",
+        "Marathi (Conversational)",
+        "English (Basic)"
+      ],
+      "soft_skills": [
+        "Punctual",
+        "Hardworking",
+        "Reliable"
+      ],
+      "interests": [
+        "Bollywood Movies",
+        "Cricket",
+        "Travel"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.633899",
+      "source_file": "DA_004_Amit_Chandra.json"
+    },
+    {
+      "resume_id": "DA-005",
+      "name": "Riya Shah",
+      "email": "riya.shah.analytics@gmail.com",
+      "phone": "+919327889900",
+      "linkedin": "linkedin.com/in/riyashah-data",
+      "github": "github.com/riya-data",
+      "portfolio": null,
+      "address": "Science City Road, Sola, Ahmedabad, Gujarat - 380060",
+      "role_applied": "Data Analyst",
+      "quality_tier": "Average",
+      "education": [
+        {
+          "degree": "B.Tech – Information Technology",
+          "institution": "Nirma University, Ahmedabad",
+          "university": "Nirma University",
+          "cgpa": 7.6,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2022
+        }
+      ],
+      "highest_degree": "B.Tech – Information Technology",
+      "institution": "Nirma University, Ahmedabad",
+      "cgpa": 7.6,
+      "experience": [
+        {
+          "company": "LogiSense Analytics",
+          "title": "Data Analyst",
+          "location": "Ahmedabad, GJ",
+          "type": "Full-Time",
+          "start_date": "Aug 2022",
+          "end_date": "Present",
+          "duration_months": 22,
+          "responsibilities": [
+            "Developed 6 Tableau dashboards for 3 logistics clients tracking OTD (On-Time Delivery), fill rate, and warehouse utilization.",
+            "Wrote 40+ SQL queries in PostgreSQL for daily, weekly, and monthly KPI reports.",
+            "Analyzed 3 years of shipment data (800K rows) to identify dispatch delay root causes — recommendations implemented saving ₹12 Lakhs/month.",
+            "Automated daily report distribution using Python smtplib and Pandas report generation.",
+            "Conducted A/B test on packaging design impact on returns rate — 14% reduction confirmed."
+          ]
+        },
+        {
+          "company": "Infosys – BPO Analytics Unit",
+          "title": "Business Analyst Intern",
+          "location": "Ahmedabad, GJ",
+          "type": "Internship",
+          "start_date": "Jan 2022",
+          "end_date": "Jun 2022",
+          "duration_months": 6,
+          "responsibilities": [
+            "Created standardized Excel-based operational scorecards for a US utility client.",
+            "Performed data validation on SAP BI extracts against source databases.",
+            "Wrote BRDs for 2 reporting automation requests."
+          ]
+        }
+      ],
+      "years_experience": 2.1,
+      "companies": [
+        "LogiSense Analytics",
+        "Infosys – BPO Analytics Unit"
+      ],
+      "skills": {
+        "languages": [
+          "SQL (intermediate)",
+          "Python (Pandas, basic Seaborn, learning ML)",
+          "Excel (Advanced)"
+        ],
+        "bi_tools": [
+          "Tableau Desktop",
+          "Power BI (basic)",
+          "Google Data Studio"
+        ],
+        "databases": [
+          "PostgreSQL",
+          "MySQL",
+          "Google BigQuery (basic)"
+        ],
+        "etl_tools": [
+          "Excel Power Query",
+          "Python Pandas ETL"
+        ],
+        "stats": [
+          "Descriptive Stats",
+          "Correlation",
+          "Basic A/B Testing",
+          "Linear Regression (conceptual)"
+        ],
+        "tools": [
+          "Git (basic)",
+          "JIRA",
+          "Confluence",
+          "MS Office"
+        ]
+      },
+      "skills_flat": [
+        "SQL (intermediate)",
+        "Python (Pandas, basic Seaborn, learning ML)",
+        "Excel (Advanced)",
+        "Tableau Desktop",
+        "Power BI (basic)",
+        "Google Data Studio",
+        "PostgreSQL",
+        "MySQL",
+        "Google BigQuery (basic)",
+        "Excel Power Query",
+        "Python Pandas ETL",
+        "Descriptive Stats",
+        "Correlation",
+        "Basic A/B Testing",
+        "Linear Regression (conceptual)",
+        "Git (basic)",
+        "JIRA",
+        "Confluence",
+        "MS Office"
+      ],
+      "skill_count": 19,
+      "projects": [
+        {
+          "name": "Supply Chain KPI Dashboard",
+          "tech_stack": [
+            "PostgreSQL",
+            "Tableau",
+            "Python"
+          ],
+          "description": "Built a Tableau dashboard for logistics KPI monitoring — OTD, OTIF, pod-rate. Includes drill-down by region, carrier, and SKU. Published on Tableau Public.",
+          "github_link": "github.com/riya-data/supply-chain-kpi"
+        }
+      ],
+      "project_count": 1,
+      "certifications": [
+        {
+          "name": "Tableau Desktop Specialist",
+          "issuer": "Tableau / Salesforce",
+          "year": 2023
+        },
+        {
+          "name": "SQL for Data Science",
+          "issuer": "Coursera / UC Davis",
+          "year": 2022
+        }
+      ],
+      "certification_names": [
+        "Tableau Desktop Specialist",
+        "SQL for Data Science"
+      ],
+      "certification_count": 2,
+      "achievements": [
+        "LogiSense Analyst of the Year 2023",
+        "Nirma University Merit Scholarship – 4th Semester (CGPA 8.2)"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Gujarati (Native)",
+        "Hindi (Native)"
+      ],
+      "soft_skills": [
+        "Process Documentation",
+        "Client Communication",
+        "Deadline Management",
+        "Cross-Functional Collaboration"
+      ],
+      "interests": [
+        "Supply Chain Analytics",
+        "Reading Business Books",
+        "Hiking"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.634144",
+      "source_file": "DA_005_Riya_Shah.json"
+    },
+    {
+      "resume_id": "DA-006",
+      "name": "Pranav Nambiar",
+      "email": "pranavnambiar.work@gmail.com",
+      "phone": "+919496001234",
+      "linkedin": "linkedin.com/in/pranavnambiar",
+      "github": null,
+      "portfolio": null,
+      "address": "Edappally, Kochi, Kerala - 682024",
+      "role_applied": "Data Analyst",
+      "quality_tier": "Poor",
+      "education": [
+        {
+          "degree": "BCA – Bachelor of Computer Applications",
+          "institution": "St. Albert's College, Ernakulam",
+          "university": "Mahatma Gandhi University, Kottayam",
+          "cgpa": 6.4,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2022
+        }
+      ],
+      "highest_degree": "BCA – Bachelor of Computer Applications",
+      "institution": "St. Albert's College, Ernakulam",
+      "cgpa": 6.4,
+      "experience": [
+        {
+          "company": "Muthoot Finance Ltd.",
+          "title": "Data Entry Operator",
+          "location": "Kochi, KL",
+          "type": "Full-Time",
+          "start_date": "Nov 2022",
+          "end_date": "Present",
+          "duration_months": 19,
+          "responsibilities": [
+            "Entered loan application data into internal system.",
+            "Prepared daily Excel reports for branch manager.",
+            "Maintained physical and digital records of customer files."
+          ]
+        }
+      ],
+      "years_experience": 1.6,
+      "companies": [
+        "Muthoot Finance Ltd."
+      ],
+      "skills": {
+        "languages": [
+          "Excel (intermediate)",
+          "SQL (SELECT basics only)"
+        ],
+        "bi_tools": [
+          "Excel Charts (basic)"
+        ],
+        "databases": [
+          "MS Access (basic)"
+        ],
+        "etl_tools": [],
+        "stats": [],
+        "tools": [
+          "MS Office",
+          "Google Sheets"
+        ]
+      },
+      "skills_flat": [
+        "Excel (intermediate)",
+        "SQL (SELECT basics only)",
+        "Excel Charts (basic)",
+        "MS Access (basic)",
+        "MS Office",
+        "Google Sheets"
+      ],
+      "skill_count": 6,
+      "projects": [
+        {
+          "name": "Branch Sales Tracker (Excel)",
+          "tech_stack": [
+            "Excel"
+          ],
+          "description": "Made an Excel file to track daily loan disbursements and target vs. actual for the branch. Used PivotTables and basic charts.",
+          "github_link": null
+        }
+      ],
+      "project_count": 1,
+      "certifications": [],
+      "certification_names": [],
+      "certification_count": 0,
+      "achievements": [],
+      "languages_known": [
+        "Malayalam (Native)",
+        "English (Conversational)",
+        "Hindi (Basic)"
+      ],
+      "soft_skills": [
+        "Reliable",
+        "Punctual",
+        "Team Player"
+      ],
+      "interests": [
+        "Football",
+        "Movies",
+        "Gaming"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.634425",
+      "source_file": "DA_006_Pranav_Nambiar.json"
+    },
+    {
+      "resume_id": "PM-001",
+      "name": "Aditya Malhotra",
+      "email": "aditya.malhotra.pm@gmail.com",
+      "phone": "+919810234567",
+      "linkedin": "linkedin.com/in/adityamalhotra-pm",
+      "github": null,
+      "portfolio": null,
+      "address": "B-104, Koregaon Park, Pune, Maharashtra - 411001",
+      "role_applied": "Product Manager",
+      "quality_tier": "Excellent",
+      "education": [
+        {
+          "degree": "MBA – Strategy & Technology Management",
+          "institution": "Indian School of Business (ISB), Hyderabad",
+          "university": "ISB (AACSB Accredited)",
+          "cgpa": 3.7,
+          "cgpa_scale": 4.0,
+          "year_of_passing": 2020
+        },
+        {
+          "degree": "B.Tech – Mechanical Engineering",
+          "institution": "NIT Trichy",
+          "university": "National Institute of Technology, Tiruchirappalli",
+          "cgpa": 8.2,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2018
+        }
+      ],
+      "highest_degree": "MBA – Strategy & Technology Management",
+      "institution": "Indian School of Business (ISB), Hyderabad",
+      "cgpa": 3.7,
+      "experience": [
+        {
+          "company": "Darwinbox Digital Solutions",
+          "title": "Product Manager – Core HR & Payroll",
+          "location": "Pune, MH",
+          "type": "Full-Time",
+          "start_date": "Jan 2022",
+          "end_date": "Present",
+          "duration_months": 29,
+          "responsibilities": [
+            "Owned the Core HR + Payroll vertical for Darwinbox (serving 700+ enterprise clients, 2M+ employees). Managed backlog of 180+ items.",
+            "Led the 0-to-1 launch of Payroll Analytics module — reduced payroll processing time by 40% for enterprise clients; attributed to ₹3.2 Crore ARR uplift in first year.",
+            "Drove discovery for compliance automation across 22 Indian states — wrote 14 PRDs and coordinated across engineering (8 devs), legal, and design.",
+            "Managed quarterly OKR planning and monthly roadmap reviews with CPO and CEO.",
+            "Ran 40+ user interviews per quarter across CHROs, payroll managers, and employees.",
+            "Launched bulk import feature reducing HR data migration TAT from 2 weeks to 2 days."
+          ]
+        },
+        {
+          "company": "Razorpay",
+          "title": "Associate Product Manager",
+          "location": "Bengaluru, KA",
+          "type": "Full-Time",
+          "start_date": "Jul 2020",
+          "end_date": "Dec 2021",
+          "duration_months": 18,
+          "responsibilities": [
+            "Supported PM for Razorpay Dashboard — owned 4 features in the analytics and settlement modules.",
+            "Shipped International Payments onboarding flow — reduced activation time from 7 days to 22 hours; NPS improved from 32 to 47.",
+            "Conducted competitive analysis against Stripe, PayU, and CCAvenue; presented findings to VP Product.",
+            "Used Mixpanel and SQL for funnel analytics; identified and fixed 3 critical user drop-off points."
+          ]
+        }
+      ],
+      "years_experience": 3.9,
+      "companies": [
+        "Darwinbox Digital Solutions",
+        "Razorpay"
+      ],
+      "skills": {
+        "core_pm": [
+          "Product Roadmapping",
+          "PRD Writing",
+          "User Story Mapping",
+          "OKR Planning",
+          "Competitive Analysis"
+        ],
+        "research": [
+          "User Interviews",
+          "Jobs-to-be-Done",
+          "Usability Testing",
+          "Surveys (Typeform, SurveyMonkey)",
+          "JTBD Framework"
+        ],
+        "analytics": [
+          "Mixpanel",
+          "Amplitude",
+          "SQL (intermediate)",
+          "Google Analytics 4",
+          "Looker"
+        ],
+        "tools": [
+          "JIRA",
+          "Confluence",
+          "Notion",
+          "Miro",
+          "Figma (review mode)",
+          "ProductBoard",
+          "Coda"
+        ],
+        "frameworks": [
+          "RICE Prioritization",
+          "MoSCoW",
+          "HEART Framework",
+          "AARRR Metrics",
+          "Kano Model"
+        ]
+      },
+      "skills_flat": [
+        "Product Roadmapping",
+        "PRD Writing",
+        "User Story Mapping",
+        "OKR Planning",
+        "Competitive Analysis",
+        "User Interviews",
+        "Jobs-to-be-Done",
+        "Usability Testing",
+        "Surveys (Typeform, SurveyMonkey)",
+        "JTBD Framework",
+        "Mixpanel",
+        "Amplitude",
+        "SQL (intermediate)",
+        "Google Analytics 4",
+        "Looker",
+        "JIRA",
+        "Confluence",
+        "Notion",
+        "Miro",
+        "Figma (review mode)",
+        "ProductBoard",
+        "Coda",
+        "RICE Prioritization",
+        "MoSCoW",
+        "HEART Framework",
+        "AARRR Metrics",
+        "Kano Model"
+      ],
+      "skill_count": 27,
+      "projects": [
+        {
+          "name": "Payroll Analytics Module – Darwinbox",
+          "description": "0-to-1 product launch: A self-serve analytics module giving payroll managers real-time visibility into salary cost distribution, compliance risks, and processing status. Now used by 300+ enterprise clients.",
+          "impact": "₹3.2 Crore ARR uplift | 40% reduction in payroll processing time | NPS improvement: 31 → 54"
+        },
+        {
+          "name": "HR Compliance Automation Engine",
+          "description": "Led discovery and scoping for an automated statutory compliance engine covering PF, ESI, PT, and labour law across 22 Indian states. Currently in beta with 50 clients.",
+          "impact": "Reduced compliance error rate from 4.8% to 0.6% in beta"
+        }
+      ],
+      "project_count": 2,
+      "certifications": [
+        {
+          "name": "AIPMM Certified Product Manager (CPM)",
+          "issuer": "AIPMM",
+          "year": 2022
+        },
+        {
+          "name": "Reforge – Product Strategy",
+          "issuer": "Reforge",
+          "year": 2023
+        },
+        {
+          "name": "SQL for Product Managers",
+          "issuer": "Mode Analytics / LinkedIn Learning",
+          "year": 2021
+        }
+      ],
+      "certification_names": [
+        "AIPMM Certified Product Manager (CPM)",
+        "Reforge – Product Strategy",
+        "SQL for Product Managers"
+      ],
+      "certification_count": 3,
+      "achievements": [
+        "ISB Dean's List — Top 15% of cohort",
+        "Darwinbox Product Excellence Award 2023 – Payroll Analytics",
+        "Selected for Reforge Retention + Engagement cohort (acceptance rate 8%)",
+        "Speaker: Nasscom Product Conclave 2023 — 'Compliance as a Product: Lessons from HR-tech'"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Hindi (Native)",
+        "Punjabi (Conversational)"
+      ],
+      "soft_skills": [
+        "Stakeholder Influence",
+        "Executive Communication",
+        "Decision Velocity",
+        "Prioritization Under Ambiguity",
+        "Empathy-Driven Discovery"
+      ],
+      "interests": [
+        "HR Tech Research",
+        "SaaS Metrics Benchmarking",
+        "Marathon Running (42.2km – PB 3h 54m)",
+        "Chess"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.634787",
+      "source_file": "PM_001_Aditya_Malhotra.json"
+    },
+    {
+      "resume_id": "PM-002",
+      "name": "Neha Verma",
+      "email": "neha.verma.product@gmail.com",
+      "phone": "+919205566778",
+      "linkedin": "linkedin.com/in/nehaverma-pm",
+      "github": null,
+      "portfolio": null,
+      "address": "Viman Nagar, Pune, Maharashtra - 411014",
+      "role_applied": "Product Manager",
+      "quality_tier": "Average",
+      "education": [
+        {
+          "degree": "MBA – Marketing & Operations",
+          "institution": "Symbiosis Institute of Business Management (SIBM), Pune",
+          "university": "Symbiosis International University",
+          "cgpa": 7.8,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2021
+        },
+        {
+          "degree": "B.E. – Computer Engineering",
+          "institution": "Pune Institute of Computer Technology (PICT)",
+          "university": "Savitribai Phule Pune University",
+          "cgpa": 7.4,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2019
+        }
+      ],
+      "highest_degree": "MBA – Marketing & Operations",
+      "institution": "Symbiosis Institute of Business Management (SIBM), Pune",
+      "cgpa": 7.8,
+      "experience": [
+        {
+          "company": "Shopalyst Technologies",
+          "title": "Product Manager",
+          "location": "Pune, MH",
+          "type": "Full-Time",
+          "start_date": "Jul 2021",
+          "end_date": "Present",
+          "duration_months": 35,
+          "responsibilities": [
+            "Managed roadmap for Shopalyst's Ad Placement Optimization product used by 50+ FMCG brands.",
+            "Led delivery of 4 quarterly feature launches, coordinating engineering (6 devs), data science, and design teams.",
+            "Conducted user interviews with brand managers and agency media planners (6–8 per quarter).",
+            "Created PRDs and user stories for 3 major feature areas; reduced average sprint rework to 12%.",
+            "Tracked product KPIs (CTR, ROAS, feature adoption) using internal BI dashboard and Amplitude.",
+            "Managed backlog of 95 items; facilitated bi-weekly backlog grooming sessions."
+          ]
+        },
+        {
+          "company": "Infosys BPM – Digital Commerce",
+          "title": "Business Analyst",
+          "location": "Pune, MH",
+          "type": "Full-Time",
+          "start_date": "Aug 2019",
+          "end_date": "Jun 2021",
+          "duration_months": 22,
+          "responsibilities": [
+            "Gathered and documented requirements for a UK retail client's e-commerce re-platforming project.",
+            "Created 40+ user stories and facilitated UAT sessions.",
+            "Acted as liaison between offshore development team and onshore client stakeholders."
+          ]
+        }
+      ],
+      "years_experience": 4.8,
+      "companies": [
+        "Shopalyst Technologies",
+        "Infosys BPM – Digital Commerce"
+      ],
+      "skills": {
+        "core_pm": [
+          "Product Roadmapping",
+          "PRD Writing",
+          "User Story Writing",
+          "Backlog Management",
+          "Sprint Planning"
+        ],
+        "research": [
+          "User Interviews",
+          "Competitive Benchmarking",
+          "Surveys",
+          "Persona Development"
+        ],
+        "analytics": [
+          "Amplitude",
+          "Google Analytics",
+          "Excel Analytics",
+          "SQL (basic)"
+        ],
+        "tools": [
+          "JIRA",
+          "Confluence",
+          "Notion",
+          "Miro",
+          "Figma (reviewing specs)"
+        ],
+        "frameworks": [
+          "RICE",
+          "MoSCoW",
+          "Scrum",
+          "OKRs (basic)"
+        ]
+      },
+      "skills_flat": [
+        "Product Roadmapping",
+        "PRD Writing",
+        "User Story Writing",
+        "Backlog Management",
+        "Sprint Planning",
+        "User Interviews",
+        "Competitive Benchmarking",
+        "Surveys",
+        "Persona Development",
+        "Amplitude",
+        "Google Analytics",
+        "Excel Analytics",
+        "SQL (basic)",
+        "JIRA",
+        "Confluence",
+        "Notion",
+        "Miro",
+        "Figma (reviewing specs)",
+        "RICE",
+        "MoSCoW",
+        "Scrum",
+        "OKRs (basic)"
+      ],
+      "skill_count": 22,
+      "projects": [
+        {
+          "name": "Ad Placement Optimization – Self-Serve Module",
+          "description": "Led PRD + delivery of self-serve campaign setup for FMCG brands — reducing onboarding TAT from 5 days to same-day. Feature adopted by 28 brand clients within 60 days.",
+          "impact": "28/50 brands adopted; ₹1.1 Crore in new contract renewals attributed"
+        }
+      ],
+      "project_count": 1,
+      "certifications": [
+        {
+          "name": "Certified Scrum Product Owner (CSPO)",
+          "issuer": "Scrum Alliance",
+          "year": 2022
+        },
+        {
+          "name": "Digital Product Management",
+          "issuer": "University of Virginia (Coursera)",
+          "year": 2021
+        }
+      ],
+      "certification_names": [
+        "Certified Scrum Product Owner (CSPO)",
+        "Digital Product Management"
+      ],
+      "certification_count": 2,
+      "achievements": [
+        "SIBM Academic Topper – Consumer Behaviour (2021)",
+        "Shopalyst All-Hands Innovation Pitch – Runner-up (built AI campaign recommendation MVP)"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Hindi (Native)",
+        "Marathi (Conversational)"
+      ],
+      "soft_skills": [
+        "Stakeholder Communication",
+        "Documentation Quality",
+        "Structured Thinking",
+        "Facilitation",
+        "Empathy"
+      ],
+      "interests": [
+        "Product Design Blogs (Substack)",
+        "Yoga",
+        "Startup Podcasts"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.635103",
+      "source_file": "PM_002_Neha_Verma.json"
+    },
+    {
+      "resume_id": "PM-003",
+      "name": "Saurabh Tiwari",
+      "email": "saurabh.tiwari.gpm@gmail.com",
+      "phone": "+919654321098",
+      "linkedin": "linkedin.com/in/saurabhtiwari-product",
+      "github": null,
+      "portfolio": null,
+      "address": "Wakad, Pune, Maharashtra - 411057",
+      "role_applied": "Product Manager",
+      "quality_tier": "Excellent",
+      "education": [
+        {
+          "degree": "MBA – Marketing & Strategy",
+          "institution": "Indian Institute of Management (IIM) Calcutta",
+          "university": "IIM Calcutta (Triple Crown Accredited: AACSB, EQUIS, AMBA)",
+          "cgpa": 3.8,
+          "cgpa_scale": 4.0,
+          "year_of_passing": 2019
+        },
+        {
+          "degree": "B.Tech – Computer Science",
+          "institution": "Indian Institute of Technology (IIT) BHU, Varanasi",
+          "university": "IIT (BHU) Varanasi",
+          "cgpa": 8.5,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2017
+        }
+      ],
+      "highest_degree": "MBA – Marketing & Strategy",
+      "institution": "Indian Institute of Management (IIM) Calcutta",
+      "cgpa": 3.8,
+      "experience": [
+        {
+          "company": "Leegality (e-Signature SaaS)",
+          "title": "Senior Product Manager",
+          "location": "Pune (Remote-First)",
+          "type": "Full-Time",
+          "start_date": "Mar 2022",
+          "end_date": "Present",
+          "duration_months": 27,
+          "responsibilities": [
+            "Owned product strategy and execution for Leegality's Document Intelligence product — grew ARR from ₹8 Crore to ₹21 Crore in 18 months.",
+            "Led 0-to-1 launch of AI-powered document classification feature using GPT-4 API — reduced document setup time by 65%; 90% client adoption within 45 days.",
+            "Built and managed a PLG onboarding flow reducing Time-to-Value (TTV) from 12 days to 48 hours for SME segment.",
+            "Managed OKRs for product squad of 11 (4 engineers, 2 designers, 1 data scientist, 1 QA, 3 CS).",
+            "Represented product in 12 enterprise sales cycles — closed ₹4.5 Crore in deals through product demos.",
+            "Defined pricing architecture for 3 product tiers; collaborated with CFO on unit economics modeling."
+          ]
+        },
+        {
+          "company": "Capillary Technologies",
+          "title": "Product Manager",
+          "location": "Bengaluru / Pune",
+          "type": "Full-Time",
+          "start_date": "Jul 2019",
+          "end_date": "Feb 2022",
+          "duration_months": 31,
+          "responsibilities": [
+            "Managed loyalty and campaign management modules serving 200+ retail brands across 30 countries.",
+            "Shipped 2 major platform re-architectures: microservices migration of loyalty engine (0% downtime) and new campaign builder.",
+            "Reduced churn from 18% to 9% by redesigning onboarding experience based on 80 customer interviews.",
+            "Owned integrations roadmap — built 15+ third-party integrations (Shopify, WooCommerce, Salesforce, Klaviyo)."
+          ]
+        }
+      ],
+      "years_experience": 4.8,
+      "companies": [
+        "Leegality (e-Signature SaaS)",
+        "Capillary Technologies"
+      ],
+      "skills": {
+        "core_pm": [
+          "OKR Strategy",
+          "PLG Frameworks",
+          "PRD Writing",
+          "Pricing Strategy",
+          "0-to-1 Product Development"
+        ],
+        "research": [
+          "Continuous Discovery (Teresa Torres)",
+          "JTBD",
+          "CLV Analysis",
+          "Cohort Analysis",
+          "Win/Loss Analysis"
+        ],
+        "analytics": [
+          "Amplitude",
+          "Mixpanel",
+          "Heap",
+          "SQL (intermediate-advanced)",
+          "Looker",
+          "PostHog"
+        ],
+        "ai_ml": [
+          "Prompt Engineering (GPT-4, Claude)",
+          "AI Feature Scoping",
+          "Model Evaluation Frameworks"
+        ],
+        "tools": [
+          "JIRA",
+          "Productboard",
+          "Notion",
+          "Coda",
+          "Miro",
+          "Linear",
+          "Figma"
+        ],
+        "frameworks": [
+          "RICE",
+          "ICE",
+          "HEART",
+          "CIRCLES",
+          "ProductBoard Scoring",
+          "Wardley Maps"
+        ]
+      },
+      "skills_flat": [
+        "OKR Strategy",
+        "PLG Frameworks",
+        "PRD Writing",
+        "Pricing Strategy",
+        "0-to-1 Product Development",
+        "Continuous Discovery (Teresa Torres)",
+        "JTBD",
+        "CLV Analysis",
+        "Cohort Analysis",
+        "Win/Loss Analysis",
+        "Amplitude",
+        "Mixpanel",
+        "Heap",
+        "SQL (intermediate-advanced)",
+        "Looker",
+        "PostHog",
+        "Prompt Engineering (GPT-4, Claude)",
+        "AI Feature Scoping",
+        "Model Evaluation Frameworks",
+        "JIRA",
+        "Productboard",
+        "Notion",
+        "Coda",
+        "Miro",
+        "Linear",
+        "Figma",
+        "RICE",
+        "ICE",
+        "HEART",
+        "CIRCLES",
+        "ProductBoard Scoring",
+        "Wardley Maps"
+      ],
+      "skill_count": 32,
+      "projects": [
+        {
+          "name": "AI Document Intelligence – Leegality",
+          "description": "0-to-1 AI feature using GPT-4 to auto-classify, extract, and validate legal documents. Reduced document setup from 45 min to 8 min. 90% client adoption in 45 days.",
+          "impact": "₹2.8 Crore ARR attributable | 65% setup time reduction | NPS: 28 → 61"
+        },
+        {
+          "name": "PLG Onboarding Redesign",
+          "description": "Redesigned Leegality's SME onboarding with in-app walkthroughs, empty-state guidance, and milestone celebrations. TTV reduced from 12 days to 48 hours.",
+          "impact": "Month-1 retention improved from 42% to 71% | Activation rate: 38% → 67%"
+        }
+      ],
+      "project_count": 2,
+      "certifications": [
+        {
+          "name": "Reforge – Product-Led Growth",
+          "issuer": "Reforge",
+          "year": 2022
+        },
+        {
+          "name": "Reforge – Product Strategy",
+          "issuer": "Reforge",
+          "year": 2023
+        },
+        {
+          "name": "AIPMM Certified Product Manager",
+          "issuer": "AIPMM",
+          "year": 2021
+        }
+      ],
+      "certification_names": [
+        "Reforge – Product-Led Growth",
+        "Reforge – Product Strategy",
+        "AIPMM Certified Product Manager"
+      ],
+      "certification_count": 3,
+      "achievements": [
+        "IIM Calcutta – Gold Medal, Marketing (Batch 2019)",
+        "Leegality Top Performer 2023 — Only PM in company history to achieve 2x ARR in single year",
+        "Speaker: SaaStr India 2023 – 'AI Features Done Right: Lessons from B2B SaaS'",
+        "Forbes India '30 Under 35 in Tech' — Shortlisted (2023)"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Hindi (Native)",
+        "Bhojpuri (Conversational)"
+      ],
+      "soft_skills": [
+        "Strategic Clarity",
+        "Sales Partnership",
+        "C-suite Presence",
+        "PLG Mindset",
+        "Empathy at Scale"
+      ],
+      "interests": [
+        "SaaS Metrics Research",
+        "Angel Investing (2 investments)",
+        "Ironman Training",
+        "Teaching PM at Upgrad"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.635477",
+      "source_file": "PM_003_Saurabh_Tiwari.json"
+    },
+    {
+      "resume_id": "PM-004",
+      "name": "Divya Krishnan",
+      "email": "divya.krishnan.pm@gmail.com",
+      "phone": "+919994455667",
+      "linkedin": "linkedin.com/in/divyakrishnan-product",
+      "github": null,
+      "portfolio": null,
+      "address": "OMR Sholinganallur, Chennai, Tamil Nadu - 600119",
+      "role_applied": "Product Manager",
+      "quality_tier": "Average",
+      "education": [
+        {
+          "degree": "MBA – Marketing",
+          "institution": "Great Lakes Institute of Management, Chennai",
+          "university": "Great Lakes Institute of Management (Autonomous)",
+          "cgpa": 7.5,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2021
+        },
+        {
+          "degree": "B.Sc. – Psychology (Honours)",
+          "institution": "Ethiraj College for Women, Chennai",
+          "university": "University of Madras",
+          "cgpa": 8.3,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2019
+        }
+      ],
+      "highest_degree": "MBA – Marketing",
+      "institution": "Great Lakes Institute of Management, Chennai",
+      "cgpa": 7.5,
+      "experience": [
+        {
+          "company": "Byju's (Think & Learn Pvt. Ltd.)",
+          "title": "Product Manager – Live Tutoring",
+          "location": "Chennai, TN",
+          "type": "Full-Time",
+          "start_date": "Sep 2021",
+          "end_date": "Nov 2023",
+          "duration_months": 26,
+          "responsibilities": [
+            "Owned the Live Tutoring scheduling and session quality product for Byju's NEET/JEE segment (350K+ students).",
+            "Launched session quality score feature — reduced complaint rate from 8.2% to 3.1% within 3 months.",
+            "Led A/B test on tutor-student matching algorithm — version B improved session satisfaction by 14%.",
+            "Conducted monthly research rounds with 10–15 students and parents to map pain points.",
+            "Worked with data team to build Amplitude dashboards tracking session completion, repeat booking, and NPS.",
+            "Wrote 8 PRDs and managed sprint delivery with 5-dev team."
+          ]
+        },
+        {
+          "company": "Unacademy",
+          "title": "Associate Product Manager",
+          "location": "Chennai (Remote)",
+          "type": "Full-Time",
+          "start_date": "Jun 2021",
+          "end_date": "Aug 2021",
+          "duration_months": 3,
+          "responsibilities": [
+            "Short-term role during platform expansion — worked on content discovery improvements.",
+            "Ran user surveys across 2,000 learners for search feature optimization.",
+            "Left voluntarily to join Byju's for broader PM scope."
+          ]
+        }
+      ],
+      "years_experience": 2.4,
+      "companies": [
+        "Byju's (Think & Learn Pvt. Ltd.)",
+        "Unacademy"
+      ],
+      "skills": {
+        "core_pm": [
+          "PRD Writing",
+          "User Story Mapping",
+          "Backlog Management",
+          "A/B Test Design",
+          "Feature Prioritization"
+        ],
+        "research": [
+          "User Interviews",
+          "Survey Design",
+          "Persona Mapping",
+          "Empathy Mapping",
+          "Usability Heuristics"
+        ],
+        "analytics": [
+          "Amplitude",
+          "Google Analytics",
+          "SQL (basic — learning)",
+          "Tableau (basic reading)"
+        ],
+        "tools": [
+          "JIRA",
+          "Confluence",
+          "Miro",
+          "Figma (review)",
+          "Notion",
+          "Typeform"
+        ],
+        "frameworks": [
+          "MoSCoW",
+          "OKRs (basic)",
+          "Kano Model",
+          "Jobs-to-be-Done"
+        ]
+      },
+      "skills_flat": [
+        "PRD Writing",
+        "User Story Mapping",
+        "Backlog Management",
+        "A/B Test Design",
+        "Feature Prioritization",
+        "User Interviews",
+        "Survey Design",
+        "Persona Mapping",
+        "Empathy Mapping",
+        "Usability Heuristics",
+        "Amplitude",
+        "Google Analytics",
+        "SQL (basic — learning)",
+        "Tableau (basic reading)",
+        "JIRA",
+        "Confluence",
+        "Miro",
+        "Figma (review)",
+        "Notion",
+        "Typeform",
+        "MoSCoW",
+        "OKRs (basic)",
+        "Kano Model",
+        "Jobs-to-be-Done"
+      ],
+      "skill_count": 24,
+      "projects": [
+        {
+          "name": "Session Quality Score System",
+          "description": "Designed and launched a composite session quality scoring system capturing audio quality, camera issues, engagement signals, and student ratings. Became the input for automated tutor coaching recommendations.",
+          "impact": "Complaint rate: 8.2% → 3.1% | Tutor retraining efficiency +60%"
+        }
+      ],
+      "project_count": 1,
+      "certifications": [
+        {
+          "name": "ProductSpace PM Launchpad (Cohort 12)",
+          "issuer": "ProductSpace",
+          "year": 2021
+        },
+        {
+          "name": "Product Analytics Certification",
+          "issuer": "Amplitude Academy",
+          "year": 2022
+        }
+      ],
+      "certification_names": [
+        "ProductSpace PM Launchpad (Cohort 12)",
+        "Product Analytics Certification"
+      ],
+      "certification_count": 2,
+      "achievements": [
+        "Byju's Product Excellence Award – Q1 2023 (Session Quality feature)",
+        "Great Lakes Valedictorian – Consumer Psychology elective (2021)"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Tamil (Native)",
+        "Hindi (Conversational)"
+      ],
+      "soft_skills": [
+        "User Empathy",
+        "Clear Documentation",
+        "Structured Thinking",
+        "Conflict Resolution",
+        "Presentation"
+      ],
+      "interests": [
+        "Behavioral Economics",
+        "EdTech Research",
+        "Carnatic Music",
+        "Volunteering (digital literacy NGO)"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.635899",
+      "source_file": "PM_004_Divya_Krishnan.json"
+    },
+    {
+      "resume_id": "PM-005",
+      "name": "Manish Aggarwal",
+      "email": "manishaggarwal.pm1990@gmail.com",
+      "phone": "+919810555321",
+      "linkedin": "linkedin.com/in/manishaggarwal-pm",
+      "github": null,
+      "portfolio": null,
+      "address": "Janakpuri, New Delhi - 110058",
+      "role_applied": "Product Manager",
+      "quality_tier": "Poor",
+      "education": [
+        {
+          "degree": "MBA – General Management",
+          "institution": "Amity Business School, Noida",
+          "university": "Amity University",
+          "cgpa": 6.9,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2020
+        },
+        {
+          "degree": "B.Com – Commerce",
+          "institution": "Delhi College of Arts and Commerce",
+          "university": "University of Delhi",
+          "cgpa": 6.2,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2018
+        }
+      ],
+      "highest_degree": "MBA – General Management",
+      "institution": "Amity Business School, Noida",
+      "cgpa": 6.9,
+      "experience": [
+        {
+          "company": "Vedantu Innovations",
+          "title": "Product Manager",
+          "location": "Noida, UP",
+          "type": "Full-Time",
+          "start_date": "Jan 2021",
+          "end_date": "Apr 2023",
+          "duration_months": 27,
+          "responsibilities": [
+            "Managed product features for the online learning platform.",
+            "Worked with tech team to deliver features every quarter.",
+            "Created user stories and PRDs.",
+            "Attended daily standups and stakeholder meetings.",
+            "Did competitive research on competitor platforms."
+          ]
+        },
+        {
+          "company": "Freelance Consulting",
+          "title": "Product Consultant",
+          "location": "Remote",
+          "type": "Freelance",
+          "start_date": "May 2023",
+          "end_date": "Present",
+          "duration_months": 13,
+          "responsibilities": [
+            "Consulted for 2 small startups on product strategy.",
+            "Helped write PRDs and roadmaps."
+          ]
+        }
+      ],
+      "years_experience": 2.8,
+      "companies": [
+        "Vedantu Innovations",
+        "Freelance Consulting"
+      ],
+      "skills": {
+        "core_pm": [
+          "PRD Writing (basic)",
+          "Roadmapping",
+          "Sprint Planning"
+        ],
+        "research": [
+          "User Surveys",
+          "Competitive Research"
+        ],
+        "analytics": [
+          "Google Analytics (basic)",
+          "Excel"
+        ],
+        "tools": [
+          "JIRA",
+          "Trello",
+          "Confluence (basic)",
+          "PowerPoint"
+        ],
+        "frameworks": [
+          "MoSCoW (basic)",
+          "Scrum"
+        ]
+      },
+      "skills_flat": [
+        "PRD Writing (basic)",
+        "Roadmapping",
+        "Sprint Planning",
+        "User Surveys",
+        "Competitive Research",
+        "Google Analytics (basic)",
+        "Excel",
+        "JIRA",
+        "Trello",
+        "Confluence (basic)",
+        "PowerPoint",
+        "MoSCoW (basic)",
+        "Scrum"
+      ],
+      "skill_count": 13,
+      "projects": [],
+      "project_count": 0,
+      "certifications": [
+        {
+          "name": "Product Management Fundamentals",
+          "issuer": "LinkedIn Learning",
+          "year": 2021
+        }
+      ],
+      "certification_names": [
+        "Product Management Fundamentals"
+      ],
+      "certification_count": 1,
+      "achievements": [
+        "Team player at Vedantu – recognized in town hall"
+      ],
+      "languages_known": [
+        "Hindi (Native)",
+        "English (Conversational)"
+      ],
+      "soft_skills": [
+        "Communication",
+        "Team Management",
+        "Adaptability"
+      ],
+      "interests": [
+        "Cricket",
+        "Bollywood",
+        "Travel"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.636423",
+      "source_file": "PM_005_Manish_Aggarwal.json"
+    },
+    {
+      "resume_id": "PM-006",
+      "name": "Pooja Reddy",
+      "email": "poojareddy.pm2024@gmail.com",
+      "phone": "+919908123456",
+      "linkedin": "linkedin.com/in/poojareddy-product",
+      "github": null,
+      "portfolio": null,
+      "address": "Jubilee Hills, Hyderabad, Telangana - 500033",
+      "role_applied": "Product Manager",
+      "quality_tier": "Poor",
+      "education": [
+        {
+          "degree": "MBA – FMCG & Retail Management",
+          "institution": "ICFAI Business School (IBS), Hyderabad",
+          "university": "ICFAI University",
+          "cgpa": 7.1,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2020
+        },
+        {
+          "degree": "B.Sc. – Biotechnology",
+          "institution": "Osmania University, Hyderabad",
+          "university": "Osmania University",
+          "cgpa": 6.8,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2018
+        }
+      ],
+      "highest_degree": "MBA – FMCG & Retail Management",
+      "institution": "ICFAI Business School (IBS), Hyderabad",
+      "cgpa": 7.1,
+      "experience": [
+        {
+          "company": "Hindustan Unilever Limited",
+          "title": "Area Sales Manager",
+          "location": "Hyderabad, TS",
+          "type": "Full-Time",
+          "start_date": "Jul 2020",
+          "end_date": "Present",
+          "duration_months": 48,
+          "responsibilities": [
+            "Managed sales for 220+ retail outlets across 4 districts in Telangana.",
+            "Tracked monthly sales targets and distributor performance.",
+            "Conducted quarterly market visits and collected customer feedback.",
+            "Coordinated with marketing team for promotional campaigns.",
+            "Prepared monthly sales analysis reports for regional head."
+          ]
+        }
+      ],
+      "years_experience": 4.0,
+      "companies": [
+        "Hindustan Unilever Limited"
+      ],
+      "skills": {
+        "core_pm": [
+          "Market Research",
+          "Customer Feedback Collection"
+        ],
+        "research": [
+          "Sales Surveys",
+          "Retail Audits"
+        ],
+        "analytics": [
+          "Excel (basic charts)"
+        ],
+        "tools": [
+          "Excel",
+          "PowerPoint",
+          "WhatsApp Business"
+        ],
+        "frameworks": []
+      },
+      "skills_flat": [
+        "Market Research",
+        "Customer Feedback Collection",
+        "Sales Surveys",
+        "Retail Audits",
+        "Excel (basic charts)",
+        "Excel",
+        "PowerPoint",
+        "WhatsApp Business"
+      ],
+      "skill_count": 8,
+      "projects": [],
+      "project_count": 0,
+      "certifications": [
+        {
+          "name": "Introduction to Product Management",
+          "issuer": "Coursera (1-week course)",
+          "year": 2024
+        }
+      ],
+      "certification_names": [
+        "Introduction to Product Management"
+      ],
+      "certification_count": 1,
+      "achievements": [
+        "HUL Circle Achievement Award – Telangana North Region 2022",
+        "Exceeded sales targets by 8% for FY 2022-23"
+      ],
+      "languages_known": [
+        "Telugu (Native)",
+        "Hindi (Conversational)",
+        "English (Conversational)"
+      ],
+      "soft_skills": [
+        "Sales Mindset",
+        "Relationship Building",
+        "Field Operations"
+      ],
+      "interests": [
+        "FMCG Industry",
+        "Cooking",
+        "Badminton"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.636672",
+      "source_file": "PM_006_Pooja_Reddy.json"
+    },
+    {
+      "resume_id": "SE-001",
+      "name": "Aarav Mehta",
+      "email": "aarav.mehta97@gmail.com",
+      "phone": "+919845123670",
+      "linkedin": "linkedin.com/in/aaravmehta",
+      "github": "github.com/aarav-mehta",
+      "portfolio": null,
+      "address": "Flat 4B, Koramangala 5th Block, Bengaluru, Karnataka - 560095",
+      "role_applied": "Software Engineer",
+      "quality_tier": "Average",
+      "education": [
+        {
+          "degree": "B.Tech – Computer Science & Engineering",
+          "institution": "RV College of Engineering, Bengaluru",
+          "university": "Visvesvaraya Technological University (VTU)",
+          "cgpa": 7.4,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2023
+        }
+      ],
+      "highest_degree": "B.Tech – Computer Science & Engineering",
+      "institution": "RV College of Engineering, Bengaluru",
+      "cgpa": 7.4,
+      "experience": [
+        {
+          "company": "Zoho Corporation",
+          "title": "Junior Software Engineer",
+          "location": "Bengaluru, KA",
+          "type": "Full-Time",
+          "start_date": "Aug 2023",
+          "end_date": "Present",
+          "duration_months": 10,
+          "responsibilities": [
+            "Developed 3 new frontend modules for Zoho CRM using React.js and TypeScript, improving UI load time by 18%.",
+            "Wrote RESTful APIs using Node.js (Express) integrated with PostgreSQL, handling 10K+ daily API calls.",
+            "Participated in bi-weekly code reviews and resolved 40+ production bugs in first quarter.",
+            "Wrote unit tests using Jest achieving 75% code coverage for assigned modules."
+          ]
+        },
+        {
+          "company": "StartupDen Technologies",
+          "title": "Frontend Developer Intern",
+          "location": "Remote",
+          "type": "Internship",
+          "start_date": "Jan 2023",
+          "end_date": "Jun 2023",
+          "duration_months": 6,
+          "responsibilities": [
+            "Built responsive landing pages using React.js and Tailwind CSS for 3 client projects.",
+            "Integrated payment gateway (Razorpay) and reduced checkout abandonment by 12%.",
+            "Collaborated with the design team to implement Figma specs with pixel accuracy."
+          ]
+        }
+      ],
+      "years_experience": 1.1,
+      "companies": [
+        "Zoho Corporation",
+        "StartupDen Technologies"
+      ],
+      "skills": {
+        "languages": [
+          "Python",
+          "JavaScript",
+          "TypeScript",
+          "HTML5",
+          "CSS3"
+        ],
+        "frameworks": [
+          "React.js",
+          "Node.js (Express)",
+          "Django (basic)"
+        ],
+        "databases": [
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB (basic)"
+        ],
+        "tools": [
+          "Git",
+          "GitHub",
+          "Docker (basic)",
+          "Postman",
+          "JIRA",
+          "VS Code"
+        ],
+        "cloud": [
+          "AWS S3 (basic)"
+        ],
+        "testing": [
+          "Jest",
+          "Pytest (basic)"
+        ]
+      },
+      "skills_flat": [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "React.js",
+        "Node.js (Express)",
+        "Django (basic)",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB (basic)",
+        "Git",
+        "GitHub",
+        "Docker (basic)",
+        "Postman",
+        "JIRA",
+        "VS Code",
+        "AWS S3 (basic)",
+        "Jest",
+        "Pytest (basic)"
+      ],
+      "skill_count": 20,
+      "projects": [
+        {
+          "name": "TaskFlow – Project Management Tool",
+          "tech_stack": [
+            "React.js",
+            "Node.js",
+            "PostgreSQL",
+            "Socket.io"
+          ],
+          "description": "Built a real-time project management app with kanban boards, task assignment, and deadline tracking. 200+ GitHub stars. Deployed on Railway.app.",
+          "github_link": "github.com/aarav-mehta/taskflow"
+        },
+        {
+          "name": "MediAlert – Hospital Appointment System",
+          "tech_stack": [
+            "Django",
+            "SQLite",
+            "Bootstrap",
+            "Twilio SMS API"
+          ],
+          "description": "Developed a hospital appointment booking system with automated SMS reminders. Used as final year project. Presented at VTU Tech Fest 2023.",
+          "github_link": "github.com/aarav-mehta/medialert"
+        }
+      ],
+      "project_count": 2,
+      "certifications": [
+        {
+          "name": "AWS Certified Cloud Practitioner",
+          "issuer": "Amazon Web Services",
+          "year": 2023
+        },
+        {
+          "name": "Meta Front-End Developer Certificate",
+          "issuer": "Coursera / Meta",
+          "year": 2022
+        }
+      ],
+      "certification_names": [
+        "AWS Certified Cloud Practitioner",
+        "Meta Front-End Developer Certificate"
+      ],
+      "certification_count": 2,
+      "achievements": [
+        "Ranked in Top 100 in ZCoder Internal Coding Contest at Zoho (Q1 2024)",
+        "Won 2nd prize at StartupDen Hackathon (24-hour product build challenge)",
+        "Dean's List — 5th and 6th semester (CGPA > 8.0 in both)"
+      ],
+      "languages_known": [
+        "English (Professional)",
+        "Hindi (Native)",
+        "Kannada (Conversational)"
+      ],
+      "soft_skills": [
+        "Problem Solving",
+        "Team Collaboration",
+        "Attention to Detail",
+        "Adaptability"
+      ],
+      "interests": [
+        "Open Source Contributing",
+        "Competitive Programming",
+        "Tech Blogging"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.636931",
+      "source_file": "SE_001_Aarav_Mehta.json"
+    },
+    {
+      "resume_id": "SE-002",
+      "name": "Priya Nair",
+      "email": "priyanair.2024@yahoo.com",
+      "phone": "+919746001234",
+      "linkedin": "linkedin.com/in/priya-nair-cse",
+      "github": "github.com/priyanair24",
+      "portfolio": null,
+      "address": "42, Indiranagar, Bengaluru, Karnataka - 560038",
+      "role_applied": "Software Engineer",
+      "quality_tier": "Poor",
+      "education": [
+        {
+          "degree": "B.Tech – Computer Science",
+          "institution": "Nitte Meenakshi Institute of Technology, Bengaluru",
+          "university": "Visvesvaraya Technological University (VTU)",
+          "cgpa": 6.1,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2024
+        }
+      ],
+      "highest_degree": "B.Tech – Computer Science",
+      "institution": "Nitte Meenakshi Institute of Technology, Bengaluru",
+      "cgpa": 6.1,
+      "experience": [
+        {
+          "company": "Softech Infoways",
+          "title": "Software Intern",
+          "location": "Bengaluru, KA",
+          "type": "Internship",
+          "start_date": "Jan 2024",
+          "end_date": "Apr 2024",
+          "duration_months": 4,
+          "responsibilities": [
+            "Assisted senior developers in testing web forms.",
+            "Wrote basic HTML pages for internal tools.",
+            "Attended daily stand-ups and took meeting notes."
+          ]
+        }
+      ],
+      "years_experience": 0.2,
+      "companies": [
+        "Softech Infoways"
+      ],
+      "skills": {
+        "languages": [
+          "Python (basic)",
+          "HTML",
+          "CSS"
+        ],
+        "frameworks": [],
+        "databases": [
+          "MySQL (basic)"
+        ],
+        "tools": [
+          "Git (basic)",
+          "VS Code"
+        ],
+        "cloud": [],
+        "testing": []
+      },
+      "skills_flat": [
+        "Python (basic)",
+        "HTML",
+        "CSS",
+        "MySQL (basic)",
+        "Git (basic)",
+        "VS Code"
+      ],
+      "skill_count": 6,
+      "projects": [
+        {
+          "name": "Student Result Management System",
+          "tech_stack": [
+            "Python",
+            "Tkinter",
+            "MySQL"
+          ],
+          "description": "A desktop application to manage student results for a college. Built as final year project.",
+          "github_link": "github.com/priyanair24/result-mgmt"
+        }
+      ],
+      "project_count": 1,
+      "certifications": [
+        {
+          "name": "Python for Beginners",
+          "issuer": "Udemy",
+          "year": 2023
+        }
+      ],
+      "certification_names": [
+        "Python for Beginners"
+      ],
+      "certification_count": 1,
+      "achievements": [
+        "Participated in college-level coding competition (no prize)"
+      ],
+      "languages_known": [
+        "English (Basic)",
+        "Hindi (Native)",
+        "Malayalam (Native)"
+      ],
+      "soft_skills": [
+        "Willingness to Learn",
+        "Punctual",
+        "Team Player"
+      ],
+      "interests": [
+        "Reading",
+        "Cooking",
+        "Music"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.637288",
+      "source_file": "SE_002_Priya_Nair.json"
+    },
+    {
+      "resume_id": "SE-003",
+      "name": "Devansh Trivedi",
+      "email": "devansh.trivedi@protonmail.com",
+      "phone": "+919820445567",
+      "linkedin": "linkedin.com/in/devansht",
+      "github": "github.com/devanshtrivedi",
+      "portfolio": null,
+      "address": "Plot 11, HSR Layout Sector 2, Bengaluru, Karnataka - 560102",
+      "role_applied": "Software Engineer",
+      "quality_tier": "Excellent",
+      "education": [
+        {
+          "degree": "B.Tech – Computer Science & Engineering",
+          "institution": "BITS Pilani, Goa Campus",
+          "university": "Birla Institute of Technology & Science",
+          "cgpa": 8.9,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2022
+        }
+      ],
+      "highest_degree": "B.Tech – Computer Science & Engineering",
+      "institution": "BITS Pilani, Goa Campus",
+      "cgpa": 8.9,
+      "experience": [
+        {
+          "company": "Flipkart Internet Pvt. Ltd.",
+          "title": "Software Development Engineer I (SDE-I)",
+          "location": "Bengaluru, KA",
+          "type": "Full-Time",
+          "start_date": "Jul 2022",
+          "end_date": "Present",
+          "duration_months": 23,
+          "responsibilities": [
+            "Designed and built a high-throughput event-driven microservice (Kafka + Java Spring Boot) for real-time inventory synchronization across 400+ warehouse nodes, reducing stock discrepancy by 34%.",
+            "Re-architected the search results caching layer using Redis Cluster, cutting P99 latency from 380ms to 95ms for 1M+ daily active users.",
+            "Led migration of 3 legacy REST APIs to GraphQL with schema federation, reducing over-fetching by 60% on mobile clients.",
+            "Mentored 2 intern engineers through 12-week projects; both received return offers.",
+            "Achieved 92% unit test coverage across 6 owned microservices; led team's shift to TDD practices."
+          ]
+        },
+        {
+          "company": "Microsoft India (GSDC)",
+          "title": "Software Engineer Intern",
+          "location": "Hyderabad, TS",
+          "type": "Internship",
+          "start_date": "May 2021",
+          "end_date": "Jul 2021",
+          "duration_months": 2,
+          "responsibilities": [
+            "Built an internal dashboard for Azure DevOps pipeline visibility using React and TypeScript.",
+            "Reduced manual reporting effort by 8 hours/week through automated metrics aggregation.",
+            "Received Pre-Placement Offer (PPO) — declined in favour of Flipkart."
+          ]
+        }
+      ],
+      "years_experience": 2.0,
+      "companies": [
+        "Flipkart Internet Pvt. Ltd.",
+        "Microsoft India (GSDC)"
+      ],
+      "skills": {
+        "languages": [
+          "Java",
+          "Python",
+          "JavaScript",
+          "TypeScript",
+          "Go (learning)"
+        ],
+        "frameworks": [
+          "Spring Boot",
+          "React.js",
+          "GraphQL",
+          "Express.js",
+          "FastAPI"
+        ],
+        "databases": [
+          "PostgreSQL",
+          "Redis",
+          "Cassandra",
+          "Elasticsearch"
+        ],
+        "tools": [
+          "Docker",
+          "Kubernetes",
+          "Kafka",
+          "GitHub Actions",
+          "Prometheus",
+          "Grafana",
+          "JIRA"
+        ],
+        "cloud": [
+          "AWS (EC2, S3, Lambda, RDS, CloudWatch)",
+          "GCP Basics"
+        ],
+        "testing": [
+          "JUnit 5",
+          "Mockito",
+          "Pytest",
+          "Jest",
+          "Postman",
+          "k6 (Load Testing)"
+        ]
+      },
+      "skills_flat": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "Go (learning)",
+        "Spring Boot",
+        "React.js",
+        "GraphQL",
+        "Express.js",
+        "FastAPI",
+        "PostgreSQL",
+        "Redis",
+        "Cassandra",
+        "Elasticsearch",
+        "Docker",
+        "Kubernetes",
+        "Kafka",
+        "GitHub Actions",
+        "Prometheus",
+        "Grafana",
+        "JIRA",
+        "AWS (EC2, S3, Lambda, RDS, CloudWatch)",
+        "GCP Basics",
+        "JUnit 5",
+        "Mockito",
+        "Pytest",
+        "Jest",
+        "Postman",
+        "k6 (Load Testing)"
+      ],
+      "skill_count": 29,
+      "projects": [
+        {
+          "name": "OpenExpense – Open Source Expense Tracker API",
+          "tech_stack": [
+            "Go",
+            "PostgreSQL",
+            "Docker",
+            "JWT Auth"
+          ],
+          "description": "Maintained open-source expense management REST API with 1.2K GitHub stars and 40+ contributors. Implemented OAuth2 login, multi-currency support, and Telegram bot integration.",
+          "github_link": "github.com/devanshtrivedi/openexpense"
+        },
+        {
+          "name": "ScaleQ – Distributed Task Queue",
+          "tech_stack": [
+            "Python",
+            "Redis",
+            "Celery",
+            "FastAPI"
+          ],
+          "description": "Built a lightweight distributed task queue library for Python. Published on PyPI with 300+ weekly downloads. Used in 3 production systems at small startups.",
+          "github_link": "github.com/devanshtrivedi/scaleq"
+        }
+      ],
+      "project_count": 2,
+      "certifications": [
+        {
+          "name": "AWS Certified Solutions Architect – Associate",
+          "issuer": "Amazon Web Services",
+          "year": 2023
+        },
+        {
+          "name": "Certified Kubernetes Application Developer (CKAD)",
+          "issuer": "CNCF / Linux Foundation",
+          "year": 2024
+        },
+        {
+          "name": "Meta Backend Developer Certificate",
+          "issuer": "Coursera / Meta",
+          "year": 2022
+        }
+      ],
+      "certification_names": [
+        "AWS Certified Solutions Architect – Associate",
+        "Certified Kubernetes Application Developer (CKAD)",
+        "Meta Backend Developer Certificate"
+      ],
+      "certification_count": 3,
+      "achievements": [
+        "Promoted to SDE-I Band 2 within 18 months (top 5% of batch) at Flipkart",
+        "Speaker at Bengaluru Java User Group (JUG) — talk on Kafka Exactly-Once Semantics",
+        "BITS Merit Scholarship recipient — all 4 years",
+        "Finalist — Smart India Hackathon 2021 (team of 6, national level)"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Hindi (Native)",
+        "Gujarati (Conversational)"
+      ],
+      "soft_skills": [
+        "Systems Thinking",
+        "Technical Leadership",
+        "Mentoring",
+        "Presentation Skills",
+        "Ownership"
+      ],
+      "interests": [
+        "Distributed Systems Research",
+        "OSS Contributing",
+        "Running (Half Marathon)"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.637544",
+      "source_file": "SE_003_Devansh_Trivedi.json"
+    },
+    {
+      "resume_id": "SE-004",
+      "name": "Simran Kaur",
+      "email": "simran.kaur.dev@gmail.com",
+      "phone": "+919988776655",
+      "linkedin": "linkedin.com/in/simrankaur-dev",
+      "github": "github.com/simrankaur-dev",
+      "portfolio": null,
+      "address": "B-14, Sector 62, Noida, Uttar Pradesh - 201309",
+      "role_applied": "Software Engineer",
+      "quality_tier": "Average",
+      "education": [
+        {
+          "degree": "B.Tech – Information Technology",
+          "institution": "Thapar Institute of Engineering & Technology, Patiala",
+          "university": "Thapar University",
+          "cgpa": 7.8,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2022
+        }
+      ],
+      "highest_degree": "B.Tech – Information Technology",
+      "institution": "Thapar Institute of Engineering & Technology, Patiala",
+      "cgpa": 7.8,
+      "experience": [
+        {
+          "company": "HireIn Technologies",
+          "title": "Software Engineer",
+          "location": "Noida, UP",
+          "type": "Full-Time",
+          "start_date": "Aug 2022",
+          "end_date": "Feb 2024",
+          "duration_months": 18,
+          "responsibilities": [
+            "Developed 5 REST API modules using Django REST Framework for a B2B HR SaaS product.",
+            "Optimized 12 slow SQL queries reducing average response time from 2.1s to 340ms.",
+            "Integrated third-party APIs (WhatsApp Business, SendGrid, Razorpay) into the platform.",
+            "Wrote API documentation using Swagger/OpenAPI for 30+ endpoints.",
+            "Assisted in migrating legacy MySQL schema to PostgreSQL with zero data loss."
+          ]
+        },
+        {
+          "company": "Nexora Labs",
+          "title": "Backend Intern",
+          "location": "Gurugram, HR",
+          "type": "Internship",
+          "start_date": "Jan 2022",
+          "end_date": "Jun 2022",
+          "duration_months": 6,
+          "responsibilities": [
+            "Built CRUD APIs for a logistics tracking system using Flask and MySQL.",
+            "Wrote Bash scripts to automate daily database backups.",
+            "Participated in code reviews and fixed 20+ bugs across the codebase."
+          ]
+        }
+      ],
+      "years_experience": 1.8,
+      "companies": [
+        "HireIn Technologies",
+        "Nexora Labs"
+      ],
+      "skills": {
+        "languages": [
+          "Python",
+          "SQL",
+          "JavaScript (basic)",
+          "Bash"
+        ],
+        "frameworks": [
+          "Django",
+          "Django REST Framework",
+          "Flask"
+        ],
+        "databases": [
+          "PostgreSQL",
+          "MySQL",
+          "Redis (basic)"
+        ],
+        "tools": [
+          "Git",
+          "Postman",
+          "Swagger",
+          "Docker (basic)",
+          "JIRA",
+          "VS Code"
+        ],
+        "cloud": [
+          "AWS EC2 (basic)",
+          "Heroku"
+        ],
+        "testing": [
+          "Pytest",
+          "DRF Test Client"
+        ]
+      },
+      "skills_flat": [
+        "Python",
+        "SQL",
+        "JavaScript (basic)",
+        "Bash",
+        "Django",
+        "Django REST Framework",
+        "Flask",
+        "PostgreSQL",
+        "MySQL",
+        "Redis (basic)",
+        "Git",
+        "Postman",
+        "Swagger",
+        "Docker (basic)",
+        "JIRA",
+        "VS Code",
+        "AWS EC2 (basic)",
+        "Heroku",
+        "Pytest",
+        "DRF Test Client"
+      ],
+      "skill_count": 20,
+      "projects": [
+        {
+          "name": "QuickShip – Logistics Tracking Dashboard",
+          "tech_stack": [
+            "Django",
+            "PostgreSQL",
+            "Celery",
+            "Redis",
+            "Bootstrap"
+          ],
+          "description": "Built a logistics tracking system with real-time shipment status updates using Celery beat tasks and Redis pub/sub. Handles 500 daily orders.",
+          "github_link": "github.com/simrankaur-dev/quickship"
+        },
+        {
+          "name": "DevBlog API",
+          "tech_stack": [
+            "Django REST Framework",
+            "PostgreSQL",
+            "JWT",
+            "Markdown"
+          ],
+          "description": "Built a blogging platform REST API with Markdown rendering, JWT auth, tagging, and full-text search using pg_trgm.",
+          "github_link": "github.com/simrankaur-dev/devblog-api"
+        }
+      ],
+      "project_count": 2,
+      "certifications": [
+        {
+          "name": "Django REST Framework – Full Course",
+          "issuer": "Udemy (Jose Portilla)",
+          "year": 2022
+        },
+        {
+          "name": "AWS Cloud Practitioner Essentials",
+          "issuer": "AWS Training (in progress)",
+          "year": 2024
+        }
+      ],
+      "certification_names": [
+        "Django REST Framework – Full Course",
+        "AWS Cloud Practitioner Essentials"
+      ],
+      "certification_count": 2,
+      "achievements": [
+        "Employee of the Month – HireIn Technologies (March 2023)",
+        "Thapar Coding League – Top 20 finisher (350+ participants)"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Hindi (Native)",
+        "Punjabi (Native)"
+      ],
+      "soft_skills": [
+        "Communication",
+        "Initiative",
+        "Deadline-Oriented",
+        "Collaborative"
+      ],
+      "interests": [
+        "Backend Architecture",
+        "Travel",
+        "Photography"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.637840",
+      "source_file": "SE_004_Simran_Kaur.json"
+    },
+    {
+      "resume_id": "SE-005",
+      "name": "Rahul Ghosh",
+      "email": "rahulghosh.work@gmail.com",
+      "phone": "+918100234556",
+      "linkedin": "linkedin.com/in/rahulghosh-kolkata",
+      "github": "github.com/rahulcodes99",
+      "portfolio": null,
+      "address": "12/A Ballygunge Place, Kolkata, West Bengal - 700019",
+      "role_applied": "Software Engineer",
+      "quality_tier": "Poor",
+      "education": [
+        {
+          "degree": "B.Tech – Computer Science",
+          "institution": "Techno Main Salt Lake, Kolkata",
+          "university": "Maulana Abul Kalam Azad University of Technology (MAKAUT)",
+          "cgpa": 6.3,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2024
+        }
+      ],
+      "highest_degree": "B.Tech – Computer Science",
+      "institution": "Techno Main Salt Lake, Kolkata",
+      "cgpa": 6.3,
+      "experience": [],
+      "years_experience": 0.0,
+      "companies": [],
+      "skills": {
+        "languages": [
+          "C++",
+          "Java (basic)",
+          "HTML"
+        ],
+        "frameworks": [],
+        "databases": [
+          "MySQL (basic)"
+        ],
+        "tools": [
+          "Eclipse IDE",
+          "Git (basic)"
+        ],
+        "cloud": [],
+        "testing": []
+      },
+      "skills_flat": [
+        "C++",
+        "Java (basic)",
+        "HTML",
+        "MySQL (basic)",
+        "Eclipse IDE",
+        "Git (basic)"
+      ],
+      "skill_count": 6,
+      "projects": [
+        {
+          "name": "Library Management System",
+          "tech_stack": [
+            "Java",
+            "MySQL",
+            "Swing GUI"
+          ],
+          "description": "Desktop application for managing library books, members and borrowing records. Built as 3rd year academic project.",
+          "github_link": "github.com/rahulcodes99/library-mgmt"
+        }
+      ],
+      "project_count": 1,
+      "certifications": [
+        {
+          "name": "C++ Programming Basics",
+          "issuer": "Sololearn",
+          "year": 2023
+        }
+      ],
+      "certification_names": [
+        "C++ Programming Basics"
+      ],
+      "certification_count": 1,
+      "achievements": [
+        "Attended 2 college-level seminars on cloud computing"
+      ],
+      "languages_known": [
+        "Bengali (Native)",
+        "Hindi (Conversational)",
+        "English (Basic)"
+      ],
+      "soft_skills": [
+        "Hardworking",
+        "Eager to Learn"
+      ],
+      "interests": [
+        "Cricket",
+        "Movies",
+        "Music"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.638120",
+      "source_file": "SE_005_Rahul_Ghosh.json"
+    },
+    {
+      "resume_id": "SE-006",
+      "name": "Tanvi Patel",
+      "email": "tanvi.patel.eng@gmail.com",
+      "phone": "+919173456789",
+      "linkedin": "linkedin.com/in/tanvipatel-swe",
+      "github": "github.com/tanvipateldev",
+      "portfolio": null,
+      "address": "102, Prahlad Nagar, Ahmedabad, Gujarat - 380015",
+      "role_applied": "Software Engineer",
+      "quality_tier": "Excellent",
+      "education": [
+        {
+          "degree": "B.Tech – Computer Science & Engineering (Honours)",
+          "institution": "Dhirubhai Ambani Institute of Information and Communication Technology (DAIICT), Gandhinagar",
+          "university": "DA-IICT",
+          "cgpa": 9.1,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2022
+        }
+      ],
+      "highest_degree": "B.Tech – Computer Science & Engineering (Honours)",
+      "institution": "Dhirubhai Ambani Institute of Information and Communication Technology (DAIICT), Gandhinagar",
+      "cgpa": 9.1,
+      "experience": [
+        {
+          "company": "Razorpay Software Pvt. Ltd.",
+          "title": "Software Development Engineer (Backend)",
+          "location": "Bengaluru, KA",
+          "type": "Full-Time",
+          "start_date": "Aug 2022",
+          "end_date": "Present",
+          "duration_months": 22,
+          "responsibilities": [
+            "Developed payment reconciliation microservice in Go, processing ₹5,000 Crore+ monthly transactions with 99.97% accuracy.",
+            "Implemented distributed tracing (Jaeger + OpenTelemetry) across 12 services, cutting MTTR from 45min to 8min.",
+            "Designed and deployed a webhook retry engine using Kafka DLQ + exponential backoff, reducing merchant webhook failure rate from 4.2% to 0.3%.",
+            "Built internal CLI tool (Go) for developer environment setup — adopted by 200+ engineers, saving 3+ hours per onboarding.",
+            "Achieved 95% test coverage across owned services using Go's testing package and testcontainers."
+          ]
+        },
+        {
+          "company": "Google Summer of Code (GSoC)",
+          "title": "Open Source Contributor – The Julia Language",
+          "location": "Remote (Global)",
+          "type": "Fellowship",
+          "start_date": "May 2021",
+          "end_date": "Aug 2021",
+          "duration_months": 3,
+          "responsibilities": [
+            "Contributed 18 PRs to Julia's HTTP.jl library adding streaming response support and compression middleware.",
+            "Wrote comprehensive documentation and benchmark comparisons published on the Julia Discourse forum.",
+            "Stipend: $3,000 USD — accepted from Google."
+          ]
+        }
+      ],
+      "years_experience": 2.1,
+      "companies": [
+        "Razorpay Software Pvt. Ltd.",
+        "Google Summer of Code (GSoC)"
+      ],
+      "skills": {
+        "languages": [
+          "Go",
+          "Python",
+          "Bash",
+          "SQL",
+          "Julia"
+        ],
+        "frameworks": [
+          "Gin (Go)",
+          "FastAPI",
+          "gRPC"
+        ],
+        "databases": [
+          "PostgreSQL",
+          "Redis",
+          "Cassandra",
+          "ClickHouse"
+        ],
+        "tools": [
+          "Docker",
+          "Kubernetes",
+          "Terraform",
+          "Helm",
+          "Kafka",
+          "Prometheus",
+          "Grafana",
+          "Jaeger",
+          "GitHub Actions"
+        ],
+        "cloud": [
+          "AWS (EC2, RDS, S3, Lambda, SQS, CloudWatch, Route 53)",
+          "GCP (GKE, Cloud Run)"
+        ],
+        "testing": [
+          "Go testing",
+          "testcontainers",
+          "k6 Load Testing",
+          "Postman",
+          "chaos engineering (basic)"
+        ]
+      },
+      "skills_flat": [
+        "Go",
+        "Python",
+        "Bash",
+        "SQL",
+        "Julia",
+        "Gin (Go)",
+        "FastAPI",
+        "gRPC",
+        "PostgreSQL",
+        "Redis",
+        "Cassandra",
+        "ClickHouse",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "Helm",
+        "Kafka",
+        "Prometheus",
+        "Grafana",
+        "Jaeger",
+        "GitHub Actions",
+        "AWS (EC2, RDS, S3, Lambda, SQS, CloudWatch, Route 53)",
+        "GCP (GKE, Cloud Run)",
+        "Go testing",
+        "testcontainers",
+        "k6 Load Testing",
+        "Postman",
+        "chaos engineering (basic)"
+      ],
+      "skill_count": 28,
+      "projects": [
+        {
+          "name": "Sentinel – Lightweight APM Tool",
+          "tech_stack": [
+            "Go",
+            "Prometheus",
+            "Grafana",
+            "ClickHouse",
+            "Docker Compose"
+          ],
+          "description": "Built an open-source Application Performance Monitoring tool that auto-instruments Go HTTP servers. 800+ GitHub stars. Featured on Go Weekly newsletter issue #492.",
+          "github_link": "github.com/tanvipateldev/sentinel"
+        },
+        {
+          "name": "PgMigrate – Safe PostgreSQL Migration CLI",
+          "tech_stack": [
+            "Go",
+            "PostgreSQL",
+            "Cobra CLI"
+          ],
+          "description": "A zero-downtime PostgreSQL schema migration tool inspired by Flyway. Supports dry-run, rollback, and audit logging. 200+ weekly downloads from GitHub Releases.",
+          "github_link": "github.com/tanvipateldev/pgmigrate"
+        }
+      ],
+      "project_count": 2,
+      "certifications": [
+        {
+          "name": "AWS Certified Solutions Architect – Professional",
+          "issuer": "Amazon Web Services",
+          "year": 2024
+        },
+        {
+          "name": "Certified Kubernetes Administrator (CKA)",
+          "issuer": "CNCF / Linux Foundation",
+          "year": 2023
+        },
+        {
+          "name": "HashiCorp Certified: Terraform Associate",
+          "issuer": "HashiCorp",
+          "year": 2023
+        }
+      ],
+      "certification_names": [
+        "AWS Certified Solutions Architect – Professional",
+        "Certified Kubernetes Administrator (CKA)",
+        "HashiCorp Certified: Terraform Associate"
+      ],
+      "certification_count": 3,
+      "achievements": [
+        "Top 1% in DA-IICT batch — Institute Gold Medal nominee (CGPA 9.1)",
+        "Google Summer of Code 2021 – selected from 8,900+ applicants (acceptance rate ~4%)",
+        "Spoke at GopherCon India 2023 – 'Building Reliable Webhooks at Scale'",
+        "Razorpay Quarterly Excellence Award Q2 2023 (chosen by engineering leadership)"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Gujarati (Native)",
+        "Hindi (Native)"
+      ],
+      "soft_skills": [
+        "Deep Work",
+        "Technical Writing",
+        "Mentoring",
+        "First-Principles Thinking",
+        "Reliability Mindset"
+      ],
+      "interests": [
+        "Site Reliability Engineering",
+        "Open Source",
+        "Badminton",
+        "Technical Writing on Substack"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.638370",
+      "source_file": "SE_006_Tanvi_Patel.json"
+    },
+    {
+      "resume_id": "UX-001",
+      "name": "Karan Joshi",
+      "email": "karan.joshi.design@gmail.com",
+      "phone": "+919818111234",
+      "linkedin": "linkedin.com/in/karanjoshi-ux",
+      "github": null,
+      "portfolio": "behance.net/karanjoshi | figma.com/@karanjoshi",
+      "address": "Sector 15A, Noida, Uttar Pradesh - 201301",
+      "role_applied": "UI/UX Designer",
+      "quality_tier": "Excellent",
+      "education": [
+        {
+          "degree": "B.Des – Interaction Design",
+          "institution": "National Institute of Design (NID), Ahmedabad",
+          "university": "National Institute of Design (Autonomous)",
+          "cgpa": 8.7,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2021
+        }
+      ],
+      "highest_degree": "B.Des – Interaction Design",
+      "institution": "National Institute of Design (NID), Ahmedabad",
+      "cgpa": 8.7,
+      "experience": [
+        {
+          "company": "Slice (fintech startup)",
+          "title": "Product Designer (UI/UX)",
+          "location": "Bengaluru / Noida (Hybrid)",
+          "type": "Full-Time",
+          "start_date": "Aug 2021",
+          "end_date": "Present",
+          "duration_months": 34,
+          "responsibilities": [
+            "Led end-to-end UX for Slice's card management and rewards product used by 2.5M+ monthly active users.",
+            "Built and maintained Slice Design System — 120+ components in Figma, adopted across 4 product squads (8 designers).",
+            "Reduced onboarding drop-off by 38% through a complete redesign of the KYC flow based on 25 user interviews and 3 usability tests.",
+            "Designed accessible UX (WCAG 2.1 AA) for low-literacy users — tap target optimization, icon-first navigation — leading to 22% increase in rural user retention.",
+            "Launched Slice Rewards Hub: 0-to-1 design from research → prototype → shipped in 8 weeks. Feature adopted by 68% of active users.",
+            "Conducted monthly design crits with cross-functional team; established design review framework adopted company-wide."
+          ]
+        },
+        {
+          "company": "91Springboard Design Studio",
+          "title": "UI/UX Designer (Junior)",
+          "location": "Noida, UP",
+          "type": "Internship + Full-Time",
+          "start_date": "Jan 2021",
+          "end_date": "Jul 2021",
+          "duration_months": 7,
+          "responsibilities": [
+            "Designed 3 client web apps (edtech, healthcare, e-commerce) from wireframe to hi-fi Figma prototypes.",
+            "Conducted usability tests with 5–7 users per project; iterated on 2-week design sprints.",
+            "Contributed 30+ reusable components to agency's shared design library."
+          ]
+        }
+      ],
+      "years_experience": 3.1,
+      "companies": [
+        "Slice (fintech startup)",
+        "91Springboard Design Studio"
+      ],
+      "skills": {
+        "design_tools": [
+          "Figma (Expert: Auto Layout v5, Variables, Dev Mode, Branching)",
+          "Adobe Illustrator",
+          "Adobe XD",
+          "Principle",
+          "Lottie Files"
+        ],
+        "research_methods": [
+          "Moderated Usability Testing",
+          "Card Sorting",
+          "A/B Testing",
+          "Heuristic Evaluation",
+          "User Interviews",
+          "Tree Testing"
+        ],
+        "design_disciplines": [
+          "Interaction Design",
+          "Visual UI Design",
+          "Responsive Web Design",
+          "Mobile App Design (iOS + Android)",
+          "Design Systems",
+          "Accessibility (WCAG 2.1 AA)"
+        ],
+        "code_knowledge": [
+          "HTML/CSS (sufficient for design QA)",
+          "CSS animations",
+          "React component vocabulary"
+        ],
+        "collaboration": [
+          "Figma Dev Mode",
+          "Zeplin",
+          "Storybook (reading)",
+          "JIRA",
+          "Confluence",
+          "Miro",
+          "Notion"
+        ]
+      },
+      "skills_flat": [
+        "Figma (Expert: Auto Layout v5, Variables, Dev Mode, Branching)",
+        "Adobe Illustrator",
+        "Adobe XD",
+        "Principle",
+        "Lottie Files",
+        "Moderated Usability Testing",
+        "Card Sorting",
+        "A/B Testing",
+        "Heuristic Evaluation",
+        "User Interviews",
+        "Tree Testing",
+        "Interaction Design",
+        "Visual UI Design",
+        "Responsive Web Design",
+        "Mobile App Design (iOS + Android)",
+        "Design Systems",
+        "Accessibility (WCAG 2.1 AA)",
+        "HTML/CSS (sufficient for design QA)",
+        "CSS animations",
+        "React component vocabulary",
+        "Figma Dev Mode",
+        "Zeplin",
+        "Storybook (reading)",
+        "JIRA",
+        "Confluence",
+        "Miro",
+        "Notion"
+      ],
+      "skill_count": 27,
+      "projects": [
+        {
+          "name": "Slice Rewards Hub — Case Study",
+          "description": "0-to-1 product design: Discovery (user interviews, competitive audit), IA, wireframing, visual design, prototype testing, launch. 68% adoption rate post-launch. Available on Behance with full case study.",
+          "portfolio_link": "behance.net/karanjoshi/slice-rewards"
+        },
+        {
+          "name": "HealthTrack Dashboard — SaaS Design",
+          "description": "Designed complex data-heavy healthcare analytics dashboard for a Series A startup. Solved for cognitive overload through progressive disclosure and contextual data hierarchy. Figma Community featured file — 3,400 duplicates.",
+          "portfolio_link": "figma.com/community/file/karanjoshi-healthtrack"
+        },
+        {
+          "name": "AccessFirst Design System",
+          "description": "Open-source Figma design system built with WCAG 2.1 AA compliance from the ground up. Includes accessibility annotations, color token system, and component documentation. 2,100+ Figma duplicates.",
+          "portfolio_link": "figma.com/community/file/accessfirst-karanjoshi"
+        }
+      ],
+      "project_count": 3,
+      "certifications": [
+        {
+          "name": "Google UX Design Professional Certificate",
+          "issuer": "Coursera / Google",
+          "year": 2021
+        },
+        {
+          "name": "Interaction Design Foundation – UX Designer",
+          "issuer": "IDF",
+          "year": 2022
+        },
+        {
+          "name": "Figma Advanced Prototyping",
+          "issuer": "Figma Academy",
+          "year": 2023
+        }
+      ],
+      "certification_names": [
+        "Google UX Design Professional Certificate",
+        "Interaction Design Foundation – UX Designer",
+        "Figma Advanced Prototyping"
+      ],
+      "certification_count": 3,
+      "achievements": [
+        "Behance Featured Creator – UI/UX category (March 2023)",
+        "Figma Community Most Duplicated File — AccessFirst Design System (2,100+ duplicates)",
+        "NID Design Award — Excellence in Interaction Design (Final Year Project 2021)",
+        "Slice All-Hands Innovation Award — KYC Redesign (Q3 2022)"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Hindi (Native)"
+      ],
+      "soft_skills": [
+        "Design Leadership",
+        "User Empathy",
+        "Facilitating Design Critique",
+        "Storytelling",
+        "Accessibility Advocacy"
+      ],
+      "interests": [
+        "Accessibility Research",
+        "Type Design",
+        "Street Photography",
+        "Mentoring Junior Designers (ADPList)"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.638670",
+      "source_file": "UX_001_Karan_Joshi.json"
+    },
+    {
+      "resume_id": "UX-002",
+      "name": "Isha Bhatia",
+      "email": "isha.bhatia.design@gmail.com",
+      "phone": "+919876543210",
+      "linkedin": "linkedin.com/in/ishabhatia-ux",
+      "github": null,
+      "portfolio": "dribbble.com/ishabhatia | ishabhatia.design",
+      "address": "Defence Colony, New Delhi - 110024",
+      "role_applied": "UI/UX Designer",
+      "quality_tier": "Average",
+      "education": [
+        {
+          "degree": "B.Des – Communication Design",
+          "institution": "Pearl Academy, New Delhi",
+          "university": "Pearl Academy (Autonomous)",
+          "cgpa": 8.0,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2022
+        }
+      ],
+      "highest_degree": "B.Des – Communication Design",
+      "institution": "Pearl Academy, New Delhi",
+      "cgpa": 8.0,
+      "experience": [
+        {
+          "company": "Vedantu Innovations",
+          "title": "UI/UX Designer",
+          "location": "Delhi / Remote",
+          "type": "Full-Time",
+          "start_date": "Jul 2022",
+          "end_date": "Present",
+          "duration_months": 23,
+          "responsibilities": [
+            "Designed 3 new feature flows for Vedantu's K-12 learning app — practice test module, live class schedule redesign, and progress report screen.",
+            "Conducted 5 usability tests per quarter with students and parents; reduced task completion time by 20% on redesigned flows.",
+            "Created wireframes and hi-fi prototypes in Figma with clear annotation for dev handoff.",
+            "Contributed 20 components to the Vedantu app design system.",
+            "Collaborated with content, product, and engineering teams in 2-week design sprints."
+          ]
+        },
+        {
+          "company": "The Design Studio (Agency)",
+          "title": "UI Design Intern",
+          "location": "New Delhi",
+          "type": "Internship",
+          "start_date": "Jan 2022",
+          "end_date": "Jun 2022",
+          "duration_months": 6,
+          "responsibilities": [
+            "Designed landing pages and social media creatives for 6 client brands.",
+            "Assisted senior designer in mobile app screens for a fashion e-commerce client.",
+            "Learned Figma auto layout and created reusable component sets."
+          ]
+        }
+      ],
+      "years_experience": 2.2,
+      "companies": [
+        "Vedantu Innovations",
+        "The Design Studio (Agency)"
+      ],
+      "skills": {
+        "design_tools": [
+          "Figma (intermediate)",
+          "Adobe Photoshop",
+          "Adobe Illustrator",
+          "InVision"
+        ],
+        "research_methods": [
+          "Usability Testing (moderated)",
+          "User Interviews (basic)",
+          "Heuristic Evaluation"
+        ],
+        "design_disciplines": [
+          "Mobile App Design",
+          "Responsive Web Design",
+          "Wireframing",
+          "Prototyping",
+          "Component Design"
+        ],
+        "code_knowledge": [
+          "HTML/CSS (basic)"
+        ],
+        "collaboration": [
+          "Figma Dev Mode (basic)",
+          "JIRA (basic)",
+          "Notion",
+          "Zeplin"
+        ]
+      },
+      "skills_flat": [
+        "Figma (intermediate)",
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "InVision",
+        "Usability Testing (moderated)",
+        "User Interviews (basic)",
+        "Heuristic Evaluation",
+        "Mobile App Design",
+        "Responsive Web Design",
+        "Wireframing",
+        "Prototyping",
+        "Component Design",
+        "HTML/CSS (basic)",
+        "Figma Dev Mode (basic)",
+        "JIRA (basic)",
+        "Notion",
+        "Zeplin"
+      ],
+      "skill_count": 17,
+      "projects": [
+        {
+          "name": "Vedantu Practice Test Redesign",
+          "description": "Redesigned practice test interface for K-12 students — improved readability, added timer visibility, and reduced cognitive load. Task completion rate improved from 72% to 89% post-test.",
+          "portfolio_link": "dribbble.com/ishabhatia/vedantu-case"
+        },
+        {
+          "name": "FreshCart – Grocery App UI",
+          "description": "Designed a clean, minimal grocery shopping app UI as a personal portfolio project. Features cart management, search, and order tracking flows.",
+          "portfolio_link": "dribbble.com/ishabhatia/freshcart"
+        }
+      ],
+      "project_count": 2,
+      "certifications": [
+        {
+          "name": "Google UX Design Certificate (Foundations)",
+          "issuer": "Coursera / Google",
+          "year": 2022
+        },
+        {
+          "name": "Figma UI Design Masterclass",
+          "issuer": "Udemy (Daniel Walter Scott)",
+          "year": 2022
+        }
+      ],
+      "certification_names": [
+        "Google UX Design Certificate (Foundations)",
+        "Figma UI Design Masterclass"
+      ],
+      "certification_count": 2,
+      "achievements": [
+        "Pearl Academy Design Showcase – Runner-Up (Final Year Project 2022)",
+        "Dribbble 5,000 followers milestone (May 2024)"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Hindi (Native)",
+        "Punjabi (Conversational)"
+      ],
+      "soft_skills": [
+        "Creative Problem Solving",
+        "Attention to Detail",
+        "Collaboration",
+        "Open to Critique",
+        "Deadline-Focused"
+      ],
+      "interests": [
+        "UI Design Exploration",
+        "Dribbble Shots",
+        "Film Photography",
+        "Interior Design"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.639016",
+      "source_file": "UX_002_Isha_Bhatia.json"
+    },
+    {
+      "resume_id": "UX-003",
+      "name": "Nandita Roy",
+      "email": "nandita.roy.ux@gmail.com",
+      "phone": "+919831122334",
+      "linkedin": "linkedin.com/in/nanditaroy-design",
+      "github": null,
+      "portfolio": "nanditaroy.design | behance.net/nanditaroy",
+      "address": "Salt Lake City Sector III, Kolkata, West Bengal - 700097",
+      "role_applied": "UI/UX Designer",
+      "quality_tier": "Excellent",
+      "education": [
+        {
+          "degree": "M.Des – Interaction & Experience Design",
+          "institution": "IDC School of Design, IIT Bombay",
+          "university": "Indian Institute of Technology Bombay",
+          "cgpa": 9.0,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2020
+        },
+        {
+          "degree": "B.Des – Industrial & Product Design",
+          "institution": "Jadavpur University School of Design",
+          "university": "Jadavpur University",
+          "cgpa": 8.4,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2018
+        }
+      ],
+      "highest_degree": "M.Des – Interaction & Experience Design",
+      "institution": "IDC School of Design, IIT Bombay",
+      "cgpa": 9.0,
+      "experience": [
+        {
+          "company": "HealthPlix Technologies",
+          "title": "Lead UX Designer",
+          "location": "Kolkata (Remote)",
+          "type": "Full-Time",
+          "start_date": "Jul 2021",
+          "end_date": "Present",
+          "duration_months": 35,
+          "responsibilities": [
+            "Led design for HealthPlix EMR (Electronic Medical Record) platform — primary tool for 50,000+ doctors across India.",
+            "Built and scaled the design team from 1 to 5 designers; established design rituals, critique processes, and hiring standards.",
+            "Redesigned prescription writing flow — reduced doctor's average prescription time from 4.2 min to 1.8 min (57% improvement). Validated by post-launch user research.",
+            "Designed HealthPlix Analytics dashboard for hospital administrators — data-heavy UX for 600+ KPI widgets, built on enterprise design system.",
+            "Embedded accessibility guidelines into design process — 100% WCAG 2.1 AA compliance for all new features from Q2 2023.",
+            "Conducted quarterly design sprints with 3 hospital networks as embedded researcher; synthesized 120+ hours of field research."
+          ]
+        },
+        {
+          "company": "Intuit India (TurboTax / QuickBooks)",
+          "title": "UX Designer",
+          "location": "Bengaluru / Remote",
+          "type": "Full-Time",
+          "start_date": "Aug 2020",
+          "end_date": "Jun 2021",
+          "duration_months": 11,
+          "responsibilities": [
+            "Designed GST filing flow improvements for QuickBooks India, reducing support ticket volume by 31%.",
+            "Ran 3 unmoderated usability tests using UserTesting platform with 15 SME users per round.",
+            "Contributed 45 components to the QuickBooks India Design System (Figma)."
+          ]
+        }
+      ],
+      "years_experience": 3.8,
+      "companies": [
+        "HealthPlix Technologies",
+        "Intuit India (TurboTax / QuickBooks)"
+      ],
+      "skills": {
+        "design_tools": [
+          "Figma (Expert — Variables, Branching, Dev Mode, Prototype)",
+          "Principle",
+          "After Effects (motion)",
+          "Framer",
+          "Adobe CC Suite",
+          "Lottie",
+          "Miro"
+        ],
+        "research_methods": [
+          "Contextual Inquiry",
+          "Diary Studies",
+          "Moderated & Unmoderated Usability Testing",
+          "Card Sorting",
+          "Tree Testing",
+          "JTBD Interviews",
+          "Kano Surveys",
+          "Affinity Diagramming"
+        ],
+        "design_disciplines": [
+          "Enterprise UX",
+          "Data Visualization Design",
+          "Mobile Design (iOS + Android)",
+          "Design Systems (Tokens + Components)",
+          "Service Design",
+          "Accessibility (WCAG 2.1 AA)",
+          "Motion Design"
+        ],
+        "code_knowledge": [
+          "HTML/CSS (good)",
+          "Basic React component vocabulary",
+          "CSS Animations"
+        ],
+        "collaboration": [
+          "Figma Dev Mode",
+          "Storybook integration",
+          "JIRA",
+          "Confluence",
+          "Productboard"
+        ]
+      },
+      "skills_flat": [
+        "Figma (Expert — Variables, Branching, Dev Mode, Prototype)",
+        "Principle",
+        "After Effects (motion)",
+        "Framer",
+        "Adobe CC Suite",
+        "Lottie",
+        "Miro",
+        "Contextual Inquiry",
+        "Diary Studies",
+        "Moderated & Unmoderated Usability Testing",
+        "Card Sorting",
+        "Tree Testing",
+        "JTBD Interviews",
+        "Kano Surveys",
+        "Affinity Diagramming",
+        "Enterprise UX",
+        "Data Visualization Design",
+        "Mobile Design (iOS + Android)",
+        "Design Systems (Tokens + Components)",
+        "Service Design",
+        "Accessibility (WCAG 2.1 AA)",
+        "Motion Design",
+        "HTML/CSS (good)",
+        "Basic React component vocabulary",
+        "CSS Animations",
+        "Figma Dev Mode",
+        "Storybook integration",
+        "JIRA",
+        "Confluence",
+        "Productboard"
+      ],
+      "skill_count": 30,
+      "projects": [
+        {
+          "name": "HealthPlix Doctor Prescription Redesign",
+          "description": "Comprehensive UX research and redesign of EMR prescription module. Field research with 18 doctors across 3 cities. Full case study: discovery → IA → wireframes → tested prototypes → shipped → measured. 57% time reduction.",
+          "portfolio_link": "nanditaroy.design/healthplix-case"
+        },
+        {
+          "name": "NeuroViz – Neuro Analytics Dashboard",
+          "description": "Personal project: Designed a complex neurological patient data dashboard for hospital neurologists. Solved for data density, cognitive load, and clinical accuracy. Featured on UX Collective Medium (8,200 reads).",
+          "portfolio_link": "behance.net/nanditaroy/neuroviz"
+        },
+        {
+          "name": "Enterprise Design System — HealthPlix",
+          "description": "Built from scratch: design token system (light/dark/high-contrast modes), 150+ components, documentation, contribution guidelines. Adopted by 5 squads.",
+          "portfolio_link": "nanditaroy.design/design-system"
+        }
+      ],
+      "project_count": 3,
+      "certifications": [
+        {
+          "name": "Interaction Design Foundation – UX Management",
+          "issuer": "IDF",
+          "year": 2022
+        },
+        {
+          "name": "IAAP – Certified Professional in Accessibility Core Competencies (CPACC)",
+          "issuer": "IAAP",
+          "year": 2023
+        },
+        {
+          "name": "Figma Config Speaker Badge – Advanced Design Systems",
+          "issuer": "Figma",
+          "year": 2023
+        }
+      ],
+      "certification_names": [
+        "Interaction Design Foundation – UX Management",
+        "IAAP – Certified Professional in Accessibility Core Competencies (CPACC)",
+        "Figma Config Speaker Badge – Advanced Design Systems"
+      ],
+      "certification_count": 3,
+      "achievements": [
+        "IIT Bombay IDC Director's Medal — Outstanding M.Des Thesis (2020)",
+        "Figma Config 2023 Speaker — 'Designing for Cognitive Overload in Healthcare SaaS'",
+        "UX Collective Featured Article — 8,200 reads (NeuroViz Dashboard case study)",
+        "IAAP CPACC Certified Accessibility Professional",
+        "HealthPlix Design Impact Award — 2023 Annual Review"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Bengali (Native)",
+        "Hindi (Fluent)",
+        "French (A1 – learning)"
+      ],
+      "soft_skills": [
+        "Design Leadership",
+        "Research Synthesis",
+        "Executive Storytelling",
+        "Accessibility Advocacy",
+        "Mentoring & Team Building"
+      ],
+      "interests": [
+        "Healthcare UX Research",
+        "Cognitive Science",
+        "Pottery",
+        "Reading (Philosophy of Mind)",
+        "Teaching (Guest lecturer at Jadavpur University)"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.639269",
+      "source_file": "UX_003_Nandita_Roy.json"
+    },
+    {
+      "resume_id": "UX-004",
+      "name": "Sameer Malik",
+      "email": "sameer.malik.design99@gmail.com",
+      "phone": "+919456789012",
+      "linkedin": "linkedin.com/in/sameermalik-ui",
+      "github": null,
+      "portfolio": "dribbble.com/sameermalik99",
+      "address": "Gomti Nagar, Lucknow, Uttar Pradesh - 226010",
+      "role_applied": "UI/UX Designer",
+      "quality_tier": "Poor",
+      "education": [
+        {
+          "degree": "BCA – Bachelor of Computer Applications",
+          "institution": "Integral University, Lucknow",
+          "university": "Integral University",
+          "cgpa": 6.5,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2022
+        }
+      ],
+      "highest_degree": "BCA – Bachelor of Computer Applications",
+      "institution": "Integral University, Lucknow",
+      "cgpa": 6.5,
+      "experience": [
+        {
+          "company": "Webisdom Technologies",
+          "title": "UI Designer",
+          "location": "Lucknow, UP",
+          "type": "Full-Time",
+          "start_date": "Sep 2022",
+          "end_date": "Present",
+          "duration_months": 21,
+          "responsibilities": [
+            "Designed website pages for client websites in Figma.",
+            "Made social media posts in Canva and Photoshop.",
+            "Worked on mobile app screens for 2 client projects.",
+            "Attended client calls with senior team members."
+          ]
+        }
+      ],
+      "years_experience": 1.8,
+      "companies": [
+        "Webisdom Technologies"
+      ],
+      "skills": {
+        "design_tools": [
+          "Figma (basic)",
+          "Canva",
+          "Adobe Photoshop (intermediate)"
+        ],
+        "research_methods": [],
+        "design_disciplines": [
+          "UI Design (static screens)",
+          "Social Media Graphics"
+        ],
+        "code_knowledge": [
+          "HTML (very basic)"
+        ],
+        "collaboration": [
+          "JIRA (basic ticket updates)",
+          "WhatsApp for client communication"
+        ]
+      },
+      "skills_flat": [
+        "Figma (basic)",
+        "Canva",
+        "Adobe Photoshop (intermediate)",
+        "UI Design (static screens)",
+        "Social Media Graphics",
+        "HTML (very basic)",
+        "JIRA (basic ticket updates)",
+        "WhatsApp for client communication"
+      ],
+      "skill_count": 8,
+      "projects": [
+        {
+          "name": "FoodOrder App UI (Personal Project)",
+          "description": "Designed screens for a food ordering mobile app UI — home screen, restaurant listing, cart, and order tracking. No usability testing or research conducted.",
+          "portfolio_link": "dribbble.com/sameermalik99/foodorder"
+        }
+      ],
+      "project_count": 1,
+      "certifications": [
+        {
+          "name": "UI/UX Design Bootcamp",
+          "issuer": "Udemy (beginner level)",
+          "year": 2022
+        }
+      ],
+      "certification_names": [
+        "UI/UX Design Bootcamp"
+      ],
+      "certification_count": 1,
+      "achievements": [
+        "Client appreciated work at Webisdom in a feedback email"
+      ],
+      "languages_known": [
+        "Urdu (Native)",
+        "Hindi (Native)",
+        "English (Basic)"
+      ],
+      "soft_skills": [
+        "Creative",
+        "Hardworking",
+        "Friendly"
+      ],
+      "interests": [
+        "Gaming",
+        "Drawing",
+        "Movies"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.639633",
+      "source_file": "UX_004_Sameer_Malik.json"
+    },
+    {
+      "resume_id": "UX-005",
+      "name": "Ayesha Khan",
+      "email": "ayesha.khan.uxdesign@gmail.com",
+      "phone": "+919677889900",
+      "linkedin": "linkedin.com/in/ayeshakhan-ux",
+      "github": null,
+      "portfolio": "ayeshakhandesign.com | behance.net/ayeshakhan",
+      "address": "Banjara Hills Road 12, Hyderabad, Telangana - 500034",
+      "role_applied": "UI/UX Designer",
+      "quality_tier": "Average",
+      "education": [
+        {
+          "degree": "B.Des – Visual Communication Design",
+          "institution": "MIT Institute of Design, Pune",
+          "university": "MIT Art, Design and Technology University",
+          "cgpa": 7.8,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2021
+        }
+      ],
+      "highest_degree": "B.Des – Visual Communication Design",
+      "institution": "MIT Institute of Design, Pune",
+      "cgpa": 7.8,
+      "experience": [
+        {
+          "company": "OYO Rooms (Oravel Stays Pvt. Ltd.)",
+          "title": "UX Designer",
+          "location": "Hyderabad / Remote",
+          "type": "Full-Time",
+          "start_date": "Aug 2021",
+          "end_date": "Present",
+          "duration_months": 34,
+          "responsibilities": [
+            "Designed core booking flows for OYO's guest-facing mobile app — hotel search, date selection, room upgrades, and review submission.",
+            "Ran 4 rounds of usability testing per quarter using Maze and live sessions; average 8 participants per test.",
+            "Improved booking conversion rate by 17% through redesign of room selection screen based on eye-tracking study findings.",
+            "Contributed 35 components to OYO's design system; collaborated with 3 other designers on token architecture.",
+            "Designed OYO Business — corporate travel booking flow from scratch — onboarded by 200+ corporate accounts within 6 months.",
+            "Worked with iOS and Android developers on platform-specific interaction patterns."
+          ]
+        },
+        {
+          "company": "Cleartrip (Flipkart Group)",
+          "title": "UI Design Intern",
+          "location": "Bengaluru / Remote",
+          "type": "Internship",
+          "start_date": "Feb 2021",
+          "end_date": "Jul 2021",
+          "duration_months": 6,
+          "responsibilities": [
+            "Assisted in redesigning the flight search results page — implemented new filter UX.",
+            "Created visual design specs for 3 new features; participated in design reviews.",
+            "Maintained component library entries for 10+ new UI patterns."
+          ]
+        }
+      ],
+      "years_experience": 3.1,
+      "companies": [
+        "OYO Rooms (Oravel Stays Pvt. Ltd.)",
+        "Cleartrip (Flipkart Group)"
+      ],
+      "skills": {
+        "design_tools": [
+          "Figma (intermediate-advanced)",
+          "Principle",
+          "Adobe XD",
+          "Photoshop",
+          "Illustrator"
+        ],
+        "research_methods": [
+          "Usability Testing (Maze, live)",
+          "Eye-Tracking (Tobii — supervised)",
+          "User Interviews",
+          "Competitive Audit"
+        ],
+        "design_disciplines": [
+          "Mobile App Design (iOS + Android)",
+          "Responsive Web",
+          "Wireframing",
+          "Visual UI Design",
+          "Component Design"
+        ],
+        "code_knowledge": [
+          "HTML/CSS (design QA level)"
+        ],
+        "collaboration": [
+          "Figma Dev Mode",
+          "Zeplin",
+          "JIRA",
+          "Confluence",
+          "Slack"
+        ]
+      },
+      "skills_flat": [
+        "Figma (intermediate-advanced)",
+        "Principle",
+        "Adobe XD",
+        "Photoshop",
+        "Illustrator",
+        "Usability Testing (Maze, live)",
+        "Eye-Tracking (Tobii — supervised)",
+        "User Interviews",
+        "Competitive Audit",
+        "Mobile App Design (iOS + Android)",
+        "Responsive Web",
+        "Wireframing",
+        "Visual UI Design",
+        "Component Design",
+        "HTML/CSS (design QA level)",
+        "Figma Dev Mode",
+        "Zeplin",
+        "JIRA",
+        "Confluence",
+        "Slack"
+      ],
+      "skill_count": 20,
+      "projects": [
+        {
+          "name": "OYO Business – Corporate Travel Booking",
+          "description": "0-to-1 design for OYO Business — corporate travel management and hotel booking for company employees. Full design ownership. 200+ corporate accounts onboarded in 6 months.",
+          "portfolio_link": "ayeshakhandesign.com/oyo-business"
+        },
+        {
+          "name": "TravelLight – Minimalist Travel App",
+          "description": "Personal project: UX exploration for a minimalist solo-travel companion app. Includes trip journal, offline maps, and local experience discovery. Published full case study on Behance.",
+          "portfolio_link": "behance.net/ayeshakhan/travellight"
+        }
+      ],
+      "project_count": 2,
+      "certifications": [
+        {
+          "name": "Google UX Design Professional Certificate",
+          "issuer": "Coursera / Google",
+          "year": 2021
+        },
+        {
+          "name": "IDF – UX Research Bootcamp",
+          "issuer": "Interaction Design Foundation",
+          "year": 2022
+        }
+      ],
+      "certification_names": [
+        "Google UX Design Professional Certificate",
+        "IDF – UX Research Bootcamp"
+      ],
+      "certification_count": 2,
+      "achievements": [
+        "MIT Institute of Design Best Portfolio Award – Final Year (2021)",
+        "Maze Design Impact Report — OYO booking conversion case study featured (2023)"
+      ],
+      "languages_known": [
+        "English (Fluent)",
+        "Hindi (Native)",
+        "Urdu (Native)",
+        "Telegu (Basic)"
+      ],
+      "soft_skills": [
+        "Empathy-Driven Design",
+        "Research Synthesis",
+        "Constructive Critique",
+        "Cross-Platform Awareness",
+        "Stakeholder Facilitation"
+      ],
+      "interests": [
+        "Travel Photography",
+        "Motion Design (learning After Effects)",
+        "Cooking",
+        "Design Conference Talks"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.639819",
+      "source_file": "UX_005_Ayesha_Khan.json"
+    },
+    {
+      "resume_id": "UX-006",
+      "name": "Deepak Sundaram",
+      "email": "deepaksundaram.design@rediffmail.com",
+      "phone": "+919444001122",
+      "linkedin": null,
+      "github": null,
+      "portfolio": null,
+      "address": "Chromepet, Chennai, Tamil Nadu - 600044",
+      "role_applied": "UI/UX Designer",
+      "quality_tier": "Poor",
+      "education": [
+        {
+          "degree": "B.Sc. – Visual Communication",
+          "institution": "Loyola College, Chennai",
+          "university": "University of Madras",
+          "cgpa": 6.1,
+          "cgpa_scale": 10.0,
+          "year_of_passing": 2022
+        }
+      ],
+      "highest_degree": "B.Sc. – Visual Communication",
+      "institution": "Loyola College, Chennai",
+      "cgpa": 6.1,
+      "experience": [
+        {
+          "company": "PrintMagic Advertising",
+          "title": "Graphic Designer",
+          "location": "Chennai, TN",
+          "type": "Full-Time",
+          "start_date": "Aug 2022",
+          "end_date": "Present",
+          "duration_months": 22,
+          "responsibilities": [
+            "Designed print advertisements, brochures, and banner stands for local clients.",
+            "Made social media graphics using Canva and Photoshop.",
+            "Worked with print vendors to finalize designs for production."
+          ]
+        }
+      ],
+      "years_experience": 1.8,
+      "companies": [
+        "PrintMagic Advertising"
+      ],
+      "skills": {
+        "design_tools": [
+          "Adobe Photoshop (intermediate)",
+          "Canva",
+          "Figma (beginner — self-taught from YouTube)"
+        ],
+        "research_methods": [],
+        "design_disciplines": [
+          "Print Design",
+          "Social Media Graphics",
+          "Basic Digital UI (no user testing experience)"
+        ],
+        "code_knowledge": [],
+        "collaboration": [
+          "WhatsApp",
+          "Email"
+        ]
+      },
+      "skills_flat": [
+        "Adobe Photoshop (intermediate)",
+        "Canva",
+        "Figma (beginner — self-taught from YouTube)",
+        "Print Design",
+        "Social Media Graphics",
+        "Basic Digital UI (no user testing experience)",
+        "WhatsApp",
+        "Email"
+      ],
+      "skill_count": 8,
+      "projects": [
+        {
+          "name": "Taxi App Screens (Personal Practice)",
+          "description": "Copied and recreated a taxi booking app UI from a YouTube tutorial in Figma. No original design work or user research involved.",
+          "portfolio_link": null
+        }
+      ],
+      "project_count": 1,
+      "certifications": [],
+      "certification_names": [],
+      "certification_count": 0,
+      "achievements": [
+        "Designed award-winning brochure for a local NGO charity run (2023)"
+      ],
+      "languages_known": [
+        "Tamil (Native)",
+        "English (Basic)"
+      ],
+      "soft_skills": [
+        "Creative",
+        "Hardworking",
+        "Punctual"
+      ],
+      "interests": [
+        "Movies",
+        "Drawing",
+        "Cricket"
+      ],
+      "parsed_at": "2026-06-28T15:11:39.640098",
+      "source_file": "UX_006_Deepak_Sundaram.json"
+    }
+  ]
+}

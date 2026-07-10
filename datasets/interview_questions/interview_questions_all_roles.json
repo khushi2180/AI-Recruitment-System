@@ -1,0 +1,442 @@
+{
+  "meta": {
+    "phase": "Phase 5 – Interview Question Generator",
+    "roles_covered": ["Software Engineer", "Cyber Security Analyst", "Data Analyst", "Product Manager", "UI/UX Designer"],
+    "questions_per_role": { "technical": 10, "behavioural": 10, "situational": 5 },
+    "rubric_levels": ["Excellent (9-10)", "Average (5-8)", "Poor (0-4)"]
+  },
+  "roles": {
+
+    "Software Engineer": {
+      "technical": [
+        {
+          "id": "SE-T-01",
+          "question": "Explain the difference between synchronous and asynchronous programming. When would you use one over the other?",
+          "difficulty": "Medium",
+          "marks": 10,
+          "expected_answer": "Synchronous code executes sequentially, blocking execution until each operation completes. Asynchronous code allows non-blocking execution — the program continues running while waiting for I/O (network, file, DB). Use async for I/O-bound tasks (API calls, DB queries) and sync for CPU-bound, sequential logic.",
+          "evaluation_criteria": ["Correct definition", "I/O vs CPU bound distinction", "Real-world example (Promises/async-await, callbacks)", "Performance impact awareness"],
+          "rubric": {
+            "excellent": "Explains both with examples, discusses event loop or thread pools, gives appropriate use-case trade-offs.",
+            "average": "Correctly defines both concepts with a simple example but misses performance nuances.",
+            "poor": "Confuses the two or provides a very vague answer without examples."
+          }
+        },
+        {
+          "id": "SE-T-02",
+          "question": "Design a URL shortening service (like bit.ly). What components would you include, how would you handle scale, and what database would you choose?",
+          "difficulty": "Hard",
+          "marks": 10,
+          "expected_answer": "System components: URL encoding (Base62 hashing), key generation service, database (NoSQL like Cassandra or Redis for fast reads), CDN for redirect latency, analytics store. Handle scale with: horizontal sharding on short code, cache (Redis) for hot URLs, load balancer, rate limiting. Use NoSQL for high-read, low-latency access patterns.",
+          "evaluation_criteria": ["System architecture components", "Hash/encoding strategy", "Database choice with justification", "Scalability approach (caching, sharding)", "Analytics consideration"],
+          "rubric": {
+            "excellent": "Covers all components with trade-offs, proposes Base62 encoding, uses Redis for caching, explains sharding and analytics layer.",
+            "average": "Covers basic components (hash + DB), partially addresses scale, vague on specific technologies.",
+            "poor": "Only describes a simple redirect mechanism without addressing scale, DB, or architecture."
+          }
+        },
+        {
+          "id": "SE-T-03",
+          "question": "What is the difference between a process and a thread? How does Python's GIL affect multithreading?",
+          "difficulty": "Medium",
+          "marks": 10,
+          "expected_answer": "Process: independent program in memory with its own address space. Thread: lightweight unit within a process sharing memory. Python's GIL (Global Interpreter Lock) allows only one thread to execute Python bytecode at a time, making Python threads ineffective for CPU-bound tasks. Use multiprocessing for CPU-bound and threading/asyncio for I/O-bound.",
+          "evaluation_criteria": ["Correct process vs thread definition", "Memory space awareness", "GIL explanation", "When to use multiprocessing vs threading"],
+          "rubric": {
+            "excellent": "Clear process/thread distinction, explains GIL impact precisely, gives asyncio/multiprocessing workarounds.",
+            "average": "Knows the difference and mentions GIL but not its exact impact on performance.",
+            "poor": "Confuses processes and threads; unaware of GIL."
+          }
+        },
+        {
+          "id": "SE-T-04",
+          "question": "What are the SOLID principles? Explain each briefly with an example.",
+          "difficulty": "Medium",
+          "marks": 10,
+          "expected_answer": "S – Single Responsibility: a class should have one reason to change. O – Open/Closed: open for extension, closed for modification. L – Liskov Substitution: subclasses should replace base classes seamlessly. I – Interface Segregation: clients shouldn't depend on unused interfaces. D – Dependency Inversion: depend on abstractions, not concretions.",
+          "evaluation_criteria": ["All 5 principles named correctly", "Correct definitions", "At least 2 practical examples", "Understanding of design impact"],
+          "rubric": {
+            "excellent": "All 5 correctly explained with code or real-world examples; explains why violations cause problems.",
+            "average": "3–4 principles correctly explained; limited or no examples.",
+            "poor": "Recalls fewer than 3 principles; vague definitions."
+          }
+        },
+        {
+          "id": "SE-T-05",
+          "question": "What is a RESTful API? What are the key constraints? How does it differ from GraphQL?",
+          "difficulty": "Medium",
+          "marks": 10,
+          "expected_answer": "REST uses HTTP verbs (GET, POST, PUT, DELETE), stateless requests, uniform resource URLs, and standard status codes. Key constraints: statelessness, cacheability, client-server separation, layered system. GraphQL: single endpoint, clients specify exact data needed, avoids over/under-fetching. Use REST for simple CRUD; GraphQL for complex, nested data with varied client needs.",
+          "evaluation_criteria": ["REST constraints correctly stated", "HTTP verbs and status codes", "GraphQL vs REST trade-offs", "Use-case differentiation"],
+          "rubric": {
+            "excellent": "Explains all REST constraints, gives status code examples, compares GraphQL on over/under-fetching and use cases.",
+            "average": "Knows REST basics and GraphQL high level but unclear on REST constraints or specific trade-offs.",
+            "poor": "Can describe REST vaguely; little to no knowledge of GraphQL or REST constraints."
+          }
+        },
+        {
+          "id": "SE-T-06",
+          "question": "Explain what Docker is and how it differs from a virtual machine. Write a simple Dockerfile for a Python Flask app.",
+          "difficulty": "Medium",
+          "marks": 10,
+          "expected_answer": "Docker: containerisation platform that packages apps with their dependencies. Vs VM: containers share the host OS kernel (lightweight, fast startup). VMs virtualise hardware (heavy, full OS per VM). Dockerfile: FROM python:3.11-slim → WORKDIR /app → COPY requirements.txt . → RUN pip install -r requirements.txt → COPY . . → EXPOSE 5000 → CMD [\"python\", \"app.py\"].",
+          "evaluation_criteria": ["Docker vs VM distinction", "Kernel sharing concept", "Valid Dockerfile structure", "Layer caching awareness"],
+          "rubric": {
+            "excellent": "Clear Docker vs VM explanation with kernel sharing; correct Dockerfile with layer caching optimisation.",
+            "average": "Correct Docker explanation; Dockerfile is valid but not optimised.",
+            "poor": "Vague Docker definition; cannot write a Dockerfile."
+          }
+        },
+        {
+          "id": "SE-T-07",
+          "question": "Write a Python function to find the longest substring without repeating characters. Analyse its time and space complexity.",
+          "difficulty": "Hard",
+          "marks": 10,
+          "expected_answer": "Sliding window with hash set: maintain left pointer and set of chars. Extend right; if char in set, shrink from left. Track max window size. Time: O(n), Space: O(min(n, 26)) for ASCII. Code: def longest_unique(s): seen, l, max_len = set(), 0, 0 [for r in range(len(s)): while s[r] in seen: seen.discard(s[l]); l += 1 [seen.add(s[r]); max_len = max(max_len, r-l+1)] return max_len]",
+          "evaluation_criteria": ["Sliding window approach", "Correct use of set/map", "Edge cases handled (empty, single char)", "Correct O(n) complexity analysis"],
+          "rubric": {
+            "excellent": "Sliding window solution, O(n) time/O(1) space, handles edge cases, explains trade-offs.",
+            "average": "Brute-force O(n²) or correct sliding window with minor bugs; partial complexity analysis.",
+            "poor": "Nested loop without optimisation; incorrect complexity; misses edge cases."
+          }
+        },
+        {
+          "id": "SE-T-08",
+          "question": "What is SQL indexing? When would you create an index and when would it hurt performance?",
+          "difficulty": "Medium",
+          "marks": 10,
+          "expected_answer": "Index: data structure (B-tree/hash) that speeds up SELECT queries by allowing fast lookup. Create when: frequently queried columns (WHERE, JOIN, ORDER BY), high-cardinality columns. Avoid when: small tables, frequently updated columns (write overhead), low-selectivity columns. Composite indexes: column order matters (leftmost prefix rule).",
+          "evaluation_criteria": ["Index definition", "B-tree vs hash index", "When to create/avoid", "Write overhead understanding", "Composite index rules"],
+          "rubric": {
+            "excellent": "Explains B-tree structure, gives SELECT/INSERT trade-off, discusses composite index prefix rule with example.",
+            "average": "Knows index improves reads, names correct use cases, vague on write overhead.",
+            "poor": "Says indexing makes things faster without understanding write penalty or when not to use."
+          }
+        },
+        {
+          "id": "SE-T-09",
+          "question": "Explain the concept of eventual consistency vs strong consistency in distributed systems. Give a real-world example of each.",
+          "difficulty": "Hard",
+          "marks": 10,
+          "expected_answer": "Strong consistency: all reads reflect the latest write (e.g., bank balance — use RDBMS with transactions). Eventual consistency: system will converge to consistent state given no new updates (e.g., DNS propagation, social media likes count). Trade-off via CAP theorem: Consistency vs Availability vs Partition Tolerance.",
+          "evaluation_criteria": ["Correct definitions", "CAP theorem reference", "Real-world examples", "Trade-off articulation"],
+          "rubric": {
+            "excellent": "Correctly defines both, references CAP theorem, gives appropriate examples (banking vs DNS), explains when to choose each.",
+            "average": "Correct definitions with one example; limited CAP theorem awareness.",
+            "poor": "Confuses the two or gives only superficial definitions without examples."
+          }
+        },
+        {
+          "id": "SE-T-10",
+          "question": "What is a memory leak in software? How would you detect and fix one in a Node.js application?",
+          "difficulty": "Medium",
+          "marks": 10,
+          "expected_answer": "Memory leak: memory that is allocated but never released, causing the process to consume increasing RAM over time. In Node.js: use Chrome DevTools heap profiler or Clinic.js to take heap snapshots, compare, and identify growing object references. Common causes: event listener accumulation, global variables, unclosed streams/DB connections. Fix: remove listeners after use (emitter.off), use WeakMap for object references, close DB connections.",
+          "evaluation_criteria": ["Definition accuracy", "Detection tooling (heap snapshot)", "Common causes", "Concrete fix strategies"],
+          "rubric": {
+            "excellent": "Explains definition, names specific tools (Clinic.js, heap snapshot), identifies 3+ root causes, gives code-level fixes.",
+            "average": "Correct definition, mentions one detection method, vague fixes.",
+            "poor": "Vague definition; cannot name debugging tools or causes."
+          }
+        }
+      ],
+      "behavioural": [
+        {
+          "id": "SE-B-01",
+          "question": "Tell me about a time you received critical feedback on your code during a code review. How did you respond?",
+          "difficulty": "Medium", "marks": 10,
+          "expected_answer": "STAR format: Situation – review caught a significant security flaw or design anti-pattern. Task – needed to understand the feedback without defensiveness. Action – asked clarifying questions, researched the suggestion, reworked the code. Result – shipped better code, built trust with senior reviewer, adopted learnings.",
+          "rubric": {
+            "excellent": "Clear STAR structure, shows humility and growth mindset, describes specific learning.",
+            "average": "Describes a situation but lacks specificity or clear growth outcome.",
+            "poor": "Defensive framing or superficial answer without real reflection."
+          }
+        },
+        {
+          "id": "SE-B-02",
+          "question": "Describe a time when you had to debug a production issue under time pressure. What was your process?",
+          "difficulty": "Hard", "marks": 10,
+          "expected_answer": "STAR: identifies structured debugging approach — check logs, isolate component, reproduce locally or in staging, apply minimal fix first, test, hotfix deploy, root-cause analysis post-incident. Communication with stakeholders during incident also highlighted.",
+          "rubric": {
+            "excellent": "Structured process (logs → isolate → reproduce → fix → RCA), clear team communication, specific technical detail.",
+            "average": "Describes debugging steps but lacks structure or impact clarity.",
+            "poor": "Vague 'I just kept trying things' answer without systematic approach."
+          }
+        },
+        {
+          "id": "SE-B-03", "question": "Give an example of a time you proactively improved something that wasn't in your job description.", "difficulty": "Medium", "marks": 10,
+          "expected_answer": "Example: noticed flaky test suite causing CI delays; took initiative to stabilise tests or add integration tests; improved team velocity without being asked.", "rubric": { "excellent": "Specific example with measurable impact, shows initiative and team awareness.", "average": "Good example but limited measurable impact.", "poor": "Vague or clearly minor improvement." }
+        },
+        { "id": "SE-B-04", "question": "Describe a time you had to work with a difficult teammate. How did you handle the conflict?", "difficulty": "Medium", "marks": 10,
+          "expected_answer": "Focuses on the problem, not the person. Used direct communication, sought common ground, escalated appropriately if needed.", "rubric": { "excellent": "Diplomatic approach, specific resolution, positive outcome.", "average": "Handled it but perhaps avoided direct conversation.", "poor": "Blames the other person or avoids the conflict." }
+        },
+        { "id": "SE-B-05", "question": "Tell me about a time you had to learn a new technology quickly to complete a project.", "difficulty": "Medium", "marks": 10, "expected_answer": "Structured learning approach: official docs, build-while-learning, seek help from team, apply immediately to project.", "rubric": { "excellent": "Specific tech, fast learning strategy, shipped successfully.", "average": "Describes learning a technology with some structure.", "poor": "Vague; no clear approach or outcome." }
+        },
+        { "id": "SE-B-06", "question": "Describe a project where you had to balance multiple priorities simultaneously. How did you manage?", "difficulty": "Medium", "marks": 10, "expected_answer": "Uses prioritisation (MoSCoW/impact-effort), communicates with manager, sets expectations.", "rubric": { "excellent": "Framework used, clear communication, successful delivery of both.", "average": "Managed but ad hoc.", "poor": "Dropped one; no clear strategy." }
+        },
+        { "id": "SE-B-07", "question": "Tell me about a time your code caused a bug in production. What did you do?", "difficulty": "Hard", "marks": 10, "expected_answer": "Owns the mistake, quick mitigation, root cause analysis, process improvement to prevent recurrence.", "rubric": { "excellent": "Ownership, fast fix, RCA, process change (e.g., added test).", "average": "Admits mistake but limited follow-through on prevention.", "poor": "Deflects or minimises the issue." }
+        },
+        { "id": "SE-B-08", "question": "Give an example of how you have contributed to improving team processes or culture.", "difficulty": "Medium", "marks": 10, "expected_answer": "Code review standards, onboarding docs, tech talk, pair programming sessions.", "rubric": { "excellent": "Specific initiative with measurable team impact.", "average": "Good example but impact unclear.", "poor": "Vague or minimal contribution." }
+        },
+        { "id": "SE-B-09", "question": "Describe a time when you disagreed with your manager's technical decision. How did you handle it?", "difficulty": "Hard", "marks": 10, "expected_answer": "Raised concern with data/reasoning, chose battles wisely, disagreed and committed once decision made.", "rubric": { "excellent": "Data-backed disagreement, professional escalation, committed to decision.", "average": "Raised concern but lacked data or backing.", "poor": "Either never disagreed or raised conflict without resolution." }
+        },
+        { "id": "SE-B-10", "question": "Tell me about the most complex system you've built. What made it complex and how did you manage that complexity?", "difficulty": "Hard", "marks": 10, "expected_answer": "Architecture decisions, modular design, testing strategy, documentation, team collaboration.", "rubric": { "excellent": "Specific system with real technical detail, clear complexity management strategy.", "average": "Describes a reasonably complex project with some strategy.", "poor": "Vague or overly simple project presented as complex." }
+        }
+      ],
+      "situational": [
+        {
+          "id": "SE-S-01",
+          "question": "You are mid-sprint and a critical production outage occurs that affects 10,000 users. Your sprint deadline is in 2 days. What do you do?",
+          "difficulty": "Hard", "marks": 10,
+          "expected_answer": "Immediate: join incident bridge, own resolution, communicate ETA to stakeholders. Sprint: negotiate deadline extension with PM after outage is resolved. Post-incident: RCA and process update.",
+          "rubric": { "excellent": "Correct prioritisation (outage > sprint), clear communication, RCA mindset.", "average": "Fixes outage but poor stakeholder communication or no RCA.", "poor": "Prioritises sprint over outage or panics without a plan." }
+        },
+        { "id": "SE-S-02", "question": "You discover that a security vulnerability exists in a library your product uses. The patch requires significant refactoring. How do you handle it?", "difficulty": "Hard", "marks": 10,
+          "expected_answer": "Assess CVSS severity, apply temporary mitigation (WAF rule, feature flag), schedule proper patch in next sprint, communicate to security team and management.", "rubric": { "excellent": "Risk-based approach, temporary + permanent fix, stakeholder communication.", "average": "Knows to patch but no interim mitigation strategy.", "poor": "Ignores or delays without mitigation." }
+        },
+        { "id": "SE-S-03", "question": "You are asked to estimate how long a feature will take, but you've never built anything similar before. How do you respond?", "difficulty": "Medium", "marks": 10, "expected_answer": "Time-boxed spike/prototyping, research, break into unknowns, provide a range estimate with explicit assumptions and review points.", "rubric": { "excellent": "Proposes spike, gives range, flags assumptions.", "average": "Gives an estimate but doesn't flag assumptions.", "poor": "Wild guess or refuses to estimate." }
+        },
+        { "id": "SE-S-04", "question": "Your code review partner consistently submits PRs without tests, despite team standards requiring 80% coverage. How do you handle it?", "difficulty": "Medium", "marks": 10, "expected_answer": "Direct conversation first, point to standards, offer help, escalate to team lead if continues, maybe automate the gate in CI.", "rubric": { "excellent": "Direct but collaborative approach, proposes systemic fix (CI gate).", "average": "Talks to the person but no systemic solution.", "poor": "Ignores it or immediately escalates without direct conversation." }
+        },
+        { "id": "SE-S-05", "question": "You join a new team and find the existing codebase is a mess — no tests, no documentation, and tightly coupled. What do you do in your first 90 days?", "difficulty": "Hard", "marks": 10, "expected_answer": "First 30 days: understand, don't change. Identify hotspots. Days 31-60: add tests to areas you touch. Days 61-90: propose refactor plan with business case. Evangelise incrementally.", "rubric": { "excellent": "Phased approach, earns trust before proposing change, business-case driven.", "average": "Wants to fix things but no phased plan.", "poor": "Immediately rewrites everything or accepts the mess." }
+        }
+      ]
+    },
+
+    "Cyber Security Analyst": {
+      "technical": [
+        { "id": "CSA-T-01", "question": "Explain the MITRE ATT&CK framework. How would you use it in a SOC environment?", "difficulty": "Medium", "marks": 10, "expected_answer": "MITRE ATT&CK: knowledge base of adversary TTPs (Tactics, Techniques, Procedures) organised in a matrix. In SOC: map detected alerts to ATT&CK techniques, identify coverage gaps, tune detection rules by technique, prioritise threat hunting based on APT group profiles.", "rubric": { "excellent": "Full framework explanation, practical SOC application, names specific tactics (e.g., Execution, Lateral Movement) and use in threat hunting.", "average": "Knows the framework, can describe SOC use at high level.", "poor": "Vague description; cannot explain practical use." }
+        },
+        { "id": "CSA-T-02", "question": "What is the difference between IDS and IPS? What are their limitations?", "difficulty": "Easy", "marks": 10, "expected_answer": "IDS: detects and alerts (passive). IPS: detects and blocks (active, inline). Limitations: both suffer from false positives/negatives, signature-based tools miss zero-days, encrypted traffic analysis limitations, performance impact in high-throughput environments.", "rubric": { "excellent": "Correct distinction, discusses signature vs anomaly detection, limitations in encrypted traffic and zero-days.", "average": "Correct IDS/IPS distinction; limited discussion of limitations.", "poor": "Confuses IDS and IPS or cannot identify limitations." }
+        },
+        { "id": "CSA-T-03", "question": "Walk me through how you would investigate a suspected phishing email. What tools and steps would you use?", "difficulty": "Medium", "marks": 10, "expected_answer": "Steps: check email headers (SPF/DKIM/DMARC), analyse sender domain (WHOIS, MX record), inspect URLs (URLScan.io, VirusTotal), sandbox attachments (Cuckoo, Any.run), check IoCs against threat intel feeds, isolate affected user, reset credentials if compromise confirmed, document and report.", "rubric": { "excellent": "Systematic investigation with specific tools, IoC analysis, user isolation and remediation steps.", "average": "Checks headers and links; partial tool knowledge.", "poor": "Only checks sender and advises to delete; no forensic depth." }
+        },
+        { "id": "CSA-T-04", "question": "What is a SQL Injection attack? Write a simple example and explain how to prevent it.", "difficulty": "Medium", "marks": 10, "expected_answer": "SQLi: attacker injects malicious SQL via input fields. Example: `SELECT * FROM users WHERE username='' OR 1=1--`. Prevention: parameterised queries / prepared statements, input validation, WAF, least privilege DB accounts, stored procedures.", "rubric": { "excellent": "Correct example, explains boolean-based and blind SQLi variants, all prevention techniques.", "average": "Correct example with parameterised queries as fix; misses WAF or least privilege.", "poor": "Describes SQLi vaguely; cannot write example or fix." }
+        },
+        { "id": "CSA-T-05", "question": "Explain the concept of a zero-day vulnerability. How does it differ from an n-day vulnerability?", "difficulty": "Medium", "marks": 10, "expected_answer": "Zero-day: vulnerability unknown to the vendor/public; no patch exists. N-day: known vulnerability with a patch available but not yet applied. Zero-days are more dangerous as defenders cannot patch. N-days are exploited by attackers against unpatched systems (most breaches use n-days).", "rubric": { "excellent": "Clear distinction, explains threat landscape of both, notes most real breaches use n-days.", "average": "Correct zero-day vs n-day distinction; doesn't elaborate on exploitation landscape.", "poor": "Confuses zero-day with new attack; vague on difference." }
+        },
+        { "id": "CSA-T-06", "question": "What is Kerberoasting? How does it work and how can it be detected and prevented?", "difficulty": "Hard", "marks": 10, "expected_answer": "Kerberoasting: attacker with valid AD credentials requests Kerberos service tickets for SPN accounts, then cracks TGS tickets offline to obtain service account passwords. Detect: look for unusual TGS-REQ events (Event ID 4769) with weak encryption (RC4). Prevent: strong passwords for service accounts (25+ chars), group managed service accounts (gMSA), monitor for 4769 spikes.", "rubric": { "excellent": "Full attack chain explained, detection via Event ID 4769, prevention via gMSA and strong passwords.", "average": "Knows the attack and prevention but missed detection method.", "poor": "Heard the term but cannot explain mechanism or remediation." }
+        },
+        { "id": "CSA-T-07", "question": "What is the CIA Triad? Give a real-world example of a breach that violated each pillar.", "difficulty": "Easy", "marks": 10, "expected_answer": "C – Confidentiality (data not exposed to unauthorised parties): Equifax breach — PII exposed. I – Integrity (data not tampered): supply chain attack (SolarWinds — code modified). A – Availability (systems accessible): DDoS attack on Dyn DNS — services down.", "rubric": { "excellent": "Correct definitions with named real-world examples for each pillar.", "average": "Correct definitions; generic or incomplete examples.", "poor": "Can name CIA but cannot explain with examples." }
+        },
+        { "id": "CSA-T-08", "question": "How does SSL/TLS work? Explain the TLS handshake process.", "difficulty": "Hard", "marks": 10, "expected_answer": "TLS handshake: ClientHello (supported cipher suites, TLS version) → ServerHello (chosen cipher, cert) → Certificate validation → Key exchange (ECDHE) → Session key derivation → Finished messages. Symmetric encryption used for data transfer. Certificate chain validates server identity.", "rubric": { "excellent": "All handshake steps correct, explains asymmetric for key exchange + symmetric for data, certificate chain validation.", "average": "Knows handshake steps generally; may miss key exchange details.", "poor": "Says 'it encrypts data' without explaining the mechanism." }
+        },
+        { "id": "CSA-T-09", "question": "Write a simple Python script that reads a log file and extracts all IP addresses found in it using regular expressions.", "difficulty": "Medium", "marks": 10, "expected_answer": "import re; with open('access.log') as f: log=f.read(); ips=re.findall(r'\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b', log); unique_ips=list(set(ips)); print(unique_ips)", "rubric": { "excellent": "Correct regex for IPv4, handles duplicates, reads file properly, could extend to IPv6.", "average": "Functional regex but doesn't deduplicate or handle edge cases.", "poor": "Cannot write regex or reads file incorrectly." }
+        },
+        { "id": "CSA-T-10", "question": "Explain Pass-the-Hash (PtH) attack. How would you mitigate it in a Windows environment?", "difficulty": "Hard", "marks": 10, "expected_answer": "PtH: attacker captures NTLM hash of a user and uses it to authenticate without knowing plaintext password. Tools: Mimikatz, Impacket. Mitigation: enable Protected Users group, disable NTLM where possible (use Kerberos), deploy Credential Guard (Windows Defender), admin tiering, monitor NTLM authentication events.", "rubric": { "excellent": "Full attack chain, mentions Mimikatz, 3+ mitigations including Credential Guard.", "average": "Describes attack and 1-2 mitigations.", "poor": "Knows the name but cannot explain mechanism or fix." }
+        }
+      ],
+      "behavioural": [
+        { "id": "CSA-B-01", "question": "Describe a high-severity security incident you handled. Walk me through your response process.", "difficulty": "Hard", "marks": 10, "expected_answer": "STAR: contains, eradicates, recovers, conducts post-incident review. Clear communication to stakeholders. Documents everything.", "rubric": { "excellent": "Full IR lifecycle, clear stakeholder communication, RCA and lessons learned.", "average": "Describes incident but skips RCA or communication.", "poor": "Vague or describes a minor event as high-severity." }
+        },
+        { "id": "CSA-B-02", "question": "Tell me about a time you found a critical vulnerability before it was exploited. What did you do?", "difficulty": "Medium", "marks": 10, "expected_answer": "Proactive discovery (code review, VAPT, threat hunting), responsible disclosure, coordinated fix, documentation.", "rubric": { "excellent": "Specific finding with CVSS score, responsible disclosure, patch verification.", "average": "Found a vulnerability and reported it; limited detail.", "poor": "Cannot provide a specific example." }
+        },
+        { "id": "CSA-B-03", "question": "Describe a time you had to explain a security risk to a non-technical stakeholder. How did you make it understandable?", "difficulty": "Medium", "marks": 10, "expected_answer": "Used business impact framing (financial risk, reputational damage), analogies, avoided jargon.", "rubric": { "excellent": "Business impact framing, clear analogy, stakeholder acted on recommendation.", "average": "Simplified but still used some jargon.", "poor": "Presented technical detail without translation." }
+        },
+        { "id": "CSA-B-04", "question": "Give an example of when you had to make a quick containment decision during an incident without full information.", "difficulty": "Hard", "marks": 10, "expected_answer": "Explains risk-based decision making under uncertainty: isolate first, investigate after. Clear escalation.", "rubric": { "excellent": "Fast, risk-based decision, documented rationale, escalated appropriately.", "average": "Made a decision but limited reasoning or escalation.", "poor": "Froze or waited for full information — causing delay." }
+        },
+        { "id": "CSA-B-05", "question": "Tell me about how you stay current with emerging cybersecurity threats and trends.", "difficulty": "Easy", "marks": 10, "expected_answer": "SANS Internet Stormcast, CISA advisories, vendor threat intel (CrowdStrike, Mandiant), CVE feeds, Twitter/X threat intel community, CTF participation.", "rubric": { "excellent": "Names 4+ specific sources; participates in community (CTF, conferences).", "average": "2–3 sources mentioned; general answer.", "poor": "Says 'I read the news'; no specific sources." }
+        },
+        { "id": "CSA-B-06", "question": "Describe a time you disagreed with how an incident was classified or handled. What did you do?", "difficulty": "Medium", "marks": 10, "expected_answer": "Raised concern with data, escalated appropriately, documented reasoning.", "rubric": { "excellent": "Professional escalation with evidence; outcome influenced the decision.", "average": "Raised the issue without formal escalation.", "poor": "Silently disagreed or overreacted." }
+        },
+        { "id": "CSA-B-07", "question": "Tell me about a time you mentored a junior analyst. What was most challenging?", "difficulty": "Medium", "marks": 10, "expected_answer": "Adapted communication style, built confidence, provided structured guidance without doing everything for them.", "rubric": { "excellent": "Specific challenge (e.g., alert fatigue), tailored approach, measurable improvement.", "average": "Helped a junior but limited structure or outcome.", "poor": "Cannot provide an example or offers superficial answer." }
+        },
+        { "id": "CSA-B-08", "question": "Give an example of a time you identified a gap in your team's security coverage and fixed it.", "difficulty": "Hard", "marks": 10, "expected_answer": "Identified gap (e.g., no monitoring of cloud egress traffic), proposed solution, implemented detection rule or process.", "rubric": { "excellent": "Specific gap, root cause, solution implemented with measurable improvement.", "average": "Identified gap; partial resolution.", "poor": "Vague or cannot provide a specific example." }
+        },
+        { "id": "CSA-B-09", "question": "Describe a time when alert fatigue affected your team. How did you address it?", "difficulty": "Medium", "marks": 10, "expected_answer": "Tuned SIEM rules, suppressed known-good patterns, categorised low-risk alerts, rotated analyst focus, set threshold-based alerts.", "rubric": { "excellent": "Systematic rule tuning, false positive reduction metric, analyst morale improvement.", "average": "Reduced some alerts but no structured approach.", "poor": "Accepted alert fatigue or just worked harder." }
+        },
+        { "id": "CSA-B-10", "question": "Tell me about your most impactful work in the past year. Why do you consider it impactful?", "difficulty": "Medium", "marks": 10, "expected_answer": "Specific project/initiative with measurable security improvement: reduced MTTD, discovered CVE, improved playbooks, trained team.", "rubric": { "excellent": "Specific, measurable security impact with business context.", "average": "Describes work with limited measurable impact.", "poor": "Vague or unrelated to security." }
+        }
+      ],
+      "situational": [
+        { "id": "CSA-S-01", "question": "At 2 AM during your shift, you detect lateral movement in the network originating from a high-privilege admin account. What do you do?", "difficulty": "Hard", "marks": 10, "expected_answer": "Immediately: log all activity, isolate the compromised account (disable/reset), alert on-call incident commander, check for additional compromised systems, preserve evidence. Escalate to P1. Document timeline.", "rubric": { "excellent": "Immediate isolation, evidence preservation, full escalation chain, P1 classification.", "average": "Isolates account and escalates; misses evidence preservation.", "poor": "Waits until morning or investigates without containing." }
+        },
+        { "id": "CSA-S-02", "question": "A business unit requests you whitelist a known-malicious IP address because 'it's a vendor'. How do you handle it?", "difficulty": "Hard", "marks": 10, "expected_answer": "Assess the risk formally, check threat intel on the IP, require business justification in writing, escalate to CISO, propose alternative (VPN allowlist). Document the decision and risk acceptance.", "rubric": { "excellent": "Formal risk assessment, written risk acceptance, alternative proposed, escalated to leadership.", "average": "Pushes back but lacks formal process.", "poor": "Whitelists without assessment or refuses without offering alternatives." }
+        },
+        { "id": "CSA-S-03", "question": "Your SIEM generates 500 alerts on a Monday morning due to a misconfigured rule. Legitimate alerts are buried in the noise. How do you manage?", "difficulty": "Medium", "marks": 10, "expected_answer": "Immediately suppress the misconfigured rule, prioritise P1/P2 alert categories, triage by asset criticality, fix the rule with proper testing, post-incident review.", "rubric": { "excellent": "Immediate suppression + triage strategy, systematic prioritisation, rule fix with test.", "average": "Suppresses rule and triages; no structured prioritisation.", "poor": "Tries to review all 500 manually or shuts down SIEM." }
+        },
+        { "id": "CSA-S-04", "question": "You receive a threat intelligence report indicating your industry is being targeted by a specific APT group. How do you prepare?", "difficulty": "Hard", "marks": 10, "expected_answer": "Map APT TTPs to MITRE ATT&CK, compare against current detection coverage, identify gaps, create new detection rules, update playbooks, brief leadership, consider threat hunting exercise.", "rubric": { "excellent": "MITRE mapping, gap analysis, new rules, playbook update, leadership brief.", "average": "Reads the report and updates some rules; misses coverage gap analysis.", "poor": "Files the report without action." }
+        },
+        { "id": "CSA-S-05", "question": "A developer pushes API keys to a public GitHub repository by accident. You see it in threat intel feeds. What is your response plan?", "difficulty": "Medium", "marks": 10, "expected_answer": "Immediate: revoke the exposed keys, rotate credentials, assess blast radius (what the keys had access to). Check for any unauthorised API calls in logs. Remove from GitHub (though cached). Alert affected teams. Post-incident: add pre-commit hooks and secret scanning to CI/CD.", "rubric": { "excellent": "Immediate revocation, blast radius assessment, log review, preventive tooling (git-secrets, GitHub secret scanning).", "average": "Revokes keys but misses blast radius or preventive tooling.", "poor": "Asks the developer to delete the file without revoking credentials." }
+        }
+      ]
+    },
+
+    "Data Analyst": {
+      "technical": [
+        { "id": "DA-T-01", "question": "Write a SQL query to find the top 5 customers by total revenue in the last 12 months, along with their most recently purchased product.", "difficulty": "Hard", "marks": 10, "expected_answer": "WITH revenue AS (SELECT customer_id, SUM(amount) AS total_revenue FROM orders WHERE order_date >= CURRENT_DATE - INTERVAL '12 months' GROUP BY customer_id), recent AS (SELECT customer_id, product_name, ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY order_date DESC) AS rn FROM orders) SELECT r.customer_id, rev.total_revenue, r.product_name FROM revenue rev JOIN recent r ON rev.customer_id = r.customer_id AND r.rn = 1 ORDER BY rev.total_revenue DESC LIMIT 5;", "rubric": { "excellent": "Correct use of CTE + window function, correct filtering, handles ties.", "average": "Gets top 5 revenue but misses recent product (or uses suboptimal approach).", "poor": "Basic SELECT without aggregation or window functions." }
+        },
+        { "id": "DA-T-02", "question": "Explain the difference between RANK(), DENSE_RANK(), and ROW_NUMBER() in SQL. Give an example of when each is appropriate.", "difficulty": "Medium", "marks": 10, "expected_answer": "ROW_NUMBER: sequential, no ties. RANK: same rank for ties but gaps next rank. DENSE_RANK: same rank for ties, no gaps. Use ROW_NUMBER for unique row selection; RANK/DENSE_RANK for leaderboards.", "rubric": { "excellent": "All three correct with tie examples, appropriate use cases, demonstrates with example data.", "average": "Knows the difference but cannot articulate tie handling.", "poor": "Confuses them or can only define one." }
+        },
+        { "id": "DA-T-03", "question": "You have a Pandas DataFrame with 1M rows and your EDA script takes 8 minutes to run. How would you optimise it?", "difficulty": "Hard", "marks": 10, "expected_answer": "Use dtype optimisation (int32 instead of int64), chunked reading (read_csv chunksize), vectorised operations instead of apply(), use numba/Cython for compute, sample for EDA, switch to Polars or Dask for large data.", "rubric": { "excellent": "dtype optimisation, vectorisation, Polars/Dask suggestion, chunking, profiling with cProfile.", "average": "Mentions vectorisation and sampling; misses dtype or Polars.", "poor": "Suggests increasing RAM or using a faster computer." }
+        },
+        { "id": "DA-T-04", "question": "Explain A/B testing. How would you determine the required sample size before running a test?", "difficulty": "Medium", "marks": 10, "expected_answer": "A/B test compares two variants. Sample size depends on: baseline conversion rate, minimum detectable effect (MDE), statistical power (80%), significance level (α=0.05). Use power analysis: n = f(α, β, MDE, baseline). Tools: statsmodels.stats.power or online calculators.", "rubric": { "excellent": "Correct sample size formula components, explains Type I/II errors, power analysis, tool mentioned.", "average": "Knows A/B testing and mentions significance level; vague on sample size calculation.", "poor": "Describes A/B testing but cannot explain how to size the experiment." }
+        },
+        { "id": "DA-T-05", "question": "What is the difference between a fact table and a dimension table in a data warehouse? Give an example schema.", "difficulty": "Medium", "marks": 10, "expected_answer": "Fact table: contains quantitative measures (sales_amount, quantity) and foreign keys to dimensions. Dimension table: descriptive attributes (customer name, product category, date). Star schema: one fact, multiple dimensions. Snowflake: normalised dimensions. Example: FACT_SALES (order_id, customer_id, product_id, date_id, amount) surrounded by DIM_CUSTOMER, DIM_PRODUCT, DIM_DATE.", "rubric": { "excellent": "Correct fact/dim distinction, star vs snowflake comparison, concrete schema example.", "average": "Correct definition with simple example; no star/snowflake distinction.", "poor": "Confuses fact and dimension tables." }
+        },
+        { "id": "DA-T-06", "question": "What is data normalisation and when should you avoid it in an analytics context?", "difficulty": "Medium", "marks": 10, "expected_answer": "Normalisation: organising data to reduce redundancy (1NF, 2NF, 3NF). Avoid in analytics/OLAP: denormalised schemas (star/snowflake) are better for query performance. JOINs are expensive at scale. Pre-aggregated tables and materialised views serve analytics better.", "rubric": { "excellent": "Explains normalisation forms, explains why OLAP prefers denormalisation for query speed.", "average": "Knows normalisation basics; limited OLAP context.", "poor": "Confuses OLTP normalisation vs OLAP denormalisation." }
+        },
+        { "id": "DA-T-07", "question": "How would you handle missing values in a dataset? Explain at least 4 different strategies with trade-offs.", "difficulty": "Medium", "marks": 10, "expected_answer": "1. Deletion (listwise/pairwise) — loses data. 2. Mean/median/mode imputation — introduces bias. 3. KNN imputation — computationally expensive but accurate. 4. Regression imputation — assumes linear relationship. 5. Multiple imputation — gold standard for research. 6. Indicator variable — flag missing as feature. Choose based on % missing and data type.", "rubric": { "excellent": "4+ strategies with trade-offs, explains when to use each, considers % missing threshold.", "average": "3 strategies with limited trade-off discussion.", "poor": "Only mentions deletion or mean imputation." }
+        },
+        { "id": "DA-T-08", "question": "Explain the difference between a left join, inner join, and a full outer join. When would you use each?", "difficulty": "Easy", "marks": 10, "expected_answer": "Inner: only matching rows from both tables. Left: all left table rows + matching right rows (NULL for non-matches). Full Outer: all rows from both sides. Use inner for strict matching; left for preserving all records from primary table; full outer for reconciliation.", "rubric": { "excellent": "Correct definitions with Venn diagram reasoning, specific use cases for each.", "average": "Correct definitions; generic use cases.", "poor": "Confuses left and inner join." }
+        },
+        { "id": "DA-T-09", "question": "What is the difference between correlation and causation? Give an example of a spurious correlation.", "difficulty": "Easy", "marks": 10, "expected_answer": "Correlation: statistical relationship between variables. Causation: one variable directly causes another. Spurious: ice cream sales correlate with drowning rates (confounded by summer/heat). Establishing causation requires controlled experiments (RCT) or causal inference methods (IV, DiD, regression discontinuity).", "rubric": { "excellent": "Clear distinction, specific spurious example, mentions RCT or causal inference methods.", "average": "Correct explanation with an example; no causal inference methodology.", "poor": "Confuses correlation with causation." }
+        },
+        { "id": "DA-T-10", "question": "How would you build a dashboard to track user retention for a SaaS product? What metrics and visualisations would you include?", "difficulty": "Hard", "marks": 10, "expected_answer": "Metrics: Day-1/7/30 retention, cohort retention curves, churn rate, MRR retention, NRR. Visualisations: cohort heatmap (retention grid), line chart (retention by cohort), bar chart (churn by segment), waterfall (MRR movement). Drill-downs: by plan, region, acquisition channel.", "rubric": { "excellent": "All key retention metrics, cohort heatmap, drill-down by dimensions, actionable design.", "average": "Main metrics correct; missing cohort analysis or drill-downs.", "poor": "Basic DAU/MAU only; no retention-specific metrics." }
+        }
+      ],
+      "behavioural": [
+        { "id": "DA-B-01", "question": "Describe a time your analysis revealed an uncomfortable truth for the business. How did you present it?", "difficulty": "Hard", "marks": 10, "expected_answer": "Data-backed findings, sensitive framing, actionable recommendations alongside the bad news.", "rubric": { "excellent": "Specific finding, careful framing, stakeholder responded constructively.", "average": "Shared finding but limited strategy for delivery.", "poor": "Softened the data to avoid conflict." }
+        },
+        { "id": "DA-B-02", "question": "Tell me about the most complex analysis you've built. What was the business question and how did you solve it?", "difficulty": "Hard", "marks": 10, "expected_answer": "Clear business problem, methodology, data sources, tools, result, and business impact.", "rubric": { "excellent": "End-to-end analysis story with measurable business impact.", "average": "Good analysis but impact unclear.", "poor": "Simple analysis presented as complex." }
+        },
+        { "id": "DA-B-03", "question": "Describe a time you found a data quality issue that would have led to a wrong business decision if uncaught.", "difficulty": "Medium", "marks": 10, "expected_answer": "Proactive discovery, validation process, escalation, remediation.", "rubric": { "excellent": "Specific issue, escalation process, data quality check implemented.", "average": "Found and fixed but no systemic improvement.", "poor": "Cannot provide a specific example." }
+        },
+        { "id": "DA-B-04", "question": "Give an example of how you convinced a stakeholder to change a decision based on data.", "difficulty": "Medium", "marks": 10, "expected_answer": "Data storytelling, visual evidence, business framing, follow-through.", "rubric": { "excellent": "Specific decision change with measurable outcome.", "average": "Influenced decision but unclear if it changed.", "poor": "Presented data but stakeholder didn't change." }
+        },
+        { "id": "DA-B-05", "question": "Tell me about a time you had to prioritise multiple analysis requests simultaneously. How did you manage?", "difficulty": "Medium", "marks": 10, "expected_answer": "Framework for prioritisation (business impact, urgency), stakeholder communication, setting clear timelines.", "rubric": { "excellent": "Clear framework, stakeholder communication, delivered on time.", "average": "Managed but ad hoc prioritisation.", "poor": "Overwhelmed or dropped requests." }
+        },
+        { "id": "DA-B-06", "question": "Describe a time you automated a manual reporting process. What was the impact?", "difficulty": "Medium", "marks": 10, "expected_answer": "Identified repetitive process, built automated pipeline (Python/SQL/scheduled), saved measurable hours.", "rubric": { "excellent": "Specific automation with time savings quantified.", "average": "Automated something; limited impact quantification.", "poor": "Cannot provide a specific automation example." }
+        },
+        { "id": "DA-B-07", "question": "Tell me about a mistake you made in an analysis. How did you catch it and what did you do?", "difficulty": "Hard", "marks": 10, "expected_answer": "Ownership, quick correction, communication to stakeholders, process change to prevent recurrence.", "rubric": { "excellent": "Owns mistake, fast correction, process improvement.", "average": "Admits mistake but limited follow-through.", "poor": "Deflects or minimises." }
+        },
+        { "id": "DA-B-08", "question": "Describe how you approach building a new dashboard from scratch for a new stakeholder.", "difficulty": "Medium", "marks": 10, "expected_answer": "Discovery (what decisions does the dashboard support?), identify KPIs, prototype → feedback → iterate, validation, training.", "rubric": { "excellent": "Structured discovery process, iterative build, training stakeholder.", "average": "Builds the dashboard; limited stakeholder discovery.", "poor": "Immediately opens Tableau without understanding the business need." }
+        },
+        { "id": "DA-B-09", "question": "Give an example of a time you worked with messy or incomplete data. How did you handle it?", "difficulty": "Medium", "marks": 10, "expected_answer": "Assessment of data quality, imputation/cleaning strategy, documentation of assumptions, communication of limitations.", "rubric": { "excellent": "Systematic cleaning strategy, assumptions documented, limitations communicated.", "average": "Cleaned data; limited documentation of approach.", "poor": "Used dirty data without noting limitations." }
+        },
+        { "id": "DA-B-10", "question": "Tell me about a time you learned a new analytics tool or technique quickly to solve a business problem.", "difficulty": "Medium", "marks": 10, "expected_answer": "Docs-first learning, build-while-learning, shipped solution within deadline.", "rubric": { "excellent": "Specific tool, fast ramp, delivered on deadline with measurable outcome.", "average": "Learned the tool; outcome not clearly measured.", "poor": "Vague learning story without clear application." }
+        }
+      ],
+      "situational": [
+        { "id": "DA-S-01", "question": "Your dashboard shows a 40% drop in daily sales overnight. The VP of Sales wants an answer in 30 minutes. What do you do?", "difficulty": "Hard", "marks": 10, "expected_answer": "First check data pipeline (is this a data issue?), check tracking code, compare by segment (region, product), check for system downtime, market events. Communicate interim findings clearly. State what you know vs what you're investigating.", "rubric": { "excellent": "Data pipeline check first, segmented investigation, clear interim communication.", "average": "Investigates the data; communicates but no pipeline check.", "poor": "Dives into the data without validating it's not a pipeline error." }
+        },
+        { "id": "DA-S-02", "question": "A business stakeholder asks you to 'just make the numbers look better' for the board deck. How do you respond?", "difficulty": "Hard", "marks": 10, "expected_answer": "Decline to manipulate data. Offer to find genuinely positive metrics, reframe data with context, explain risks of presenting misleading data (credibility, legal).", "rubric": { "excellent": "Clear ethical stance, offers a legitimate alternative, explains consequences.", "average": "Refuses but doesn't offer an alternative.", "poor": "Agrees to cherry-pick or manipulate." }
+        },
+        { "id": "DA-S-03", "question": "You are building a customer segmentation model and the dataset has 30% missing values in the income column. How do you proceed?", "difficulty": "Medium", "marks": 10, "expected_answer": "Assess whether missing is MCAR/MAR/MNAR. Options: exclude if MNAR and imputation would bias; use KNN or regression imputation if MAR; flag as a separate segment if useful. Document the decision and communicate limitations.", "rubric": { "excellent": "MCAR/MAR/MNAR analysis, appropriate imputation choice, limitation communicated.", "average": "Knows imputation strategies; doesn't assess missing type.", "poor": "Deletes all rows or imputes mean without analysis." }
+        },
+        { "id": "DA-S-04", "question": "Two senior business leaders disagree about whether to expand to a new market. They ask you to provide data to support the decision. How do you approach this?", "difficulty": "Hard", "marks": 10, "expected_answer": "Objective analysis: TAM, competitive landscape, customer data from existing markets, cost projections, risk factors. Present both perspectives with evidence, clearly state assumptions. Do not bias towards one stakeholder.", "rubric": { "excellent": "Neutral framing, comprehensive analysis, both scenarios presented with assumptions.", "average": "Provides analysis but may favour one view.", "poor": "Presents data to support one side without acknowledging the other." }
+        },
+        { "id": "DA-S-05", "question": "Your ETL pipeline fails silently and bad data appears in a production dashboard used by the CEO. You discover it on a Friday at 5 PM. What do you do?", "difficulty": "Hard", "marks": 10, "expected_answer": "Immediately take the dashboard offline or add a data warning banner, notify stakeholders with clear communication (what's wrong, impact, resolution ETA), fix pipeline, validate data, restore dashboard, implement monitoring to catch silently failing pipelines.", "rubric": { "excellent": "Immediate action (warning banner), stakeholder notification, fix + monitoring implementation.", "average": "Notifies stakeholders and fixes; misses monitoring improvement.", "poor": "Waits until Monday or fixes quietly without notifying CEO." }
+        }
+      ]
+    },
+
+    "Product Manager": {
+      "technical": [
+        { "id": "PM-T-01", "question": "Walk me through how you would write a PRD (Product Requirements Document) for a new feature. What sections would you include?", "difficulty": "Medium", "marks": 10, "expected_answer": "Sections: Problem Statement, Goals & Success Metrics, User Personas, User Stories/Jobs-to-be-Done, Feature Requirements (functional + non-functional), Out-of-Scope, Design Mockups (Figma link), Technical Considerations, Dependencies, Launch Plan, Risks, Open Questions.", "rubric": { "excellent": "All key sections, explains WHY each exists, shows understanding of engineering and design needs.", "average": "Most sections covered; misses success metrics or technical considerations.", "poor": "Writes a feature list, not a PRD." }
+        },
+        { "id": "PM-T-02", "question": "Explain the RICE prioritisation framework. How would you apply it to a backlog of 20 features?", "difficulty": "Medium", "marks": 10, "expected_answer": "RICE = (Reach × Impact × Confidence) / Effort. Score each feature, rank descending. Discuss limitations: subjective confidence, political bias. Combine with other signals (customer demand, strategic alignment, dependencies).", "rubric": { "excellent": "Formula correct, demonstrates on example, discusses limitations and complements.", "average": "Formula correct, applies to example; doesn't discuss limitations.", "poor": "Knows RICE exists but cannot define the formula." }
+        },
+        { "id": "PM-T-03", "question": "How do you define and measure product-market fit? What signals tell you that you've achieved it?", "difficulty": "Hard", "marks": 10, "expected_answer": "Sean Ellis 'very disappointed' survey: ≥40%. NPS, retention curves flattening, organic growth/WOM, low churn in target segment, ACV growth without heavy sales. Qualitative: customers describe product as a must-have.", "rubric": { "excellent": "40% threshold, multiple quantitative signals, qualitative validation, explains segment specificity.", "average": "Mentions NPS and retention; misses Sean Ellis or organic growth.", "poor": "Defines PMF vaguely; cannot name measurable signals." }
+        },
+        { "id": "PM-T-04", "question": "Explain the difference between output metrics, outcome metrics, and lagging vs leading indicators. Give examples.", "difficulty": "Medium", "marks": 10, "expected_answer": "Output: what you built (features shipped, deployments). Outcome: business result (churn reduced, revenue increased). Leading indicators predict future outcomes (activation rate predicts retention). Lagging: historical results (annual revenue). Good product teams focus on outcome metrics and leading indicators.", "rubric": { "excellent": "All four correctly defined with concrete examples, explains why leading indicators matter most.", "average": "Output vs outcome distinction correct; unclear on leading/lagging.", "poor": "Confuses outputs and outcomes." }
+        },
+        { "id": "PM-T-05", "question": "How would you conduct a competitive analysis for a new B2B SaaS product entering the CRM market?", "difficulty": "Medium", "marks": 10, "expected_answer": "Identify direct competitors (Salesforce, HubSpot, Pipedrive), indirect substitutes (Excel, Notion). Analyse: feature set, pricing, positioning, ICP, reviews (G2/Gartner), sales motion (PLG vs SLG), API ecosystem. Produce competitive matrix and differentiation map.", "rubric": { "excellent": "Systematic framework, names tools (G2, Gartner), covers pricing + positioning + ecosystem, produces actionable output.", "average": "Names competitors, compares features; misses pricing or reviews.", "poor": "Lists competitor names without a structured comparison." }
+        },
+        { "id": "PM-T-06", "question": "What is the North Star Metric? How do you choose the right one for a product?", "difficulty": "Medium", "marks": 10, "expected_answer": "NSM: single metric that best captures delivered value and predicts long-term success. Choose based on: most correlated to retention, captures core value delivery, not vanity metric. Examples: Slack – daily messages sent; Airbnb – nights booked; Spotify – time listening. Leads a metric tree of supporting KPIs.", "rubric": { "excellent": "NSM defined correctly, gives examples across business models, explains metric tree.", "average": "Correct definition with one example; doesn't explain how to choose.", "poor": "Confuses NSM with revenue." }
+        },
+        { "id": "PM-T-07", "question": "How would you design an experiment to test whether adding a free trial improves conversion for a B2B SaaS product?", "difficulty": "Hard", "marks": 10, "expected_answer": "Define hypothesis. Identify sample (new trial signups), randomise (A: existing demo request vs B: self-serve free trial), primary metric (activation + trial-to-paid conversion within 30 days), guard metrics (support tickets, abuse). Run for statistical significance. Segment by company size, geography.", "rubric": { "excellent": "Full experiment design: hypothesis, randomisation, metrics (primary + guard), duration, segments.", "average": "Defines hypothesis and primary metric; misses guard metrics or segmentation.", "poor": "Describes A/B testing without a structured experiment design." }
+        },
+        { "id": "PM-T-08", "question": "Explain Jobs-to-be-Done (JTBD) theory. How does it differ from traditional personas?", "difficulty": "Medium", "marks": 10, "expected_answer": "JTBD: people hire products to do a job — functional, emotional, social dimensions. Differs from personas: personas describe demographics (who), JTBD describes the job context and switch moment (why now, what progress is desired). Example: 'I hire Slack to reduce email so I can respond faster to my team (functional) and feel in control (emotional).'", "rubric": { "excellent": "All three JTBD dimensions, clear difference from personas, strong example.", "average": "Correct JTBD theory; persona distinction partially explained.", "poor": "Confuses JTBD with features or persona attributes." }
+        },
+        { "id": "PM-T-09", "question": "What is product-led growth (PLG)? How does it change the role of the PM?", "difficulty": "Medium", "marks": 10, "expected_answer": "PLG: product is the primary driver of acquisition, conversion, and expansion (Slack, Notion, Figma). PM role shift: focus on onboarding, activation, viral loops, self-serve experience, usage triggers for expansion. Metrics change: TTV, activation rate, PQL (Product-Qualified Lead) replace traditional sales pipeline.", "rubric": { "excellent": "PLG definition, flywheel, PM role shift, PQL, examples (Slack/Figma), metric changes.", "average": "PLG correct; limited on PM role change or metrics.", "poor": "Confuses PLG with freemium." }
+        },
+        { "id": "PM-T-10", "question": "How do you write a good user story? What makes one 'ready' for a sprint?", "difficulty": "Easy", "marks": 10, "expected_answer": "Format: 'As a [persona], I want [action] so that [benefit].' Ready criteria (INVEST): Independent, Negotiable, Valuable, Estimable, Small, Testable. Definition of Ready: acceptance criteria defined, designs available, no open dependencies, estimated by team.", "rubric": { "excellent": "Correct format, INVEST criteria, Definition of Ready with all components.", "average": "Correct format with acceptance criteria; doesn't know INVEST.", "poor": "Writes feature descriptions, not user stories." }
+        }
+      ],
+      "behavioural": [
+        { "id": "PM-B-01", "question": "Tell me about a product decision you made that turned out to be wrong. How did you handle it?", "difficulty": "Hard", "marks": 10, "expected_answer": "Ownership, data-driven discovery of the mistake, fast pivot, lessons learned and process change.", "rubric": { "excellent": "Specific decision, data revealed the mistake, fast pivot, systemic learning.", "average": "Admits mistake; limited follow-through on learning.", "poor": "Cannot recall a mistake or deflects." }
+        },
+        { "id": "PM-B-02", "question": "Describe a time you had to say 'no' to a senior stakeholder's feature request. How did you handle it?", "difficulty": "Hard", "marks": 10, "expected_answer": "Data-backed reasoning, empathy, alternative offered, commitment to revisit.", "rubric": { "excellent": "Data-backed no, empathetic framing, concrete alternative, stakeholder relationship preserved.", "average": "Said no with reasoning; no alternative offered.", "poor": "Agreed to avoid conflict." }
+        },
+        { "id": "PM-B-03", "question": "Tell me about the product launch you are most proud of. What made it successful?", "difficulty": "Medium", "marks": 10, "expected_answer": "Clear success metrics, cross-functional execution, user adoption, and measurable outcome.", "rubric": { "excellent": "Specific launch, measurable success, cross-functional teamwork highlighted.", "average": "Good launch story; limited on cross-functional or measurable outcome.", "poor": "Vague or no clear success metrics." }
+        },
+        { "id": "PM-B-04", "question": "Describe a time when you had to align multiple stakeholders with conflicting priorities.", "difficulty": "Hard", "marks": 10, "expected_answer": "Facilitated discussion, grounded in data and strategy, found common ground, documented decision.", "rubric": { "excellent": "Specific conflict, facilitation skill, data-grounded resolution, documented outcome.", "average": "Describes alignment effort; lacks specific facilitation technique.", "poor": "Avoided the conflict or escalated without resolution." }
+        },
+        { "id": "PM-B-05", "question": "Tell me about a time you shipped a product with significant technical debt. What was the trade-off decision?", "difficulty": "Hard", "marks": 10, "expected_answer": "Acknowledges trade-off explicitly, time pressure justification, documented the debt, planned for paydown.", "rubric": { "excellent": "Conscious trade-off decision, documented debt, paydown planned.", "average": "Shipped with debt; limited awareness of long-term cost.", "poor": "Unaware of the trade-off or no plan for debt paydown." }
+        },
+        { "id": "PM-B-06", "question": "Describe a time when user research changed your mind about a product direction.", "difficulty": "Medium", "marks": 10, "expected_answer": "Shows research leading to a significant pivot or de-prioritisation. Humility to follow data over intuition.", "rubric": { "excellent": "Specific research insight, significant pivot, measurably better outcome.", "average": "Changed direction; limited detail on research method or outcome.", "poor": "Ignored the research or couldn't recall." }
+        },
+        { "id": "PM-B-07", "question": "Tell me about a time you collaborated closely with engineering to solve a complex technical problem. What was your role?", "difficulty": "Medium", "marks": 10, "expected_answer": "Clarified the 'why', helped break down requirements, facilitated trade-off discussions, removed blockers.", "rubric": { "excellent": "Clear PM role (not solution prescriber), shows trust and collaborative problem-solving.", "average": "Describes collaboration; slightly too technical or passive.", "poor": "Prescribes the solution to engineers or is absent from the process." }
+        },
+        { "id": "PM-B-08", "question": "Give an example of how you used data to identify a product improvement that no one was asking for.", "difficulty": "Hard", "marks": 10, "expected_answer": "Proactive analysis (funnel drop-off, session replay, cohort analysis) revealed an unvoiced pain point; validated, built, launched with impact.", "rubric": { "excellent": "Specific data source, insight not driven by requests, measurable improvement post-launch.", "average": "Data-driven improvement; stakeholder requested it too.", "poor": "Cannot provide a proactive data discovery example." }
+        },
+        { "id": "PM-B-09", "question": "Describe a situation where your product team was underperforming. How did you help the team improve?", "difficulty": "Hard", "marks": 10, "expected_answer": "Identified root cause (unclear ownership, poor rituals, morale), implemented specific change (better sprint planning, 1:1s, clearer success criteria).", "rubric": { "excellent": "Root cause identified, systemic change implemented, measurable improvement.", "average": "Helped the team; change was surface-level.", "poor": "Blames the team or cannot identify what they changed." }
+        },
+        { "id": "PM-B-10", "question": "Tell me about how you balance short-term user requests vs long-term product strategy.", "difficulty": "Hard", "marks": 10, "expected_answer": "Uses a framework (RICE, OKR alignment), communicates trade-offs transparently, protects strategy budget (innovation time) while delivering quick wins.", "rubric": { "excellent": "Specific framework, clear strategy vs request bucket, stakeholder communication.", "average": "Balances but no clear framework or strategy protection.", "poor": "Responds to every request without strategic filter." }
+        }
+      ],
+      "situational": [
+        { "id": "PM-S-01", "question": "Your engineering team tells you the feature you promised to launch next sprint will take 3x longer than estimated. You have a customer demo in 2 weeks. What do you do?", "difficulty": "Hard", "marks": 10, "expected_answer": "Assess scope reduction options (MVP subset), negotiate timeline with customer, communicate proactively, explore parallel tracks (UI mock in demo + real feature in background).", "rubric": { "excellent": "Proactive customer communication, scope reduction, creative demo alternative.", "average": "Communicates delay; no creative scope solution.", "poor": "Hides the delay from the customer." }
+        },
+        { "id": "PM-S-02", "question": "A competitor just launched a feature that your top customers are asking you to copy. How do you decide whether to build it?", "difficulty": "Hard", "marks": 10, "expected_answer": "Validate if it solves a real job-to-be-done vs feature envy. Assess: customer churn risk if not built, differentiation opportunity, build vs buy vs partner, capacity cost.", "rubric": { "excellent": "JTBD validation, churn risk, differentiation vs parity decision, alternatives considered.", "average": "Assesses the feature; misses churn risk or differentiation frame.", "poor": "Immediately schedules to copy without validation." }
+        },
+        { "id": "PM-S-03", "question": "Your product NPS suddenly drops from 42 to 18 after a recent release. What is your investigation process?", "difficulty": "Hard", "marks": 10, "expected_answer": "Segment NPS verbatims (promoters vs detractors), correlate with release changelog, identify which user cohorts are most affected, check session replays and support tickets, hotfix if critical, communicate to affected customers.", "rubric": { "excellent": "Systematic investigation: segmented NPS, changelog correlation, session replay, customer communication.", "average": "Investigates; misses segmentation or customer communication.", "poor": "Asks designers to look at the UI without root-cause investigation." }
+        },
+        { "id": "PM-S-04", "question": "You have budget for only one of three features requested by different enterprise clients. How do you decide?", "difficulty": "Hard", "marks": 10, "expected_answer": "RICE or opportunity scoring: revenue impact (ARR at risk/gain), strategic alignment, # of clients affected, development cost. Communicate decision to all three clients with timeline for the others.", "rubric": { "excellent": "Objective scoring with revenue weighting, strategic alignment, transparent stakeholder communication.", "average": "Makes a decision; limited framework or communication plan.", "poor": "Chooses based on which client is loudest." }
+        },
+        { "id": "PM-S-05", "question": "You are tasked with launching a product in a market you know nothing about. How do you prepare in 4 weeks?", "difficulty": "Hard", "marks": 10, "expected_answer": "Week 1: secondary research (market reports, competitor analysis). Week 2: 10 customer discovery interviews. Week 3: validate JTBD, TAM analysis, regulatory requirements. Week 4: initial roadmap + GTM hypotheses, present to leadership.", "rubric": { "excellent": "Phased 4-week plan, customer discovery, regulatory check, TAM, leadership presentation.", "average": "Desk research + some customer interviews; no structured timeline.", "poor": "Reads product reviews and starts building." }
+        }
+      ]
+    },
+
+    "UI/UX Designer": {
+      "technical": [
+        { "id": "UX-T-01", "question": "Explain the double diamond design process. How do you apply it in a product team with Agile sprints?", "difficulty": "Medium", "marks": 10, "expected_answer": "Double Diamond: Discover (research) → Define (synthesis/problem framing) → Develop (ideation/prototyping) → Deliver (testing/launch). In Agile: run design 1–2 sprints ahead of engineering; use a continuous discovery + delivery rhythm. Discovery is never fully front-loaded.", "rubric": { "excellent": "All four phases correct, explains Agile integration with concrete cadence.", "average": "Four phases correct; vague on Agile adaptation.", "poor": "Cannot name all four phases or explains only visual design." }
+        },
+        { "id": "UX-T-02", "question": "How do you design for accessibility? What specific WCAG 2.1 guidelines do you consider most important?", "difficulty": "Medium", "marks": 10, "expected_answer": "Key WCAG criteria: 1.4.3 Contrast Ratio (4.5:1 AA), 1.4.11 Non-text Contrast, 2.4.3 Focus Order, 2.1.1 Keyboard Navigation, 1.1.1 Alt Text, 3.3.1 Error Identification. Tools: Figma Stark plugin, colour contrast checker, screen reader testing (VoiceOver, NVDA).", "rubric": { "excellent": "WCAG criterion numbers and descriptions, practical tools, screen reader awareness.", "average": "Knows 3–4 WCAG criteria; vague on tools.", "poor": "Says 'use high contrast colours' without specific WCAG knowledge." }
+        },
+        { "id": "UX-T-03", "question": "What is a design system? How would you structure one from scratch for a SaaS product?", "difficulty": "Hard", "marks": 10, "expected_answer": "Design system: shared language of design tokens, components, patterns, and guidelines. Structure: Tokens (colour, typography, spacing, elevation) → Atoms (button, input, badge) → Molecules (form group, card) → Organisms (nav bar, modal) → Templates → Pages. Include: documentation, contribution guidelines, Storybook integration.", "rubric": { "excellent": "Atomic Design hierarchy, token system, documentation, Storybook, governance model.", "average": "Component library described; misses tokens or governance.", "poor": "Describes a stylesheet, not a design system." }
+        },
+        { "id": "UX-T-04", "question": "Explain the difference between usability testing and A/B testing. When would you use each?", "difficulty": "Medium", "marks": 10, "expected_answer": "Usability testing: qualitative, 5–8 users, moderated/unmoderated, identifies WHY users struggle. A/B testing: quantitative, statistical significance, tells WHICH version performs better. Use usability before you build (validate concept); use A/B after launch (optimise variants at scale).", "rubric": { "excellent": "Qualitative vs quantitative distinction, correct sample sizes, when to use each with example.", "average": "Correct distinction; unclear on when to use each.", "poor": "Confuses the two methodologies." }
+        },
+        { "id": "UX-T-05", "question": "What are Fitts' Law and Hick's Law? Give a specific UI design example for each.", "difficulty": "Medium", "marks": 10, "expected_answer": "Fitts' Law: time to reach a target = function of distance and target size. Design: make primary CTAs large and close to where the eye rests. Hick's Law: decision time increases with number of choices. Design: progressive disclosure, limited navigation items, streamlined onboarding steps.", "rubric": { "excellent": "Correct formulaic basis, concrete UI examples for both, design implications.", "average": "Both laws defined with one good example.", "poor": "Heard of them but cannot define or apply." }
+        },
+        { "id": "UX-T-06", "question": "How do you approach designing a complex data-heavy enterprise dashboard without overwhelming users?", "difficulty": "Hard", "marks": 10, "expected_answer": "Progressive disclosure (summary → detail), information hierarchy, contextual data (show only relevant data per user role), ample whitespace, consistent chart types, colour only for meaning (not decoration), user-configurable widgets, drill-down interactions, status indicators.", "rubric": { "excellent": "Progressive disclosure, role-based views, chart type consistency, colour-for-meaning principle.", "average": "Good principles mentioned; misses role-based or progressive disclosure.", "poor": "Suggests putting all data on one screen with filters." }
+        },
+        { "id": "UX-T-07", "question": "How do you hand off designs to developers in Figma? What should the handoff file include?", "difficulty": "Easy", "marks": 10, "expected_answer": "Use Figma Dev Mode: ensure all layers are properly named, components are from the design system library, spacing is consistent (auto layout), interactions are annotated, edge cases documented (empty states, error states, loading). Include asset exports, font specs, responsive breakpoints, motion specs for animations.", "rubric": { "excellent": "Dev Mode usage, named layers, all states (empty/error/loading), motion specs, responsive specs.", "average": "Mentions Dev Mode and component names; misses states or motion.", "poor": "Just exports PNG files for developers." }
+        },
+        { "id": "UX-T-08", "question": "What is the System Usability Scale (SUS)? How would you interpret a score of 68?", "difficulty": "Medium", "marks": 10, "expected_answer": "SUS: 10-question usability questionnaire scored 0–100. Scores: ≥80 excellent, 68 = average (D grade), below 51 = poor. Score of 68 means the system is marginally acceptable — warrants investigation into the pain points that brought it below 80.", "rubric": { "excellent": "SUS methodology, correct score interpretation (68 = D/average), action plan.", "average": "Knows SUS exists and can interpret 68 as average.", "poor": "Unaware of SUS or misinterprets the score." }
+        },
+        { "id": "UX-T-09", "question": "What are micro-interactions? Describe 3 examples where they significantly improve the user experience.", "difficulty": "Medium", "marks": 10, "expected_answer": "Micro-interactions: small, contained product moments that accomplish a single task. Examples: 1) Button loading spinner on form submit (prevents double submission). 2) Like button animation (emotional feedback). 3) Password strength indicator (real-time guidance). 4) Toast notification on save. All reduce anxiety and communicate system state.", "rubric": { "excellent": "3+ specific, well-reasoned examples, explains emotional/functional role.", "average": "2 examples; limited explanation of UX impact.", "poor": "Describes animations generally without specifics." }
+        },
+        { "id": "UX-T-10", "question": "How do you design for mobile-first? What does it mean in practice, and how does it differ from responsive design?", "difficulty": "Medium", "marks": 10, "expected_answer": "Mobile-first: start design/development on the smallest viewport, progressively enhance for larger screens. Encourages prioritisation (only essential content on mobile), better performance. Responsive design: same content adapts across breakpoints. Mobile-first + responsive is the standard: design mobile layouts first, then expand breakpoints.", "rubric": { "excellent": "Correct distinction, content prioritisation benefit, performance implications, breakpoint workflow.", "average": "Correct definition; doesn't explain prioritisation benefit.", "poor": "Confuses mobile-first with a mobile app or responsive design." }
+        }
+      ],
+      "behavioural": [
+        { "id": "UX-B-01", "question": "Walk me through your favourite case study from your portfolio. What was the problem, your process, and the outcome?", "difficulty": "Medium", "marks": 10, "expected_answer": "Research-first problem framing, synthesis, divergent ideation, convergence through testing, measurable outcome.", "rubric": { "excellent": "Full research-to-outcome story with quantifiable impact.", "average": "Good process story; limited on measurable outcome.", "poor": "Shows final screens without explaining the process." }
+        },
+        { "id": "UX-B-02", "question": "Describe a time your design was significantly changed by user testing. How did you respond?", "difficulty": "Medium", "marks": 10, "expected_answer": "Shows humility and user advocacy over personal attachment to design. Iterated quickly.", "rubric": { "excellent": "Specific insight that changed design direction, quick iteration, better outcome.", "average": "Changed based on testing; limited specificity.", "poor": "Ignored the feedback or made minimal changes." }
+        },
+        { "id": "UX-B-03", "question": "Tell me about a time you had to push back on a stakeholder who wanted to 'make the logo bigger'. How did you handle it?", "difficulty": "Medium", "marks": 10, "expected_answer": "Data-backed pushback, user advocacy framing, offered alternatives with rationale.", "rubric": { "excellent": "User research or data backing, empathetic delivery, stakeholder accepted or compromise reached.", "average": "Pushed back but no data support.", "poor": "Just complied or failed to explain the UX impact." }
+        },
+        { "id": "UX-B-04", "question": "Describe a time you worked in a team where design decisions felt rushed. How did you manage the quality of your work?", "difficulty": "Hard", "marks": 10, "expected_answer": "Negotiated scope with PM, used design patterns to move faster, tracked debt, advocated for design sprints.", "rubric": { "excellent": "Concrete prioritisation, design system speed leverage, quality tracking.", "average": "Managed but reduced quality without explanation.", "poor": "Just shipped whatever was done." }
+        },
+        { "id": "UX-B-05", "question": "Tell me about a time you improved an existing product experience rather than building something new.", "difficulty": "Medium", "marks": 10, "expected_answer": "Diagnosed pain via analytics or research, redesigned specifically targeted experience, measured improvement.", "rubric": { "excellent": "Data-driven diagnosis, targeted redesign, measurable improvement (SUS score, task completion).", "average": "Improved something; limited data usage.", "poor": "Describes a visual refresh without research basis." }
+        },
+        { "id": "UX-B-06", "question": "How have you contributed to building a design system at a previous company?", "difficulty": "Medium", "marks": 10, "expected_answer": "Component creation, documentation, token definition, cross-team alignment, adoption.", "rubric": { "excellent": "Specific contributions with governance model, adoption rate, cross-team impact.", "average": "Created some components; limited governance or adoption story.", "poor": "Only used a design system, never contributed." }
+        },
+        { "id": "UX-B-07", "question": "Describe a time you had to design under very tight time constraints. How did you ensure quality?", "difficulty": "Hard", "marks": 10, "expected_answer": "Leveraged existing components/patterns, ruthlessly prioritised core flow, deferred nice-to-haves explicitly, communicated design debt.", "rubric": { "excellent": "Design system leverage, explicit scope reduction, design debt logged.", "average": "Met the deadline; limited on how quality was maintained.", "poor": "Rushed without a strategy or didn't log the debt." }
+        },
+        { "id": "UX-B-08", "question": "Tell me about a time your design solved a real accessibility problem for a user.", "difficulty": "Medium", "marks": 10, "expected_answer": "Specific accessibility barrier identified (e.g., low contrast, no keyboard nav), design solution, validated with assistive technology or user.", "rubric": { "excellent": "Specific WCAG criterion, solution validated with screen reader or user.", "average": "Improved contrast; not tested with assistive technology.", "poor": "Cannot provide a specific accessibility example." }
+        },
+        { "id": "UX-B-09", "question": "Give an example of a time you had to design across both mobile and desktop for the same product. What challenges did you face?", "difficulty": "Medium", "marks": 10, "expected_answer": "Content prioritisation per viewport, touch vs mouse interaction differences, responsive breakpoint decisions, navigation pattern differences (drawer vs sidebar).", "rubric": { "excellent": "Content prioritisation, interaction model differences, specific pattern decisions.", "average": "Designed for both; limited on interaction model differences.", "poor": "Scaled the desktop design down without mobile-first thinking." }
+        },
+        { "id": "UX-B-10", "question": "Tell me about how you balance aesthetic quality with business and technical constraints.", "difficulty": "Hard", "marks": 10, "expected_answer": "Builds constraints into the design brief, advocates for quality trade-off decisions, documents design debt, finds creative solutions within constraints.", "rubric": { "excellent": "Specific example of constrained design decision with reasoning; design debt tracked.", "average": "Balances but no clear framework.", "poor": "Compromises on aesthetics without documenting the trade-off." }
+        }
+      ],
+      "situational": [
+        { "id": "UX-S-01", "question": "You are designing an onboarding flow and usability testing shows 60% of users fail to complete step 3. Engineering says redesigning it will take 2 sprints. What do you do right now?", "difficulty": "Hard", "marks": 10, "expected_answer": "Immediate: micro-copy change or tooltip (no dev effort), progress indicator update, email nudge for incomplete users. Long-term: full redesign in next sprint. Measure if interim fix moves the needle.", "rubric": { "excellent": "Immediate no-code fix, parallel long-term redesign, measurement plan.", "average": "Proposes redesign without an interim fix.", "poor": "Waits 2 sprints without any interim action." }
+        },
+        { "id": "UX-S-02", "question": "A PM says 'we don't have time for user research, just design something good'. How do you respond?", "difficulty": "Hard", "marks": 10, "expected_answer": "Negotiate a lean research approach (5 user interviews, guerrilla testing), explain the cost of rework, propose time-boxed discovery sprint. Offer to do it in parallel without blocking engineering.", "rubric": { "excellent": "Lean research alternative, rework cost argument, parallel discovery.", "average": "Pushes for research; no lean alternative offered.", "poor": "Accepts and designs without any research." }
+        },
+        { "id": "UX-S-03", "question": "You've been asked to redesign a legacy enterprise product used by 10,000 daily users. How do you approach this without disrupting existing users?", "difficulty": "Hard", "marks": 10, "expected_answer": "Gradual rollout (opt-in beta), change management communication, overlap period (old + new UI), power user advisory board, training, familiarity-first design (don't change patterns unnecessarily).", "rubric": { "excellent": "Beta rollout, power user inclusion, communication plan, familiarity-first principle.", "average": "Phased rollout; misses user communication or training.", "poor": "Full cutover on day 1 without any change management." }
+        },
+        { "id": "UX-S-04", "question": "Your design looks great in Figma but the final developed product looks different. How do you ensure better design-to-dev fidelity going forward?", "difficulty": "Medium", "marks": 10, "expected_answer": "Design QA process, Dev Mode adoption, regular design reviews during development sprints, component token alignment, motion specs, communication protocol for design deviations.", "rubric": { "excellent": "Design QA process, Dev Mode, developer office hours, agreed deviation protocol.", "average": "Dev Mode mentioned; no formal QA process.", "poor": "Blames developers without proposing a process fix." }
+        },
+        { "id": "UX-S-05", "question": "You discover your company's main product is inaccessible to screen reader users (no ARIA labels, poor keyboard nav). The engineering backlog is already full. How do you make the case to prioritise accessibility?", "difficulty": "Hard", "marks": 10, "expected_answer": "Business case: legal risk (ADA/RPwD Act), market expansion (15% of population has disability), brand reputation. Propose: accessibility sprint (2 weeks), low-hanging fruit first (focus styles, alt text, labels), phased plan with metrics.", "rubric": { "excellent": "Legal + business case, phased plan, specific low-effort high-impact fixes, executive framing.", "average": "Makes the case; limited specificity on approach or business case.", "poor": "Files a Jira ticket and moves on." }
+        }
+      ]
+    }
+  }
+}

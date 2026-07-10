@@ -1,0 +1,165 @@
+{
+  "resume_id": "UX-002",
+  "name": "Isha Bhatia",
+  "email": "isha.bhatia.design@gmail.com",
+  "phone": "+919876543210",
+  "linkedin": "linkedin.com/in/ishabhatia-ux",
+  "github": null,
+  "portfolio": "dribbble.com/ishabhatia | ishabhatia.design",
+  "address": "Defence Colony, New Delhi - 110024",
+  "role_applied": "UI/UX Designer",
+  "quality_tier": "Average",
+  "education": [
+    {
+      "degree": "B.Des – Communication Design",
+      "institution": "Pearl Academy, New Delhi",
+      "university": "Pearl Academy (Autonomous)",
+      "cgpa": 8.0,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2022
+    }
+  ],
+  "highest_degree": "B.Des – Communication Design",
+  "institution": "Pearl Academy, New Delhi",
+  "cgpa": 8.0,
+  "experience": [
+    {
+      "company": "Vedantu Innovations",
+      "title": "UI/UX Designer",
+      "location": "Delhi / Remote",
+      "type": "Full-Time",
+      "start_date": "Jul 2022",
+      "end_date": "Present",
+      "duration_months": 23,
+      "responsibilities": [
+        "Designed 3 new feature flows for Vedantu's K-12 learning app — practice test module, live class schedule redesign, and progress report screen.",
+        "Conducted 5 usability tests per quarter with students and parents; reduced task completion time by 20% on redesigned flows.",
+        "Created wireframes and hi-fi prototypes in Figma with clear annotation for dev handoff.",
+        "Contributed 20 components to the Vedantu app design system.",
+        "Collaborated with content, product, and engineering teams in 2-week design sprints."
+      ]
+    },
+    {
+      "company": "The Design Studio (Agency)",
+      "title": "UI Design Intern",
+      "location": "New Delhi",
+      "type": "Internship",
+      "start_date": "Jan 2022",
+      "end_date": "Jun 2022",
+      "duration_months": 6,
+      "responsibilities": [
+        "Designed landing pages and social media creatives for 6 client brands.",
+        "Assisted senior designer in mobile app screens for a fashion e-commerce client.",
+        "Learned Figma auto layout and created reusable component sets."
+      ]
+    }
+  ],
+  "years_experience": 2.2,
+  "companies": [
+    "Vedantu Innovations",
+    "The Design Studio (Agency)"
+  ],
+  "skills": {
+    "design_tools": [
+      "Figma (intermediate)",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "InVision"
+    ],
+    "research_methods": [
+      "Usability Testing (moderated)",
+      "User Interviews (basic)",
+      "Heuristic Evaluation"
+    ],
+    "design_disciplines": [
+      "Mobile App Design",
+      "Responsive Web Design",
+      "Wireframing",
+      "Prototyping",
+      "Component Design"
+    ],
+    "code_knowledge": [
+      "HTML/CSS (basic)"
+    ],
+    "collaboration": [
+      "Figma Dev Mode (basic)",
+      "JIRA (basic)",
+      "Notion",
+      "Zeplin"
+    ]
+  },
+  "skills_flat": [
+    "Figma (intermediate)",
+    "Adobe Photoshop",
+    "Adobe Illustrator",
+    "InVision",
+    "Usability Testing (moderated)",
+    "User Interviews (basic)",
+    "Heuristic Evaluation",
+    "Mobile App Design",
+    "Responsive Web Design",
+    "Wireframing",
+    "Prototyping",
+    "Component Design",
+    "HTML/CSS (basic)",
+    "Figma Dev Mode (basic)",
+    "JIRA (basic)",
+    "Notion",
+    "Zeplin"
+  ],
+  "skill_count": 17,
+  "projects": [
+    {
+      "name": "Vedantu Practice Test Redesign",
+      "description": "Redesigned practice test interface for K-12 students — improved readability, added timer visibility, and reduced cognitive load. Task completion rate improved from 72% to 89% post-test.",
+      "portfolio_link": "dribbble.com/ishabhatia/vedantu-case"
+    },
+    {
+      "name": "FreshCart – Grocery App UI",
+      "description": "Designed a clean, minimal grocery shopping app UI as a personal portfolio project. Features cart management, search, and order tracking flows.",
+      "portfolio_link": "dribbble.com/ishabhatia/freshcart"
+    }
+  ],
+  "project_count": 2,
+  "certifications": [
+    {
+      "name": "Google UX Design Certificate (Foundations)",
+      "issuer": "Coursera / Google",
+      "year": 2022
+    },
+    {
+      "name": "Figma UI Design Masterclass",
+      "issuer": "Udemy (Daniel Walter Scott)",
+      "year": 2022
+    }
+  ],
+  "certification_names": [
+    "Google UX Design Certificate (Foundations)",
+    "Figma UI Design Masterclass"
+  ],
+  "certification_count": 2,
+  "achievements": [
+    "Pearl Academy Design Showcase – Runner-Up (Final Year Project 2022)",
+    "Dribbble 5,000 followers milestone (May 2024)"
+  ],
+  "languages_known": [
+    "English (Fluent)",
+    "Hindi (Native)",
+    "Punjabi (Conversational)"
+  ],
+  "soft_skills": [
+    "Creative Problem Solving",
+    "Attention to Detail",
+    "Collaboration",
+    "Open to Critique",
+    "Deadline-Focused"
+  ],
+  "interests": [
+    "UI Design Exploration",
+    "Dribbble Shots",
+    "Film Photography",
+    "Interior Design"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.639016",
+  "source_file": "UX_002_Isha_Bhatia.json"
+}

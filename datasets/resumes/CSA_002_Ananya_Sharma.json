@@ -1,0 +1,72 @@
+{
+  "resume_id": "CSA-002",
+  "name": "Ananya Sharma",
+  "email": "ananya.s2024@gmail.com",
+  "phone": "+91-9711223344",
+  "linkedin": "linkedin.com/in/ananyasharma-sec",
+  "github": null,
+  "address": "C-45, Shalimar Bagh, Delhi - 110088",
+  "role_applied": "Cyber Security Analyst",
+  "quality_tier": "Poor",
+
+  "summary": "B.Tech graduate interested in cybersecurity. Completed an online ethical hacking course and looking to start my career in the security field.",
+
+  "education": [
+    {
+      "degree": "B.Tech – Electronics & Communication Engineering",
+      "institution": "Inderprastha Engineering College, Ghaziabad",
+      "university": "Abdul Kalam Technical University (AKTU)",
+      "cgpa": 6.2,
+      "year_of_passing": 2024,
+      "relevant_courses": ["Digital Electronics", "Computer Networks", "Programming in C"]
+    }
+  ],
+
+  "experience": [],
+
+  "skills": {
+    "security_tools": ["Nmap (basic)", "Kali Linux (beginner)"],
+    "frameworks": [],
+    "os_platforms": ["Windows 10", "Kali Linux"],
+    "scripting": ["Python (very basic)"],
+    "networking": ["OSI Model", "TCP/IP (theoretical)"],
+    "cloud_security": []
+  },
+
+  "projects": [
+    {
+      "name": "Password Strength Checker",
+      "tech_stack": ["Python"],
+      "description": "A simple Python script that checks password strength based on length, special characters, and uppercase letters. Built as a practice project.",
+      "github_link": null
+    }
+  ],
+
+  "certifications": [
+    { "name": "Ethical Hacking Basics", "issuer": "Udemy (100-level course)", "year": 2024 }
+  ],
+
+  "achievements": [
+    "Attended 1 cybersecurity webinar (ISACA Delhi chapter)"
+  ],
+
+  "languages_known": ["Hindi (Native)", "English (Basic)"],
+
+  "soft_skills": ["Eager to Learn", "Hardworking"],
+
+  "interests": ["Cybersecurity", "Reading Tech Blogs", "Watching Security YouTube Channels"],
+
+  "ats_score": {
+    "total": 24,
+    "breakdown": {
+      "skills_match": 6,
+      "experience": 0,
+      "projects": 6,
+      "education": 5,
+      "certifications": 3,
+      "resume_quality": 4
+    },
+    "rank": 6,
+    "shortlisted": false
+  }
+}

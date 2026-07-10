@@ -1,0 +1,210 @@
+{
+  "resume_id": "SE-003",
+  "name": "Devansh Trivedi",
+  "email": "devansh.trivedi@protonmail.com",
+  "phone": "+919820445567",
+  "linkedin": "linkedin.com/in/devansht",
+  "github": "github.com/devanshtrivedi",
+  "portfolio": null,
+  "address": "Plot 11, HSR Layout Sector 2, Bengaluru, Karnataka - 560102",
+  "role_applied": "Software Engineer",
+  "quality_tier": "Excellent",
+  "education": [
+    {
+      "degree": "B.Tech – Computer Science & Engineering",
+      "institution": "BITS Pilani, Goa Campus",
+      "university": "Birla Institute of Technology & Science",
+      "cgpa": 8.9,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2022
+    }
+  ],
+  "highest_degree": "B.Tech – Computer Science & Engineering",
+  "institution": "BITS Pilani, Goa Campus",
+  "cgpa": 8.9,
+  "experience": [
+    {
+      "company": "Flipkart Internet Pvt. Ltd.",
+      "title": "Software Development Engineer I (SDE-I)",
+      "location": "Bengaluru, KA",
+      "type": "Full-Time",
+      "start_date": "Jul 2022",
+      "end_date": "Present",
+      "duration_months": 23,
+      "responsibilities": [
+        "Designed and built a high-throughput event-driven microservice (Kafka + Java Spring Boot) for real-time inventory synchronization across 400+ warehouse nodes, reducing stock discrepancy by 34%.",
+        "Re-architected the search results caching layer using Redis Cluster, cutting P99 latency from 380ms to 95ms for 1M+ daily active users.",
+        "Led migration of 3 legacy REST APIs to GraphQL with schema federation, reducing over-fetching by 60% on mobile clients.",
+        "Mentored 2 intern engineers through 12-week projects; both received return offers.",
+        "Achieved 92% unit test coverage across 6 owned microservices; led team's shift to TDD practices."
+      ]
+    },
+    {
+      "company": "Microsoft India (GSDC)",
+      "title": "Software Engineer Intern",
+      "location": "Hyderabad, TS",
+      "type": "Internship",
+      "start_date": "May 2021",
+      "end_date": "Jul 2021",
+      "duration_months": 2,
+      "responsibilities": [
+        "Built an internal dashboard for Azure DevOps pipeline visibility using React and TypeScript.",
+        "Reduced manual reporting effort by 8 hours/week through automated metrics aggregation.",
+        "Received Pre-Placement Offer (PPO) — declined in favour of Flipkart."
+      ]
+    }
+  ],
+  "years_experience": 2.0,
+  "companies": [
+    "Flipkart Internet Pvt. Ltd.",
+    "Microsoft India (GSDC)"
+  ],
+  "skills": {
+    "languages": [
+      "Java",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "Go (learning)"
+    ],
+    "frameworks": [
+      "Spring Boot",
+      "React.js",
+      "GraphQL",
+      "Express.js",
+      "FastAPI"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "Redis",
+      "Cassandra",
+      "Elasticsearch"
+    ],
+    "tools": [
+      "Docker",
+      "Kubernetes",
+      "Kafka",
+      "GitHub Actions",
+      "Prometheus",
+      "Grafana",
+      "JIRA"
+    ],
+    "cloud": [
+      "AWS (EC2, S3, Lambda, RDS, CloudWatch)",
+      "GCP Basics"
+    ],
+    "testing": [
+      "JUnit 5",
+      "Mockito",
+      "Pytest",
+      "Jest",
+      "Postman",
+      "k6 (Load Testing)"
+    ]
+  },
+  "skills_flat": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "Go (learning)",
+    "Spring Boot",
+    "React.js",
+    "GraphQL",
+    "Express.js",
+    "FastAPI",
+    "PostgreSQL",
+    "Redis",
+    "Cassandra",
+    "Elasticsearch",
+    "Docker",
+    "Kubernetes",
+    "Kafka",
+    "GitHub Actions",
+    "Prometheus",
+    "Grafana",
+    "JIRA",
+    "AWS (EC2, S3, Lambda, RDS, CloudWatch)",
+    "GCP Basics",
+    "JUnit 5",
+    "Mockito",
+    "Pytest",
+    "Jest",
+    "Postman",
+    "k6 (Load Testing)"
+  ],
+  "skill_count": 29,
+  "projects": [
+    {
+      "name": "OpenExpense – Open Source Expense Tracker API",
+      "tech_stack": [
+        "Go",
+        "PostgreSQL",
+        "Docker",
+        "JWT Auth"
+      ],
+      "description": "Maintained open-source expense management REST API with 1.2K GitHub stars and 40+ contributors. Implemented OAuth2 login, multi-currency support, and Telegram bot integration.",
+      "github_link": "github.com/devanshtrivedi/openexpense"
+    },
+    {
+      "name": "ScaleQ – Distributed Task Queue",
+      "tech_stack": [
+        "Python",
+        "Redis",
+        "Celery",
+        "FastAPI"
+      ],
+      "description": "Built a lightweight distributed task queue library for Python. Published on PyPI with 300+ weekly downloads. Used in 3 production systems at small startups.",
+      "github_link": "github.com/devanshtrivedi/scaleq"
+    }
+  ],
+  "project_count": 2,
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect – Associate",
+      "issuer": "Amazon Web Services",
+      "year": 2023
+    },
+    {
+      "name": "Certified Kubernetes Application Developer (CKAD)",
+      "issuer": "CNCF / Linux Foundation",
+      "year": 2024
+    },
+    {
+      "name": "Meta Backend Developer Certificate",
+      "issuer": "Coursera / Meta",
+      "year": 2022
+    }
+  ],
+  "certification_names": [
+    "AWS Certified Solutions Architect – Associate",
+    "Certified Kubernetes Application Developer (CKAD)",
+    "Meta Backend Developer Certificate"
+  ],
+  "certification_count": 3,
+  "achievements": [
+    "Promoted to SDE-I Band 2 within 18 months (top 5% of batch) at Flipkart",
+    "Speaker at Bengaluru Java User Group (JUG) — talk on Kafka Exactly-Once Semantics",
+    "BITS Merit Scholarship recipient — all 4 years",
+    "Finalist — Smart India Hackathon 2021 (team of 6, national level)"
+  ],
+  "languages_known": [
+    "English (Fluent)",
+    "Hindi (Native)",
+    "Gujarati (Conversational)"
+  ],
+  "soft_skills": [
+    "Systems Thinking",
+    "Technical Leadership",
+    "Mentoring",
+    "Presentation Skills",
+    "Ownership"
+  ],
+  "interests": [
+    "Distributed Systems Research",
+    "OSS Contributing",
+    "Running (Half Marathon)"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.637544",
+  "source_file": "SE_003_Devansh_Trivedi.json"
+}

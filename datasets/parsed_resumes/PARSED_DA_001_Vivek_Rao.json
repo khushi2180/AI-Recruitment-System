@@ -1,0 +1,204 @@
+{
+  "resume_id": "DA-001",
+  "name": "Vivek Rao",
+  "email": "vivek.rao.analytics@gmail.com",
+  "phone": "+919908765432",
+  "linkedin": "linkedin.com/in/vivekrao-data",
+  "github": "github.com/vivekrao-da",
+  "portfolio": null,
+  "address": "Flat 7, Madhapur, Hyderabad, Telangana - 500081",
+  "role_applied": "Data Analyst",
+  "quality_tier": "Excellent",
+  "education": [
+    {
+      "degree": "B.Tech – Computer Science & Engineering",
+      "institution": "Osmania University College of Engineering, Hyderabad",
+      "university": "Osmania University",
+      "cgpa": 8.4,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2022
+    }
+  ],
+  "highest_degree": "B.Tech – Computer Science & Engineering",
+  "institution": "Osmania University College of Engineering, Hyderabad",
+  "cgpa": 8.4,
+  "experience": [
+    {
+      "company": "DataBridge Analytics Pvt. Ltd.",
+      "title": "Data Analyst",
+      "location": "Hyderabad, TS",
+      "type": "Full-Time",
+      "start_date": "Aug 2022",
+      "end_date": "Present",
+      "duration_months": 22,
+      "responsibilities": [
+        "Built end-to-end sales analytics pipeline using Python (Pandas, SQLAlchemy) + BigQuery + Tableau, reducing weekly reporting from 5 days to 4 hours for a top-5 FMCG client.",
+        "Designed 8 executive-level Tableau dashboards tracking ₹1,200 Crore in annual revenue across 22 product categories.",
+        "Performed customer segmentation (RFM + K-Means) on 2M+ transaction records, identifying 3 high-value segments worth ₹180 Crores combined.",
+        "Led an A/B testing program for a D2C brand — tested 6 marketing hypotheses, resulting in 23% increase in conversion rate.",
+        "Automated 14 recurring Excel reports with Python scripts, saving 18 man-hours per week across the team.",
+        "Mentored 2 junior analysts in SQL and Tableau fundamentals."
+      ]
+    },
+    {
+      "company": "Cognizant Technology Solutions",
+      "title": "Data Analyst Intern",
+      "location": "Hyderabad, TS",
+      "type": "Internship",
+      "start_date": "Jan 2022",
+      "end_date": "Jun 2022",
+      "duration_months": 6,
+      "responsibilities": [
+        "Created SQL-based weekly sales reports for a US retail client using MS SQL Server.",
+        "Developed Power BI dashboard for supply chain KPIs — on-time delivery, fill rate, inventory turnover.",
+        "Cleaned and transformed 500K+ row dataset from legacy ERP for migration."
+      ]
+    }
+  ],
+  "years_experience": 2.1,
+  "companies": [
+    "DataBridge Analytics Pvt. Ltd.",
+    "Cognizant Technology Solutions"
+  ],
+  "skills": {
+    "languages": [
+      "Python (Pandas, NumPy, Matplotlib, Seaborn, Plotly)",
+      "SQL (Advanced: CTEs, Window Functions, Pivoting)",
+      "R (basic)"
+    ],
+    "bi_tools": [
+      "Tableau Desktop & Server",
+      "Power BI",
+      "Google Looker Studio"
+    ],
+    "databases": [
+      "BigQuery",
+      "PostgreSQL",
+      "MS SQL Server",
+      "Snowflake (learning)"
+    ],
+    "etl_tools": [
+      "dbt (basic)",
+      "Python ETL scripts",
+      "Apache Airflow (basic)"
+    ],
+    "spreadsheets": [
+      "Advanced Excel (Macros, Power Query, Pivot Tables, VLOOKUP/INDEX-MATCH)"
+    ],
+    "stats": [
+      "Descriptive Statistics",
+      "Regression Analysis",
+      "A/B Testing",
+      "Hypothesis Testing",
+      "K-Means Clustering"
+    ],
+    "tools": [
+      "Git",
+      "JIRA",
+      "Confluence",
+      "Notion",
+      "Google Sheets API"
+    ]
+  },
+  "skills_flat": [
+    "Python (Pandas, NumPy, Matplotlib, Seaborn, Plotly)",
+    "SQL (Advanced: CTEs, Window Functions, Pivoting)",
+    "R (basic)",
+    "Tableau Desktop & Server",
+    "Power BI",
+    "Google Looker Studio",
+    "BigQuery",
+    "PostgreSQL",
+    "MS SQL Server",
+    "Snowflake (learning)",
+    "dbt (basic)",
+    "Python ETL scripts",
+    "Apache Airflow (basic)",
+    "Advanced Excel (Macros, Power Query, Pivot Tables, VLOOKUP/INDEX-MATCH)",
+    "Descriptive Statistics",
+    "Regression Analysis",
+    "A/B Testing",
+    "Hypothesis Testing",
+    "K-Means Clustering",
+    "Git",
+    "JIRA",
+    "Confluence",
+    "Notion",
+    "Google Sheets API"
+  ],
+  "skill_count": 24,
+  "projects": [
+    {
+      "name": "RetailPulse – Retail Analytics Dashboard",
+      "tech_stack": [
+        "Python",
+        "BigQuery",
+        "Tableau",
+        "Pandas"
+      ],
+      "description": "Open-source retail analytics starter kit with sample e-commerce dataset, Tableau workbook, and Python EDA notebook. 150+ GitHub stars. Used by 3 freelance data analysts.",
+      "github_link": "github.com/vivekrao-da/retailpulse"
+    },
+    {
+      "name": "ChurnPredict – Customer Churn Analysis",
+      "tech_stack": [
+        "Python",
+        "scikit-learn",
+        "Seaborn",
+        "Logistic Regression"
+      ],
+      "description": "Built a customer churn prediction model with 89.4% accuracy. Feature engineering on 30+ behavioral variables. EDA published on Medium with 2,400 views.",
+      "github_link": "github.com/vivekrao-da/churnpredict"
+    }
+  ],
+  "project_count": 2,
+  "certifications": [
+    {
+      "name": "Tableau Certified Data Analyst",
+      "issuer": "Tableau / Salesforce",
+      "year": 2023
+    },
+    {
+      "name": "Google Data Analytics Professional Certificate",
+      "issuer": "Coursera / Google",
+      "year": 2022
+    },
+    {
+      "name": "Microsoft PL-300: Power BI Data Analyst",
+      "issuer": "Microsoft",
+      "year": 2024
+    }
+  ],
+  "certification_names": [
+    "Tableau Certified Data Analyst",
+    "Google Data Analytics Professional Certificate",
+    "Microsoft PL-300: Power BI Data Analyst"
+  ],
+  "certification_count": 3,
+  "achievements": [
+    "Promoted to Senior Analyst track after 18 months (youngest in team)",
+    "DataBridge Analytics Innovation Award — Q2 2023 (for automated reporting pipeline)",
+    "Medium Data Science Author — 8,000+ total views on analytics articles",
+    "Osmania University Topper — Statistics & Data Mining (2022)"
+  ],
+  "languages_known": [
+    "English (Fluent)",
+    "Telugu (Native)",
+    "Hindi (Fluent)"
+  ],
+  "soft_skills": [
+    "Data Storytelling",
+    "Stakeholder Management",
+    "Attention to Detail",
+    "Problem Decomposition",
+    "Presentation Skills"
+  ],
+  "interests": [
+    "Data Visualization",
+    "Kaggle Competitions",
+    "Cricket Analytics",
+    "Teaching (Mentoring on DataCamp)"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.632968",
+  "source_file": "DA_001_Vivek_Rao.json"
+}

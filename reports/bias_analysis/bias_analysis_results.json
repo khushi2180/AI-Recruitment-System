@@ -1,0 +1,175 @@
+{
+  "generated_at": "2026-06-28T15:21:37.357748",
+  "total_candidates_analysed": 30,
+  "bias_dimensions": [
+    {
+      "dimension": "Gender",
+      "severity": "Medium",
+      "male_count": 16,
+      "female_count": 14,
+      "male_avg_score": 64.7,
+      "female_avg_score": 70.0,
+      "score_gap": -5.3,
+      "male_shortlist_rate": "56.2%",
+      "female_shortlist_rate": "71.4%",
+      "evidence": "Male avg ATS score: 64.7 | Female avg ATS score: 70.0. Shortlist rate — Male: 56.2% | Female: 71.4%.",
+      "root_cause": "The ATS scoring engine rewards technical certifications (CEH, OSCP, AWS) which are disproportionately held by male candidates in the dataset, possibly reflecting systemic access gaps in technical certification programmes. This is a proxy bias — the model is not using gender directly, but correlated proxies.",
+      "recommendation": [
+        "Audit certification scoring weight — reduce from 10% to 7% for roles where certifications correlate with gender.",
+        "Add contextual scoring: internship quality, open-source contributions, and portfolio work as alternative signals.",
+        "Blind screening: remove names before ATS scoring to prevent unconscious bias in manual review stages.",
+        "Set shortlist ratio targets: if >15% gap in shortlist rates by gender persists, trigger a manual review."
+      ]
+    },
+    {
+      "dimension": "College/Institution Tier",
+      "severity": "High",
+      "avg_scores_by_tier": {
+        "Tier-1": 79.3,
+        "Tier-2": 72.5,
+        "Tier-3": 54.1
+      },
+      "candidate_counts": {
+        "Tier-1": 9,
+        "Tier-2": 9,
+        "Tier-3": 12
+      },
+      "tier1_shortlist_rate": "88.9%",
+      "tier3_shortlist_rate": "33.3%",
+      "score_gap_tier1_vs_tier3": 25.2,
+      "evidence": "Tier-1 institution avg score: 79.3 | Tier-3 avg score: 54.1. Gap: 25.2 points.",
+      "root_cause": "Institution tier is correlated with higher CGPA and better access to internships, certifications, and projects — all of which are scored positively by the ATS engine. Candidates from Tier-3 institutions may have equivalent skills but fewer credential signals, causing systematic underscoring that is unrelated to actual job performance.",
+      "recommendation": [
+        "Remove institution tier as an explicit or implicit scoring factor.",
+        "Evaluate skills through a standardised technical assessment (same for all candidates).",
+        "Weight skills demonstrated in projects and work experience over institutional prestige.",
+        "Actively source from Tier-2 and Tier-3 institutions through campus partnerships."
+      ]
+    },
+    {
+      "dimension": "Age",
+      "severity": "Medium",
+      "younger_candidates_avg": 65.7,
+      "older_candidates_avg": 74.3,
+      "age_score_gap": 8.6,
+      "evidence": "Candidates aged ≤24 avg score: 65.7 | Candidates aged ≥27 avg score: 74.3. Gap: 8.6 points.",
+      "root_cause": "The experience scoring caps at the upper end of the target range, which slightly disadvantages older candidates applying to entry roles (overqualified penalty). Additionally, older candidates in this dataset are transitioning from non-tech roles and lack technical certifications, causing lower cert and skills scores.",
+      "recommendation": [
+        "Remove the overqualified penalty from experience scoring — years of experience should not cap out.",
+        "Value transferable skills: managerial experience, domain expertise, client-facing skills.",
+        "Avoid degree year as an implicit filter — focus solely on skills and demonstrated capability.",
+        "Train hiring managers on age-neutrality and 'culture add' vs 'culture fit' framing."
+      ]
+    },
+    {
+      "dimension": "Employment Gap",
+      "severity": "High",
+      "gap_candidates_count": 0,
+      "gap_candidates_avg_score": 0,
+      "no_gap_candidates_avg_score": 67.2,
+      "score_difference": 67.2,
+      "evidence": "0 candidates with detectable employment gaps. Gap avg score: 0 | No-gap avg score: 67.2. Score difference: 67.2 points.",
+      "root_cause": "Candidates with employment gaps (e.g., freshers who graduated in 2022 but have no full-time work, or those with non-traditional career paths) receive 0 on the experience dimension. This disproportionately affects: caregivers (predominantly women), candidates from economically disadvantaged backgrounds, and those who pursued education or personal development during the gap.",
+      "recommendation": [
+        "Ask candidates to explain their employment gap in a cover letter — do not penalise automatically.",
+        "Count freelance, volunteer, personal projects, and open-source work as valid experience.",
+        "Remove automatic 0-score for candidates with gaps; apply a floor score based on skills alone.",
+        "Train recruiters to evaluate gaps contextually rather than as a red flag."
+      ]
+    },
+    {
+      "dimension": "English Fluency",
+      "severity": "High",
+      "high_fluency_avg_score": 78.9,
+      "low_fluency_avg_score": 43.8,
+      "score_gap": 35.1,
+      "counts": {
+        "High": 20,
+        "Medium": 3,
+        "Low/Unknown": 7
+      },
+      "evidence": "High fluency candidates avg: 78.9 | Low/unknown fluency avg: 43.8. Gap: 35.1 points.",
+      "root_cause": "Resume quality score rewards well-structured, detailed English-language summaries. Candidates whose primary language is not English may write shorter, less polished summaries even if equally qualified, resulting in lower resume quality scores. This is a proxy for socioeconomic access to English-medium education.",
+      "recommendation": [
+        "Separate resume writing quality from candidate capability — use structured applications (forms) instead.",
+        "Provide resume writing support to all candidates from underrepresented groups.",
+        "Do not penalise concise resumes — a shorter but highly specific resume is not lower quality.",
+        "Consider bilingual application options and translation support for technical assessments."
+      ]
+    },
+    {
+      "dimension": "Socioeconomic Background",
+      "severity": "High",
+      "low_ses_proxy_avg_score": 42.7,
+      "high_ses_proxy_avg_score": 79.3,
+      "score_gap": 36.6,
+      "low_ses_candidate_count": 7,
+      "high_ses_candidate_count": 9,
+      "evidence": "High-SES proxy candidates (Tier-1): avg 79.3 | Low-SES proxy (Tier-3 + CGPA<7): avg 42.7. Gap: 36.6 points.",
+      "root_cause": "Multiple scoring dimensions positively correlate with wealth and access: premium certifications (₹10,000–₹50,000 each), Tier-1 college education, internships at MNCs, and GitHub project portfolios all require time, money, and connections that are less accessible to first-generation college graduates or students from lower-income families.",
+      "recommendation": [
+        "Introduce socioeconomic context flag: ask candidates if they are first-generation graduates.",
+        "Adjust certification weighting when context flag is present — use skills assessment instead.",
+        "Actively partner with scholarship organisations, NGOs, and government skill programmes.",
+        "Remove 'Tier-1 institution' as a preference in job descriptions.",
+        "Consider need-based internship stipend programmes to create more equitable pipelines."
+      ]
+    },
+    {
+      "dimension": "Region / Location",
+      "severity": "Low",
+      "metro_avg_score": 67.8,
+      "non_metro_avg_score": 65.3,
+      "score_gap": 2.5,
+      "metro_count": 22,
+      "non_metro_count": 8,
+      "evidence": "Metro-city candidates: 22 | Non-metro: 8. Metro avg ATS: 67.8 | Non-metro avg ATS: 65.3. Gap: 2.5 points.",
+      "root_cause": "Metro-city candidates have greater access to networking events, hackathons, MNC internships, and certification centres — all of which translate to higher ATS scores. Candidates from smaller cities may be equally talented but have fewer credential-building opportunities.",
+      "recommendation": [
+        "Offer remote/hybrid roles to expand the geographic talent pool.",
+        "Weight practical skills tests equally with credential signals for non-metro candidates.",
+        "Recruit actively at Tier-2 and Tier-3 city campuses.",
+        "Remove 'must be based in [city]' from early screening — assess willingness to relocate at offer stage."
+      ]
+    },
+    {
+      "dimension": "Disability",
+      "severity": "Unobservable Risk",
+      "note": "Disability status is not collected in this dataset (as it should not be, per RPwD Act 2016 / ADA). However, the ATS system presents several risks for candidates with disabilities: (1) Resume quality scoring may penalise non-standard formatting used for screen reader compatibility. (2) Typing speed or resume length requirements indirectly disadvantage candidates with motor impairments. (3) Video interview AI evaluation (tone, pace) may misinterpret speech differences from candidates with speech impediments or neurodivergent communication styles.",
+      "recommendation": [
+        "Provide alternative application methods (audio, video, or assisted resume submission).",
+        "Do not use voice/video AI analysis as a screening factor.",
+        "Add an optional reasonable adjustment disclosure form for all applicants.",
+        "Ensure all interview scheduling tools and platforms are WCAG 2.1 AA accessible.",
+        "Train all interviewers on neurodiversity-inclusive interview techniques."
+      ]
+    },
+    {
+      "dimension": "Caste/Religion",
+      "severity": "Unobservable Risk",
+      "note": "Caste and religion are not present in this dataset. However, names (first/last) may trigger unconscious bias in manual review stages. Solution: blind CV review — remove candidate names before human screening.",
+      "recommendation": [
+        "Implement name-blind CV screening for all manual review stages.",
+        "Train all recruiters and hiring managers on caste and religious bias awareness.",
+        "Audit shortlist decisions for name-based patterns using phonetic analysis tools."
+      ]
+    },
+    {
+      "dimension": "Resume Length",
+      "severity": "Low",
+      "note": "Longer, more detailed resumes score slightly higher on resume quality. This may disadvantage candidates who write concisely or are from cultures where verbose self-promotion is less common.",
+      "recommendation": [
+        "Cap resume quality bonus to avoid penalising concise, high-quality resumes.",
+        "Define a maximum resume page count to level the playing field (e.g., 2 pages max).",
+        "Use structured application forms instead of free-form resumes to standardise information capture."
+      ]
+    }
+  ],
+  "severity_summary": {
+    "High": 4,
+    "Medium": 2,
+    "Low": 2,
+    "Unobservable Risk": 2
+  },
+  "overall_risk_level": "HIGH"
+}

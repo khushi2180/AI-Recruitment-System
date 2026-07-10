@@ -1,0 +1,221 @@
+{
+  "resume_id": "CSA-001",
+  "name": "Rohan Kapoor",
+  "email": "rohan.kapoor.sec@gmail.com",
+  "phone": "+919871234560",
+  "linkedin": "linkedin.com/in/rohankapoor-cybersec",
+  "github": "github.com/rohanksec",
+  "portfolio": null,
+  "address": "Flat 8C, DLF Phase 2, Gurugram, Haryana - 122002",
+  "role_applied": "Cyber Security Analyst",
+  "quality_tier": "Excellent",
+  "education": [
+    {
+      "degree": "B.Tech – Computer Science (Cybersecurity Specialization)",
+      "institution": "Manipal Institute of Technology, Manipal",
+      "university": "Manipal Academy of Higher Education (MAHE)",
+      "cgpa": 8.6,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2022
+    }
+  ],
+  "highest_degree": "B.Tech – Computer Science (Cybersecurity Specialization)",
+  "institution": "Manipal Institute of Technology, Manipal",
+  "cgpa": 8.6,
+  "experience": [
+    {
+      "company": "CyberSafe India Pvt. Ltd. (MSSP)",
+      "title": "Cyber Security Analyst (L2 SOC)",
+      "location": "Gurugram, HR",
+      "type": "Full-Time",
+      "start_date": "Aug 2022",
+      "end_date": "Present",
+      "duration_months": 22,
+      "responsibilities": [
+        "Monitored and triaged 10,000+ daily security alerts using Splunk SIEM, achieving MTTD of 9 minutes for critical P1 incidents.",
+        "Led 4 major incident response engagements involving ransomware (LockBit variant) and BEC attacks on BFSI clients.",
+        "Conducted 12 VAPT engagements (web + network) using Burp Suite, Nessus, and Metasploit; delivered formal pentest reports with CVSS-scored findings.",
+        "Developed 30+ custom Splunk detection rules reducing false positive rate from 18% to 6%.",
+        "Authored 8 threat intelligence reports on emerging APT groups targeting Indian financial sector, shared with CERT-In.",
+        "Mentored 3 L1 analysts through SOC onboarding and playbook training."
+      ]
+    },
+    {
+      "company": "Wipro Limited – Cybersecurity Practice",
+      "title": "Cybersecurity Intern",
+      "location": "Bengaluru, KA",
+      "type": "Internship",
+      "start_date": "Jan 2022",
+      "end_date": "Jun 2022",
+      "duration_months": 6,
+      "responsibilities": [
+        "Assisted in ISO 27001 gap assessment for a mid-sized manufacturing client.",
+        "Performed manual vulnerability scanning using Nmap and Nessus Essentials.",
+        "Contributed to SOC runbook documentation for 15 alert categories."
+      ]
+    }
+  ],
+  "years_experience": 2.1,
+  "companies": [
+    "CyberSafe India Pvt. Ltd. (MSSP)",
+    "Wipro Limited – Cybersecurity Practice"
+  ],
+  "skills": {
+    "security_tools": [
+      "Splunk (SPL)",
+      "IBM QRadar",
+      "Microsoft Sentinel",
+      "CrowdStrike Falcon",
+      "Nessus",
+      "Burp Suite Pro",
+      "Metasploit Framework",
+      "Wireshark",
+      "Volatility"
+    ],
+    "frameworks": [
+      "MITRE ATT&CK",
+      "Cyber Kill Chain",
+      "NIST CSF",
+      "ISO 27001",
+      "OWASP Top 10"
+    ],
+    "os_platforms": [
+      "Kali Linux",
+      "Ubuntu",
+      "Windows Server 2019",
+      "Active Directory",
+      "Parrot OS"
+    ],
+    "scripting": [
+      "Python (SIEM automation, log parsing)",
+      "Bash",
+      "PowerShell"
+    ],
+    "networking": [
+      "TCP/IP",
+      "DNS",
+      "HTTP/S",
+      "VPN",
+      "Firewall Rule Analysis",
+      "Packet Capture"
+    ],
+    "cloud_security": [
+      "AWS Security Hub",
+      "GuardDuty",
+      "Azure Defender (basic)"
+    ]
+  },
+  "skills_flat": [
+    "Splunk (SPL)",
+    "IBM QRadar",
+    "Microsoft Sentinel",
+    "CrowdStrike Falcon",
+    "Nessus",
+    "Burp Suite Pro",
+    "Metasploit Framework",
+    "Wireshark",
+    "Volatility",
+    "MITRE ATT&CK",
+    "Cyber Kill Chain",
+    "NIST CSF",
+    "ISO 27001",
+    "OWASP Top 10",
+    "Kali Linux",
+    "Ubuntu",
+    "Windows Server 2019",
+    "Active Directory",
+    "Parrot OS",
+    "Python (SIEM automation, log parsing)",
+    "Bash",
+    "PowerShell",
+    "TCP/IP",
+    "DNS",
+    "HTTP/S",
+    "VPN",
+    "Firewall Rule Analysis",
+    "Packet Capture",
+    "AWS Security Hub",
+    "GuardDuty",
+    "Azure Defender (basic)"
+  ],
+  "skill_count": 31,
+  "projects": [
+    {
+      "name": "PhishGuard – Email Phishing Detection Tool",
+      "tech_stack": [
+        "Python",
+        "NLP (scikit-learn)",
+        "IMAP",
+        "Flask"
+      ],
+      "description": "Built an ML-powered phishing email classifier achieving 96.3% accuracy on 10,000-email dataset. Deployed as internal tool at CyberSafe reducing SOC analyst phishing triage time by 40%.",
+      "github_link": "github.com/rohanksec/phishguard"
+    },
+    {
+      "name": "SplunkHunter – Automated Threat Hunting Scripts",
+      "tech_stack": [
+        "Python",
+        "Splunk REST API",
+        "MITRE ATT&CK Navigator"
+      ],
+      "description": "Collection of 25+ automated threat hunting queries and scripts mapped to MITRE ATT&CK techniques. Used internally at CyberSafe and shared on GitHub with 400+ stars.",
+      "github_link": "github.com/rohanksec/splunkhunter"
+    }
+  ],
+  "project_count": 2,
+  "certifications": [
+    {
+      "name": "Certified Ethical Hacker (CEH v12)",
+      "issuer": "EC-Council",
+      "year": 2023
+    },
+    {
+      "name": "CompTIA Security+ (SY0-701)",
+      "issuer": "CompTIA",
+      "year": 2022
+    },
+    {
+      "name": "eLearnSecurity Junior Penetration Tester (eJPT)",
+      "issuer": "INE / eLearnSecurity",
+      "year": 2022
+    },
+    {
+      "name": "Splunk Core Certified Power User",
+      "issuer": "Splunk",
+      "year": 2023
+    }
+  ],
+  "certification_names": [
+    "Certified Ethical Hacker (CEH v12)",
+    "CompTIA Security+ (SY0-701)",
+    "eLearnSecurity Junior Penetration Tester (eJPT)",
+    "Splunk Core Certified Power User"
+  ],
+  "certification_count": 4,
+  "achievements": [
+    "Top 50 Ranked – HackTheBox India (Hall of Fame entry)",
+    "1st Place – CyberSafe Internal Red vs Blue Team Exercise (2023)",
+    "Published CVE-2023-XXXXX: Discovered XSS vulnerability in open-source SIEM plugin (responsibly disclosed)",
+    "Manipal Institute Gold Medal – Cybersecurity Specialization (Batch 2022)"
+  ],
+  "languages_known": [
+    "English (Fluent)",
+    "Hindi (Native)",
+    "Punjabi (Conversational)"
+  ],
+  "soft_skills": [
+    "Analytical Thinking",
+    "Attention to Detail",
+    "Cool Under Pressure",
+    "Report Writing",
+    "Stakeholder Communication"
+  ],
+  "interests": [
+    "CTF Competitions",
+    "Malware Analysis",
+    "OSINT Research",
+    "Bug Bounty Hunting"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.630752",
+  "source_file": "CSA_001_Rohan_Kapoor.json"
+}

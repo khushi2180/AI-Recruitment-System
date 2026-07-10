@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "phase": "Phase 8 — Hiring Funnel with Realistic Numbers",
+    "batch": "Summer 2024 Graduate Recruitment Drive",
+    "company": "TechNova Group (5 subsidiaries)",
+    "period": "April–July 2024",
+    "generated": "2024-06-28"
+  },
+
+  "overall_funnel": {
+    "stages": [
+      {
+        "stage_id": 1,
+        "name": "Job Descriptions Published",
+        "count": 5,
+        "conversion_from_prev": null,
+        "cumulative_drop": 0,
+        "details": "5 JDs live across LinkedIn, Naukri, Internshala, and company careers page. Total reach: 48,000 impressions."
+      },
+      {
+        "stage_id": 2,
+        "name": "Applications Received",
+        "count": 30,
+        "note": "Simulated batch — 30 realistic candidates generated for demonstration",
+        "realistic_equivalent": 312,
+        "realistic_note": "In a real deployment for these 5 roles, expect 300–350 applications across Indian job portals",
+        "conversion_from_prev": null,
+        "cumulative_drop": 0
+      },
+      {
+        "stage_id": 3,
+        "name": "AI Resume Parsing (Phase 3)",
+        "count": 30,
+        "parsed_successfully": 30,
+        "parse_failures": 0,
+        "conversion_from_prev": "100%",
+        "cumulative_drop": 0,
+        "time_taken": "0.8 seconds (batch of 30)",
+        "insight": "All 30 resumes parsed. In real deployment, handles 300+ in <30 seconds."
+      },
+      {
+        "stage_id": 4,
+        "name": "ATS Screening (≥55 threshold)",
+        "count": 22,
+        "conversion_from_prev": "73.3%",
+        "cumulative_drop": "26.7%",
+        "score_range": "55–100",
+        "average_score_at_stage": 76.4,
+        "insight": "8 candidates below 55 — primarily freshers with poor skill match or non-tech role transferees."
+      },
+      {
+        "stage_id": 5,
+        "name": "Shortlisted (≥65 threshold)",
+        "count": 19,
+        "conversion_from_prev": "86.4%",
+        "cumulative_drop": "36.7% from applications",
+        "score_range": "65–100",
+        "average_score_at_stage": 79.8,
+        "insight": "19 candidates meet the shortlist bar. 3 additional candidates scored 55–64 — placed on watchlist."
+      },
+      {
+        "stage_id": 6,
+        "name": "Bias Audit Review",
+        "count": 19,
+        "conversion_from_prev": "100%",
+        "flagged_for_review": 4,
+        "bias_flags": [
+          "Institution tier skew — 2 Tier-1 candidates may have been over-scored",
+          "Employment gap flag — 1 candidate's gap context not captured",
+          "English fluency proxy — 1 candidate's score potentially impacted"
+        ],
+        "insight": "4 candidates flagged for manual recruiter review before interview scheduling."
+      },
+      {
+        "stage_id": 7,
+        "name": "HR Screening Call (15-min)",
+        "count": 16,
+        "conversion_from_prev": "84.2%",
+        "dropped": 3,
+        "drop_reasons": [
+          "1 candidate withdrew — accepted competing offer",
+          "1 candidate failed basic communication assessment",
+          "1 candidate's expected CTC was 3x the budgeted range"
+        ],
+        "average_call_duration_mins": 14.2,
+        "insight": "3 dropped post-HR call. 16 proceed to technical interview."
+      },
+      {
+        "stage_id": 8,
+        "name": "Technical Interview (Round 1)",
+        "count": 14,
+        "conversion_from_prev": "87.5%",
+        "dropped": 2,
+        "drop_reasons": [
+          "1 Software Engineer could not solve medium-level DSA question",
+          "1 Data Analyst had incorrect SQL fundamentals"
+        ],
+        "interview_questions_used": "Phase 5 — interview_questions_all_roles.json",
+        "avg_technical_score": 72.4,
+        "insight": "14 advance. AI-generated questions (Phase 5) used for consistent evaluation."
+      },
+      {
+        "stage_id": 9,
+        "name": "Panel Interview (Round 2 — Behavioural + Managerial)",
+        "count": 10,
+        "conversion_from_prev": "71.4%",
+        "dropped": 4,
+        "drop_reasons": [
+          "2 candidates showed poor cultural fit signals (no specifics cited — bias-mitigation rule)",
+          "1 candidate had poor conflict resolution skills",
+          "1 candidate asked inappropriate questions about team politics"
+        ],
+        "avg_panel_score": 74.1,
+        "insight": "10 advance to final decision stage."
+      },
+      {
+        "stage_id": 10,
+        "name": "Offer Decision / Final Review",
+        "count": 10,
+        "conversion_from_prev": "100%",
+        "offers_approved": 8,
+        "not_offered": 2,
+        "not_offer_reasons": [
+          "1 candidate — headcount freeze announced during process",
+          "1 candidate — final panel disagreed on seniority fit"
+        ],
+        "insight": "8 offers approved by hiring manager + HRBP."
+      },
+      {
+        "stage_id": 11,
+        "name": "Offer Sent",
+        "count": 8,
+        "conversion_from_prev": "80%",
+        "offer_letter_turnaround_days": 2.3,
+        "insight": "8 offer letters sent within 2.3 days of approval (target: <3 days — ✅ met)."
+      },
+      {
+        "stage_id": 12,
+        "name": "Offer Accepted",
+        "count": 6,
+        "conversion_from_prev": "75%",
+        "declined": 2,
+        "decline_reasons": [
+          "Competitor offered ₹1.2 LPA higher package",
+          "Candidate chose a startup for ESOPs"
+        ],
+        "acceptance_rate": "75%",
+        "industry_benchmark": "68%",
+        "insight": "75% acceptance rate — above 68% industry benchmark. Indicates competitive offer quality."
+      },
+      {
+        "stage_id": 13,
+        "name": "Joiners (Day 1)",
+        "count": 5,
+        "conversion_from_prev": "83.3%",
+        "no_shows": 1,
+        "no_show_reason": "Candidate ghosted — withdrew via WhatsApp 12 hours before joining date",
+        "overall_conversion": "16.7% (5 joiners from 30 applicants)",
+        "insight": "Final pipeline conversion: 5 out of 30 (16.7%) — strong for a competitive, AI-screened process."
+      }
+    ]
+  },
+
+  "per_role_funnel": {
+    "Software Engineer": {
+      "applications": 6, "parsed": 6, "ats_screened": 4, "shortlisted": 4,
+      "hr_call": 3, "tech_interview": 2, "panel": 2, "offers_sent": 2, "offers_accepted": 2, "joiners": 2,
+      "top_candidate": "Devansh Trivedi (94.0)", "avg_score": 73.1,
+      "funnel_conversion": "33.3%"
+    },
+    "Cyber Security Analyst": {
+      "applications": 6, "parsed": 6, "ats_screened": 4, "shortlisted": 4,
+      "hr_call": 3, "tech_interview": 3, "panel": 2, "offers_sent": 1, "offers_accepted": 1, "joiners": 0,
+      "top_candidate": "Rohan Kapoor (88.4)", "avg_score": 66.6,
+      "funnel_conversion": "0% (joiner declined on Day 1)",
+      "note": "CSA Joiner offered competed role at Palo Alto Networks — lost to competitor"
+    },
+    "Data Analyst": {
+      "applications": 6, "parsed": 6, "ats_screened": 5, "shortlisted": 4,
+      "hr_call": 4, "tech_interview": 3, "panel": 2, "offers_sent": 2, "offers_accepted": 2, "joiners": 2,
+      "top_candidate": "Harshita Gupta (95.0)", "avg_score": 71.7,
+      "funnel_conversion": "33.3%"
+    },
+    "Product Manager": {
+      "applications": 6, "parsed": 6, "ats_screened": 4, "shortlisted": 3,
+      "hr_call": 3, "tech_interview": 3, "panel": 2, "offers_sent": 2, "offers_accepted": 1, "joiners": 1,
+      "top_candidate": "Saurabh Tiwari (98.0)", "avg_score": 63.1,
+      "funnel_conversion": "16.7%",
+      "note": "Aditya Malhotra declined — accepted Director of PM role at a Series B startup"
+    },
+    "UI/UX Designer": {
+      "applications": 6, "parsed": 6, "ats_screened": 5, "shortlisted": 4,
+      "hr_call": 3, "tech_interview": 3, "panel": 2, "offers_sent": 1, "offers_accepted": 1, "joiners": 1,
+      "top_candidate": "Nandita Roy (97.0)", "avg_score": 65.7,
+      "funnel_conversion": "16.7%"
+    }
+  },
+
+  "key_metrics": {
+    "overall_conversion_rate": "16.7%",
+    "shortlist_rate": "63.3%",
+    "offer_acceptance_rate": "75%",
+    "avg_time_to_hire_days": 18,
+    "avg_ats_score": 67.2,
+    "industry_benchmark_time_to_hire": 21,
+    "cost_per_hire_estimate_inr": 28000,
+    "ai_time_saved_hours": 34.5,
+    "ai_time_saved_note": "Estimated 34.5 hours of manual screening saved vs manual review of 30 applications"
+  },
+
+  "benchmark_comparison": {
+    "metric": "Our System vs Industry",
+    "time_to_hire": { "ours": 18, "industry": 21, "status": "Better" },
+    "offer_acceptance": { "ours": "75%", "industry": "68%", "status": "Better" },
+    "shortlist_rate": { "ours": "63.3%", "industry": "45%", "status": "Higher (AI optimised)" },
+    "bias_dimensions_monitored": { "ours": 10, "industry": 3, "status": "More Comprehensive" }
+  }
+}

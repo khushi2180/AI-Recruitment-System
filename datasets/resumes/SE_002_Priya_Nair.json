@@ -1,0 +1,87 @@
+{
+  "resume_id": "SE-002",
+  "name": "Priya Nair",
+  "email": "priyanair.2024@yahoo.com",
+  "phone": "+91-9746001234",
+  "linkedin": "linkedin.com/in/priya-nair-cse",
+  "github": "github.com/priyanair24",
+  "address": "42, Indiranagar, Bengaluru, Karnataka - 560038",
+  "role_applied": "Software Engineer",
+  "quality_tier": "Poor",
+
+  "summary": "Fresh B.Tech graduate eager to start career in software development. Completed final year project in Python. Looking for an opportunity to learn and contribute.",
+
+  "education": [
+    {
+      "degree": "B.Tech – Computer Science",
+      "institution": "Nitte Meenakshi Institute of Technology, Bengaluru",
+      "university": "Visvesvaraya Technological University (VTU)",
+      "cgpa": 6.1,
+      "year_of_passing": 2024,
+      "relevant_courses": ["Programming in C", "Data Structures", "DBMS", "Computer Networks"]
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "Softech Infoways",
+      "title": "Software Intern",
+      "location": "Bengaluru, KA",
+      "type": "Internship",
+      "start_date": "Jan 2024",
+      "end_date": "Apr 2024",
+      "duration_months": 4,
+      "responsibilities": [
+        "Assisted senior developers in testing web forms.",
+        "Wrote basic HTML pages for internal tools.",
+        "Attended daily stand-ups and took meeting notes."
+      ]
+    }
+  ],
+
+  "skills": {
+    "languages": ["Python (basic)", "HTML", "CSS"],
+    "frameworks": [],
+    "databases": ["MySQL (basic)"],
+    "tools": ["Git (basic)", "VS Code"],
+    "cloud": [],
+    "testing": []
+  },
+
+  "projects": [
+    {
+      "name": "Student Result Management System",
+      "tech_stack": ["Python", "Tkinter", "MySQL"],
+      "description": "A desktop application to manage student results for a college. Built as final year project.",
+      "github_link": "github.com/priyanair24/result-mgmt"
+    }
+  ],
+
+  "certifications": [
+    { "name": "Python for Beginners", "issuer": "Udemy", "year": 2023 }
+  ],
+
+  "achievements": [
+    "Participated in college-level coding competition (no prize)"
+  ],
+
+  "languages_known": ["English (Basic)", "Hindi (Native)", "Malayalam (Native)"],
+
+  "soft_skills": ["Willingness to Learn", "Punctual", "Team Player"],
+
+  "interests": ["Reading", "Cooking", "Music"],
+
+  "ats_score": {
+    "total": 38,
+    "breakdown": {
+      "skills_match": 10,
+      "experience": 6,
+      "projects": 8,
+      "education": 6,
+      "certifications": 4,
+      "resume_quality": 4
+    },
+    "rank": 6,
+    "shortlisted": false
+  }
+}

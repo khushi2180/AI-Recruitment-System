@@ -1,0 +1,115 @@
+{
+  "resume_id": "CSA-005",
+  "name": "Arjun Das",
+  "email": "arjun.das.infosec@gmail.com",
+  "phone": "+91-9051234567",
+  "linkedin": "linkedin.com/in/arjundas-redteam",
+  "github": "github.com/arjundas-sec",
+  "address": "Salt Lake Sector V, Kolkata, West Bengal - 700091",
+  "role_applied": "Cyber Security Analyst",
+  "quality_tier": "Excellent",
+
+  "summary": "Offensive Security professional with 2 years of experience in penetration testing, red teaming, and vulnerability research. Holds OSCP certification — one of the most respected credentials in offensive security. Discovered 6 CVEs across open-source projects. Bug bounty hunter with ₹4.2 Lakhs in total payouts from HackerOne and Bugcrowd. Adept at web, network, and Active Directory exploitation.",
+
+  "education": [
+    {
+      "degree": "B.Tech – Information Technology",
+      "institution": "Jadavpur University, Kolkata",
+      "university": "Jadavpur University",
+      "cgpa": 8.7,
+      "year_of_passing": 2022,
+      "relevant_courses": ["Network Security", "Cryptography", "OS Internals", "Reverse Engineering", "Malware Analysis"]
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "RedForce Security Labs",
+      "title": "Junior Penetration Tester",
+      "location": "Kolkata, WB",
+      "type": "Full-Time",
+      "start_date": "Sep 2022",
+      "end_date": "Present",
+      "duration_months": 21,
+      "responsibilities": [
+        "Delivered 20+ VAPT engagements including web apps (OWASP), internal networks, and AD environments for BFSI and e-commerce clients.",
+        "Discovered critical SQL Injection vulnerability in a PSU bank's loan management portal — CVSS 9.1 — responsibly disclosed and patched.",
+        "Developed a custom C2 framework extension for an adversary simulation exercise, evading 3 major AV/EDR solutions.",
+        "Wrote detailed pentest reports with executive summaries for C-suite clients; presentations to CISOs.",
+        "Built automated Active Directory enumeration and privilege escalation toolkit in Python used by team of 12 testers.",
+        "Conducted 3 phishing simulation campaigns with 2,000+ target employees; achieved 28% click rate on baseline."
+      ]
+    },
+    {
+      "company": "Independent (Bug Bounty)",
+      "title": "Bug Bounty Hunter",
+      "location": "Remote",
+      "type": "Freelance",
+      "start_date": "Jan 2021",
+      "end_date": "Present",
+      "duration_months": 41,
+      "responsibilities": [
+        "Reported 45+ valid vulnerabilities across 20+ programs on HackerOne and Bugcrowd.",
+        "Total earnings: ₹4,20,000 in bounty payouts (P1: 6, P2: 14, P3+: 25).",
+        "Specializations: IDOR, SSRF, Race Conditions, JWT flaws, SAML Injection."
+      ]
+    }
+  ],
+
+  "skills": {
+    "security_tools": ["Metasploit", "Burp Suite Pro", "Cobalt Strike (exposure)", "BloodHound", "Responder", "Mimikatz", "Nessus Pro", "Nmap", "SQLmap", "ffuf", "Volatility"],
+    "frameworks": ["OWASP Top 10", "PTES", "MITRE ATT&CK", "PTES", "Cyber Kill Chain"],
+    "os_platforms": ["Kali Linux (daily driver)", "Parrot OS", "Windows (AD exploitation)", "macOS"],
+    "scripting": ["Python", "Bash", "PowerShell", "Go (basic)"],
+    "networking": ["Full TCP/IP stack", "BGP/OSPF basics", "Packet crafting (Scapy)"],
+    "cloud_security": ["AWS Pentest (S3, IAM, Lambda misconfigurations)", "GCP basics"]
+  },
+
+  "projects": [
+    {
+      "name": "ADExploit – AD Enumeration & Attack Toolkit",
+      "tech_stack": ["Python", "Impacket", "BloodHound API", "LDAP"],
+      "description": "Automated Active Directory enumeration toolkit. Performs ACL abuse detection, Kerberoasting, and ASREProasting automation. Used in 5+ real engagements. 500+ GitHub stars.",
+      "github_link": "github.com/arjundas-sec/adexploit"
+    },
+    {
+      "name": "WebFuzz – Smart Web Application Fuzzer",
+      "tech_stack": ["Go", "HTTP/2 support", "Custom wordlists"],
+      "description": "High-speed, context-aware web fuzzer with support for HTTP/2, custom auth headers, and mutation strategies. 3x faster than ffuf on tested benchmarks.",
+      "github_link": "github.com/arjundas-sec/webfuzz"
+    }
+  ],
+
+  "certifications": [
+    { "name": "Offensive Security Certified Professional (OSCP)", "issuer": "Offensive Security", "year": 2023 },
+    { "name": "CEH Practical", "issuer": "EC-Council", "year": 2023 },
+    { "name": "CompTIA PenTest+", "issuer": "CompTIA", "year": 2022 }
+  ],
+
+  "achievements": [
+    "OSCP Certification — Passed on first attempt (2023)",
+    "HackerOne Hall of Fame — Paytm, OLA, MakeMyTrip programs",
+    "CVE Author: CVE-2023-31456, CVE-2023-35821, CVE-2024-11029 (among others)",
+    "Speaker: null0x0 Security Conference Kolkata 2023 — 'Breaking JWT: Real-World Case Studies'"
+  ],
+
+  "languages_known": ["English (Fluent)", "Bengali (Native)", "Hindi (Fluent)"],
+
+  "soft_skills": ["Adversarial Thinking", "Precision & Accuracy", "Discretion & Ethics", "Report Writing Excellence", "Research Mindset"],
+
+  "interests": ["Vulnerability Research", "CTF Competitions (HackTheBox Pro Labs)", "Reverse Engineering (Malware)", "Rock Climbing"],
+
+  "ats_score": {
+    "total": 89,
+    "breakdown": {
+      "skills_match": 31,
+      "experience": 22,
+      "projects": 14,
+      "education": 9,
+      "certifications": 9,
+      "resume_quality": 4
+    },
+    "rank": 2,
+    "shortlisted": true
+  }
+}

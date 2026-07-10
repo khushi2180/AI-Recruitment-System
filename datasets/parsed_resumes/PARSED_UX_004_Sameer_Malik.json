@@ -1,0 +1,115 @@
+{
+  "resume_id": "UX-004",
+  "name": "Sameer Malik",
+  "email": "sameer.malik.design99@gmail.com",
+  "phone": "+919456789012",
+  "linkedin": "linkedin.com/in/sameermalik-ui",
+  "github": null,
+  "portfolio": "dribbble.com/sameermalik99",
+  "address": "Gomti Nagar, Lucknow, Uttar Pradesh - 226010",
+  "role_applied": "UI/UX Designer",
+  "quality_tier": "Poor",
+  "education": [
+    {
+      "degree": "BCA – Bachelor of Computer Applications",
+      "institution": "Integral University, Lucknow",
+      "university": "Integral University",
+      "cgpa": 6.5,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2022
+    }
+  ],
+  "highest_degree": "BCA – Bachelor of Computer Applications",
+  "institution": "Integral University, Lucknow",
+  "cgpa": 6.5,
+  "experience": [
+    {
+      "company": "Webisdom Technologies",
+      "title": "UI Designer",
+      "location": "Lucknow, UP",
+      "type": "Full-Time",
+      "start_date": "Sep 2022",
+      "end_date": "Present",
+      "duration_months": 21,
+      "responsibilities": [
+        "Designed website pages for client websites in Figma.",
+        "Made social media posts in Canva and Photoshop.",
+        "Worked on mobile app screens for 2 client projects.",
+        "Attended client calls with senior team members."
+      ]
+    }
+  ],
+  "years_experience": 1.8,
+  "companies": [
+    "Webisdom Technologies"
+  ],
+  "skills": {
+    "design_tools": [
+      "Figma (basic)",
+      "Canva",
+      "Adobe Photoshop (intermediate)"
+    ],
+    "research_methods": [],
+    "design_disciplines": [
+      "UI Design (static screens)",
+      "Social Media Graphics"
+    ],
+    "code_knowledge": [
+      "HTML (very basic)"
+    ],
+    "collaboration": [
+      "JIRA (basic ticket updates)",
+      "WhatsApp for client communication"
+    ]
+  },
+  "skills_flat": [
+    "Figma (basic)",
+    "Canva",
+    "Adobe Photoshop (intermediate)",
+    "UI Design (static screens)",
+    "Social Media Graphics",
+    "HTML (very basic)",
+    "JIRA (basic ticket updates)",
+    "WhatsApp for client communication"
+  ],
+  "skill_count": 8,
+  "projects": [
+    {
+      "name": "FoodOrder App UI (Personal Project)",
+      "description": "Designed screens for a food ordering mobile app UI — home screen, restaurant listing, cart, and order tracking. No usability testing or research conducted.",
+      "portfolio_link": "dribbble.com/sameermalik99/foodorder"
+    }
+  ],
+  "project_count": 1,
+  "certifications": [
+    {
+      "name": "UI/UX Design Bootcamp",
+      "issuer": "Udemy (beginner level)",
+      "year": 2022
+    }
+  ],
+  "certification_names": [
+    "UI/UX Design Bootcamp"
+  ],
+  "certification_count": 1,
+  "achievements": [
+    "Client appreciated work at Webisdom in a feedback email"
+  ],
+  "languages_known": [
+    "Urdu (Native)",
+    "Hindi (Native)",
+    "English (Basic)"
+  ],
+  "soft_skills": [
+    "Creative",
+    "Hardworking",
+    "Friendly"
+  ],
+  "interests": [
+    "Gaming",
+    "Drawing",
+    "Movies"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.639633",
+  "source_file": "UX_004_Sameer_Malik.json"
+}

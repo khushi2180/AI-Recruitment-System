@@ -1,0 +1,216 @@
+{
+  "resume_id": "UX-003",
+  "name": "Nandita Roy",
+  "email": "nandita.roy.ux@gmail.com",
+  "phone": "+919831122334",
+  "linkedin": "linkedin.com/in/nanditaroy-design",
+  "github": null,
+  "portfolio": "nanditaroy.design | behance.net/nanditaroy",
+  "address": "Salt Lake City Sector III, Kolkata, West Bengal - 700097",
+  "role_applied": "UI/UX Designer",
+  "quality_tier": "Excellent",
+  "education": [
+    {
+      "degree": "M.Des – Interaction & Experience Design",
+      "institution": "IDC School of Design, IIT Bombay",
+      "university": "Indian Institute of Technology Bombay",
+      "cgpa": 9.0,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2020
+    },
+    {
+      "degree": "B.Des – Industrial & Product Design",
+      "institution": "Jadavpur University School of Design",
+      "university": "Jadavpur University",
+      "cgpa": 8.4,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2018
+    }
+  ],
+  "highest_degree": "M.Des – Interaction & Experience Design",
+  "institution": "IDC School of Design, IIT Bombay",
+  "cgpa": 9.0,
+  "experience": [
+    {
+      "company": "HealthPlix Technologies",
+      "title": "Lead UX Designer",
+      "location": "Kolkata (Remote)",
+      "type": "Full-Time",
+      "start_date": "Jul 2021",
+      "end_date": "Present",
+      "duration_months": 35,
+      "responsibilities": [
+        "Led design for HealthPlix EMR (Electronic Medical Record) platform — primary tool for 50,000+ doctors across India.",
+        "Built and scaled the design team from 1 to 5 designers; established design rituals, critique processes, and hiring standards.",
+        "Redesigned prescription writing flow — reduced doctor's average prescription time from 4.2 min to 1.8 min (57% improvement). Validated by post-launch user research.",
+        "Designed HealthPlix Analytics dashboard for hospital administrators — data-heavy UX for 600+ KPI widgets, built on enterprise design system.",
+        "Embedded accessibility guidelines into design process — 100% WCAG 2.1 AA compliance for all new features from Q2 2023.",
+        "Conducted quarterly design sprints with 3 hospital networks as embedded researcher; synthesized 120+ hours of field research."
+      ]
+    },
+    {
+      "company": "Intuit India (TurboTax / QuickBooks)",
+      "title": "UX Designer",
+      "location": "Bengaluru / Remote",
+      "type": "Full-Time",
+      "start_date": "Aug 2020",
+      "end_date": "Jun 2021",
+      "duration_months": 11,
+      "responsibilities": [
+        "Designed GST filing flow improvements for QuickBooks India, reducing support ticket volume by 31%.",
+        "Ran 3 unmoderated usability tests using UserTesting platform with 15 SME users per round.",
+        "Contributed 45 components to the QuickBooks India Design System (Figma)."
+      ]
+    }
+  ],
+  "years_experience": 3.8,
+  "companies": [
+    "HealthPlix Technologies",
+    "Intuit India (TurboTax / QuickBooks)"
+  ],
+  "skills": {
+    "design_tools": [
+      "Figma (Expert — Variables, Branching, Dev Mode, Prototype)",
+      "Principle",
+      "After Effects (motion)",
+      "Framer",
+      "Adobe CC Suite",
+      "Lottie",
+      "Miro"
+    ],
+    "research_methods": [
+      "Contextual Inquiry",
+      "Diary Studies",
+      "Moderated & Unmoderated Usability Testing",
+      "Card Sorting",
+      "Tree Testing",
+      "JTBD Interviews",
+      "Kano Surveys",
+      "Affinity Diagramming"
+    ],
+    "design_disciplines": [
+      "Enterprise UX",
+      "Data Visualization Design",
+      "Mobile Design (iOS + Android)",
+      "Design Systems (Tokens + Components)",
+      "Service Design",
+      "Accessibility (WCAG 2.1 AA)",
+      "Motion Design"
+    ],
+    "code_knowledge": [
+      "HTML/CSS (good)",
+      "Basic React component vocabulary",
+      "CSS Animations"
+    ],
+    "collaboration": [
+      "Figma Dev Mode",
+      "Storybook integration",
+      "JIRA",
+      "Confluence",
+      "Productboard"
+    ]
+  },
+  "skills_flat": [
+    "Figma (Expert — Variables, Branching, Dev Mode, Prototype)",
+    "Principle",
+    "After Effects (motion)",
+    "Framer",
+    "Adobe CC Suite",
+    "Lottie",
+    "Miro",
+    "Contextual Inquiry",
+    "Diary Studies",
+    "Moderated & Unmoderated Usability Testing",
+    "Card Sorting",
+    "Tree Testing",
+    "JTBD Interviews",
+    "Kano Surveys",
+    "Affinity Diagramming",
+    "Enterprise UX",
+    "Data Visualization Design",
+    "Mobile Design (iOS + Android)",
+    "Design Systems (Tokens + Components)",
+    "Service Design",
+    "Accessibility (WCAG 2.1 AA)",
+    "Motion Design",
+    "HTML/CSS (good)",
+    "Basic React component vocabulary",
+    "CSS Animations",
+    "Figma Dev Mode",
+    "Storybook integration",
+    "JIRA",
+    "Confluence",
+    "Productboard"
+  ],
+  "skill_count": 30,
+  "projects": [
+    {
+      "name": "HealthPlix Doctor Prescription Redesign",
+      "description": "Comprehensive UX research and redesign of EMR prescription module. Field research with 18 doctors across 3 cities. Full case study: discovery → IA → wireframes → tested prototypes → shipped → measured. 57% time reduction.",
+      "portfolio_link": "nanditaroy.design/healthplix-case"
+    },
+    {
+      "name": "NeuroViz – Neuro Analytics Dashboard",
+      "description": "Personal project: Designed a complex neurological patient data dashboard for hospital neurologists. Solved for data density, cognitive load, and clinical accuracy. Featured on UX Collective Medium (8,200 reads).",
+      "portfolio_link": "behance.net/nanditaroy/neuroviz"
+    },
+    {
+      "name": "Enterprise Design System — HealthPlix",
+      "description": "Built from scratch: design token system (light/dark/high-contrast modes), 150+ components, documentation, contribution guidelines. Adopted by 5 squads.",
+      "portfolio_link": "nanditaroy.design/design-system"
+    }
+  ],
+  "project_count": 3,
+  "certifications": [
+    {
+      "name": "Interaction Design Foundation – UX Management",
+      "issuer": "IDF",
+      "year": 2022
+    },
+    {
+      "name": "IAAP – Certified Professional in Accessibility Core Competencies (CPACC)",
+      "issuer": "IAAP",
+      "year": 2023
+    },
+    {
+      "name": "Figma Config Speaker Badge – Advanced Design Systems",
+      "issuer": "Figma",
+      "year": 2023
+    }
+  ],
+  "certification_names": [
+    "Interaction Design Foundation – UX Management",
+    "IAAP – Certified Professional in Accessibility Core Competencies (CPACC)",
+    "Figma Config Speaker Badge – Advanced Design Systems"
+  ],
+  "certification_count": 3,
+  "achievements": [
+    "IIT Bombay IDC Director's Medal — Outstanding M.Des Thesis (2020)",
+    "Figma Config 2023 Speaker — 'Designing for Cognitive Overload in Healthcare SaaS'",
+    "UX Collective Featured Article — 8,200 reads (NeuroViz Dashboard case study)",
+    "IAAP CPACC Certified Accessibility Professional",
+    "HealthPlix Design Impact Award — 2023 Annual Review"
+  ],
+  "languages_known": [
+    "English (Fluent)",
+    "Bengali (Native)",
+    "Hindi (Fluent)",
+    "French (A1 – learning)"
+  ],
+  "soft_skills": [
+    "Design Leadership",
+    "Research Synthesis",
+    "Executive Storytelling",
+    "Accessibility Advocacy",
+    "Mentoring & Team Building"
+  ],
+  "interests": [
+    "Healthcare UX Research",
+    "Cognitive Science",
+    "Pottery",
+    "Reading (Philosophy of Mind)",
+    "Teaching (Guest lecturer at Jadavpur University)"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.639269",
+  "source_file": "UX_003_Nandita_Roy.json"
+}

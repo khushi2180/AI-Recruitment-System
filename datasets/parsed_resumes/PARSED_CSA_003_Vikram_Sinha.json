@@ -1,0 +1,171 @@
+{
+  "resume_id": "CSA-003",
+  "name": "Vikram Sinha",
+  "email": "vikram.sinha.csec@outlook.com",
+  "phone": "+919334567890",
+  "linkedin": "linkedin.com/in/vikramsinha-security",
+  "github": "github.com/vikramsec",
+  "portfolio": null,
+  "address": "Flat 3A, Sector 49, Gurugram, Haryana - 122018",
+  "role_applied": "Cyber Security Analyst",
+  "quality_tier": "Average",
+  "education": [
+    {
+      "degree": "B.Tech – Computer Science",
+      "institution": "SRM Institute of Science and Technology, Chennai",
+      "university": "SRM University",
+      "cgpa": 7.5,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2022
+    }
+  ],
+  "highest_degree": "B.Tech – Computer Science",
+  "institution": "SRM Institute of Science and Technology, Chennai",
+  "cgpa": 7.5,
+  "experience": [
+    {
+      "company": "NetGuard Security Services",
+      "title": "SOC Analyst – L1",
+      "location": "Gurugram, HR",
+      "type": "Full-Time",
+      "start_date": "Jan 2023",
+      "end_date": "Present",
+      "duration_months": 17,
+      "responsibilities": [
+        "Monitored 2,500+ daily alerts on Microsoft Sentinel for 8 enterprise clients across BFSI and retail sectors.",
+        "Triaged and classified security alerts; escalated 40–60 incidents per month to L2/L3 team.",
+        "Created and maintained 15 alert suppression rules to reduce false positives by 22%.",
+        "Participated in 3 tabletop IR exercises with client CISO teams.",
+        "Generated daily shift reports and monthly security summary dashboards for client stakeholders."
+      ]
+    },
+    {
+      "company": "Infosys BPM",
+      "title": "IT Security Intern",
+      "location": "Hyderabad, TS",
+      "type": "Internship",
+      "start_date": "Jul 2021",
+      "end_date": "Dec 2021",
+      "duration_months": 6,
+      "responsibilities": [
+        "Assisted in access control reviews and IAM audit for internal Active Directory.",
+        "Documented security SOPs for phishing email handling procedures.",
+        "Supported evidence collection for ISO 27001 certification audit."
+      ]
+    }
+  ],
+  "years_experience": 1.7,
+  "companies": [
+    "NetGuard Security Services",
+    "Infosys BPM"
+  ],
+  "skills": {
+    "security_tools": [
+      "Microsoft Sentinel (KQL queries)",
+      "Splunk (basic SPL)",
+      "CrowdStrike Falcon",
+      "Nmap",
+      "Wireshark (basic)"
+    ],
+    "frameworks": [
+      "MITRE ATT&CK (basic)",
+      "NIST CSF",
+      "ISO 27001 (awareness)"
+    ],
+    "os_platforms": [
+      "Windows Server",
+      "Active Directory",
+      "Ubuntu",
+      "Kali Linux (learning)"
+    ],
+    "scripting": [
+      "Python (basic log automation)",
+      "KQL (Microsoft Sentinel)"
+    ],
+    "networking": [
+      "TCP/IP",
+      "DNS",
+      "Firewall rules",
+      "VPN concepts"
+    ],
+    "cloud_security": [
+      "Azure Defender (basic)",
+      "Azure AD"
+    ]
+  },
+  "skills_flat": [
+    "Microsoft Sentinel (KQL queries)",
+    "Splunk (basic SPL)",
+    "CrowdStrike Falcon",
+    "Nmap",
+    "Wireshark (basic)",
+    "MITRE ATT&CK (basic)",
+    "NIST CSF",
+    "ISO 27001 (awareness)",
+    "Windows Server",
+    "Active Directory",
+    "Ubuntu",
+    "Kali Linux (learning)",
+    "Python (basic log automation)",
+    "KQL (Microsoft Sentinel)",
+    "TCP/IP",
+    "DNS",
+    "Firewall rules",
+    "VPN concepts",
+    "Azure Defender (basic)",
+    "Azure AD"
+  ],
+  "skill_count": 20,
+  "projects": [
+    {
+      "name": "IOC Enrichment Script",
+      "tech_stack": [
+        "Python",
+        "VirusTotal API",
+        "AbuseIPDB API"
+      ],
+      "description": "Wrote a Python script to auto-enrich IP/domain IoCs from Sentinel alerts using VirusTotal and AbuseIPDB APIs. Reduced manual lookups from 5 min to 30 sec per alert.",
+      "github_link": "github.com/vikramsec/ioc-enricher"
+    }
+  ],
+  "project_count": 1,
+  "certifications": [
+    {
+      "name": "CompTIA Security+ (SY0-601)",
+      "issuer": "CompTIA",
+      "year": 2022
+    },
+    {
+      "name": "Microsoft Security Operations Analyst (SC-200) – In Progress",
+      "issuer": "Microsoft",
+      "year": 2024
+    }
+  ],
+  "certification_names": [
+    "CompTIA Security+ (SY0-601)",
+    "Microsoft Security Operations Analyst (SC-200) – In Progress"
+  ],
+  "certification_count": 2,
+  "achievements": [
+    "Most Improved Analyst – NetGuard Security Q4 2023",
+    "TryHackMe – Top 10% Global Rank (as of May 2024)"
+  ],
+  "languages_known": [
+    "English (Professional)",
+    "Hindi (Native)",
+    "Maithili (Conversational)"
+  ],
+  "soft_skills": [
+    "Attention to Detail",
+    "Documentation",
+    "Night-Shift Adaptability",
+    "Escalation Judgment"
+  ],
+  "interests": [
+    "CTF (TryHackMe, PicoCTF)",
+    "Threat Intelligence",
+    "Football"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.631672",
+  "source_file": "CSA_003_Vikram_Sinha.json"
+}

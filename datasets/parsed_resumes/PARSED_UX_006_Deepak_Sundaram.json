@@ -1,0 +1,104 @@
+{
+  "resume_id": "UX-006",
+  "name": "Deepak Sundaram",
+  "email": "deepaksundaram.design@rediffmail.com",
+  "phone": "+919444001122",
+  "linkedin": null,
+  "github": null,
+  "portfolio": null,
+  "address": "Chromepet, Chennai, Tamil Nadu - 600044",
+  "role_applied": "UI/UX Designer",
+  "quality_tier": "Poor",
+  "education": [
+    {
+      "degree": "B.Sc. – Visual Communication",
+      "institution": "Loyola College, Chennai",
+      "university": "University of Madras",
+      "cgpa": 6.1,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2022
+    }
+  ],
+  "highest_degree": "B.Sc. – Visual Communication",
+  "institution": "Loyola College, Chennai",
+  "cgpa": 6.1,
+  "experience": [
+    {
+      "company": "PrintMagic Advertising",
+      "title": "Graphic Designer",
+      "location": "Chennai, TN",
+      "type": "Full-Time",
+      "start_date": "Aug 2022",
+      "end_date": "Present",
+      "duration_months": 22,
+      "responsibilities": [
+        "Designed print advertisements, brochures, and banner stands for local clients.",
+        "Made social media graphics using Canva and Photoshop.",
+        "Worked with print vendors to finalize designs for production."
+      ]
+    }
+  ],
+  "years_experience": 1.8,
+  "companies": [
+    "PrintMagic Advertising"
+  ],
+  "skills": {
+    "design_tools": [
+      "Adobe Photoshop (intermediate)",
+      "Canva",
+      "Figma (beginner — self-taught from YouTube)"
+    ],
+    "research_methods": [],
+    "design_disciplines": [
+      "Print Design",
+      "Social Media Graphics",
+      "Basic Digital UI (no user testing experience)"
+    ],
+    "code_knowledge": [],
+    "collaboration": [
+      "WhatsApp",
+      "Email"
+    ]
+  },
+  "skills_flat": [
+    "Adobe Photoshop (intermediate)",
+    "Canva",
+    "Figma (beginner — self-taught from YouTube)",
+    "Print Design",
+    "Social Media Graphics",
+    "Basic Digital UI (no user testing experience)",
+    "WhatsApp",
+    "Email"
+  ],
+  "skill_count": 8,
+  "projects": [
+    {
+      "name": "Taxi App Screens (Personal Practice)",
+      "description": "Copied and recreated a taxi booking app UI from a YouTube tutorial in Figma. No original design work or user research involved.",
+      "portfolio_link": null
+    }
+  ],
+  "project_count": 1,
+  "certifications": [],
+  "certification_names": [],
+  "certification_count": 0,
+  "achievements": [
+    "Designed award-winning brochure for a local NGO charity run (2023)"
+  ],
+  "languages_known": [
+    "Tamil (Native)",
+    "English (Basic)"
+  ],
+  "soft_skills": [
+    "Creative",
+    "Hardworking",
+    "Punctual"
+  ],
+  "interests": [
+    "Movies",
+    "Drawing",
+    "Cricket"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.640098",
+  "source_file": "UX_006_Deepak_Sundaram.json"
+}

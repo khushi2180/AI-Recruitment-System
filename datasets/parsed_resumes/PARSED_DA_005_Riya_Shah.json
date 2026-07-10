@@ -1,0 +1,169 @@
+{
+  "resume_id": "DA-005",
+  "name": "Riya Shah",
+  "email": "riya.shah.analytics@gmail.com",
+  "phone": "+919327889900",
+  "linkedin": "linkedin.com/in/riyashah-data",
+  "github": "github.com/riya-data",
+  "portfolio": null,
+  "address": "Science City Road, Sola, Ahmedabad, Gujarat - 380060",
+  "role_applied": "Data Analyst",
+  "quality_tier": "Average",
+  "education": [
+    {
+      "degree": "B.Tech – Information Technology",
+      "institution": "Nirma University, Ahmedabad",
+      "university": "Nirma University",
+      "cgpa": 7.6,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2022
+    }
+  ],
+  "highest_degree": "B.Tech – Information Technology",
+  "institution": "Nirma University, Ahmedabad",
+  "cgpa": 7.6,
+  "experience": [
+    {
+      "company": "LogiSense Analytics",
+      "title": "Data Analyst",
+      "location": "Ahmedabad, GJ",
+      "type": "Full-Time",
+      "start_date": "Aug 2022",
+      "end_date": "Present",
+      "duration_months": 22,
+      "responsibilities": [
+        "Developed 6 Tableau dashboards for 3 logistics clients tracking OTD (On-Time Delivery), fill rate, and warehouse utilization.",
+        "Wrote 40+ SQL queries in PostgreSQL for daily, weekly, and monthly KPI reports.",
+        "Analyzed 3 years of shipment data (800K rows) to identify dispatch delay root causes — recommendations implemented saving ₹12 Lakhs/month.",
+        "Automated daily report distribution using Python smtplib and Pandas report generation.",
+        "Conducted A/B test on packaging design impact on returns rate — 14% reduction confirmed."
+      ]
+    },
+    {
+      "company": "Infosys – BPO Analytics Unit",
+      "title": "Business Analyst Intern",
+      "location": "Ahmedabad, GJ",
+      "type": "Internship",
+      "start_date": "Jan 2022",
+      "end_date": "Jun 2022",
+      "duration_months": 6,
+      "responsibilities": [
+        "Created standardized Excel-based operational scorecards for a US utility client.",
+        "Performed data validation on SAP BI extracts against source databases.",
+        "Wrote BRDs for 2 reporting automation requests."
+      ]
+    }
+  ],
+  "years_experience": 2.1,
+  "companies": [
+    "LogiSense Analytics",
+    "Infosys – BPO Analytics Unit"
+  ],
+  "skills": {
+    "languages": [
+      "SQL (intermediate)",
+      "Python (Pandas, basic Seaborn, learning ML)",
+      "Excel (Advanced)"
+    ],
+    "bi_tools": [
+      "Tableau Desktop",
+      "Power BI (basic)",
+      "Google Data Studio"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "Google BigQuery (basic)"
+    ],
+    "etl_tools": [
+      "Excel Power Query",
+      "Python Pandas ETL"
+    ],
+    "stats": [
+      "Descriptive Stats",
+      "Correlation",
+      "Basic A/B Testing",
+      "Linear Regression (conceptual)"
+    ],
+    "tools": [
+      "Git (basic)",
+      "JIRA",
+      "Confluence",
+      "MS Office"
+    ]
+  },
+  "skills_flat": [
+    "SQL (intermediate)",
+    "Python (Pandas, basic Seaborn, learning ML)",
+    "Excel (Advanced)",
+    "Tableau Desktop",
+    "Power BI (basic)",
+    "Google Data Studio",
+    "PostgreSQL",
+    "MySQL",
+    "Google BigQuery (basic)",
+    "Excel Power Query",
+    "Python Pandas ETL",
+    "Descriptive Stats",
+    "Correlation",
+    "Basic A/B Testing",
+    "Linear Regression (conceptual)",
+    "Git (basic)",
+    "JIRA",
+    "Confluence",
+    "MS Office"
+  ],
+  "skill_count": 19,
+  "projects": [
+    {
+      "name": "Supply Chain KPI Dashboard",
+      "tech_stack": [
+        "PostgreSQL",
+        "Tableau",
+        "Python"
+      ],
+      "description": "Built a Tableau dashboard for logistics KPI monitoring — OTD, OTIF, pod-rate. Includes drill-down by region, carrier, and SKU. Published on Tableau Public.",
+      "github_link": "github.com/riya-data/supply-chain-kpi"
+    }
+  ],
+  "project_count": 1,
+  "certifications": [
+    {
+      "name": "Tableau Desktop Specialist",
+      "issuer": "Tableau / Salesforce",
+      "year": 2023
+    },
+    {
+      "name": "SQL for Data Science",
+      "issuer": "Coursera / UC Davis",
+      "year": 2022
+    }
+  ],
+  "certification_names": [
+    "Tableau Desktop Specialist",
+    "SQL for Data Science"
+  ],
+  "certification_count": 2,
+  "achievements": [
+    "LogiSense Analyst of the Year 2023",
+    "Nirma University Merit Scholarship – 4th Semester (CGPA 8.2)"
+  ],
+  "languages_known": [
+    "English (Fluent)",
+    "Gujarati (Native)",
+    "Hindi (Native)"
+  ],
+  "soft_skills": [
+    "Process Documentation",
+    "Client Communication",
+    "Deadline Management",
+    "Cross-Functional Collaboration"
+  ],
+  "interests": [
+    "Supply Chain Analytics",
+    "Reading Business Books",
+    "Hiking"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.634144",
+  "source_file": "DA_005_Riya_Shah.json"
+}

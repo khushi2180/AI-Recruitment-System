@@ -1,0 +1,203 @@
+{
+  "resume_id": "PM-001",
+  "name": "Aditya Malhotra",
+  "email": "aditya.malhotra.pm@gmail.com",
+  "phone": "+919810234567",
+  "linkedin": "linkedin.com/in/adityamalhotra-pm",
+  "github": null,
+  "portfolio": null,
+  "address": "B-104, Koregaon Park, Pune, Maharashtra - 411001",
+  "role_applied": "Product Manager",
+  "quality_tier": "Excellent",
+  "education": [
+    {
+      "degree": "MBA – Strategy & Technology Management",
+      "institution": "Indian School of Business (ISB), Hyderabad",
+      "university": "ISB (AACSB Accredited)",
+      "cgpa": 3.7,
+      "cgpa_scale": 4.0,
+      "year_of_passing": 2020
+    },
+    {
+      "degree": "B.Tech – Mechanical Engineering",
+      "institution": "NIT Trichy",
+      "university": "National Institute of Technology, Tiruchirappalli",
+      "cgpa": 8.2,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2018
+    }
+  ],
+  "highest_degree": "MBA – Strategy & Technology Management",
+  "institution": "Indian School of Business (ISB), Hyderabad",
+  "cgpa": 3.7,
+  "experience": [
+    {
+      "company": "Darwinbox Digital Solutions",
+      "title": "Product Manager – Core HR & Payroll",
+      "location": "Pune, MH",
+      "type": "Full-Time",
+      "start_date": "Jan 2022",
+      "end_date": "Present",
+      "duration_months": 29,
+      "responsibilities": [
+        "Owned the Core HR + Payroll vertical for Darwinbox (serving 700+ enterprise clients, 2M+ employees). Managed backlog of 180+ items.",
+        "Led the 0-to-1 launch of Payroll Analytics module — reduced payroll processing time by 40% for enterprise clients; attributed to ₹3.2 Crore ARR uplift in first year.",
+        "Drove discovery for compliance automation across 22 Indian states — wrote 14 PRDs and coordinated across engineering (8 devs), legal, and design.",
+        "Managed quarterly OKR planning and monthly roadmap reviews with CPO and CEO.",
+        "Ran 40+ user interviews per quarter across CHROs, payroll managers, and employees.",
+        "Launched bulk import feature reducing HR data migration TAT from 2 weeks to 2 days."
+      ]
+    },
+    {
+      "company": "Razorpay",
+      "title": "Associate Product Manager",
+      "location": "Bengaluru, KA",
+      "type": "Full-Time",
+      "start_date": "Jul 2020",
+      "end_date": "Dec 2021",
+      "duration_months": 18,
+      "responsibilities": [
+        "Supported PM for Razorpay Dashboard — owned 4 features in the analytics and settlement modules.",
+        "Shipped International Payments onboarding flow — reduced activation time from 7 days to 22 hours; NPS improved from 32 to 47.",
+        "Conducted competitive analysis against Stripe, PayU, and CCAvenue; presented findings to VP Product.",
+        "Used Mixpanel and SQL for funnel analytics; identified and fixed 3 critical user drop-off points."
+      ]
+    }
+  ],
+  "years_experience": 3.9,
+  "companies": [
+    "Darwinbox Digital Solutions",
+    "Razorpay"
+  ],
+  "skills": {
+    "core_pm": [
+      "Product Roadmapping",
+      "PRD Writing",
+      "User Story Mapping",
+      "OKR Planning",
+      "Competitive Analysis"
+    ],
+    "research": [
+      "User Interviews",
+      "Jobs-to-be-Done",
+      "Usability Testing",
+      "Surveys (Typeform, SurveyMonkey)",
+      "JTBD Framework"
+    ],
+    "analytics": [
+      "Mixpanel",
+      "Amplitude",
+      "SQL (intermediate)",
+      "Google Analytics 4",
+      "Looker"
+    ],
+    "tools": [
+      "JIRA",
+      "Confluence",
+      "Notion",
+      "Miro",
+      "Figma (review mode)",
+      "ProductBoard",
+      "Coda"
+    ],
+    "frameworks": [
+      "RICE Prioritization",
+      "MoSCoW",
+      "HEART Framework",
+      "AARRR Metrics",
+      "Kano Model"
+    ]
+  },
+  "skills_flat": [
+    "Product Roadmapping",
+    "PRD Writing",
+    "User Story Mapping",
+    "OKR Planning",
+    "Competitive Analysis",
+    "User Interviews",
+    "Jobs-to-be-Done",
+    "Usability Testing",
+    "Surveys (Typeform, SurveyMonkey)",
+    "JTBD Framework",
+    "Mixpanel",
+    "Amplitude",
+    "SQL (intermediate)",
+    "Google Analytics 4",
+    "Looker",
+    "JIRA",
+    "Confluence",
+    "Notion",
+    "Miro",
+    "Figma (review mode)",
+    "ProductBoard",
+    "Coda",
+    "RICE Prioritization",
+    "MoSCoW",
+    "HEART Framework",
+    "AARRR Metrics",
+    "Kano Model"
+  ],
+  "skill_count": 27,
+  "projects": [
+    {
+      "name": "Payroll Analytics Module – Darwinbox",
+      "description": "0-to-1 product launch: A self-serve analytics module giving payroll managers real-time visibility into salary cost distribution, compliance risks, and processing status. Now used by 300+ enterprise clients.",
+      "impact": "₹3.2 Crore ARR uplift | 40% reduction in payroll processing time | NPS improvement: 31 → 54"
+    },
+    {
+      "name": "HR Compliance Automation Engine",
+      "description": "Led discovery and scoping for an automated statutory compliance engine covering PF, ESI, PT, and labour law across 22 Indian states. Currently in beta with 50 clients.",
+      "impact": "Reduced compliance error rate from 4.8% to 0.6% in beta"
+    }
+  ],
+  "project_count": 2,
+  "certifications": [
+    {
+      "name": "AIPMM Certified Product Manager (CPM)",
+      "issuer": "AIPMM",
+      "year": 2022
+    },
+    {
+      "name": "Reforge – Product Strategy",
+      "issuer": "Reforge",
+      "year": 2023
+    },
+    {
+      "name": "SQL for Product Managers",
+      "issuer": "Mode Analytics / LinkedIn Learning",
+      "year": 2021
+    }
+  ],
+  "certification_names": [
+    "AIPMM Certified Product Manager (CPM)",
+    "Reforge – Product Strategy",
+    "SQL for Product Managers"
+  ],
+  "certification_count": 3,
+  "achievements": [
+    "ISB Dean's List — Top 15% of cohort",
+    "Darwinbox Product Excellence Award 2023 – Payroll Analytics",
+    "Selected for Reforge Retention + Engagement cohort (acceptance rate 8%)",
+    "Speaker: Nasscom Product Conclave 2023 — 'Compliance as a Product: Lessons from HR-tech'"
+  ],
+  "languages_known": [
+    "English (Fluent)",
+    "Hindi (Native)",
+    "Punjabi (Conversational)"
+  ],
+  "soft_skills": [
+    "Stakeholder Influence",
+    "Executive Communication",
+    "Decision Velocity",
+    "Prioritization Under Ambiguity",
+    "Empathy-Driven Discovery"
+  ],
+  "interests": [
+    "HR Tech Research",
+    "SaaS Metrics Benchmarking",
+    "Marathon Running (42.2km – PB 3h 54m)",
+    "Chess"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.634787",
+  "source_file": "PM_001_Aditya_Malhotra.json"
+}

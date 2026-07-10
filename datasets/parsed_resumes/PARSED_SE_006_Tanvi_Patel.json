@@ -1,0 +1,209 @@
+{
+  "resume_id": "SE-006",
+  "name": "Tanvi Patel",
+  "email": "tanvi.patel.eng@gmail.com",
+  "phone": "+919173456789",
+  "linkedin": "linkedin.com/in/tanvipatel-swe",
+  "github": "github.com/tanvipateldev",
+  "portfolio": null,
+  "address": "102, Prahlad Nagar, Ahmedabad, Gujarat - 380015",
+  "role_applied": "Software Engineer",
+  "quality_tier": "Excellent",
+  "education": [
+    {
+      "degree": "B.Tech – Computer Science & Engineering (Honours)",
+      "institution": "Dhirubhai Ambani Institute of Information and Communication Technology (DAIICT), Gandhinagar",
+      "university": "DA-IICT",
+      "cgpa": 9.1,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2022
+    }
+  ],
+  "highest_degree": "B.Tech – Computer Science & Engineering (Honours)",
+  "institution": "Dhirubhai Ambani Institute of Information and Communication Technology (DAIICT), Gandhinagar",
+  "cgpa": 9.1,
+  "experience": [
+    {
+      "company": "Razorpay Software Pvt. Ltd.",
+      "title": "Software Development Engineer (Backend)",
+      "location": "Bengaluru, KA",
+      "type": "Full-Time",
+      "start_date": "Aug 2022",
+      "end_date": "Present",
+      "duration_months": 22,
+      "responsibilities": [
+        "Developed payment reconciliation microservice in Go, processing ₹5,000 Crore+ monthly transactions with 99.97% accuracy.",
+        "Implemented distributed tracing (Jaeger + OpenTelemetry) across 12 services, cutting MTTR from 45min to 8min.",
+        "Designed and deployed a webhook retry engine using Kafka DLQ + exponential backoff, reducing merchant webhook failure rate from 4.2% to 0.3%.",
+        "Built internal CLI tool (Go) for developer environment setup — adopted by 200+ engineers, saving 3+ hours per onboarding.",
+        "Achieved 95% test coverage across owned services using Go's testing package and testcontainers."
+      ]
+    },
+    {
+      "company": "Google Summer of Code (GSoC)",
+      "title": "Open Source Contributor – The Julia Language",
+      "location": "Remote (Global)",
+      "type": "Fellowship",
+      "start_date": "May 2021",
+      "end_date": "Aug 2021",
+      "duration_months": 3,
+      "responsibilities": [
+        "Contributed 18 PRs to Julia's HTTP.jl library adding streaming response support and compression middleware.",
+        "Wrote comprehensive documentation and benchmark comparisons published on the Julia Discourse forum.",
+        "Stipend: $3,000 USD — accepted from Google."
+      ]
+    }
+  ],
+  "years_experience": 2.1,
+  "companies": [
+    "Razorpay Software Pvt. Ltd.",
+    "Google Summer of Code (GSoC)"
+  ],
+  "skills": {
+    "languages": [
+      "Go",
+      "Python",
+      "Bash",
+      "SQL",
+      "Julia"
+    ],
+    "frameworks": [
+      "Gin (Go)",
+      "FastAPI",
+      "gRPC"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "Redis",
+      "Cassandra",
+      "ClickHouse"
+    ],
+    "tools": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Helm",
+      "Kafka",
+      "Prometheus",
+      "Grafana",
+      "Jaeger",
+      "GitHub Actions"
+    ],
+    "cloud": [
+      "AWS (EC2, RDS, S3, Lambda, SQS, CloudWatch, Route 53)",
+      "GCP (GKE, Cloud Run)"
+    ],
+    "testing": [
+      "Go testing",
+      "testcontainers",
+      "k6 Load Testing",
+      "Postman",
+      "chaos engineering (basic)"
+    ]
+  },
+  "skills_flat": [
+    "Go",
+    "Python",
+    "Bash",
+    "SQL",
+    "Julia",
+    "Gin (Go)",
+    "FastAPI",
+    "gRPC",
+    "PostgreSQL",
+    "Redis",
+    "Cassandra",
+    "ClickHouse",
+    "Docker",
+    "Kubernetes",
+    "Terraform",
+    "Helm",
+    "Kafka",
+    "Prometheus",
+    "Grafana",
+    "Jaeger",
+    "GitHub Actions",
+    "AWS (EC2, RDS, S3, Lambda, SQS, CloudWatch, Route 53)",
+    "GCP (GKE, Cloud Run)",
+    "Go testing",
+    "testcontainers",
+    "k6 Load Testing",
+    "Postman",
+    "chaos engineering (basic)"
+  ],
+  "skill_count": 28,
+  "projects": [
+    {
+      "name": "Sentinel – Lightweight APM Tool",
+      "tech_stack": [
+        "Go",
+        "Prometheus",
+        "Grafana",
+        "ClickHouse",
+        "Docker Compose"
+      ],
+      "description": "Built an open-source Application Performance Monitoring tool that auto-instruments Go HTTP servers. 800+ GitHub stars. Featured on Go Weekly newsletter issue #492.",
+      "github_link": "github.com/tanvipateldev/sentinel"
+    },
+    {
+      "name": "PgMigrate – Safe PostgreSQL Migration CLI",
+      "tech_stack": [
+        "Go",
+        "PostgreSQL",
+        "Cobra CLI"
+      ],
+      "description": "A zero-downtime PostgreSQL schema migration tool inspired by Flyway. Supports dry-run, rollback, and audit logging. 200+ weekly downloads from GitHub Releases.",
+      "github_link": "github.com/tanvipateldev/pgmigrate"
+    }
+  ],
+  "project_count": 2,
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect – Professional",
+      "issuer": "Amazon Web Services",
+      "year": 2024
+    },
+    {
+      "name": "Certified Kubernetes Administrator (CKA)",
+      "issuer": "CNCF / Linux Foundation",
+      "year": 2023
+    },
+    {
+      "name": "HashiCorp Certified: Terraform Associate",
+      "issuer": "HashiCorp",
+      "year": 2023
+    }
+  ],
+  "certification_names": [
+    "AWS Certified Solutions Architect – Professional",
+    "Certified Kubernetes Administrator (CKA)",
+    "HashiCorp Certified: Terraform Associate"
+  ],
+  "certification_count": 3,
+  "achievements": [
+    "Top 1% in DA-IICT batch — Institute Gold Medal nominee (CGPA 9.1)",
+    "Google Summer of Code 2021 – selected from 8,900+ applicants (acceptance rate ~4%)",
+    "Spoke at GopherCon India 2023 – 'Building Reliable Webhooks at Scale'",
+    "Razorpay Quarterly Excellence Award Q2 2023 (chosen by engineering leadership)"
+  ],
+  "languages_known": [
+    "English (Fluent)",
+    "Gujarati (Native)",
+    "Hindi (Native)"
+  ],
+  "soft_skills": [
+    "Deep Work",
+    "Technical Writing",
+    "Mentoring",
+    "First-Principles Thinking",
+    "Reliability Mindset"
+  ],
+  "interests": [
+    "Site Reliability Engineering",
+    "Open Source",
+    "Badminton",
+    "Technical Writing on Substack"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.638370",
+  "source_file": "SE_006_Tanvi_Patel.json"
+}

@@ -1,0 +1,215 @@
+{
+  "resume_id": "PM-003",
+  "name": "Saurabh Tiwari",
+  "email": "saurabh.tiwari.gpm@gmail.com",
+  "phone": "+919654321098",
+  "linkedin": "linkedin.com/in/saurabhtiwari-product",
+  "github": null,
+  "portfolio": null,
+  "address": "Wakad, Pune, Maharashtra - 411057",
+  "role_applied": "Product Manager",
+  "quality_tier": "Excellent",
+  "education": [
+    {
+      "degree": "MBA – Marketing & Strategy",
+      "institution": "Indian Institute of Management (IIM) Calcutta",
+      "university": "IIM Calcutta (Triple Crown Accredited: AACSB, EQUIS, AMBA)",
+      "cgpa": 3.8,
+      "cgpa_scale": 4.0,
+      "year_of_passing": 2019
+    },
+    {
+      "degree": "B.Tech – Computer Science",
+      "institution": "Indian Institute of Technology (IIT) BHU, Varanasi",
+      "university": "IIT (BHU) Varanasi",
+      "cgpa": 8.5,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2017
+    }
+  ],
+  "highest_degree": "MBA – Marketing & Strategy",
+  "institution": "Indian Institute of Management (IIM) Calcutta",
+  "cgpa": 3.8,
+  "experience": [
+    {
+      "company": "Leegality (e-Signature SaaS)",
+      "title": "Senior Product Manager",
+      "location": "Pune (Remote-First)",
+      "type": "Full-Time",
+      "start_date": "Mar 2022",
+      "end_date": "Present",
+      "duration_months": 27,
+      "responsibilities": [
+        "Owned product strategy and execution for Leegality's Document Intelligence product — grew ARR from ₹8 Crore to ₹21 Crore in 18 months.",
+        "Led 0-to-1 launch of AI-powered document classification feature using GPT-4 API — reduced document setup time by 65%; 90% client adoption within 45 days.",
+        "Built and managed a PLG onboarding flow reducing Time-to-Value (TTV) from 12 days to 48 hours for SME segment.",
+        "Managed OKRs for product squad of 11 (4 engineers, 2 designers, 1 data scientist, 1 QA, 3 CS).",
+        "Represented product in 12 enterprise sales cycles — closed ₹4.5 Crore in deals through product demos.",
+        "Defined pricing architecture for 3 product tiers; collaborated with CFO on unit economics modeling."
+      ]
+    },
+    {
+      "company": "Capillary Technologies",
+      "title": "Product Manager",
+      "location": "Bengaluru / Pune",
+      "type": "Full-Time",
+      "start_date": "Jul 2019",
+      "end_date": "Feb 2022",
+      "duration_months": 31,
+      "responsibilities": [
+        "Managed loyalty and campaign management modules serving 200+ retail brands across 30 countries.",
+        "Shipped 2 major platform re-architectures: microservices migration of loyalty engine (0% downtime) and new campaign builder.",
+        "Reduced churn from 18% to 9% by redesigning onboarding experience based on 80 customer interviews.",
+        "Owned integrations roadmap — built 15+ third-party integrations (Shopify, WooCommerce, Salesforce, Klaviyo)."
+      ]
+    }
+  ],
+  "years_experience": 4.8,
+  "companies": [
+    "Leegality (e-Signature SaaS)",
+    "Capillary Technologies"
+  ],
+  "skills": {
+    "core_pm": [
+      "OKR Strategy",
+      "PLG Frameworks",
+      "PRD Writing",
+      "Pricing Strategy",
+      "0-to-1 Product Development"
+    ],
+    "research": [
+      "Continuous Discovery (Teresa Torres)",
+      "JTBD",
+      "CLV Analysis",
+      "Cohort Analysis",
+      "Win/Loss Analysis"
+    ],
+    "analytics": [
+      "Amplitude",
+      "Mixpanel",
+      "Heap",
+      "SQL (intermediate-advanced)",
+      "Looker",
+      "PostHog"
+    ],
+    "ai_ml": [
+      "Prompt Engineering (GPT-4, Claude)",
+      "AI Feature Scoping",
+      "Model Evaluation Frameworks"
+    ],
+    "tools": [
+      "JIRA",
+      "Productboard",
+      "Notion",
+      "Coda",
+      "Miro",
+      "Linear",
+      "Figma"
+    ],
+    "frameworks": [
+      "RICE",
+      "ICE",
+      "HEART",
+      "CIRCLES",
+      "ProductBoard Scoring",
+      "Wardley Maps"
+    ]
+  },
+  "skills_flat": [
+    "OKR Strategy",
+    "PLG Frameworks",
+    "PRD Writing",
+    "Pricing Strategy",
+    "0-to-1 Product Development",
+    "Continuous Discovery (Teresa Torres)",
+    "JTBD",
+    "CLV Analysis",
+    "Cohort Analysis",
+    "Win/Loss Analysis",
+    "Amplitude",
+    "Mixpanel",
+    "Heap",
+    "SQL (intermediate-advanced)",
+    "Looker",
+    "PostHog",
+    "Prompt Engineering (GPT-4, Claude)",
+    "AI Feature Scoping",
+    "Model Evaluation Frameworks",
+    "JIRA",
+    "Productboard",
+    "Notion",
+    "Coda",
+    "Miro",
+    "Linear",
+    "Figma",
+    "RICE",
+    "ICE",
+    "HEART",
+    "CIRCLES",
+    "ProductBoard Scoring",
+    "Wardley Maps"
+  ],
+  "skill_count": 32,
+  "projects": [
+    {
+      "name": "AI Document Intelligence – Leegality",
+      "description": "0-to-1 AI feature using GPT-4 to auto-classify, extract, and validate legal documents. Reduced document setup from 45 min to 8 min. 90% client adoption in 45 days.",
+      "impact": "₹2.8 Crore ARR attributable | 65% setup time reduction | NPS: 28 → 61"
+    },
+    {
+      "name": "PLG Onboarding Redesign",
+      "description": "Redesigned Leegality's SME onboarding with in-app walkthroughs, empty-state guidance, and milestone celebrations. TTV reduced from 12 days to 48 hours.",
+      "impact": "Month-1 retention improved from 42% to 71% | Activation rate: 38% → 67%"
+    }
+  ],
+  "project_count": 2,
+  "certifications": [
+    {
+      "name": "Reforge – Product-Led Growth",
+      "issuer": "Reforge",
+      "year": 2022
+    },
+    {
+      "name": "Reforge – Product Strategy",
+      "issuer": "Reforge",
+      "year": 2023
+    },
+    {
+      "name": "AIPMM Certified Product Manager",
+      "issuer": "AIPMM",
+      "year": 2021
+    }
+  ],
+  "certification_names": [
+    "Reforge – Product-Led Growth",
+    "Reforge – Product Strategy",
+    "AIPMM Certified Product Manager"
+  ],
+  "certification_count": 3,
+  "achievements": [
+    "IIM Calcutta – Gold Medal, Marketing (Batch 2019)",
+    "Leegality Top Performer 2023 — Only PM in company history to achieve 2x ARR in single year",
+    "Speaker: SaaStr India 2023 – 'AI Features Done Right: Lessons from B2B SaaS'",
+    "Forbes India '30 Under 35 in Tech' — Shortlisted (2023)"
+  ],
+  "languages_known": [
+    "English (Fluent)",
+    "Hindi (Native)",
+    "Bhojpuri (Conversational)"
+  ],
+  "soft_skills": [
+    "Strategic Clarity",
+    "Sales Partnership",
+    "C-suite Presence",
+    "PLG Mindset",
+    "Empathy at Scale"
+  ],
+  "interests": [
+    "SaaS Metrics Research",
+    "Angel Investing (2 investments)",
+    "Ironman Training",
+    "Teaching PM at Upgrad"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.635477",
+  "source_file": "PM_003_Saurabh_Tiwari.json"
+}

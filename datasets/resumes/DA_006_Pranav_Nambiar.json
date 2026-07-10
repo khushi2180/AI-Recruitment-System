@@ -1,0 +1,83 @@
+{
+  "resume_id": "DA-006",
+  "name": "Pranav Nambiar",
+  "email": "pranavnambiar.work@gmail.com",
+  "phone": "+91-9496001234",
+  "linkedin": "linkedin.com/in/pranavnambiar",
+  "github": null,
+  "address": "Edappally, Kochi, Kerala - 682024",
+  "role_applied": "Data Analyst",
+  "quality_tier": "Poor",
+
+  "summary": "Recent graduate with 1.5 years of experience. I have worked in data entry and some reporting. I know Excel well. I am interested in learning data analytics tools. Looking for growth opportunities.",
+
+  "education": [
+    {
+      "degree": "BCA – Bachelor of Computer Applications",
+      "institution": "St. Albert's College, Ernakulam",
+      "university": "Mahatma Gandhi University, Kottayam",
+      "cgpa": 6.4,
+      "year_of_passing": 2022,
+      "relevant_courses": ["Database Management", "Computer Fundamentals", "Statistics for Computing"]
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "Muthoot Finance Ltd.",
+      "title": "Data Entry Operator",
+      "location": "Kochi, KL",
+      "type": "Full-Time",
+      "start_date": "Nov 2022",
+      "end_date": "Present",
+      "duration_months": 19,
+      "responsibilities": [
+        "Entered loan application data into internal system.",
+        "Prepared daily Excel reports for branch manager.",
+        "Maintained physical and digital records of customer files."
+      ]
+    }
+  ],
+
+  "skills": {
+    "languages": ["Excel (intermediate)", "SQL (SELECT basics only)"],
+    "bi_tools": ["Excel Charts (basic)"],
+    "databases": ["MS Access (basic)"],
+    "etl_tools": [],
+    "stats": [],
+    "tools": ["MS Office", "Google Sheets"]
+  },
+
+  "projects": [
+    {
+      "name": "Branch Sales Tracker (Excel)",
+      "tech_stack": ["Excel"],
+      "description": "Made an Excel file to track daily loan disbursements and target vs. actual for the branch. Used PivotTables and basic charts.",
+      "github_link": null
+    }
+  ],
+
+  "certifications": [],
+
+  "achievements": [],
+
+  "languages_known": ["Malayalam (Native)", "English (Conversational)", "Hindi (Basic)"],
+
+  "soft_skills": ["Reliable", "Punctual", "Team Player"],
+
+  "interests": ["Football", "Movies", "Gaming"],
+
+  "ats_score": {
+    "total": 22,
+    "breakdown": {
+      "skills_match": 5,
+      "experience": 4,
+      "projects": 4,
+      "education": 5,
+      "certifications": 0,
+      "resume_quality": 4
+    },
+    "rank": 5,
+    "shortlisted": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "project": "AI-Powered Smart Recruitment System",
+    "phase": "Phase 2 – Candidate Resume Dataset",
+    "total_candidates": 30,
+    "generated_date": "2024-06-28",
+    "roles": ["Software Engineer", "Cyber Security Analyst", "Data Analyst", "Product Manager", "UI/UX Designer"]
+  },
+  "candidates": [
+    { "resume_id": "SE-001", "name": "Aarav Mehta",       "role": "Software Engineer",       "tier": "Average",   "ats_score": 72,  "rank": 3, "shortlisted": true,  "experience_years": 1.0, "cgpa": 7.4, "institution": "RV College of Engineering" },
+    { "resume_id": "SE-002", "name": "Priya Nair",        "role": "Software Engineer",       "tier": "Poor",      "ats_score": 38,  "rank": 6, "shortlisted": false, "experience_years": 0.3, "cgpa": 6.1, "institution": "Nitte Meenakshi Institute of Technology" },
+    { "resume_id": "SE-003", "name": "Devansh Trivedi",   "role": "Software Engineer",       "tier": "Excellent", "ats_score": 94,  "rank": 1, "shortlisted": true,  "experience_years": 1.9, "cgpa": 8.9, "institution": "BITS Pilani" },
+    { "resume_id": "SE-004", "name": "Simran Kaur",       "role": "Software Engineer",       "tier": "Average",   "ats_score": 68,  "rank": 4, "shortlisted": true,  "experience_years": 1.5, "cgpa": 7.8, "institution": "Thapar University" },
+    { "resume_id": "SE-005", "name": "Rahul Ghosh",       "role": "Software Engineer",       "tier": "Poor",      "ats_score": 29,  "rank": 5, "shortlisted": false, "experience_years": 0.0, "cgpa": 6.3, "institution": "MAKAUT" },
+    { "resume_id": "SE-006", "name": "Tanvi Patel",       "role": "Software Engineer",       "tier": "Excellent", "ats_score": 91,  "rank": 2, "shortlisted": true,  "experience_years": 1.8, "cgpa": 9.1, "institution": "DA-IICT Gandhinagar" },
+
+    { "resume_id": "CSA-001", "name": "Rohan Kapoor",    "role": "Cyber Security Analyst",  "tier": "Excellent", "ats_score": 93,  "rank": 1, "shortlisted": true,  "experience_years": 1.8, "cgpa": 8.6, "institution": "MIT Manipal" },
+    { "resume_id": "CSA-002", "name": "Ananya Sharma",   "role": "Cyber Security Analyst",  "tier": "Poor",      "ats_score": 24,  "rank": 6, "shortlisted": false, "experience_years": 0.0, "cgpa": 6.2, "institution": "Inderprastha Engineering College" },
+    { "resume_id": "CSA-003", "name": "Vikram Sinha",    "role": "Cyber Security Analyst",  "tier": "Average",   "ats_score": 67,  "rank": 3, "shortlisted": true,  "experience_years": 1.4, "cgpa": 7.5, "institution": "SRM Institute" },
+    { "resume_id": "CSA-004", "name": "Meera Pillai",    "role": "Cyber Security Analyst",  "tier": "Average",   "ats_score": 71,  "rank": 2, "shortlisted": true,  "experience_years": 0.9, "cgpa": 8.1, "institution": "CET Trivandrum" },
+    { "resume_id": "CSA-005", "name": "Arjun Das",       "role": "Cyber Security Analyst",  "tier": "Excellent", "ats_score": 89,  "rank": 2, "shortlisted": true,  "experience_years": 1.7, "cgpa": 8.7, "institution": "Jadavpur University" },
+    { "resume_id": "CSA-006", "name": "Snehal Patil",    "role": "Cyber Security Analyst",  "tier": "Poor",      "ats_score": 18,  "rank": 5, "shortlisted": false, "experience_years": 0.0, "cgpa": 5.9, "institution": "Dr. Vikhe Patil College" },
+
+    { "resume_id": "DA-001",  "name": "Vivek Rao",       "role": "Data Analyst",            "tier": "Excellent", "ats_score": 92,  "rank": 1, "shortlisted": true,  "experience_years": 1.8, "cgpa": 8.4, "institution": "Osmania University" },
+    { "resume_id": "DA-002",  "name": "Sneha Kulkarni",  "role": "Data Analyst",            "tier": "Average",   "ats_score": 63,  "rank": 4, "shortlisted": false, "experience_years": 0.9, "cgpa": 7.9, "institution": "Fergusson College" },
+    { "resume_id": "DA-003",  "name": "Harshita Gupta",  "role": "Data Analyst",            "tier": "Excellent", "ats_score": 95,  "rank": 1, "shortlisted": true,  "experience_years": 2.8, "cgpa": 8.8, "institution": "FORE School of Management" },
+    { "resume_id": "DA-004",  "name": "Amit Chandra",    "role": "Data Analyst",            "tier": "Poor",      "ats_score": 28,  "rank": 6, "shortlisted": false, "experience_years": 1.0, "cgpa": 6.0, "institution": "Narsee Monjee College" },
+    { "resume_id": "DA-005",  "name": "Riya Shah",       "role": "Data Analyst",            "tier": "Average",   "ats_score": 74,  "rank": 3, "shortlisted": true,  "experience_years": 1.8, "cgpa": 7.6, "institution": "Nirma University" },
+    { "resume_id": "DA-006",  "name": "Pranav Nambiar",  "role": "Data Analyst",            "tier": "Poor",      "ats_score": 22,  "rank": 5, "shortlisted": false, "experience_years": 1.5, "cgpa": 6.4, "institution": "St. Albert's College" },
+
+    { "resume_id": "PM-001",  "name": "Aditya Malhotra", "role": "Product Manager",         "tier": "Excellent", "ats_score": 94,  "rank": 1, "shortlisted": true,  "experience_years": 4.0, "cgpa": 8.2, "institution": "ISB Hyderabad" },
+    { "resume_id": "PM-002",  "name": "Neha Verma",      "role": "Product Manager",         "tier": "Average",   "ats_score": 76,  "rank": 3, "shortlisted": true,  "experience_years": 3.5, "cgpa": 7.8, "institution": "SIBM Pune" },
+    { "resume_id": "PM-003",  "name": "Saurabh Tiwari",  "role": "Product Manager",         "tier": "Excellent", "ats_score": 98,  "rank": 1, "shortlisted": true,  "experience_years": 5.0, "cgpa": 8.5, "institution": "IIM Calcutta" },
+    { "resume_id": "PM-004",  "name": "Divya Krishnan",  "role": "Product Manager",         "tier": "Average",   "ats_score": 71,  "rank": 4, "shortlisted": false, "experience_years": 3.0, "cgpa": 8.3, "institution": "Great Lakes Institute" },
+    { "resume_id": "PM-005",  "name": "Manish Aggarwal", "role": "Product Manager",         "tier": "Poor",      "ats_score": 44,  "rank": 5, "shortlisted": false, "experience_years": 3.5, "cgpa": 6.9, "institution": "Amity Business School" },
+    { "resume_id": "PM-006",  "name": "Pooja Reddy",     "role": "Product Manager",         "tier": "Poor",      "ats_score": 31,  "rank": 6, "shortlisted": false, "experience_years": 4.0, "cgpa": 7.1, "institution": "IBS Hyderabad" },
+
+    { "resume_id": "UX-001",  "name": "Karan Joshi",     "role": "UI/UX Designer",          "tier": "Excellent", "ats_score": 95,  "rank": 1, "shortlisted": true,  "experience_years": 2.8, "cgpa": 8.7, "institution": "NID Ahmedabad" },
+    { "resume_id": "UX-002",  "name": "Isha Bhatia",     "role": "UI/UX Designer",          "tier": "Average",   "ats_score": 73,  "rank": 3, "shortlisted": true,  "experience_years": 1.9, "cgpa": 8.0, "institution": "Pearl Academy" },
+    { "resume_id": "UX-003",  "name": "Nandita Roy",     "role": "UI/UX Designer",          "tier": "Excellent", "ats_score": 97,  "rank": 1, "shortlisted": true,  "experience_years": 3.5, "cgpa": 9.0, "institution": "IDC IIT Bombay" },
+    { "resume_id": "UX-004",  "name": "Sameer Malik",    "role": "UI/UX Designer",          "tier": "Poor",      "ats_score": 34,  "rank": 5, "shortlisted": false, "experience_years": 1.7, "cgpa": 6.5, "institution": "Integral University" },
+    { "resume_id": "UX-005",  "name": "Ayesha Khan",     "role": "UI/UX Designer",          "tier": "Average",   "ats_score": 79,  "rank": 2, "shortlisted": true,  "experience_years": 2.8, "cgpa": 7.8, "institution": "MIT Institute of Design" },
+    { "resume_id": "UX-006",  "name": "Deepak Sundaram", "role": "UI/UX Designer",          "tier": "Poor",      "ats_score": 21,  "rank": 6, "shortlisted": false, "experience_years": 1.8, "cgpa": 6.1, "institution": "Loyola College Chennai" }
+  ],
+  "summary_stats": {
+    "total_applications": 30,
+    "shortlisted": 15,
+    "rejected": 15,
+    "shortlist_rate": "50%",
+    "average_ats_score": 62.5,
+    "by_tier": {
+      "Excellent": 10,
+      "Average": 10,
+      "Poor": 10
+    },
+    "by_role": {
+      "Software Engineer": 6,
+      "Cyber Security Analyst": 6,
+      "Data Analyst": 6,
+      "Product Manager": 6,
+      "UI/UX Designer": 6
+    },
+    "score_distribution": {
+      "90_100": 6,
+      "70_89": 9,
+      "50_69": 3,
+      "below_50": 12
+    }
+  }
+}

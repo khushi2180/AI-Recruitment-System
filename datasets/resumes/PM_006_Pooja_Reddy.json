@@ -1,0 +1,89 @@
+{
+  "resume_id": "PM-006",
+  "name": "Pooja Reddy",
+  "email": "poojareddy.pm2024@gmail.com",
+  "phone": "+91-9908123456",
+  "linkedin": "linkedin.com/in/poojareddy-product",
+  "github": null,
+  "address": "Jubilee Hills, Hyderabad, Telangana - 500033",
+  "role_applied": "Product Manager",
+  "quality_tier": "Poor",
+
+  "summary": "Experienced product manager with 4 years in FMCG sector transitioning into tech. Good at project management and understanding customer needs. Looking to apply my business skills to a software product role.",
+
+  "education": [
+    {
+      "degree": "MBA – FMCG & Retail Management",
+      "institution": "ICFAI Business School (IBS), Hyderabad",
+      "university": "ICFAI University",
+      "cgpa": 7.1,
+      "year_of_passing": 2020,
+      "relevant_courses": ["Brand Management", "Consumer Behaviour", "Retail Operations", "Supply Chain"]
+    },
+    {
+      "degree": "B.Sc. – Biotechnology",
+      "institution": "Osmania University, Hyderabad",
+      "university": "Osmania University",
+      "cgpa": 6.8,
+      "year_of_passing": 2018
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "Hindustan Unilever Limited",
+      "title": "Area Sales Manager",
+      "location": "Hyderabad, TS",
+      "type": "Full-Time",
+      "start_date": "Jul 2020",
+      "end_date": "Present",
+      "duration_months": 48,
+      "responsibilities": [
+        "Managed sales for 220+ retail outlets across 4 districts in Telangana.",
+        "Tracked monthly sales targets and distributor performance.",
+        "Conducted quarterly market visits and collected customer feedback.",
+        "Coordinated with marketing team for promotional campaigns.",
+        "Prepared monthly sales analysis reports for regional head."
+      ]
+    }
+  ],
+
+  "skills": {
+    "core_pm": ["Market Research", "Customer Feedback Collection"],
+    "research": ["Sales Surveys", "Retail Audits"],
+    "analytics": ["Excel (basic charts)"],
+    "tools": ["Excel", "PowerPoint", "WhatsApp Business"],
+    "frameworks": []
+  },
+
+  "projects": [],
+
+  "certifications": [
+    { "name": "Introduction to Product Management", "issuer": "Coursera (1-week course)", "year": 2024 }
+  ],
+
+  "achievements": [
+    "HUL Circle Achievement Award – Telangana North Region 2022",
+    "Exceeded sales targets by 8% for FY 2022-23"
+  ],
+
+  "languages_known": ["Telugu (Native)", "Hindi (Conversational)", "English (Conversational)"],
+
+  "soft_skills": ["Sales Mindset", "Relationship Building", "Field Operations"],
+
+  "interests": ["FMCG Industry", "Cooking", "Badminton"],
+
+  "ats_score": {
+    "total": 31,
+    "breakdown": {
+      "skills_match": 7,
+      "experience": 8,
+      "projects": 3,
+      "education": 7,
+      "certifications": 2,
+      "resume_quality": 4
+    },
+    "rank": 6,
+    "shortlisted": false
+  }
+}

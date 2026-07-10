@@ -1,0 +1,183 @@
+{
+  "resume_id": "PM-004",
+  "name": "Divya Krishnan",
+  "email": "divya.krishnan.pm@gmail.com",
+  "phone": "+919994455667",
+  "linkedin": "linkedin.com/in/divyakrishnan-product",
+  "github": null,
+  "portfolio": null,
+  "address": "OMR Sholinganallur, Chennai, Tamil Nadu - 600119",
+  "role_applied": "Product Manager",
+  "quality_tier": "Average",
+  "education": [
+    {
+      "degree": "MBA – Marketing",
+      "institution": "Great Lakes Institute of Management, Chennai",
+      "university": "Great Lakes Institute of Management (Autonomous)",
+      "cgpa": 7.5,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2021
+    },
+    {
+      "degree": "B.Sc. – Psychology (Honours)",
+      "institution": "Ethiraj College for Women, Chennai",
+      "university": "University of Madras",
+      "cgpa": 8.3,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2019
+    }
+  ],
+  "highest_degree": "MBA – Marketing",
+  "institution": "Great Lakes Institute of Management, Chennai",
+  "cgpa": 7.5,
+  "experience": [
+    {
+      "company": "Byju's (Think & Learn Pvt. Ltd.)",
+      "title": "Product Manager – Live Tutoring",
+      "location": "Chennai, TN",
+      "type": "Full-Time",
+      "start_date": "Sep 2021",
+      "end_date": "Nov 2023",
+      "duration_months": 26,
+      "responsibilities": [
+        "Owned the Live Tutoring scheduling and session quality product for Byju's NEET/JEE segment (350K+ students).",
+        "Launched session quality score feature — reduced complaint rate from 8.2% to 3.1% within 3 months.",
+        "Led A/B test on tutor-student matching algorithm — version B improved session satisfaction by 14%.",
+        "Conducted monthly research rounds with 10–15 students and parents to map pain points.",
+        "Worked with data team to build Amplitude dashboards tracking session completion, repeat booking, and NPS.",
+        "Wrote 8 PRDs and managed sprint delivery with 5-dev team."
+      ]
+    },
+    {
+      "company": "Unacademy",
+      "title": "Associate Product Manager",
+      "location": "Chennai (Remote)",
+      "type": "Full-Time",
+      "start_date": "Jun 2021",
+      "end_date": "Aug 2021",
+      "duration_months": 3,
+      "responsibilities": [
+        "Short-term role during platform expansion — worked on content discovery improvements.",
+        "Ran user surveys across 2,000 learners for search feature optimization.",
+        "Left voluntarily to join Byju's for broader PM scope."
+      ]
+    }
+  ],
+  "years_experience": 2.4,
+  "companies": [
+    "Byju's (Think & Learn Pvt. Ltd.)",
+    "Unacademy"
+  ],
+  "skills": {
+    "core_pm": [
+      "PRD Writing",
+      "User Story Mapping",
+      "Backlog Management",
+      "A/B Test Design",
+      "Feature Prioritization"
+    ],
+    "research": [
+      "User Interviews",
+      "Survey Design",
+      "Persona Mapping",
+      "Empathy Mapping",
+      "Usability Heuristics"
+    ],
+    "analytics": [
+      "Amplitude",
+      "Google Analytics",
+      "SQL (basic — learning)",
+      "Tableau (basic reading)"
+    ],
+    "tools": [
+      "JIRA",
+      "Confluence",
+      "Miro",
+      "Figma (review)",
+      "Notion",
+      "Typeform"
+    ],
+    "frameworks": [
+      "MoSCoW",
+      "OKRs (basic)",
+      "Kano Model",
+      "Jobs-to-be-Done"
+    ]
+  },
+  "skills_flat": [
+    "PRD Writing",
+    "User Story Mapping",
+    "Backlog Management",
+    "A/B Test Design",
+    "Feature Prioritization",
+    "User Interviews",
+    "Survey Design",
+    "Persona Mapping",
+    "Empathy Mapping",
+    "Usability Heuristics",
+    "Amplitude",
+    "Google Analytics",
+    "SQL (basic — learning)",
+    "Tableau (basic reading)",
+    "JIRA",
+    "Confluence",
+    "Miro",
+    "Figma (review)",
+    "Notion",
+    "Typeform",
+    "MoSCoW",
+    "OKRs (basic)",
+    "Kano Model",
+    "Jobs-to-be-Done"
+  ],
+  "skill_count": 24,
+  "projects": [
+    {
+      "name": "Session Quality Score System",
+      "description": "Designed and launched a composite session quality scoring system capturing audio quality, camera issues, engagement signals, and student ratings. Became the input for automated tutor coaching recommendations.",
+      "impact": "Complaint rate: 8.2% → 3.1% | Tutor retraining efficiency +60%"
+    }
+  ],
+  "project_count": 1,
+  "certifications": [
+    {
+      "name": "ProductSpace PM Launchpad (Cohort 12)",
+      "issuer": "ProductSpace",
+      "year": 2021
+    },
+    {
+      "name": "Product Analytics Certification",
+      "issuer": "Amplitude Academy",
+      "year": 2022
+    }
+  ],
+  "certification_names": [
+    "ProductSpace PM Launchpad (Cohort 12)",
+    "Product Analytics Certification"
+  ],
+  "certification_count": 2,
+  "achievements": [
+    "Byju's Product Excellence Award – Q1 2023 (Session Quality feature)",
+    "Great Lakes Valedictorian – Consumer Psychology elective (2021)"
+  ],
+  "languages_known": [
+    "English (Fluent)",
+    "Tamil (Native)",
+    "Hindi (Conversational)"
+  ],
+  "soft_skills": [
+    "User Empathy",
+    "Clear Documentation",
+    "Structured Thinking",
+    "Conflict Resolution",
+    "Presentation"
+  ],
+  "interests": [
+    "Behavioral Economics",
+    "EdTech Research",
+    "Carnatic Music",
+    "Volunteering (digital literacy NGO)"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.635899",
+  "source_file": "PM_004_Divya_Krishnan.json"
+}

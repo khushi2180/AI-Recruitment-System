@@ -1,0 +1,97 @@
+{
+  "resume_id": "CSA-002",
+  "name": "Ananya Sharma",
+  "email": "ananya.s2024@gmail.com",
+  "phone": "+919711223344",
+  "linkedin": "linkedin.com/in/ananyasharma-sec",
+  "github": null,
+  "portfolio": null,
+  "address": "C-45, Shalimar Bagh, Delhi - 110088",
+  "role_applied": "Cyber Security Analyst",
+  "quality_tier": "Poor",
+  "education": [
+    {
+      "degree": "B.Tech – Electronics & Communication Engineering",
+      "institution": "Inderprastha Engineering College, Ghaziabad",
+      "university": "Abdul Kalam Technical University (AKTU)",
+      "cgpa": 6.2,
+      "cgpa_scale": 10.0,
+      "year_of_passing": 2024
+    }
+  ],
+  "highest_degree": "B.Tech – Electronics & Communication Engineering",
+  "institution": "Inderprastha Engineering College, Ghaziabad",
+  "cgpa": 6.2,
+  "experience": [],
+  "years_experience": 0.0,
+  "companies": [],
+  "skills": {
+    "security_tools": [
+      "Nmap (basic)",
+      "Kali Linux (beginner)"
+    ],
+    "frameworks": [],
+    "os_platforms": [
+      "Windows 10",
+      "Kali Linux"
+    ],
+    "scripting": [
+      "Python (very basic)"
+    ],
+    "networking": [
+      "OSI Model",
+      "TCP/IP (theoretical)"
+    ],
+    "cloud_security": []
+  },
+  "skills_flat": [
+    "Nmap (basic)",
+    "Kali Linux (beginner)",
+    "Windows 10",
+    "Kali Linux",
+    "Python (very basic)",
+    "OSI Model",
+    "TCP/IP (theoretical)"
+  ],
+  "skill_count": 7,
+  "projects": [
+    {
+      "name": "Password Strength Checker",
+      "tech_stack": [
+        "Python"
+      ],
+      "description": "A simple Python script that checks password strength based on length, special characters, and uppercase letters. Built as a practice project.",
+      "github_link": null
+    }
+  ],
+  "project_count": 1,
+  "certifications": [
+    {
+      "name": "Ethical Hacking Basics",
+      "issuer": "Udemy (100-level course)",
+      "year": 2024
+    }
+  ],
+  "certification_names": [
+    "Ethical Hacking Basics"
+  ],
+  "certification_count": 1,
+  "achievements": [
+    "Attended 1 cybersecurity webinar (ISACA Delhi chapter)"
+  ],
+  "languages_known": [
+    "Hindi (Native)",
+    "English (Basic)"
+  ],
+  "soft_skills": [
+    "Eager to Learn",
+    "Hardworking"
+  ],
+  "interests": [
+    "Cybersecurity",
+    "Reading Tech Blogs",
+    "Watching Security YouTube Channels"
+  ],
+  "parsed_at": "2026-06-28T15:11:39.631314",
+  "source_file": "CSA_002_Ananya_Sharma.json"
+}
