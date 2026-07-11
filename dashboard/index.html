@@ -1368,7 +1368,7 @@ let currentFiltered = [];
 
 async function loadCandidates() {
   try {
-    const res = await fetch('http://localhost:5001/api/list_resumes');
+    const res = await fetch('https://ai-recruitment-system-4rf2.onrender.com/api/list_resumes');
     if (res.ok) {
       const data = await res.json();
       if (data.status === 'success' && data.resumes) {
@@ -2229,7 +2229,7 @@ async function extractTextFromFile(file) {
 
     // ── PRIMARY: Server-side pdfplumber (accurate for all PDF layouts) ─────────
     try {
-      const pdfRes = await fetch('http://localhost:5001/api/extract_pdf_text', {
+      const pdfRes = await fetch('https://ai-recruitment-system-4rf2.onrender.com/extract_pdf_text', {
         method: 'POST',
         headers: { 'Content-Type': 'application/pdf' },
         body: await file.arrayBuffer()
@@ -2523,7 +2523,7 @@ function buildSkillsMap(role, skills) {
 }
 
 async function saveResumeToServer(resumeData) {
-  return fetch('http://localhost:5001/api/save_resume', {
+  return fetch('https://ai-recruitment-system-4rf2.onrender.com/api/save_resume', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(resumeData)
@@ -2587,7 +2587,7 @@ function startAIResumeParsing() {
 
       try {
         addLog(`  🤖 Sending to Gemini AI for parsing...`);
-        const geminiRes = await fetch('http://localhost:5001/api/parse_resume_with_gemini', {
+        const geminiRes = await fetch('https://ai-recruitment-system-4rf2.onrender.com/api/parse_resume_with_gemini', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ text, name: candidateName })
@@ -2796,7 +2796,7 @@ function removeCandidate(name) {
     recalculateKPIs();
     
     // Call server API to delete the file
-    fetch('http://localhost:5001/api/delete_resume', {
+    fetch('https://ai-recruitment-system-4rf2.onrender.com/api/delete_resume', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: name })
@@ -2838,7 +2838,7 @@ async function generateQuestionsWithGemini() {
   badge.style.color = '#f59e0b';
 
   try {
-    const res = await fetch('http://localhost:5001/api/generate_questions', {
+    const res = await fetch('https://ai-recruitment-system-4rf2.onrender.com/api/generate_questions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ role, name, skills: skills.split(',').map(s => s.trim()).filter(Boolean), tier: 'Average', exp: 2 })
