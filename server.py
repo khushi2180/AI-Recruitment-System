@@ -12,7 +12,9 @@ load_dotenv(Path(__file__).parent / ".env")
 from google import genai
 from groq import Groq
 import pdfplumber
+from flask import Flask
 
+app = Flask(__name__)
 # ─── Config ───────────────────────────────────────────────────────────────────
 RESUMES_DIR = Path(__file__).parent / "datasets" / "resumes"
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
